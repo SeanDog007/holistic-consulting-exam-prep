@@ -129,9 +129,20 @@
 <body class="min-h-screen">
 
   <!-- ═══════════════════════════════════════ -->
+  <!-- LOADING STATE                          -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="loading-view" class="min-h-screen flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Holistic Consulting</h1>
+      <p class="text-xs font-semibold tracking-[0.16em] uppercase text-sage-400 mt-1">BCHN Exam Prep</p>
+      <div class="w-8 h-8 border-2 border-sage-400 border-t-transparent rounded-full animate-spin mx-auto mt-6"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
   <!-- LOGIN VIEW                             -->
   <!-- ═══════════════════════════════════════ -->
-  <div id="login-view" class="view active">
+  <div id="login-view" class="view">
     <div class="min-h-screen flex items-center justify-center p-4">
     <div class="w-full max-w-md">
       <div class="text-center mb-8">
@@ -883,32 +894,41 @@
         const { data: { session } } = await sb.auth.getSession();
         if (session) {
           currentUser = session.user;
-          await loadUserProfile();
+          try {
+            await loadUserProfile();
+          } catch (profileErr) {
+            // Profile load failed — session may be stale/expired
+            console.error('Profile load failed, clearing session:', profileErr);
+            await sb.auth.signOut();
+            currentUser = null;
+            userProfile = null;
+            showLogin();
+            return;
+          }
           showApp();
         } else {
           showLogin();
         }
       } catch (err) {
         console.error('Session check failed:', err);
+        await sb.auth.signOut().catch(() => {});
         showLogin();
       }
     }
 
     async function loadUserProfile() {
-      const { data } = await sb
-        .from('student_profiles')
-        .select('*')
-        .eq('id', currentUser.id)
-        .single();
+      const data = await apiFetch('profile');
       if (data) userProfile = data;
     }
 
     function showLogin() {
+      document.getElementById('loading-view').classList.add('hidden');
       document.getElementById('login-view').classList.add('active');
       document.getElementById('app-shell').classList.remove('active');
     }
 
     function showApp() {
+      document.getElementById('loading-view').classList.add('hidden');
       document.getElementById('login-view').classList.remove('active');
       document.getElementById('app-shell').classList.add('active');
 
@@ -1126,6 +1146,7 @@
         }
       } catch (err) {
         console.error('Dashboard load error:', err);
+        showToast('Could not load dashboard data. Please try refreshing.');
       }
     }
 
@@ -1430,6 +1451,7 @@
         }).join('');
       } catch (err) {
         console.error('Exam history error:', err);
+        document.getElementById('exam-history-list').innerHTML = '<p class="text-sm text-red-500">Could not load exam history. Please try again.</p>';
       }
     }
 
@@ -1628,6 +1650,7 @@
         `;
       } catch (err) {
         console.error('Study plan error:', err);
+        showToast('Could not load study plan.');
       }
     }
 

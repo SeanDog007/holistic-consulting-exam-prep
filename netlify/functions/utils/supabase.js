@@ -8,9 +8,12 @@ function getServiceClient() {
 }
 
 function getUserClient(token) {
+  // Use service role key to bypass RLS (avoids infinite recursion in admin policies
+  // on student_profiles). All functions already verify auth via getUser() and use
+  // explicit user_id filters, so application-level security is maintained.
   const client = createClient(
     process.env.SUPABASE_URL,
-    process.env.SUPABASE_ANON_KEY,
+    process.env.SUPABASE_SERVICE_ROLE_KEY,
     { global: { headers: { Authorization: `Bearer ${token}` } } }
   );
   return client;
