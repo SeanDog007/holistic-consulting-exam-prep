@@ -1,0 +1,9 @@
+{
+  "name": "holistic-consulting-exam-prep",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BCHN Board Exam Prep Platform for Holistic Consulting GROW members",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.0"
+  }
+}

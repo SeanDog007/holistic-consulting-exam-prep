@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCHN Exam Prep — Holistic Consulting</title>
+  <meta name="robots" content="noindex, nofollow">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: { 50: '#f4f7f2', 100: '#e4ebe0', 200: '#c9d7c1', 300: '#a4b898', 400: '#6B7F5E', 500: '#5a6e4e', 600: '#475940', 700: '#394834', 800: '#2A3024', 900: '#1e2319' },
+            copper: { 50: '#fdf6ef', 100: '#f8e4d0', 200: '#f0c49c', 300: '#e5a06a', 400: '#B07242', 500: '#9a5f33', 600: '#804b28', 700: '#663a20', 800: '#4d2c19', 900: '#3a2013' },
+            parchment: { 50: '#FDFAF5', 100: '#F5F1E6', 200: '#EDE7D8', 300: '#DDD8D0', 400: '#C5BFAF' },
+            herbchar: { 700: '#2A3024', 800: '#1e2319', 900: '#151a11' },
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'card': '0 1px 3px rgba(42, 48, 36, 0.06), 0 4px 12px rgba(42, 48, 36, 0.04)',
+            'card-hover': '0 2px 8px rgba(42, 48, 36, 0.08), 0 8px 24px rgba(42, 48, 36, 0.06)',
+            'elevated': '0 4px 16px rgba(42, 48, 36, 0.08), 0 12px 32px rgba(42, 48, 36, 0.06)',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: #F5F1E6; }
+
+    /* View transitions */
+    .view { display: none; }
+    .view.active { display: block; }
+
+    /* Sidebar */
+    .sidebar-link { transition: background 0.15s, color 0.15s; }
+    .sidebar-link:hover { background: rgba(107, 127, 94, 0.08); }
+    .sidebar-link.active { background: rgba(107, 127, 94, 0.12); color: #2A3024; font-weight: 600; }
+
+    /* Progress bars */
+    .progress-fill { transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+
+    /* Quiz options */
+    .quiz-option { transition: border-color 0.15s, background 0.15s, transform 0.1s; }
+    .quiz-option:hover { border-color: #6B7F5E; background: rgba(107, 127, 94, 0.04); }
+    .quiz-option:active { transform: scale(0.99); }
+    .quiz-option.selected { border-color: #6B7F5E; background: rgba(107, 127, 94, 0.08); }
+    .quiz-option.correct { border-color: #4CAF50; background: rgba(76, 175, 80, 0.08); }
+    .quiz-option.incorrect { border-color: #e53935; background: rgba(229, 57, 53, 0.06); }
+
+    /* Flashcard flip */
+    .flashcard-container { perspective: 1000px; }
+    .flashcard-inner {
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      transform-style: preserve-3d;
+    }
+    .flashcard-inner.flipped { transform: rotateY(180deg); }
+    .flashcard-front, .flashcard-back { backface-visibility: hidden; }
+    .flashcard-back { transform: rotateY(180deg); }
+
+    /* Readiness gauge */
+    .gauge-circle { transition: stroke-dashoffset 1s cubic-bezier(0.22, 1, 0.36, 1); }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #DDD8D0; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #C5BFAF; }
+
+    /* Toast notification */
+    .toast {
+      transform: translateY(16px);
+      opacity: 0;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    /* Exam timer */
+    .timer-urgent { animation: pulse-red 1s infinite; }
+    @keyframes pulse-red {
+      0%, 100% { color: #e53935; }
+      50% { color: #ff6f60; }
+    }
+
+    /* Study guide content styling */
+    .study-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: #2A3024; margin: 2rem 0 0.75rem; }
+    .study-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: #2A3024; margin: 1.5rem 0 0.5rem; }
+    .study-content p { line-height: 1.75; color: #2A3024; margin-bottom: 1rem; }
+    .study-content ul, .study-content ol { padding-left: 1.25rem; margin-bottom: 1rem; line-height: 1.75; color: #2A3024; }
+    .study-content li { margin-bottom: 0.25rem; }
+    .study-content strong { color: #2A3024; font-weight: 600; }
+
+    /* Exam alert callout */
+    .exam-alert {
+      background: linear-gradient(135deg, rgba(176, 114, 66, 0.06), rgba(176, 114, 66, 0.02));
+      border-left: 3px solid #B07242;
+    }
+
+    /* Mobile sidebar */
+    @media (max-width: 1023px) {
+      .sidebar-overlay {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+      }
+      .sidebar-overlay.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .sidebar-panel {
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .sidebar-panel.open {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- LOGIN VIEW                             -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="login-view" class="view active min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+      <div class="text-center mb-8">
+        <h1 class="font-display text-3xl font-bold text-herbchar-700 tracking-tight">Holistic Consulting</h1>
+        <p class="text-xs font-semibold tracking-[0.16em] uppercase text-sage-400 mt-1">BCHN Exam Prep</p>
+        <div class="w-12 h-0.5 bg-copper-400 mx-auto mt-4"></div>
+      </div>
+      <div class="bg-white rounded-lg shadow-card p-8 border border-parchment-300">
+        <h2 class="font-display text-xl font-semibold text-herbchar-700 mb-6">Sign In</h2>
+        <form id="login-form" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-herbchar-700 mb-1">Email</label>
+            <input type="email" id="login-email" required
+              class="w-full px-3 py-2.5 border border-parchment-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-sage-400/30 focus:border-sage-400">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-herbchar-700 mb-1">Password</label>
+            <input type="password" id="login-password" required
+              class="w-full px-3 py-2.5 border border-parchment-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-sage-400/30 focus:border-sage-400">
+          </div>
+          <p id="login-error" class="text-red-600 text-sm hidden"></p>
+          <button type="submit"
+            class="w-full py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-sage-400/50">
+            Sign In
+          </button>
+        </form>
+      </div>
+      <p class="text-center text-xs text-parchment-400 mt-6">Access is limited to enrolled GROW members.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- APP SHELL (authenticated)              -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="app-shell" class="view">
+    <!-- Mobile header -->
+    <header class="lg:hidden fixed top-0 left-0 right-0 bg-white border-b border-parchment-300 z-30 px-4 py-3 flex items-center justify-between">
+      <button id="mobile-menu-btn" class="p-1.5 -ml-1.5 text-herbchar-700 hover:bg-parchment-100 rounded">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <div class="text-center">
+        <p class="font-display text-sm font-semibold text-herbchar-700">BCHN Exam Prep</p>
+      </div>
+      <div class="w-8"></div>
+    </header>
+
+    <!-- Sidebar overlay (mobile) -->
+    <div id="sidebar-overlay" class="sidebar-overlay fixed inset-0 bg-black/30 z-40 lg:hidden"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar-panel fixed top-0 left-0 bottom-0 w-64 bg-white border-r border-parchment-300 z-50 lg:translate-x-0 lg:z-10 flex flex-col">
+      <!-- Brand -->
+      <div class="px-5 py-5 border-b border-parchment-200">
+        <h1 class="font-display text-lg font-bold text-herbchar-700 tracking-tight leading-tight">Holistic Consulting</h1>
+        <p class="text-[10px] font-semibold tracking-[0.16em] uppercase text-sage-400 mt-0.5">BCHN Exam Prep</p>
+      </div>
+
+      <!-- Nav -->
+      <nav class="flex-1 overflow-y-auto py-3 px-3 space-y-0.5">
+        <button data-view="dashboard" class="sidebar-link active w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700">
+          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Dashboard
+        </button>
+
+        <p class="px-3 pt-4 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-parchment-400">Study</p>
+        <button data-view="study-guide" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          Study Guides
+        </button>
+        <button data-view="flashcards" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          Flashcards
+          <span id="flashcard-due-badge" class="ml-auto text-[10px] font-semibold bg-copper-400 text-white rounded-full px-1.5 py-0.5 hidden">0</span>
+        </button>
+
+        <p class="px-3 pt-4 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-parchment-400">Practice</p>
+        <button data-view="practice-quiz" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          Practice Quiz
+        </button>
+        <button data-view="full-exam" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Full Exam (151 Q)
+        </button>
+        <button data-view="exam-history" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          Exam History
+        </button>
+
+        <p class="px-3 pt-4 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-parchment-400">Resources</p>
+        <button data-view="exam-day" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Exam Day Prep
+        </button>
+        <button data-view="study-plan" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Study Plan
+        </button>
+
+        <!-- Admin section (hidden for non-admins) -->
+        <div id="admin-nav" class="hidden">
+          <p class="px-3 pt-4 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-copper-400">Admin</p>
+          <button data-view="admin-students" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+            <svg class="w-4 h-4 text-copper-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            Students
+          </button>
+          <button data-view="admin-questions" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+            <svg class="w-4 h-4 text-copper-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+            Question Bank
+          </button>
+          <button data-view="admin-flashcards" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+            <svg class="w-4 h-4 text-copper-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            Flashcard Manager
+          </button>
+          <button data-view="admin-analytics" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+            <svg class="w-4 h-4 text-copper-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            Analytics
+          </button>
+        </div>
+      </nav>
+
+      <!-- User footer -->
+      <div class="px-4 py-3 border-t border-parchment-200">
+        <div class="flex items-center justify-between">
+          <div class="min-w-0">
+            <p id="user-name" class="text-sm font-medium text-herbchar-700 truncate"></p>
+            <p id="user-email" class="text-xs text-parchment-400 truncate"></p>
+          </div>
+          <button id="logout-btn" class="p-1.5 text-parchment-400 hover:text-herbchar-700 hover:bg-parchment-100 rounded transition-colors" title="Sign out">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="lg:ml-64 min-h-screen pt-14 lg:pt-0">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+
+        <!-- ─── DASHBOARD VIEW ─── -->
+        <div id="view-dashboard" class="view active">
+          <!-- Welcome header -->
+          <div class="mb-8">
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Welcome back, <span id="dashboard-name"></span></h2>
+            <p class="text-sm text-parchment-400 mt-1">Here's your exam readiness overview.</p>
+          </div>
+
+          <!-- Readiness score + domain breakdown -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Readiness gauge -->
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 flex flex-col items-center">
+              <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-4">Readiness Score</p>
+              <div class="relative w-36 h-36">
+                <svg class="w-36 h-36 -rotate-90" viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="52" fill="none" stroke="#EDE7D8" stroke-width="8"/>
+                  <circle id="gauge-circle" class="gauge-circle" cx="60" cy="60" r="52" fill="none" stroke="#6B7F5E" stroke-width="8" stroke-linecap="round"
+                    stroke-dasharray="326.73" stroke-dashoffset="326.73"/>
+                </svg>
+                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                  <span id="readiness-score" class="text-3xl font-bold text-herbchar-700">—</span>
+                  <span class="text-xs text-parchment-400">/ 100</span>
+                </div>
+              </div>
+              <p id="readiness-label" class="text-sm text-parchment-400 mt-3 text-center">Complete activities to build your score</p>
+            </div>
+
+            <!-- Domain breakdown -->
+            <div class="lg:col-span-2 bg-white rounded-lg shadow-card border border-parchment-300 p-6">
+              <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-4">Domain Mastery</p>
+              <div class="space-y-4" id="domain-bars">
+                <div class="domain-bar" data-domain="1">
+                  <div class="flex justify-between items-baseline mb-1">
+                    <span class="text-sm font-medium text-herbchar-700">Domain 1: Food & Nutrition</span>
+                    <span class="text-xs text-parchment-400"><span class="domain-pct">—</span>% · 35% of exam</span>
+                  </div>
+                  <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
+                    <div class="progress-fill h-full bg-sage-400 rounded-full" style="width:0%"></div>
+                  </div>
+                </div>
+                <div class="domain-bar" data-domain="2">
+                  <div class="flex justify-between items-baseline mb-1">
+                    <span class="text-sm font-medium text-herbchar-700">Domain 2: A&P / Biochemistry</span>
+                    <span class="text-xs text-parchment-400"><span class="domain-pct">—</span>% · 15% of exam</span>
+                  </div>
+                  <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
+                    <div class="progress-fill h-full bg-sage-400 rounded-full" style="width:0%"></div>
+                  </div>
+                </div>
+                <div class="domain-bar" data-domain="3">
+                  <div class="flex justify-between items-baseline mb-1">
+                    <span class="text-sm font-medium text-herbchar-700">Domain 3: Counseling / Ethics / Scope</span>
+                    <span class="text-xs text-parchment-400"><span class="domain-pct">—</span>% · 10% of exam</span>
+                  </div>
+                  <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
+                    <div class="progress-fill h-full bg-sage-400 rounded-full" style="width:0%"></div>
+                  </div>
+                </div>
+                <div class="domain-bar" data-domain="4">
+                  <div class="flex justify-between items-baseline mb-1">
+                    <span class="text-sm font-medium text-herbchar-700">Domain 4: Nutrition in Practice</span>
+                    <span class="text-xs text-parchment-400"><span class="domain-pct">—</span>% · 30% of exam</span>
+                  </div>
+                  <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
+                    <div class="progress-fill h-full bg-sage-400 rounded-full" style="width:0%"></div>
+                  </div>
+                </div>
+                <div class="domain-bar" data-domain="5">
+                  <div class="flex justify-between items-baseline mb-1">
+                    <span class="text-sm font-medium text-herbchar-700">Domain 5: Research</span>
+                    <span class="text-xs text-parchment-400"><span class="domain-pct">—</span>% · 10% of exam</span>
+                  </div>
+                  <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
+                    <div class="progress-fill h-full bg-sage-400 rounded-full" style="width:0%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick stats row -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4">
+              <p class="text-xs text-parchment-400 mb-1">Study Streak</p>
+              <p class="text-2xl font-bold text-herbchar-700"><span id="stat-streak">0</span> <span class="text-sm font-normal text-parchment-400">days</span></p>
+            </div>
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4">
+              <p class="text-xs text-parchment-400 mb-1">Questions Practiced</p>
+              <p class="text-2xl font-bold text-herbchar-700" id="stat-questions">0</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4">
+              <p class="text-xs text-parchment-400 mb-1">Practice Exams</p>
+              <p class="text-2xl font-bold text-herbchar-700" id="stat-exams">0</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4">
+              <p class="text-xs text-parchment-400 mb-1">Flashcards Mastered</p>
+              <p class="text-2xl font-bold text-herbchar-700" id="stat-flashcards">0</p>
+            </div>
+          </div>
+
+          <!-- Recommended actions -->
+          <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mb-8">
+            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-4">Today's Recommended Actions</p>
+            <div id="recommended-actions" class="space-y-3">
+              <div class="flex items-start gap-3 p-3 rounded-md bg-parchment-50 border border-parchment-200">
+                <svg class="w-5 h-5 text-sage-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                <div>
+                  <p class="text-sm font-medium text-herbchar-700">Take the diagnostic assessment</p>
+                  <p class="text-xs text-parchment-400 mt-0.5">25 questions to identify your strengths and weak areas. Takes ~15 minutes.</p>
+                </div>
+                <button onclick="switchView('practice-quiz')" class="ml-auto shrink-0 px-3 py-1.5 text-xs font-semibold text-sage-400 border border-sage-400 rounded hover:bg-sage-400 hover:text-white transition-colors">Start</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent activity -->
+          <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6">
+            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-4">Recent Activity</p>
+            <div id="recent-activity" class="space-y-2">
+              <p class="text-sm text-parchment-400 italic">No activity yet. Start studying to see your progress here.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── STUDY GUIDE VIEW ─── -->
+        <div id="view-study-guide" class="view">
+          <div class="mb-6">
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Study Guides</h2>
+            <p class="text-sm text-parchment-400 mt-1">Comprehensive study material organized by exam domain.</p>
+          </div>
+
+          <!-- Domain selector -->
+          <div id="study-domain-tabs" class="flex flex-wrap gap-2 mb-6">
+            <button data-domain="1" class="study-domain-tab px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors">
+              Domain 1 <span class="text-xs text-parchment-400">(35%)</span>
+            </button>
+            <button data-domain="2" class="study-domain-tab px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors">
+              Domain 2 <span class="text-xs text-parchment-400">(15%)</span>
+            </button>
+            <button data-domain="3" class="study-domain-tab px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors">
+              Domain 3 <span class="text-xs text-parchment-400">(10%)</span>
+            </button>
+            <button data-domain="4" class="study-domain-tab px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors">
+              Domain 4 <span class="text-xs text-parchment-400">(30%)</span>
+            </button>
+            <button data-domain="5" class="study-domain-tab px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors">
+              Domain 5 <span class="text-xs text-parchment-400">(10%)</span>
+            </button>
+          </div>
+
+          <!-- Study content area -->
+          <div id="study-content-area" class="bg-white rounded-lg shadow-card border border-parchment-300">
+            <div class="p-6">
+              <p class="text-sm text-parchment-400 italic">Select a domain above to begin studying.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── PRACTICE QUIZ VIEW ─── -->
+        <div id="view-practice-quiz" class="view">
+          <!-- Setup screen -->
+          <div id="quiz-setup">
+            <div class="mb-6">
+              <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Practice Quiz</h2>
+              <p class="text-sm text-parchment-400 mt-1">Test your knowledge with adaptive practice questions.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 max-w-lg">
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-herbchar-700 mb-2">Domain</label>
+                  <select id="quiz-domain-select" class="w-full px-3 py-2.5 border border-parchment-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-sage-400/30 focus:border-sage-400">
+                    <option value="all">All Domains (Adaptive)</option>
+                    <option value="1">Domain 1: Food & Nutrition (35%)</option>
+                    <option value="2">Domain 2: A&P / Biochemistry (15%)</option>
+                    <option value="3">Domain 3: Counseling / Ethics / Scope (10%)</option>
+                    <option value="4">Domain 4: Nutrition in Practice (30%)</option>
+                    <option value="5">Domain 5: Research (10%)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-herbchar-700 mb-2">Number of Questions</label>
+                  <select id="quiz-count-select" class="w-full px-3 py-2.5 border border-parchment-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-sage-400/30 focus:border-sage-400">
+                    <option value="10">10 Questions (~10 min)</option>
+                    <option value="25">25 Questions (~25 min)</option>
+                    <option value="50">50 Questions (~50 min)</option>
+                  </select>
+                </div>
+                <button id="start-quiz-btn" class="w-full py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                  Start Quiz
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active quiz -->
+          <div id="quiz-active" class="hidden">
+            <!-- Quiz header -->
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400">Question <span id="quiz-current-num">1</span> of <span id="quiz-total-num">10</span></p>
+                <div class="w-full max-w-xs h-1.5 bg-parchment-200 rounded-full mt-2 overflow-hidden">
+                  <div id="quiz-progress-bar" class="progress-fill h-full bg-sage-400 rounded-full" style="width:10%"></div>
+                </div>
+              </div>
+              <div class="text-right">
+                <p class="text-xs text-parchment-400"><span id="quiz-correct-count">0</span> correct</p>
+                <button id="quiz-flag-btn" class="text-xs text-copper-400 hover:text-copper-500 mt-1" title="Flag for review">Flag</button>
+              </div>
+            </div>
+
+            <!-- Question card -->
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mb-4">
+              <div class="flex items-start gap-2 mb-4">
+                <span id="quiz-domain-badge" class="shrink-0 px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase rounded bg-sage-50 text-sage-500 border border-sage-200">Domain 1</span>
+                <span id="quiz-difficulty-badge" class="shrink-0 px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase rounded bg-parchment-100 text-parchment-400 border border-parchment-300">Medium</span>
+              </div>
+              <p id="quiz-question-text" class="text-base text-herbchar-700 leading-relaxed mb-6"></p>
+              <div id="quiz-options" class="space-y-3"></div>
+            </div>
+
+            <!-- Explanation (shown after answering) -->
+            <div id="quiz-explanation" class="hidden bg-parchment-50 rounded-lg border border-parchment-200 p-5 mb-4">
+              <div class="flex items-start gap-2 mb-2">
+                <span id="quiz-result-icon"></span>
+                <p id="quiz-result-text" class="text-sm font-semibold"></p>
+              </div>
+              <p id="quiz-explanation-text" class="text-sm text-herbchar-700/80 leading-relaxed"></p>
+              <p id="quiz-reference" class="text-xs text-parchment-400 mt-2 italic"></p>
+            </div>
+
+            <!-- Next button -->
+            <div class="flex justify-end">
+              <button id="quiz-next-btn" class="hidden px-6 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                Next Question
+              </button>
+              <button id="quiz-finish-btn" class="hidden px-6 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                See Results
+              </button>
+            </div>
+          </div>
+
+          <!-- Quiz results -->
+          <div id="quiz-results" class="hidden">
+            <div class="mb-6">
+              <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Quiz Complete</h2>
+            </div>
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mb-6">
+              <div class="text-center mb-6">
+                <p id="quiz-score" class="text-4xl font-bold text-herbchar-700"></p>
+                <p id="quiz-score-label" class="text-sm text-parchment-400 mt-1"></p>
+              </div>
+              <div id="quiz-domain-results" class="space-y-3"></div>
+            </div>
+            <div class="flex gap-3">
+              <button onclick="resetQuiz()" class="px-5 py-2.5 border border-sage-400 text-sage-400 text-sm font-semibold rounded-md hover:bg-sage-400 hover:text-white transition-colors">
+                Take Another Quiz
+              </button>
+              <button onclick="switchView('dashboard')" class="px-5 py-2.5 text-sm text-parchment-400 hover:text-herbchar-700 transition-colors">
+                Back to Dashboard
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── FLASHCARDS VIEW ─── -->
+        <div id="view-flashcards" class="view">
+          <div class="mb-6">
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Flashcards</h2>
+            <p class="text-sm text-parchment-400 mt-1">Spaced repetition — review cards due today to build long-term memory.</p>
+          </div>
+          <div id="flashcard-area" class="max-w-xl mx-auto">
+            <p class="text-sm text-parchment-400 italic text-center py-12">Loading flashcards...</p>
+          </div>
+        </div>
+
+        <!-- ─── FULL EXAM VIEW ─── -->
+        <div id="view-full-exam" class="view">
+          <div class="mb-6">
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Full-Length Exam Simulation</h2>
+            <p class="text-sm text-parchment-400 mt-1">151 questions, weighted by domain — just like the real BCHN exam.</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 max-w-lg">
+            <div class="space-y-4">
+              <div class="p-4 bg-parchment-50 rounded-md border border-parchment-200">
+                <p class="text-sm text-herbchar-700 font-medium mb-2">Exam Format</p>
+                <ul class="text-sm text-herbchar-700/70 space-y-1">
+                  <li>151 questions across all 5 domains</li>
+                  <li>Weighted to match real exam distribution</li>
+                  <li>70% required to pass (106/151)</li>
+                  <li>Detailed results by domain on completion</li>
+                </ul>
+              </div>
+              <div>
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" id="exam-timed" class="rounded border-parchment-300 text-sage-400 focus:ring-sage-400">
+                  <span class="text-sm text-herbchar-700">Timed mode (recommended for exam simulation)</span>
+                </label>
+              </div>
+              <button id="start-exam-btn" class="w-full py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                Begin Exam
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── EXAM HISTORY VIEW ─── -->
+        <div id="view-exam-history" class="view">
+          <div class="mb-6">
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Exam History</h2>
+            <p class="text-sm text-parchment-400 mt-1">Track your progress across practice exams.</p>
+          </div>
+          <div id="exam-history-list" class="space-y-4">
+            <p class="text-sm text-parchment-400 italic">No exams taken yet.</p>
+          </div>
+        </div>
+
+        <!-- ─── EXAM DAY PREP VIEW ─── -->
+        <div id="view-exam-day" class="view">
+          <div class="mb-6">
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Exam Day Preparation</h2>
+            <p class="text-sm text-parchment-400 mt-1">Everything you need to know for test day.</p>
+          </div>
+          <div class="space-y-6" id="exam-day-content">
+            <!-- Exam logistics -->
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6">
+              <h3 class="font-display text-lg font-semibold text-herbchar-700 mb-4">Exam Logistics</h3>
+              <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+                <div class="p-3 bg-parchment-50 rounded-md text-center">
+                  <p class="text-2xl font-bold text-herbchar-700">151</p>
+                  <p class="text-xs text-parchment-400">Questions</p>
+                </div>
+                <div class="p-3 bg-parchment-50 rounded-md text-center">
+                  <p class="text-2xl font-bold text-herbchar-700">70%</p>
+                  <p class="text-xs text-parchment-400">To Pass</p>
+                </div>
+                <div class="p-3 bg-parchment-50 rounded-md text-center">
+                  <p class="text-2xl font-bold text-sage-400">106</p>
+                  <p class="text-xs text-parchment-400">Correct Needed</p>
+                </div>
+                <div class="p-3 bg-parchment-50 rounded-md text-center">
+                  <p class="text-lg font-bold text-herbchar-700">ProctorU</p>
+                  <p class="text-xs text-parchment-400">Online Delivery</p>
+                </div>
+              </div>
+              <div class="study-content text-sm">
+                <p>The BCHN exam is delivered online through ProctorU. Questions are <strong>randomly selected</strong> from the question bank, so every exam experience is unique. Question types include multiple choice, true/false, short answer, and matching.</p>
+                <p class="mt-2"><strong>Domain weights:</strong> Food & Nutrition (35%), A&P/Biochemistry (15%), Counseling/Ethics/Scope (10%), Nutrition in Practice (30%), Research (10%).</p>
+              </div>
+            </div>
+
+            <!-- Test-taking strategies -->
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6">
+              <h3 class="font-display text-lg font-semibold text-herbchar-700 mb-4">Test-Taking Strategies</h3>
+              <div class="study-content text-sm space-y-4">
+                <div>
+                  <p class="font-semibold text-herbchar-700 mb-1">Multiple Choice</p>
+                  <ul>
+                    <li>Read the question stem completely before looking at answers</li>
+                    <li>Eliminate obviously wrong answers first — increases your odds</li>
+                    <li>Watch for absolute words ("always," "never") — these are usually wrong</li>
+                    <li>If two answers are similar, one of them is likely correct</li>
+                    <li>"All of the above" is correct more often than "none of the above"</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-semibold text-herbchar-700 mb-1">Time Management</p>
+                  <ul>
+                    <li>Pace: roughly 1 minute per question</li>
+                    <li>Don't spend more than 2 minutes on any single question</li>
+                    <li>Flag difficult questions and come back if time allows</li>
+                    <li>Trust your first instinct — changed answers are wrong more often</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-semibold text-herbchar-700 mb-1">Short Answer & Matching</p>
+                  <ul>
+                    <li>For matching: start with the terms you're most confident about</li>
+                    <li>For short answer: be concise and specific — they're looking for key terms</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 48-hour protocol -->
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6">
+              <h3 class="font-display text-lg font-semibold text-herbchar-700 mb-4">The 48-Hour Protocol</h3>
+              <div class="study-content text-sm">
+                <p class="font-semibold text-herbchar-700 mb-2">Two Days Before</p>
+                <ul>
+                  <li>Do a light review of your weakest domain — don't cram new material</li>
+                  <li>Review your flashcard deck one final time</li>
+                  <li>Set up your ProctorU environment (quiet room, clear desk, webcam, stable internet)</li>
+                  <li>Test your computer and internet connection with ProctorU's system check</li>
+                </ul>
+                <p class="font-semibold text-herbchar-700 mb-2 mt-4">The Night Before</p>
+                <ul>
+                  <li>Stop studying by early evening — no late-night cramming</li>
+                  <li>Prepare your ID and any allowed materials</li>
+                  <li>Get 7-8 hours of sleep</li>
+                  <li>Avoid alcohol and heavy meals</li>
+                </ul>
+                <p class="font-semibold text-herbchar-700 mb-2 mt-4">Morning Of</p>
+                <ul>
+                  <li>Eat a balanced breakfast with protein and complex carbs</li>
+                  <li>Avoid excessive caffeine — it can increase anxiety</li>
+                  <li>Log in 15 minutes early to get settled</li>
+                  <li>Take 3 slow, deep breaths before starting</li>
+                  <li>Remember: you've prepared for this. Trust your training.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Stress management -->
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6">
+              <h3 class="font-display text-lg font-semibold text-herbchar-700 mb-4">Managing Test Anxiety</h3>
+              <div class="study-content text-sm">
+                <p>Test anxiety is normal and manageable. Here are evidence-based techniques:</p>
+                <ul>
+                  <li><strong>Box breathing:</strong> Inhale 4 seconds → hold 4 seconds → exhale 4 seconds → hold 4 seconds. Repeat 3-4 times.</li>
+                  <li><strong>5-4-3-2-1 grounding:</strong> Name 5 things you see, 4 you feel, 3 you hear, 2 you smell, 1 you taste.</li>
+                  <li><strong>Positive self-talk:</strong> Replace "I don't know this" with "I've studied this and I'll do my best."</li>
+                  <li><strong>Progress reframe:</strong> If you hit a hard question, remind yourself of the ones you've already answered confidently.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── STUDY PLAN VIEW ─── -->
+        <div id="view-study-plan" class="view">
+          <div class="mb-6">
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Your Study Plan</h2>
+            <p class="text-sm text-parchment-400 mt-1">Personalized schedule based on your diagnostic results and target exam date.</p>
+          </div>
+          <div id="study-plan-content" class="space-y-6">
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 max-w-lg">
+              <p class="text-sm text-parchment-400 mb-4">Set your target exam date to generate a personalized study plan.</p>
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-herbchar-700 mb-1">Target Exam Date</label>
+                  <input type="date" id="exam-date-input" class="w-full px-3 py-2.5 border border-parchment-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-sage-400/30 focus:border-sage-400">
+                </div>
+                <button id="generate-plan-btn" class="w-full py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                  Generate Study Plan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── ADMIN: STUDENTS VIEW ─── -->
+        <div id="view-admin-students" class="view">
+          <div class="mb-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Student Management</h2>
+                <p class="text-sm text-parchment-400 mt-1">Monitor student progress and manage access.</p>
+              </div>
+              <button id="invite-student-btn" class="px-4 py-2 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                Invite Student
+              </button>
+            </div>
+          </div>
+          <div id="student-list" class="space-y-3">
+            <p class="text-sm text-parchment-400 italic">Loading students...</p>
+          </div>
+        </div>
+
+        <!-- ─── ADMIN: QUESTION BANK VIEW ─── -->
+        <div id="view-admin-questions" class="view">
+          <div class="mb-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Question Bank</h2>
+                <p class="text-sm text-parchment-400 mt-1">Manage exam questions across all domains.</p>
+              </div>
+              <div class="flex gap-2">
+                <button id="import-questions-btn" class="px-4 py-2 border border-sage-400 text-sage-400 text-sm font-semibold rounded-md hover:bg-sage-400 hover:text-white transition-colors">
+                  Import CSV
+                </button>
+                <button id="add-question-btn" class="px-4 py-2 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                  Add Question
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filters -->
+          <div class="flex flex-wrap gap-3 mb-4">
+            <select id="admin-q-domain-filter" class="px-3 py-2 border border-parchment-300 rounded-md text-sm bg-white">
+              <option value="">All Domains</option>
+              <option value="1">Domain 1</option>
+              <option value="2">Domain 2</option>
+              <option value="3">Domain 3</option>
+              <option value="4">Domain 4</option>
+              <option value="5">Domain 5</option>
+            </select>
+            <select id="admin-q-type-filter" class="px-3 py-2 border border-parchment-300 rounded-md text-sm bg-white">
+              <option value="">All Types</option>
+              <option value="mc">Multiple Choice</option>
+              <option value="tf">True/False</option>
+              <option value="matching">Matching</option>
+              <option value="fill">Fill in Blank</option>
+            </select>
+            <div class="flex items-center gap-2 ml-auto">
+              <span id="admin-q-count" class="text-sm text-parchment-400">0 questions</span>
+            </div>
+          </div>
+
+          <div id="admin-question-list" class="space-y-3">
+            <p class="text-sm text-parchment-400 italic">Loading questions...</p>
+          </div>
+        </div>
+
+        <!-- ─── ADMIN: FLASHCARD MANAGER VIEW ─── -->
+        <div id="view-admin-flashcards" class="view">
+          <div class="mb-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Flashcard Manager</h2>
+                <p class="text-sm text-parchment-400 mt-1">Create and manage flashcard decks.</p>
+              </div>
+              <button id="add-flashcard-btn" class="px-4 py-2 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                Add Flashcard
+              </button>
+            </div>
+          </div>
+          <div id="admin-flashcard-list" class="space-y-3">
+            <p class="text-sm text-parchment-400 italic">Loading flashcards...</p>
+          </div>
+        </div>
+
+        <!-- ─── ADMIN: ANALYTICS VIEW ─── -->
+        <div id="view-admin-analytics" class="view">
+          <div class="mb-6">
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Analytics</h2>
+            <p class="text-sm text-parchment-400 mt-1">Cohort performance and question bank insights.</p>
+          </div>
+          <div id="analytics-content" class="space-y-6">
+            <p class="text-sm text-parchment-400 italic">Loading analytics...</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TOAST NOTIFICATION                     -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="toast" class="toast fixed bottom-6 right-6 bg-herbchar-700 text-white px-5 py-3 rounded-lg shadow-elevated text-sm z-50 max-w-sm">
+    <p id="toast-message"></p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- MODAL (generic)                        -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="modal-backdrop" class="modal-backdrop fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
+    <div id="modal-content" class="modal-content bg-white rounded-lg shadow-elevated w-full max-w-lg max-h-[90vh] overflow-y-auto">
+      <div id="modal-body" class="p-6"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- JAVASCRIPT                             -->
+  <!-- ═══════════════════════════════════════ -->
+  <script>
+    // ── Config ──
+    const SUPABASE_URL = 'https://uvzfhksyjqadkxypcocq.supabase.co';
+    const SUPABASE_ANON_KEY = 'sb_publishable_T8lG0NET6e5AGayubJESIg_AxcP66om';
+    const API_BASE = window.location.hostname === 'localhost'
+      ? 'http://localhost:8888/.netlify/functions'
+      : '/.netlify/functions';
+
+    const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const DOMAIN_NAMES = {
+      1: 'Food & Nutrition',
+      2: 'A&P / Biochemistry',
+      3: 'Counseling / Ethics / Scope',
+      4: 'Nutrition in Practice',
+      5: 'Research',
+    };
+    const DOMAIN_WEIGHTS = { 1: 35, 2: 15, 3: 10, 4: 30, 5: 10 };
+    const DIFFICULTY_LABELS = { 1: 'Easy', 2: 'Medium', 3: 'Hard' };
+
+    // ── State ──
+    let currentUser = null;
+    let userProfile = null;
+    let currentView = 'dashboard';
+
+    // Quiz state
+    let quizQuestions = [];
+    let quizIndex = 0;
+    let quizAnswers = [];
+    let quizStartTime = null;
+
+    // ── Auth ──
+    async function checkSession() {
+      const { data: { session } } = await sb.auth.getSession();
+      if (session) {
+        currentUser = session.user;
+        await loadUserProfile();
+        showApp();
+      } else {
+        showLogin();
+      }
+    }
+
+    async function loadUserProfile() {
+      const { data, error } = await sb
+        .from('student_profiles')
+        .select('*')
+        .eq('id', currentUser.id)
+        .single();
+      if (data) {
+        userProfile = data;
+      }
+    }
+
+    function showLogin() {
+      document.getElementById('login-view').classList.add('active');
+      document.getElementById('app-shell').classList.remove('active');
+    }
+
+    function showApp() {
+      document.getElementById('login-view').classList.remove('active');
+      document.getElementById('app-shell').classList.add('active');
+
+      // Set user info
+      const name = userProfile?.display_name || currentUser.email.split('@')[0];
+      document.getElementById('user-name').textContent = name;
+      document.getElementById('user-email').textContent = currentUser.email;
+      document.getElementById('dashboard-name').textContent = name.split(' ')[0];
+
+      // Show admin nav if admin
+      if (userProfile?.is_admin) {
+        document.getElementById('admin-nav').classList.remove('hidden');
+      }
+
+      loadDashboard();
+    }
+
+    // Login form
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+      const errorEl = document.getElementById('login-error');
+      errorEl.classList.add('hidden');
+
+      const { data, error } = await sb.auth.signInWithPassword({ email, password });
+      if (error) {
+        errorEl.textContent = error.message;
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      currentUser = data.user;
+      await loadUserProfile();
+      showApp();
+    });
+
+    // Logout
+    document.getElementById('logout-btn').addEventListener('click', async () => {
+      await sb.auth.signOut();
+      currentUser = null;
+      userProfile = null;
+      showLogin();
+    });
+
+    // ── Navigation ──
+    function switchView(viewName) {
+      currentView = viewName;
+
+      // Update sidebar
+      document.querySelectorAll('.sidebar-link').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.view === viewName);
+      });
+
+      // Update views
+      document.querySelectorAll('main .view').forEach(v => v.classList.remove('active'));
+      const target = document.getElementById(`view-${viewName}`);
+      if (target) target.classList.add('active');
+
+      // Close mobile sidebar
+      closeMobileSidebar();
+    }
+
+    document.querySelectorAll('[data-view]').forEach(btn => {
+      btn.addEventListener('click', () => switchView(btn.dataset.view));
+    });
+
+    // Mobile sidebar
+    const $sidebarOverlay = document.getElementById('sidebar-overlay');
+    const $sidebar = document.getElementById('sidebar');
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      $sidebarOverlay.classList.add('open');
+      $sidebar.classList.add('open');
+    });
+
+    function closeMobileSidebar() {
+      $sidebarOverlay.classList.remove('open');
+      $sidebar.classList.remove('open');
+    }
+    $sidebarOverlay.addEventListener('click', closeMobileSidebar);
+
+    // ── Toast ──
+    let toastTimer;
+    function showToast(message, duration = 3000) {
+      const el = document.getElementById('toast');
+      document.getElementById('toast-message').textContent = message;
+      el.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.remove('show'), duration);
+    }
+
+    // ── Modal ──
+    function openModal(html) {
+      document.getElementById('modal-body').innerHTML = html;
+      document.getElementById('modal-backdrop').classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('modal-backdrop').classList.remove('open');
+    }
+
+    document.getElementById('modal-backdrop').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('modal-backdrop')) closeModal();
+    });
+
+    // ── API Helpers ──
+    async function getToken() {
+      const { data: { session } } = await sb.auth.getSession();
+      return session?.access_token;
+    }
+
+    async function apiFetch(endpoint, options = {}) {
+      const token = await getToken();
+      const headers = {
+        'Content-Type': 'application/json',
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        ...options.headers,
+      };
+      const resp = await fetch(`${API_BASE}/${endpoint}`, { ...options, headers });
+      if (!resp.ok) {
+        const err = await resp.json().catch(() => ({ error: 'Request failed' }));
+        throw new Error(err.error || 'Request failed');
+      }
+      return resp.json();
+    }
+
+    // ── Dashboard ──
+    async function loadDashboard() {
+      // Load stats from Supabase directly (faster than API for read-only)
+      try {
+        // Question attempts count
+        const { count: qCount } = await sb
+          .from('question_attempts')
+          .select('*', { count: 'exact', head: true })
+          .eq('user_id', currentUser.id);
+        document.getElementById('stat-questions').textContent = qCount || 0;
+
+        // Exam attempts count
+        const { count: eCount } = await sb
+          .from('exam_attempts')
+          .select('*', { count: 'exact', head: true })
+          .eq('user_id', currentUser.id);
+        document.getElementById('stat-exams').textContent = eCount || 0;
+
+        // Domain mastery from question attempts
+        const { data: attempts } = await sb
+          .from('question_attempts')
+          .select('question_id, is_correct, questions(domain)')
+          .eq('user_id', currentUser.id);
+
+        if (attempts && attempts.length > 0) {
+          const domainStats = {};
+          for (const a of attempts) {
+            const d = a.questions?.domain;
+            if (!d) continue;
+            if (!domainStats[d]) domainStats[d] = { correct: 0, total: 0 };
+            domainStats[d].total++;
+            if (a.is_correct) domainStats[d].correct++;
+          }
+
+          let totalWeightedScore = 0;
+          let totalWeight = 0;
+
+          for (let d = 1; d <= 5; d++) {
+            const bar = document.querySelector(`.domain-bar[data-domain="${d}"]`);
+            if (!bar) continue;
+            const stats = domainStats[d];
+            const pct = stats ? Math.round((stats.correct / stats.total) * 100) : 0;
+            bar.querySelector('.domain-pct').textContent = pct;
+            bar.querySelector('.progress-fill').style.width = pct + '%';
+
+            // Color code
+            const fill = bar.querySelector('.progress-fill');
+            fill.classList.remove('bg-red-400', 'bg-yellow-400', 'bg-sage-400');
+            if (pct < 60) fill.classList.add('bg-red-400');
+            else if (pct < 80) fill.classList.add('bg-yellow-400');
+            else fill.classList.add('bg-sage-400');
+
+            if (stats) {
+              totalWeightedScore += pct * DOMAIN_WEIGHTS[d];
+              totalWeight += DOMAIN_WEIGHTS[d];
+            }
+          }
+
+          // Readiness score (weighted average of domain scores)
+          if (totalWeight > 0) {
+            const readiness = Math.round(totalWeightedScore / totalWeight);
+            updateReadinessGauge(readiness);
+          }
+        }
+      } catch (err) {
+        console.error('Dashboard load error:', err);
+      }
+    }
+
+    function updateReadinessGauge(score) {
+      const circle = document.getElementById('gauge-circle');
+      const circumference = 326.73;
+      const offset = circumference - (score / 100) * circumference;
+      circle.style.strokeDashoffset = offset;
+
+      // Color
+      if (score < 60) circle.style.stroke = '#e53935';
+      else if (score < 80) circle.style.stroke = '#FFC107';
+      else circle.style.stroke = '#6B7F5E';
+
+      document.getElementById('readiness-score').textContent = score;
+
+      const label = document.getElementById('readiness-label');
+      if (score >= 80) label.textContent = "You're looking exam-ready!";
+      else if (score >= 60) label.textContent = 'Good progress. Keep practicing weak areas.';
+      else label.textContent = 'Focus on your weakest domains to build your score.';
+    }
+
+    // ── Practice Quiz ──
+    document.getElementById('start-quiz-btn').addEventListener('click', startQuiz);
+
+    async function startQuiz() {
+      const domain = document.getElementById('quiz-domain-select').value;
+      const count = parseInt(document.getElementById('quiz-count-select').value, 10);
+
+      try {
+        let query = sb.from('questions').select('*').eq('is_active', true);
+        if (domain !== 'all') query = query.eq('domain', parseInt(domain, 10));
+
+        const { data: allQuestions, error } = await query;
+        if (error) throw error;
+        if (!allQuestions || allQuestions.length === 0) {
+          showToast('No questions available for this domain yet.');
+          return;
+        }
+
+        // Shuffle and pick
+        const shuffled = allQuestions.sort(() => Math.random() - 0.5);
+        quizQuestions = shuffled.slice(0, Math.min(count, shuffled.length));
+        quizIndex = 0;
+        quizAnswers = [];
+        quizStartTime = Date.now();
+
+        document.getElementById('quiz-setup').classList.add('hidden');
+        document.getElementById('quiz-active').classList.remove('hidden');
+        document.getElementById('quiz-results').classList.add('hidden');
+        document.getElementById('quiz-total-num').textContent = quizQuestions.length;
+
+        renderQuestion();
+      } catch (err) {
+        showToast('Error loading questions: ' + err.message);
+      }
+    }
+
+    function renderQuestion() {
+      const q = quizQuestions[quizIndex];
+      document.getElementById('quiz-current-num').textContent = quizIndex + 1;
+      document.getElementById('quiz-progress-bar').style.width =
+        ((quizIndex + 1) / quizQuestions.length * 100) + '%';
+      document.getElementById('quiz-correct-count').textContent =
+        quizAnswers.filter(a => a.is_correct).length;
+
+      document.getElementById('quiz-domain-badge').textContent = 'Domain ' + q.domain;
+      document.getElementById('quiz-difficulty-badge').textContent = DIFFICULTY_LABELS[q.difficulty] || 'Medium';
+      document.getElementById('quiz-question-text').textContent = q.question_text;
+
+      // Render options
+      const optionsEl = document.getElementById('quiz-options');
+      optionsEl.innerHTML = '';
+      const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
+      const options = q.options || [];
+
+      options.forEach((opt, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-option w-full text-left p-3 rounded-md border border-parchment-300 flex items-start gap-3';
+        btn.innerHTML = `
+          <span class="shrink-0 w-6 h-6 rounded-full border border-parchment-300 flex items-center justify-center text-xs font-semibold text-parchment-400">${labels[i]}</span>
+          <span class="text-sm text-herbchar-700">${opt}</span>
+        `;
+        btn.addEventListener('click', () => selectAnswer(labels[i], btn));
+        optionsEl.appendChild(btn);
+      });
+
+      // Hide explanation and buttons
+      document.getElementById('quiz-explanation').classList.add('hidden');
+      document.getElementById('quiz-next-btn').classList.add('hidden');
+      document.getElementById('quiz-finish-btn').classList.add('hidden');
+    }
+
+    function selectAnswer(answer, btnEl) {
+      // Prevent double-clicking
+      if (document.querySelector('.quiz-option.selected, .quiz-option.correct')) return;
+
+      const q = quizQuestions[quizIndex];
+      const isCorrect = answer === q.correct_answer;
+
+      // Mark selected
+      btnEl.classList.add('selected');
+      btnEl.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+      // Show correct answer if wrong
+      if (!isCorrect) {
+        const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
+        const correctIdx = labels.indexOf(q.correct_answer);
+        const allBtns = document.querySelectorAll('.quiz-option');
+        if (allBtns[correctIdx]) allBtns[correctIdx].classList.add('correct');
+      }
+
+      // Disable all options
+      document.querySelectorAll('.quiz-option').forEach(b => {
+        b.style.pointerEvents = 'none';
+      });
+
+      // Record answer
+      quizAnswers.push({
+        question_id: q.id,
+        selected_answer: answer,
+        is_correct: isCorrect,
+        domain: q.domain,
+      });
+
+      // Save attempt to Supabase
+      sb.from('question_attempts').insert({
+        user_id: currentUser.id,
+        question_id: q.id,
+        selected_answer: answer,
+        is_correct: isCorrect,
+      }).then(() => {});
+
+      // Show explanation
+      const explEl = document.getElementById('quiz-explanation');
+      explEl.classList.remove('hidden');
+      document.getElementById('quiz-result-icon').innerHTML = isCorrect
+        ? '<svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+        : '<svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
+      document.getElementById('quiz-result-text').textContent = isCorrect ? 'Correct!' : `Incorrect — the answer is ${q.correct_answer}`;
+      document.getElementById('quiz-result-text').className = 'text-sm font-semibold ' + (isCorrect ? 'text-green-700' : 'text-red-600');
+      document.getElementById('quiz-explanation-text').textContent = q.explanation || 'No explanation available for this question.';
+      document.getElementById('quiz-reference').textContent = q.textbook_reference ? `Reference: ${q.textbook_reference}` : '';
+
+      // Show next/finish button
+      if (quizIndex < quizQuestions.length - 1) {
+        document.getElementById('quiz-next-btn').classList.remove('hidden');
+      } else {
+        document.getElementById('quiz-finish-btn').classList.remove('hidden');
+      }
+    }
+
+    document.getElementById('quiz-next-btn').addEventListener('click', () => {
+      quizIndex++;
+      renderQuestion();
+    });
+
+    document.getElementById('quiz-finish-btn').addEventListener('click', showQuizResults);
+
+    function showQuizResults() {
+      document.getElementById('quiz-active').classList.add('hidden');
+      document.getElementById('quiz-results').classList.remove('hidden');
+
+      const correct = quizAnswers.filter(a => a.is_correct).length;
+      const total = quizAnswers.length;
+      const pct = Math.round((correct / total) * 100);
+
+      document.getElementById('quiz-score').textContent = `${pct}%`;
+      document.getElementById('quiz-score-label').textContent = `${correct} of ${total} correct${pct >= 70 ? ' — Passing!' : ''}`;
+
+      // Domain breakdown
+      const domainResults = {};
+      for (const a of quizAnswers) {
+        if (!domainResults[a.domain]) domainResults[a.domain] = { correct: 0, total: 0 };
+        domainResults[a.domain].total++;
+        if (a.is_correct) domainResults[a.domain].correct++;
+      }
+
+      const resultsEl = document.getElementById('quiz-domain-results');
+      resultsEl.innerHTML = '';
+      for (const [d, stats] of Object.entries(domainResults).sort((a, b) => a[0] - b[0])) {
+        const dpct = Math.round((stats.correct / stats.total) * 100);
+        const color = dpct >= 80 ? 'bg-sage-400' : dpct >= 60 ? 'bg-yellow-400' : 'bg-red-400';
+        resultsEl.innerHTML += `
+          <div>
+            <div class="flex justify-between items-baseline mb-1">
+              <span class="text-sm font-medium text-herbchar-700">Domain ${d}: ${DOMAIN_NAMES[d]}</span>
+              <span class="text-xs text-parchment-400">${dpct}% (${stats.correct}/${stats.total})</span>
+            </div>
+            <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
+              <div class="progress-fill h-full ${color} rounded-full" style="width:${dpct}%"></div>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function resetQuiz() {
+      quizQuestions = [];
+      quizIndex = 0;
+      quizAnswers = [];
+      document.getElementById('quiz-setup').classList.remove('hidden');
+      document.getElementById('quiz-active').classList.add('hidden');
+      document.getElementById('quiz-results').classList.add('hidden');
+    }
+
+    // ── Init ──
+    checkSession();
+  </script>
+</body>
+</html>
