@@ -18,7 +18,7 @@ exports.handler = async (event) => {
   const serviceClient = getServiceClient();
 
   if (event.httpMethod === "GET") {
-    // Get all students with their stats
+    // Get all students
     const { data: students, error } = await serviceClient
       .from("student_profiles")
       .select("*")
@@ -26,29 +26,50 @@ exports.handler = async (event) => {
 
     if (error) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: error.message }) };
 
-    // Enrich with stats
-    const enriched = [];
-    for (const s of (students || [])) {
-      const { count: questionCount } = await serviceClient
-        .from("question_attempts")
-        .select("*", { count: "exact", head: true })
-        .eq("user_id", s.id);
+    // Batch: get question attempt counts grouped by user
+    const { data: attemptCounts } = await serviceClient
+      .rpc("get_attempt_counts_by_user") // Falls back to manual if RPC not available
+      .catch(() => ({ data: null }));
 
-      const { data: latestExam } = await serviceClient
-        .from("exam_attempts")
-        .select("score_pct, completed_at")
-        .eq("user_id", s.id)
-        .not("completed_at", "is", null)
-        .order("completed_at", { ascending: false })
-        .limit(1);
+    // Batch: get all exam attempts (completed only), sorted to find latest per user
+    const { data: allExams } = await serviceClient
+      .from("exam_attempts")
+      .select("user_id, score_pct, completed_at")
+      .not("completed_at", "is", null)
+      .order("completed_at", { ascending: false });
 
-      enriched.push({
-        ...s,
-        questions_practiced: questionCount || 0,
-        latest_exam_score: latestExam?.[0]?.score_pct || null,
-        latest_exam_date: latestExam?.[0]?.completed_at || null,
-      });
+    // Build lookup maps
+    const questionCountMap = {};
+    if (attemptCounts) {
+      for (const row of attemptCounts) questionCountMap[row.user_id] = row.count;
     }
+
+    // If RPC not available, fetch counts manually in a single query
+    if (!attemptCounts) {
+      const { data: attempts } = await serviceClient
+        .from("question_attempts")
+        .select("user_id");
+      if (attempts) {
+        for (const a of attempts) {
+          questionCountMap[a.user_id] = (questionCountMap[a.user_id] || 0) + 1;
+        }
+      }
+    }
+
+    const latestExamMap = {};
+    for (const e of (allExams || [])) {
+      if (!latestExamMap[e.user_id]) {
+        latestExamMap[e.user_id] = { score_pct: e.score_pct, completed_at: e.completed_at };
+      }
+    }
+
+    // Enrich students with pre-fetched stats
+    const enriched = (students || []).map(s => ({
+      ...s,
+      questions_practiced: questionCountMap[s.id] || 0,
+      latest_exam_score: latestExamMap[s.id]?.score_pct || null,
+      latest_exam_date: latestExamMap[s.id]?.completed_at || null,
+    }));
 
     return { statusCode: 200, headers: cors, body: JSON.stringify(enriched) };
   }

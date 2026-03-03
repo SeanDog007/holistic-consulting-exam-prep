@@ -478,6 +478,7 @@
               </div>
               <div class="text-right">
                 <p class="text-xs text-parchment-400"><span id="quiz-correct-count">0</span> correct</p>
+                <p id="exam-timer" class="text-xs font-mono text-herbchar-700 hidden"></p>
                 <button id="quiz-flag-btn" class="text-xs text-copper-400 hover:text-copper-500 mt-1" title="Flag for review">Flag</button>
               </div>
             </div>
@@ -1154,11 +1155,10 @@
       const count = parseInt(document.getElementById('quiz-count-select').value, 10);
 
       try {
-        let query = sb.from('questions').select('*').eq('is_active', true);
-        if (domain !== 'all') query = query.eq('domain', parseInt(domain, 10));
+        let url = 'questions?';
+        if (domain !== 'all') url += `domain=${domain}&`;
 
-        const { data: allQuestions, error } = await query;
-        if (error) throw error;
+        const allQuestions = await apiFetch(url);
         if (!allQuestions || allQuestions.length === 0) {
           showToast('No questions available for this domain yet.');
           return;
@@ -1211,38 +1211,52 @@
       document.getElementById('quiz-finish-btn').classList.add('hidden');
     }
 
-    function selectAnswer(answer, btnEl) {
+    async function selectAnswer(answer, btnEl) {
       if (document.querySelector('.quiz-option.selected, .quiz-option.correct')) return;
 
       const q = quizQuestions[quizIndex];
-      const isCorrect = answer === q.correct_answer;
+      // Disable all options immediately
+      document.querySelectorAll('.quiz-option').forEach(b => { b.style.pointerEvents = 'none'; });
+
+      // Submit to API and get server-validated result
+      let isCorrect, correctAnswer, explanation, reference;
+      try {
+        const result = await apiFetch('submit-answer', {
+          method: 'POST',
+          body: JSON.stringify({ question_id: q.id, selected_answer: answer }),
+        });
+        isCorrect = result.is_correct;
+        correctAnswer = result.correct_answer;
+        explanation = result.explanation;
+        reference = result.textbook_reference;
+      } catch (err) {
+        // Fallback to local check if API fails
+        isCorrect = answer === q.correct_answer;
+        correctAnswer = q.correct_answer;
+        explanation = q.explanation;
+        reference = q.textbook_reference;
+      }
 
       btnEl.classList.add('selected', isCorrect ? 'correct' : 'incorrect');
 
       if (!isCorrect) {
         const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
-        const correctIdx = labels.indexOf(q.correct_answer);
+        const correctIdx = labels.indexOf(correctAnswer);
         const allBtns = document.querySelectorAll('.quiz-option');
         if (allBtns[correctIdx]) allBtns[correctIdx].classList.add('correct');
       }
 
-      document.querySelectorAll('.quiz-option').forEach(b => { b.style.pointerEvents = 'none'; });
-
       quizAnswers.push({ question_id: q.id, selected_answer: answer, is_correct: isCorrect, domain: q.domain });
-
-      sb.from('question_attempts').insert({
-        user_id: currentUser.id, question_id: q.id, selected_answer: answer, is_correct: isCorrect,
-      }).then(() => {});
 
       const explEl = document.getElementById('quiz-explanation');
       explEl.classList.remove('hidden');
       document.getElementById('quiz-result-icon').innerHTML = isCorrect
         ? '<svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
         : '<svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
-      document.getElementById('quiz-result-text').textContent = isCorrect ? 'Correct!' : `Incorrect — the answer is ${q.correct_answer}`;
+      document.getElementById('quiz-result-text').textContent = isCorrect ? 'Correct!' : `Incorrect — the answer is ${correctAnswer}`;
       document.getElementById('quiz-result-text').className = 'text-sm font-semibold ' + (isCorrect ? 'text-green-700' : 'text-red-600');
-      document.getElementById('quiz-explanation-text').textContent = q.explanation || 'No explanation available for this question.';
-      document.getElementById('quiz-reference').textContent = q.textbook_reference ? `Reference: ${q.textbook_reference}` : '';
+      document.getElementById('quiz-explanation-text').textContent = explanation || 'No explanation available for this question.';
+      document.getElementById('quiz-reference').textContent = reference ? `Reference: ${reference}` : '';
 
       if (quizIndex < quizQuestions.length - 1) {
         document.getElementById('quiz-next-btn').classList.remove('hidden');
@@ -1254,9 +1268,10 @@
     document.getElementById('quiz-next-btn').addEventListener('click', () => { quizIndex++; renderQuestion(); });
     document.getElementById('quiz-finish-btn').addEventListener('click', showQuizResults);
 
-    function showQuizResults() {
+    async function showQuizResults() {
       document.getElementById('quiz-active').classList.add('hidden');
       document.getElementById('quiz-results').classList.remove('hidden');
+      clearInterval(examTimerInterval);
 
       const correct = quizAnswers.filter(a => a.is_correct).length;
       const total = quizAnswers.length;
@@ -1289,10 +1304,33 @@
           </div>
         `;
       }
+
+      // If this was a full exam, submit results to the API
+      if (examData && examData.exam_id) {
+        try {
+          await apiFetch('submit-exam', {
+            method: 'POST',
+            body: JSON.stringify({
+              exam_id: examData.exam_id,
+              answers: quizAnswers.map(a => ({
+                question_id: a.question_id,
+                selected_answer: a.selected_answer,
+              })),
+            }),
+          });
+          showToast('Exam results saved!');
+        } catch (err) {
+          showToast('Warning: Could not save exam results — ' + err.message);
+        }
+        examData = null;
+      }
     }
 
     function resetQuiz() {
       quizQuestions = []; quizIndex = 0; quizAnswers = [];
+      clearInterval(examTimerInterval);
+      document.getElementById('exam-timer').classList.add('hidden');
+      document.getElementById('exam-timer').classList.remove('text-red-600', 'font-bold');
       document.getElementById('quiz-setup').classList.remove('hidden');
       document.getElementById('quiz-active').classList.add('hidden');
       document.getElementById('quiz-results').classList.add('hidden');
@@ -1343,13 +1381,14 @@
 
     function startExamTimer() {
       clearInterval(examTimerInterval);
-      const timerEl = document.getElementById('quiz-correct-count');
+      const timerEl = document.getElementById('exam-timer');
+      timerEl.classList.remove('hidden');
       examTimerInterval = setInterval(() => {
         examTimeRemaining--;
         const m = Math.floor(examTimeRemaining / 60);
         const s = examTimeRemaining % 60;
         timerEl.textContent = `${m}:${s.toString().padStart(2, '0')}`;
-        if (examTimeRemaining <= 300) timerEl.classList.add('timer-urgent');
+        if (examTimeRemaining <= 300) timerEl.classList.add('text-red-600', 'font-bold');
         if (examTimeRemaining <= 0) {
           clearInterval(examTimerInterval);
           showToast('Time is up!');
@@ -1728,7 +1767,10 @@
                 </div>
                 <div class="shrink-0 text-right">
                   ${passRate !== null ? `<p class="text-xs text-parchment-400">${passRate}% pass (${q.times_shown})</p>` : '<p class="text-xs text-parchment-400">No data</p>'}
-                  <button onclick="editQuestion('${q.id}')" class="text-xs text-sage-400 hover:text-sage-500 mt-1">Edit</button>
+                  <div class="flex gap-2 mt-1 justify-end">
+                    <button onclick="editQuestion('${q.id}')" class="text-xs text-sage-400 hover:text-sage-500">Edit</button>
+                    <button onclick="toggleQuestionActive('${q.id}', ${!q.is_active})" class="text-xs ${q.is_active ? 'text-red-400 hover:text-red-500' : 'text-green-500 hover:text-green-600'}">${q.is_active ? 'Deactivate' : 'Activate'}</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1899,6 +1941,19 @@
         });
         closeModal();
         showToast('Question updated!');
+        loadAdminQuestions();
+      } catch (err) {
+        showToast('Error: ' + err.message);
+      }
+    }
+
+    async function toggleQuestionActive(id, newActive) {
+      try {
+        await apiFetch('questions', {
+          method: 'PATCH',
+          body: JSON.stringify({ id, is_active: newActive }),
+        });
+        showToast(newActive ? 'Question activated' : 'Question deactivated');
         loadAdminQuestions();
       } catch (err) {
         showToast('Error: ' + err.message);

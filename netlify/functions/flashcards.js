@@ -14,17 +14,40 @@ exports.handler = async (event) => {
   const params = event.queryStringParameters || {};
 
   if (event.httpMethod === "GET") {
-    // Get cards due for review
+    // Get cards due for review (includes new cards with no review record)
     if (params.due === "true") {
-      const { data: reviews } = await userClient
+      const limit = params.limit ? parseInt(params.limit) : 20;
+
+      // 1. Cards with review records that are due
+      const { data: dueReviews } = await userClient
         .from("flashcard_reviews")
         .select("*, flashcards(*)")
         .eq("user_id", user.id)
         .lte("next_review_at", new Date().toISOString())
         .order("next_review_at", { ascending: true })
-        .limit(params.limit ? parseInt(params.limit) : 20);
+        .limit(limit);
 
-      return { statusCode: 200, headers: cors, body: JSON.stringify(reviews || []) };
+      // 2. New cards — flashcards that have NO review record for this user
+      const { data: allCards } = await userClient
+        .from("flashcards")
+        .select("*")
+        .eq("is_active", true)
+        .order("domain")
+        .order("topic");
+
+      const { data: userReviews } = await userClient
+        .from("flashcard_reviews")
+        .select("flashcard_id")
+        .eq("user_id", user.id);
+
+      const reviewedIds = new Set((userReviews || []).map(r => r.flashcard_id));
+      const newCards = (allCards || [])
+        .filter(c => !reviewedIds.has(c.id))
+        .slice(0, Math.max(0, limit - (dueReviews || []).length))
+        .map(c => ({ flashcard_id: c.id, flashcards: c, is_new: true }));
+
+      const combined = [...(dueReviews || []), ...newCards].slice(0, limit);
+      return { statusCode: 200, headers: cors, body: JSON.stringify(combined) };
     }
 
     // Get all flashcards (optionally by domain)

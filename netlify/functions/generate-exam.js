@@ -29,7 +29,8 @@ exports.handler = async (event) => {
     examQuestions = shuffled.slice(0, Math.min(50, shuffled.length));
     totalQuestions = examQuestions.length;
   } else {
-    // Full 151-question exam weighted by domain
+    // Full exam weighted by domain — use available questions up to target
+    const targetTotal = Object.values(DOMAIN_DISTRIBUTION).reduce((a, b) => a + b, 0);
     for (const [domain, count] of Object.entries(DOMAIN_DISTRIBUTION)) {
       const { data: questions, error } = await userClient
         .from("questions").select("id, domain").eq("is_active", true).eq("domain", parseInt(domain));
@@ -39,7 +40,6 @@ exports.handler = async (event) => {
       const selected = shuffled.slice(0, Math.min(count, shuffled.length));
       examQuestions.push(...selected);
     }
-    // Shuffle all selected questions together
     examQuestions.sort(() => Math.random() - 0.5);
     totalQuestions = examQuestions.length;
   }
@@ -73,7 +73,7 @@ exports.handler = async (event) => {
   const questionIds = examQuestions.map(q => q.id);
   const { data: fullQuestions } = await userClient
     .from("questions")
-    .select("id, domain, topic, difficulty, cognitive_level, question_type, question_text, options")
+    .select("id, domain, topic, difficulty, cognitive_level, question_type, question_text, options, correct_answer, explanation, textbook_reference")
     .in("id", questionIds);
 
   // Maintain the shuffled order

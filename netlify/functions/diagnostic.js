@@ -59,17 +59,42 @@ exports.handler = async (event) => {
 
     // Generate diagnostic questions (5 per domain)
     const questions = [];
+    const domainCoverage = {};
+    const missingDomains = [];
+
     for (let domain = 1; domain <= 5; domain++) {
       const { data: domainQs } = await userClient
         .from("questions")
-        .select("id, domain, topic, difficulty, question_type, question_text, options")
+        .select("id, domain, topic, difficulty, question_type, question_text, options, correct_answer, explanation, textbook_reference")
         .eq("is_active", true)
         .eq("domain", domain);
 
-      if (domainQs && domainQs.length > 0) {
+      const count = domainQs ? domainQs.length : 0;
+      domainCoverage[domain] = count;
+
+      if (count === 0) {
+        missingDomains.push(domain);
+      } else {
         const shuffled = domainQs.sort(() => Math.random() - 0.5);
         questions.push(...shuffled.slice(0, Math.min(5, shuffled.length)));
       }
+    }
+
+    // If any domain has zero questions, return an informative error
+    if (missingDomains.length > 0) {
+      const domainNames = { 1: "Food & Nutrition", 2: "A&P / Biochem", 3: "Counseling / Ethics", 4: "Nutrition in Practice", 5: "Research" };
+      const missing = missingDomains.map(d => `Domain ${d} (${domainNames[d]})`).join(", ");
+      return {
+        statusCode: 200,
+        headers: cors,
+        body: JSON.stringify({
+          questions: [],
+          total: 0,
+          insufficient: true,
+          message: `The diagnostic assessment requires questions in all 5 domains. Missing: ${missing}. Ask your instructor to add more questions.`,
+          domain_coverage: domainCoverage,
+        }),
+      };
     }
 
     // Shuffle all together
