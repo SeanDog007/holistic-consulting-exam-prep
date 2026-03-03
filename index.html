@@ -131,7 +131,8 @@
   <!-- ═══════════════════════════════════════ -->
   <!-- LOGIN VIEW                             -->
   <!-- ═══════════════════════════════════════ -->
-  <div id="login-view" class="view active min-h-screen flex items-center justify-center p-4">
+  <div id="login-view" class="view active">
+    <div class="min-h-screen flex items-center justify-center p-4">
     <div class="w-full max-w-md">
       <div class="text-center mb-8">
         <h1 class="font-display text-3xl font-bold text-herbchar-700 tracking-tight">Holistic Consulting</h1>
@@ -160,6 +161,7 @@
       </div>
       <p class="text-center text-xs text-parchment-400 mt-6">Access is limited to enrolled GROW members.</p>
     </div>
+    </div>
   </div>
 
   <!-- ═══════════════════════════════════════ -->
@@ -178,7 +180,7 @@
     </header>
 
     <!-- Sidebar overlay (mobile) -->
-    <div id="sidebar-overlay" class="sidebar-overlay fixed inset-0 bg-black/30 z-40 lg:hidden"></div>
+    <div id="sidebar-overlay" class="sidebar-overlay fixed inset-0 bg-black/30 z-40 lg:hidden hidden"></div>
 
     <!-- Sidebar -->
     <aside id="sidebar" class="sidebar-panel fixed top-0 left-0 bottom-0 w-64 bg-white border-r border-parchment-300 z-50 lg:translate-x-0 lg:z-10 flex flex-col">
@@ -876,12 +878,17 @@
 
     // ── Auth ──
     async function checkSession() {
-      const { data: { session } } = await sb.auth.getSession();
-      if (session) {
-        currentUser = session.user;
-        await loadUserProfile();
-        showApp();
-      } else {
+      try {
+        const { data: { session } } = await sb.auth.getSession();
+        if (session) {
+          currentUser = session.user;
+          await loadUserProfile();
+          showApp();
+        } else {
+          showLogin();
+        }
+      } catch (err) {
+        console.error('Session check failed:', err);
         showLogin();
       }
     }
@@ -919,20 +926,35 @@
     // Login form
     document.getElementById('login-form').addEventListener('submit', async (e) => {
       e.preventDefault();
-      const email = document.getElementById('login-email').value;
+      const email = document.getElementById('login-email').value.trim();
       const password = document.getElementById('login-password').value;
       const errorEl = document.getElementById('login-error');
+      const submitBtn = e.target.querySelector('button[type="submit"]');
       errorEl.classList.add('hidden');
 
-      const { data, error } = await sb.auth.signInWithPassword({ email, password });
-      if (error) {
-        errorEl.textContent = error.message;
+      // Loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Signing in...';
+
+      try {
+        const { data, error } = await sb.auth.signInWithPassword({ email, password });
+        if (error) {
+          errorEl.textContent = error.message === 'Invalid login credentials'
+            ? 'Invalid email or password. Please try again.'
+            : error.message;
+          errorEl.classList.remove('hidden');
+          return;
+        }
+        currentUser = data.user;
+        await loadUserProfile();
+        showApp();
+      } catch (err) {
+        errorEl.textContent = 'Connection error. Please try again.';
         errorEl.classList.remove('hidden');
-        return;
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Sign In';
       }
-      currentUser = data.user;
-      await loadUserProfile();
-      showApp();
     });
 
     // Logout
