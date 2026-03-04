@@ -11,13 +11,13 @@ exports.handler = async (event) => {
   const token = extractToken(event.headers);
   if (!token) return { statusCode: 401, headers: cors, body: JSON.stringify({ error: "Unauthorized" }) };
 
-  // Verify caller is admin
+  // Verify caller is owner
   const userClient = getUserClient(token);
   const { data: { user }, error: authErr } = await userClient.auth.getUser();
   if (authErr || !user) return { statusCode: 401, headers: cors, body: JSON.stringify({ error: "Invalid token" }) };
 
-  const { data: profile } = await userClient.from("student_profiles").select("is_admin").eq("id", user.id).single();
-  if (!profile?.is_admin) return { statusCode: 403, headers: cors, body: JSON.stringify({ error: "Admin access required" }) };
+  const { data: accessProfile } = await userClient.from("user_profiles").select("role").eq("id", user.id).single();
+  if (accessProfile?.role !== 'owner') return { statusCode: 403, headers: cors, body: JSON.stringify({ error: "Owner access required" }) };
 
   const { email, displayName } = JSON.parse(event.body);
   if (!email || !displayName) {
@@ -42,7 +42,20 @@ exports.handler = async (event) => {
     return { statusCode: 500, headers: cors, body: JSON.stringify({ error: createErr.message }) };
   }
 
-  // Create student profile
+  // Create user_profiles row (access control)
+  const { error: accessErr } = await serviceClient.from("user_profiles").insert({
+    id: newUser.user.id,
+    display_name: displayName,
+    email: email.toLowerCase(),
+    role: 'member',
+    access_crm: false,
+    access_exam_prep: true,
+    access_case_study: false,
+    invited_by: user.id,
+  });
+  if (accessErr) console.error("user_profiles create error (non-fatal):", accessErr);
+
+  // Create student profile (exam-specific data)
   const { error: profileErr } = await serviceClient.from("student_profiles").insert({
     id: newUser.user.id,
     display_name: displayName,

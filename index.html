@@ -176,6 +176,22 @@
   </div>
 
   <!-- ═══════════════════════════════════════ -->
+  <!-- NO ACCESS VIEW                         -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="no-access-view" class="view">
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div class="text-center max-w-sm">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-parchment-200 flex items-center justify-center">
+          <svg class="w-8 h-8 text-parchment-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </div>
+        <h2 class="font-display text-2xl text-herbchar-700 mb-2">Access Restricted</h2>
+        <p class="text-sm text-parchment-400 mb-6">Your account doesn't have Exam Prep access. Contact your administrator to request access.</p>
+        <button onclick="(async()=>{await sb.auth.signOut();location.reload()})()" class="text-sm text-sage-400 hover:underline cursor-pointer">Sign out</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
   <!-- APP SHELL (authenticated)              -->
   <!-- ═══════════════════════════════════════ -->
   <div id="app-shell" class="view">
@@ -873,6 +889,7 @@
     // ── State ──
     let currentUser = null;
     let userProfile = null;
+    let accessProfile = null; // from user_profiles table
     let currentView = 'dashboard';
 
     // Quiz state
@@ -919,6 +936,9 @@
     async function loadUserProfile() {
       const data = await apiFetch('profile');
       if (data) userProfile = data;
+      // Load access control profile from user_profiles
+      const { data: ap } = await sb.from('user_profiles').select('*').eq('id', currentUser.id).single();
+      accessProfile = ap || null;
     }
 
     function showLogin() {
@@ -928,8 +948,18 @@
     }
 
     function showApp() {
+      // Access gate: check user_profiles for exam prep access
+      if (accessProfile && accessProfile.role !== 'owner' && !accessProfile.access_exam_prep) {
+        document.getElementById('loading-view').classList.add('hidden');
+        document.getElementById('login-view').classList.remove('active');
+        document.getElementById('app-shell').classList.remove('active');
+        document.getElementById('no-access-view').classList.add('active');
+        return;
+      }
+
       document.getElementById('loading-view').classList.add('hidden');
       document.getElementById('login-view').classList.remove('active');
+      document.getElementById('no-access-view').classList.remove('active');
       document.getElementById('app-shell').classList.add('active');
 
       const name = userProfile?.display_name || currentUser.email.split('@')[0];
@@ -937,7 +967,7 @@
       document.getElementById('user-email').textContent = currentUser.email;
       document.getElementById('dashboard-name').textContent = name.split(' ')[0];
 
-      if (userProfile?.is_admin) {
+      if (accessProfile?.role === 'owner') {
         document.getElementById('admin-nav').classList.remove('hidden');
       }
 
@@ -1674,7 +1704,7 @@
     // ADMIN: Students
     // ═══════════════════════════════════════
     async function loadAdminStudents() {
-      if (!userProfile?.is_admin) return;
+      if (accessProfile?.role !== 'owner') return;
       const el = document.getElementById('student-list');
       el.innerHTML = '<p class="text-sm text-parchment-400">Loading students...</p>';
 
@@ -1754,7 +1784,7 @@
     // ADMIN: Question Bank
     // ═══════════════════════════════════════
     async function loadAdminQuestions() {
-      if (!userProfile?.is_admin) return;
+      if (accessProfile?.role !== 'owner') return;
       const el = document.getElementById('admin-question-list');
       el.innerHTML = '<p class="text-sm text-parchment-400">Loading questions...</p>';
 
@@ -2017,7 +2047,7 @@
     // ADMIN: Flashcard Manager
     // ═══════════════════════════════════════
     async function loadAdminFlashcards() {
-      if (!userProfile?.is_admin) return;
+      if (accessProfile?.role !== 'owner') return;
       const el = document.getElementById('admin-flashcard-list');
       el.innerHTML = '<p class="text-sm text-parchment-400">Loading flashcards...</p>';
 
@@ -2122,7 +2152,7 @@
     // ADMIN: Analytics
     // ═══════════════════════════════════════
     async function loadAdminAnalytics() {
-      if (!userProfile?.is_admin) return;
+      if (accessProfile?.role !== 'owner') return;
       const el = document.getElementById('analytics-content');
       el.innerHTML = '<p class="text-sm text-parchment-400">Loading analytics...</p>';
 

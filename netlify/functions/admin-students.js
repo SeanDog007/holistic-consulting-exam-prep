@@ -11,9 +11,9 @@ exports.handler = async (event) => {
   const { data: { user }, error: authErr } = await userClient.auth.getUser();
   if (authErr || !user) return { statusCode: 401, headers: cors, body: JSON.stringify({ error: "Invalid token" }) };
 
-  // Verify admin
-  const { data: profile } = await userClient.from("student_profiles").select("is_admin").eq("id", user.id).single();
-  if (!profile?.is_admin) return { statusCode: 403, headers: cors, body: JSON.stringify({ error: "Admin access required" }) };
+  // Verify owner role via user_profiles
+  const { data: accessProfile } = await userClient.from("user_profiles").select("role").eq("id", user.id).single();
+  if (accessProfile?.role !== 'owner') return { statusCode: 403, headers: cors, body: JSON.stringify({ error: "Owner access required" }) };
 
   const serviceClient = getServiceClient();
 
