@@ -1845,8 +1845,10 @@
         : '<svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
       document.getElementById('quiz-result-text').textContent = isCorrect ? 'Correct!' : `Incorrect — the answer is ${String(correctAnswer).toUpperCase()}`;
       document.getElementById('quiz-result-text').className = 'text-sm font-semibold ' + (isCorrect ? 'text-green-700' : 'text-red-600');
-      document.getElementById('quiz-explanation-text').textContent = explanation || 'No explanation available for this question.';
-      document.getElementById('quiz-reference').textContent = reference ? `Reference: ${reference}` : '';
+      // Keep explanation simple — just show the study domain reference
+      const domainName = DOMAIN_NAMES[q.domain] || '';
+      document.getElementById('quiz-explanation-text').textContent = isCorrect ? '' : `Study this in Domain ${q.domain}: ${domainName}`;
+      document.getElementById('quiz-reference').textContent = '';
 
       if (quizIndex < quizQuestions.length - 1) {
         document.getElementById('quiz-next-btn').classList.remove('hidden');
@@ -2297,14 +2299,14 @@
 
       resultEl.innerHTML = `
         <div class="${isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'} border rounded-lg p-4 mb-4">
-          <div class="flex items-start gap-2 mb-1">
+          <div class="flex items-start gap-2">
             ${icon}
-            <p class="text-sm font-semibold ${isCorrect ? 'text-green-700' : 'text-red-600'}">${isCorrect ? 'Correct!' : 'Incorrect — the answer is ' + labels[correctIdx]}</p>
+            <div>
+              <p class="text-sm font-semibold ${isCorrect ? 'text-green-700' : 'text-red-600'}">${isCorrect ? 'Correct!' : 'Incorrect'}</p>
+              ${!isCorrect ? `<p class="text-sm text-herbchar-700 mt-1">The correct answer is <strong class="text-green-600">${labels[correctIdx]}. ${escapeHtml(correctText)}</strong></p>` : ''}
+              ${!isCorrect && resultDomain ? `<p class="text-xs text-parchment-400 mt-2">Study this in Domain ${resultDomain}: ${DOMAIN_NAMES[resultDomain] || ''}</p>` : ''}
+            </div>
           </div>
-          ${!isCorrect ? `<p class="text-sm text-herbchar-700 mt-1">The correct answer is <strong class="text-green-600">${labels[correctIdx]}. ${escapeHtml(correctText)}</strong></p>` : ''}
-          ${explanation ? `<p class="text-sm text-herbchar-700/80 leading-relaxed mt-2">${escapeHtml(explanation)}</p>` : ''}
-          ${reference ? `<p class="text-xs text-parchment-400 mt-2 italic">Reference: ${escapeHtml(reference)}</p>` : ''}
-          ${!isCorrect && resultDomain ? `<button onclick="switchView('study-guide'); setTimeout(() => { const tab = document.querySelector('.study-domain-tab[data-domain=\\'${resultDomain}\\']'); if (tab) tab.click(); }, 100);" class="mt-3 text-xs font-semibold text-sage-500 hover:text-sage-600 underline">Study Domain ${resultDomain}: ${DOMAIN_NAMES[resultDomain] || ''} →</button>` : ''}
         </div>
         <button onclick="nextPracticeQuestion()" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white font-semibold rounded-lg transition-colors">
           Next →
@@ -2695,11 +2697,11 @@
       feedback.classList.remove('hidden');
       if (isCorrect) {
         feedback.className = 'mt-3 text-sm rounded-md p-3 bg-green-50 border border-green-200 text-green-800';
-        feedback.innerHTML = `<strong>Correct!</strong> ${q.explanation ? escapeHtml(q.explanation) : ''}`;
+        feedback.innerHTML = `<strong>Correct!</strong>`;
       } else {
         feedback.className = 'mt-3 text-sm rounded-md p-3 bg-red-50 border border-red-200 text-red-800';
         const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
-        feedback.innerHTML = `<strong>Incorrect.</strong> The correct answer is ${labels[correctIdx]}. ${q.explanation ? escapeHtml(q.explanation) : ''}`;
+        feedback.innerHTML = `<strong>Incorrect.</strong> The correct answer is <strong>${labels[correctIdx]}</strong>.`;
       }
 
       // POST to practice endpoint if we have a question ID
