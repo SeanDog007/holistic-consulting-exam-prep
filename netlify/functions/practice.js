@@ -127,7 +127,13 @@ exports.handler = async (event) => {
       .single();
     if (qErr || !question) return { statusCode: 404, headers: cors, body: JSON.stringify({ error: "Question not found" }) };
 
-    const isCorrect = selected_answer === question.correct_answer;
+    // correct_answer is stored as a letter ("a", "b", "c", "d")
+    // selected_answer comes from client as 0-based index
+    const indexToLetter = ['a', 'b', 'c', 'd', 'e', 'f'];
+    const letterToIndex = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5 };
+    const selectedLetter = indexToLetter[selected_answer] || '';
+    const isCorrect = selectedLetter === question.correct_answer;
+    const correctIdx = letterToIndex[question.correct_answer] ?? -1;
 
     // 2. SM-2 quality: correct = 4, incorrect = 1
     const quality = isCorrect ? 4 : 1;
@@ -178,7 +184,7 @@ exports.handler = async (event) => {
     const { error: attemptErr } = await userClient.from("question_attempts").insert({
       user_id: user.id,
       question_id,
-      selected_answer,
+      selected_answer: selectedLetter,
       is_correct: isCorrect,
     });
     if (attemptErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: attemptErr.message }) };
@@ -194,9 +200,9 @@ exports.handler = async (event) => {
       await serviceClient.from("questions").update(updates).eq("id", question_id);
     }
 
-    // 7. Build response with correct answer text
+    // 7. Build response with correct answer text (return 0-based index for frontend)
     const correctText = question.options && Array.isArray(question.options)
-      ? (question.options[question.correct_answer - 1] || null)
+      ? (question.options[correctIdx] || null)
       : null;
 
     return {
@@ -204,7 +210,7 @@ exports.handler = async (event) => {
       headers: cors,
       body: JSON.stringify({
         correct: isCorrect,
-        correctAnswer: question.correct_answer,
+        correctAnswer: correctIdx,
         correctText,
         explanation: question.explanation || null,
         textbook_reference: question.textbook_reference || null,

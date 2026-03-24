@@ -475,24 +475,74 @@
 
         <!-- ─── PRACTICE VIEW ─── -->
         <div id="view-practice" class="view">
-          <h1 class="font-display text-3xl font-bold text-herbchar-700 mb-1">Practice</h1>
-          <p class="text-sm text-parchment-400 mb-6">Adaptive questions powered by spaced repetition — focus on what you need to learn.</p>
+          <!-- Setup screen -->
+          <div id="practice-setup">
+            <h1 class="font-display text-3xl font-bold text-herbchar-700 mb-1">Practice</h1>
+            <p class="text-sm text-parchment-400 mb-8">Adaptive questions powered by spaced repetition — focus on what you need to learn.</p>
 
-          <!-- Domain filter bar -->
-          <div id="practice-domain-filter" class="flex flex-wrap gap-2 mb-6">
-            <button onclick="loadPractice(null)" data-practice-domain="" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-sage-400 bg-sage-400 text-white transition-colors">All</button>
-            <button onclick="loadPractice(1)" data-practice-domain="1" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 1</button>
-            <button onclick="loadPractice(2)" data-practice-domain="2" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 2</button>
-            <button onclick="loadPractice(3)" data-practice-domain="3" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 3</button>
-            <button onclick="loadPractice(4)" data-practice-domain="4" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 4</button>
-            <button onclick="loadPractice(5)" data-practice-domain="5" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 5</button>
+            <div class="max-w-lg">
+              <!-- Domain selection -->
+              <div class="mb-6">
+                <label class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-3 block">Domain</label>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <input type="radio" name="practice-domain" value="" checked class="accent-sage-400"> <span class="text-sm text-herbchar-700 font-medium">All Domains</span>
+                  </label>
+                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <input type="radio" name="practice-domain" value="1" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 1: Food &amp; Nutrition</span> <span class="ml-auto text-xs text-parchment-400">35%</span>
+                  </label>
+                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <input type="radio" name="practice-domain" value="2" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 2: A&amp;P / Biochemistry</span> <span class="ml-auto text-xs text-parchment-400">15%</span>
+                  </label>
+                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <input type="radio" name="practice-domain" value="3" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 3: Counseling / Ethics / Scope</span> <span class="ml-auto text-xs text-parchment-400">10%</span>
+                  </label>
+                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <input type="radio" name="practice-domain" value="4" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 4: Nutrition in Practice</span> <span class="ml-auto text-xs text-parchment-400">30%</span>
+                  </label>
+                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <input type="radio" name="practice-domain" value="5" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 5: Research</span> <span class="ml-auto text-xs text-parchment-400">10%</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Session length -->
+              <div class="mb-8">
+                <label class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-3 block">Session Length</label>
+                <div class="flex gap-3">
+                  <label class="flex-1 text-center px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <input type="radio" name="practice-length" value="10" class="hidden peer">
+                    <span class="block text-sm font-medium text-herbchar-700 peer-checked:text-sage-500">Quick</span>
+                    <span class="block text-xs text-parchment-400">10 questions</span>
+                  </label>
+                  <label class="flex-1 text-center px-4 py-3 rounded-lg border border-sage-400 bg-sage-50 cursor-pointer hover:border-sage-400 transition-colors">
+                    <input type="radio" name="practice-length" value="20" checked class="hidden peer">
+                    <span class="block text-sm font-medium text-sage-500">Standard</span>
+                    <span class="block text-xs text-parchment-400">20 questions</span>
+                  </label>
+                  <label class="flex-1 text-center px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <input type="radio" name="practice-length" value="40" class="hidden peer">
+                    <span class="block text-sm font-medium text-herbchar-700 peer-checked:text-sage-500">Deep</span>
+                    <span class="block text-xs text-parchment-400">40 questions</span>
+                  </label>
+                </div>
+              </div>
+
+              <button onclick="startPracticeSession()" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-lg transition-colors">
+                Start Practice →
+              </button>
+            </div>
           </div>
 
-          <!-- Stats bar -->
-          <div id="practice-stats" class="flex gap-4 mb-6 text-xs text-parchment-400"></div>
-
-          <!-- Question area -->
-          <div id="practice-area"></div>
+          <!-- Active practice (hidden until started) -->
+          <div id="practice-active" class="hidden">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="font-display text-xl font-bold text-herbchar-700">Practice</h2>
+              <button onclick="showPracticeSetup()" class="text-xs text-parchment-400 hover:text-herbchar-700 transition-colors">← Back to setup</button>
+            </div>
+            <div id="practice-stats" class="flex gap-4 mb-4 text-xs text-parchment-400"></div>
+            <div id="practice-area"></div>
+          </div>
         </div>
 
         <!-- ─── QUIZ ACTIVE (shared by Domain Exams & Full Exam) ─── -->
@@ -1036,7 +1086,7 @@
       // Load view data
       if (viewName === 'dashboard') loadDashboard();
       else if (viewName === 'study-guide') loadStudyGuide();
-      else if (viewName === 'practice') loadPractice(activePracticeDomain);
+      else if (viewName === 'practice') showPracticeSetup();
       else if (viewName === 'exam-history') loadExamHistory();
       else if (viewName === 'study-plan') loadStudyPlan();
       else if (viewName === 'domain-exams') loadDomainExams();
@@ -1555,20 +1605,43 @@
     let practiceCorrect = 0;
     let practiceIncorrect = 0;
     let activePracticeDomain = null;
+    let activePracticeLimit = 20;
+    let practiceDomainResults = {}; // { domain: { correct: N, total: N } }
+    let practiceWrongTopics = []; // topics user got wrong
 
-    async function loadPractice(domain) {
-      activePracticeDomain = domain;
+    function showPracticeSetup() {
+      document.getElementById('practice-setup').classList.remove('hidden');
+      document.getElementById('practice-active').classList.add('hidden');
+    }
 
-      // Update active domain filter button styling
-      document.querySelectorAll('.practice-domain-btn').forEach(btn => {
-        const btnDomain = btn.dataset.practiceDomain;
-        const isActive = (domain === null && btnDomain === '') || (String(domain) === btnDomain);
-        if (isActive) {
-          btn.className = 'practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-sage-400 bg-sage-400 text-white transition-colors';
+    function startPracticeSession() {
+      const domainRadio = document.querySelector('input[name="practice-domain"]:checked');
+      const lengthRadio = document.querySelector('input[name="practice-length"]:checked');
+      const domain = domainRadio?.value ? parseInt(domainRadio.value) : null;
+      const limit = lengthRadio?.value ? parseInt(lengthRadio.value) : 20;
+
+      // Update length button styles
+      document.querySelectorAll('input[name="practice-length"]').forEach(r => {
+        const label = r.closest('label');
+        if (r.checked) {
+          label.classList.remove('border-parchment-300', 'bg-white');
+          label.classList.add('border-sage-400', 'bg-sage-50');
         } else {
-          btn.className = 'practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors';
+          label.classList.remove('border-sage-400', 'bg-sage-50');
+          label.classList.add('border-parchment-300', 'bg-white');
         }
       });
+
+      document.getElementById('practice-setup').classList.add('hidden');
+      document.getElementById('practice-active').classList.remove('hidden');
+      loadPractice(domain, limit);
+    }
+
+    async function loadPractice(domain, limit) {
+      activePracticeDomain = domain;
+      activePracticeLimit = limit || 20;
+      practiceDomainResults = {};
+      practiceWrongTopics = [];
 
       const area = document.getElementById('practice-area');
       const statsEl = document.getElementById('practice-stats');
@@ -1578,8 +1651,7 @@
       try {
         const domainParam = domain ? `&domain=${domain}` : '';
 
-        // Fetch from unified practice endpoint (SM-2 spaced repetition)
-        const result = await apiFetch(`practice?limit=20${domainParam}`);
+        const result = await apiFetch(`practice?limit=${activePracticeLimit}${domainParam}`);
         const questions = result.questions || [];
         const dueCount = result.dueCount || 0;
         const newCount = result.newCount || 0;
@@ -1589,14 +1661,12 @@
           return;
         }
 
-        // Shuffle combined set
         practiceStack = questions.sort(() => Math.random() - 0.5);
         practiceIdx = 0;
         practiceCorrect = 0;
         practiceIncorrect = 0;
 
-        // Stats bar
-        statsEl.innerHTML = `<span>${practiceStack.length} questions</span>${dueCount > 0 ? `<span>${dueCount} due for review</span>` : ''}${newCount > 0 ? `<span>${newCount} new</span>` : ''}`;
+        statsEl.innerHTML = `<span>${practiceStack.length} questions</span>${dueCount > 0 ? `<span>· ${dueCount} due for review</span>` : ''}${newCount > 0 ? `<span>· ${newCount} new</span>` : ''}`;
 
         renderPracticeQuestion();
       } catch (err) {
@@ -1608,24 +1678,57 @@
       const area = document.getElementById('practice-area');
 
       if (practiceIdx >= practiceStack.length) {
-        // Session summary
+        // Session summary with domain breakdown
         const total = practiceCorrect + practiceIncorrect;
         const pct = total > 0 ? Math.round((practiceCorrect / total) * 100) : 0;
         const pctColor = pct >= 80 ? 'text-green-600' : pct >= 60 ? 'text-yellow-600' : 'text-red-500';
-        area.innerHTML = `
-          <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-8 max-w-lg mx-auto text-center">
-            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-4">Session Complete</p>
-            <p class="text-4xl font-bold ${pctColor} mb-1">${pct}%</p>
-            <p class="text-sm text-parchment-400 mb-6">${practiceCorrect} correct, ${practiceIncorrect} incorrect out of ${total}</p>
-            <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden mb-6">
-              <div class="h-full ${pct >= 80 ? 'bg-sage-400' : pct >= 60 ? 'bg-yellow-400' : 'bg-red-400'} rounded-full" style="width:${pct}%"></div>
+        const barColor = pct >= 80 ? 'bg-sage-400' : pct >= 60 ? 'bg-yellow-400' : 'bg-red-400';
+
+        // Domain breakdown
+        const domainRows = Object.keys(practiceDomainResults).sort().map(d => {
+          const dr = practiceDomainResults[d];
+          const dPct = dr.total > 0 ? Math.round((dr.correct / dr.total) * 100) : 0;
+          const dColor = dPct >= 80 ? 'bg-sage-400' : dPct >= 60 ? 'bg-yellow-400' : 'bg-red-400';
+          return `
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-parchment-400 w-24 shrink-0">D${d}: ${DOMAIN_NAMES[d] || ''}</span>
+              <div class="flex-1 h-1.5 bg-parchment-200 rounded-full overflow-hidden">
+                <div class="h-full ${dColor} rounded-full" style="width:${dPct}%"></div>
+              </div>
+              <span class="text-xs font-medium text-herbchar-700 w-12 text-right">${dPct}%</span>
             </div>
-            <button onclick="loadPractice(activePracticeDomain)" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
-              Practice More
-            </button>
-            <button onclick="switchView('dashboard')" class="w-full py-2.5 text-sm text-parchment-400 hover:text-herbchar-700 transition-colors mt-2">
-              Back to Dashboard
-            </button>
+          `;
+        }).join('');
+
+        // Weak topics
+        const uniqueTopics = [...new Set(practiceWrongTopics)];
+        const weakHtml = uniqueTopics.length > 0 ? `
+          <div class="mt-4 pt-4 border-t border-parchment-200">
+            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-2">Topics to Review</p>
+            <div class="flex flex-wrap gap-1.5">
+              ${uniqueTopics.slice(0, 8).map(t => `<span class="px-2 py-1 text-xs bg-red-50 text-red-500 rounded-md border border-red-200">${escapeHtml(t)}</span>`).join('')}
+            </div>
+          </div>
+        ` : '';
+
+        area.innerHTML = `
+          <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-8 max-w-lg mx-auto">
+            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-4 text-center">Session Complete</p>
+            <p class="text-4xl font-bold ${pctColor} mb-1 text-center">${pct}%</p>
+            <p class="text-sm text-parchment-400 mb-4 text-center">${practiceCorrect} correct, ${practiceIncorrect} incorrect out of ${total}</p>
+            <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden mb-6">
+              <div class="h-full ${barColor} rounded-full" style="width:${pct}%"></div>
+            </div>
+            ${domainRows ? `<div class="space-y-2 mb-4">${domainRows}</div>` : ''}
+            ${weakHtml}
+            <div class="mt-6 space-y-2">
+              <button onclick="showPracticeSetup()" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                Practice More
+              </button>
+              <button onclick="switchView('dashboard')" class="w-full py-2.5 text-sm text-parchment-400 hover:text-herbchar-700 transition-colors">
+                Back to Dashboard
+              </button>
+            </div>
           </div>
         `;
         return;
@@ -1682,9 +1785,18 @@
         return;
       }
 
-      // Update counters
+      // Update counters + domain tracking
       if (isCorrect) practiceCorrect++;
-      else practiceIncorrect++;
+      else {
+        practiceIncorrect++;
+        if (q.topic) practiceWrongTopics.push(q.topic);
+      }
+      const d = q.domain;
+      if (d) {
+        if (!practiceDomainResults[d]) practiceDomainResults[d] = { correct: 0, total: 0 };
+        practiceDomainResults[d].total++;
+        if (isCorrect) practiceDomainResults[d].correct++;
+      }
 
       // Highlight correct/incorrect options
       document.querySelectorAll('.practice-option').forEach((btn, i) => {
