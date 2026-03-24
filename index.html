@@ -240,6 +240,10 @@
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
           Practice Quiz
         </button>
+        <button data-view="domain-exams" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+          Domain Exams
+        </button>
         <button data-view="full-exam" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           Full Exam (151 Q)
@@ -573,6 +577,16 @@
           <div id="flashcard-area" class="max-w-xl mx-auto">
             <p class="text-sm text-parchment-400 italic text-center py-12">Loading flashcards...</p>
           </div>
+        </div>
+
+        <!-- ─── DOMAIN EXAMS VIEW ─── -->
+        <div id="view-domain-exams" class="view">
+          <div class="mb-6">
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Domain Exams</h2>
+            <p class="text-sm text-parchment-400 mt-1">Fixed practice exams organized by domain — same questions every time for consistent tracking.</p>
+          </div>
+          <div id="domain-exams-loading" class="text-sm text-parchment-400">Loading exams...</div>
+          <div id="domain-exams-list" class="space-y-4 hidden"></div>
         </div>
 
         <!-- ─── FULL EXAM VIEW ─── -->
@@ -1036,6 +1050,7 @@
       else if (viewName === 'flashcards') loadFlashcards();
       else if (viewName === 'exam-history') loadExamHistory();
       else if (viewName === 'study-plan') loadStudyPlan();
+      else if (viewName === 'domain-exams') loadDomainExams();
       else if (viewName === 'admin-students') loadAdminStudents();
       else if (viewName === 'admin-questions') loadAdminQuestions();
       else if (viewName === 'admin-flashcards') loadAdminFlashcards();
@@ -1196,6 +1211,101 @@
       if (score >= 80) label.textContent = "You're looking exam-ready!";
       else if (score >= 60) label.textContent = 'Good progress. Keep practicing weak areas.';
       else label.textContent = 'Focus on your weakest domains to build your score.';
+    }
+
+    // ── Domain Exams ──
+    const DOMAIN_NAMES = {
+      1: 'Food & Nutrition',
+      2: 'A&P / Biochemistry',
+      3: 'Counseling / Ethics / Scope',
+      4: 'Nutrition in Practice',
+      5: 'Research',
+    };
+    const DOMAIN_WEIGHTS = { 1: '35%', 2: '15%', 3: '10%', 4: '30%', 5: '10%' };
+
+    async function loadDomainExams() {
+      const $loading = document.getElementById('domain-exams-loading');
+      const $list = document.getElementById('domain-exams-list');
+      $loading.classList.remove('hidden');
+      $list.classList.add('hidden');
+
+      try {
+        const res = await apiFetch('domain-exams');
+        const { domains } = res;
+
+        $list.innerHTML = '';
+        for (let d = 1; d <= 5; d++) {
+          const exams = domains[d] || [];
+          if (exams.length === 0) continue;
+
+          const totalQs = exams.reduce((s, e) => s + e.questionCount, 0);
+          const section = document.createElement('div');
+          section.className = 'bg-white rounded-lg shadow-card border border-parchment-300 overflow-hidden';
+          section.innerHTML = `
+            <button class="domain-exam-toggle w-full flex items-center justify-between p-4 text-left hover:bg-parchment-50 transition-colors" data-domain="${d}">
+              <div>
+                <h3 class="font-display text-lg font-bold text-herbchar-700">Domain ${d}: ${DOMAIN_NAMES[d]}</h3>
+                <p class="text-xs text-parchment-400 mt-0.5">${DOMAIN_WEIGHTS[d]} of exam · ${exams.length} exams · ${totalQs} questions</p>
+              </div>
+              <svg class="w-5 h-5 text-parchment-400 transition-transform domain-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="domain-exam-body hidden border-t border-parchment-200 p-4 space-y-2">
+              ${exams.map((exam, i) => `
+                <div class="flex items-center justify-between p-3 rounded-md border border-parchment-200 hover:border-sage-300 hover:bg-sage-50/30 transition-colors">
+                  <div>
+                    <p class="text-sm font-medium text-herbchar-700">Exam ${i + 1}</p>
+                    <p class="text-xs text-parchment-400">${exam.questionCount} questions</p>
+                  </div>
+                  <button onclick="startDomainExam('${exam.name.replace(/'/g, "\\'")}')" class="px-4 py-1.5 bg-sage-400 hover:bg-sage-500 text-white text-xs font-semibold rounded-md transition-colors">
+                    Start
+                  </button>
+                </div>
+              `).join('')}
+            </div>
+          `;
+          $list.appendChild(section);
+        }
+
+        // Toggle accordion
+        $list.querySelectorAll('.domain-exam-toggle').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const body = btn.nextElementSibling;
+            const chevron = btn.querySelector('.domain-chevron');
+            body.classList.toggle('hidden');
+            chevron.style.transform = body.classList.contains('hidden') ? '' : 'rotate(180deg)';
+          });
+        });
+
+        $loading.classList.add('hidden');
+        $list.classList.remove('hidden');
+      } catch (err) {
+        $loading.textContent = 'Failed to load exams: ' + err.message;
+      }
+    }
+
+    async function startDomainExam(examName) {
+      try {
+        const res = await apiFetch('domain-exams?exam=' + encodeURIComponent(examName));
+
+        // Reuse the practice quiz UI and state
+        quizQuestions = res.questions;
+        quizIndex = 0;
+        quizAnswers = [];
+        quizStartTime = Date.now();
+
+        // Switch to practice quiz view to show the quiz UI
+        document.querySelectorAll('main .view').forEach(v => v.classList.remove('active'));
+        document.getElementById('view-practice-quiz').classList.add('active');
+
+        document.getElementById('quiz-setup').classList.add('hidden');
+        document.getElementById('quiz-active').classList.remove('hidden');
+        document.getElementById('quiz-results').classList.add('hidden');
+        document.getElementById('quiz-total-num').textContent = quizQuestions.length;
+
+        renderQuestion();
+      } catch (err) {
+        alert('Failed to start exam: ' + err.message);
+      }
     }
 
     // ── Practice Quiz ──
