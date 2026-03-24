@@ -1526,7 +1526,6 @@
                 </p>
                 <div class="flex items-center gap-2 flex-wrap">
                   <button onclick="loadLesson('${item.lesson_id}', 'focus-areas')" class="px-3 py-1.5 text-xs font-semibold text-white bg-sage-400 rounded hover:bg-sage-500 transition-colors">Study Lesson →</button>
-                  <button onclick="startPracticeDomain(${item.domain})" class="px-3 py-1.5 text-xs font-semibold text-sage-500 border border-sage-300 rounded hover:bg-sage-50 transition-colors">Practice →</button>
                   <div class="ml-auto flex items-center gap-1">
                     <button onclick="dismissFocusArea('${item.id}')" class="px-2 py-1 text-[10px] text-parchment-400 hover:text-parchment-600 transition-colors" title="Dismiss (hide until you miss related questions again)">Dismiss</button>
                     <button onclick="completeFocusArea('${item.id}')" class="px-2 py-1 text-[10px] font-semibold text-sage-500 hover:text-sage-700 transition-colors" title="Mark complete (also completes in Study Guides)">✓ Complete</button>
@@ -1599,15 +1598,6 @@
         listEl.innerHTML = '';
         document.getElementById('focus-areas-empty')?.classList.remove('hidden');
       }
-    }
-
-    function startPracticeDomain(domain) {
-      switchView('practice');
-      setTimeout(() => {
-        const radio = document.querySelector(`input[name="practice-domain"][value="${domain}"]`);
-        if (radio) radio.checked = true;
-        startPracticeSession();
-      }, 100);
     }
 
     async function updateFocusBadge() {
