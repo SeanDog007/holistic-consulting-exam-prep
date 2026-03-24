@@ -2303,7 +2303,7 @@
             ${icon}
             <div>
               <p class="text-sm font-semibold ${isCorrect ? 'text-green-700' : 'text-red-600'}">${isCorrect ? 'Correct!' : 'Incorrect'}</p>
-              ${!isCorrect ? `<p class="text-sm text-herbchar-700 mt-1">The correct answer is <strong class="text-green-600">${labels[correctIdx]}. ${escapeHtml(correctText)}</strong></p>` : ''}
+              ${!isCorrect && correctIdx >= 0 ? `<p class="text-sm text-herbchar-700 mt-1">The correct answer is <strong class="text-green-600">${labels[correctIdx]}${correctText ? '. ' + escapeHtml(correctText) : ''}</strong></p>` : ''}
               ${!isCorrect && resultDomain ? `<p class="text-xs text-parchment-400 mt-2">Study this in Domain ${resultDomain}: ${DOMAIN_NAMES[resultDomain] || ''}</p>` : ''}
             </div>
           </div>
