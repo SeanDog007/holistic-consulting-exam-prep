@@ -2374,11 +2374,16 @@
       document.getElementById('lesson-exam-alert').classList.add('hidden');
 
       try {
-        const lesson = await apiFetch(`curriculum?lesson=${lessonId}`);
+        const data = await apiFetch(`curriculum?lesson=${lessonId}`);
+        const lesson = data.lesson || {};
+        const mod = data.module || {};
+        const progress = data.progress || {};
+        const practiceQs = data.practice_questions || [];
+        const nav = data.navigation || {};
 
         // Title and subtitle
         document.getElementById('lesson-title').textContent = lesson.title || 'Lesson';
-        document.getElementById('lesson-subtitle').textContent = lesson.module_title || '';
+        document.getElementById('lesson-subtitle').textContent = mod.title ? `Module: ${mod.title}` : '';
 
         // Estimated time
         document.getElementById('lesson-time-text').textContent = lesson.estimated_minutes ? `${lesson.estimated_minutes} min` : '';
@@ -2391,7 +2396,7 @@
         }
 
         // Content
-        document.getElementById('lesson-body').innerHTML = lesson.content_html ? cleanStudyContent(lesson.content_html, lesson.title) : '<p class="text-sm text-parchment-400 italic">No content available.</p>';
+        document.getElementById('lesson-body').innerHTML = lesson.content_html ? cleanStudyContent(lesson.content_html, lesson.title) : '<p class="text-sm text-parchment-400 italic">No content available for this lesson yet.</p>';
 
         // Key takeaways
         if (lesson.key_takeaways && lesson.key_takeaways.length > 0) {
@@ -2407,10 +2412,10 @@
         }
 
         // Practice questions
-        if (lesson.practice_questions && lesson.practice_questions.length > 0) {
+        if (practiceQs && practiceQs.length > 0) {
           document.getElementById('lesson-practice').classList.remove('hidden');
           const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
-          document.getElementById('lesson-questions').innerHTML = lesson.practice_questions.map((q, qIdx) => `
+          document.getElementById('lesson-questions').innerHTML = practiceQs.map((q, qIdx) => `
             <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-5" id="lesson-q-${qIdx}">
               <p class="text-sm font-medium text-herbchar-700 mb-3">${qIdx + 1}. ${escapeHtml(q.question_text)}</p>
               <div class="space-y-2">
@@ -2426,7 +2431,7 @@
           `).join('');
 
           // Store correct answers for local check
-          window._lessonQuestions = lesson.practice_questions;
+          window._lessonQuestions = practiceQs;
         } else {
           document.getElementById('lesson-practice').classList.add('hidden');
         }
@@ -2434,7 +2439,7 @@
         // Mark complete button state
         const completeBtn = document.getElementById('lesson-complete-btn');
         const completeText = document.getElementById('lesson-complete-text');
-        if (lesson.is_completed) {
+        if (progress.is_completed) {
           completeBtn.classList.remove('bg-sage-400', 'hover:bg-sage-500');
           completeBtn.classList.add('bg-green-500', 'hover:bg-green-600');
           completeText.textContent = 'Completed';
