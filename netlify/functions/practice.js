@@ -132,8 +132,9 @@ exports.handler = async (event) => {
     const indexToLetter = ['a', 'b', 'c', 'd', 'e', 'f'];
     const letterToIndex = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5 };
     const selectedLetter = indexToLetter[selected_answer] || '';
-    const isCorrect = selectedLetter === question.correct_answer;
-    const correctIdx = letterToIndex[question.correct_answer] ?? -1;
+    const correctLetter = String(question.correct_answer).toLowerCase();
+    const isCorrect = selectedLetter === correctLetter;
+    const correctIdx = letterToIndex[correctLetter] ?? -1;
 
     // 2. SM-2 quality: correct = 4, incorrect = 1
     const quality = isCorrect ? 4 : 1;
