@@ -244,17 +244,14 @@
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
           Study Guides
         </button>
-        <button data-view="flashcards" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
-          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-          Flashcards
-          <span id="flashcard-due-badge" class="ml-auto text-[10px] font-semibold bg-copper-400 text-white rounded-full px-1.5 py-0.5 hidden">0</span>
-        </button>
 
         <p class="px-3 pt-4 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-parchment-400">Practice</p>
-        <button data-view="practice-quiz" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+        <button data-view="practice" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-          Practice Quiz
+          Practice
         </button>
+
+        <p class="px-3 pt-4 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-parchment-400">Test</p>
         <button data-view="domain-exams" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/></svg>
           Domain Exams
@@ -428,7 +425,7 @@
                   <p class="text-sm font-medium text-herbchar-700">Take the diagnostic assessment</p>
                   <p class="text-xs text-parchment-400 mt-0.5">25 questions to identify your strengths and weak areas. Takes ~15 minutes.</p>
                 </div>
-                <button onclick="switchView('practice-quiz')" class="ml-auto shrink-0 px-3 py-1.5 text-xs font-semibold text-sage-400 border border-sage-400 rounded hover:bg-sage-400 hover:text-white transition-colors">Start</button>
+                <button onclick="switchView('practice')" class="ml-auto shrink-0 px-3 py-1.5 text-xs font-semibold text-sage-400 border border-sage-400 rounded hover:bg-sage-400 hover:text-white transition-colors">Start</button>
               </div>
             </div>
           </div>
@@ -476,44 +473,32 @@
           </div>
         </div>
 
-        <!-- ─── PRACTICE QUIZ VIEW ─── -->
-        <div id="view-practice-quiz" class="view">
-          <!-- Setup screen -->
-          <div id="quiz-setup">
-            <div class="mb-6">
-              <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Practice Quiz</h2>
-              <p class="text-sm text-parchment-400 mt-1">Test your knowledge with adaptive practice questions.</p>
-            </div>
-            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 max-w-lg">
-              <div class="space-y-4">
-                <div>
-                  <label class="block text-sm font-medium text-herbchar-700 mb-2">Domain</label>
-                  <select id="quiz-domain-select" class="w-full px-3 py-2.5 border border-parchment-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-sage-400/30 focus:border-sage-400">
-                    <option value="all">All Domains (Adaptive)</option>
-                    <option value="1">Domain 1: Food & Nutrition (35%)</option>
-                    <option value="2">Domain 2: A&P / Biochemistry (15%)</option>
-                    <option value="3">Domain 3: Counseling / Ethics / Scope (10%)</option>
-                    <option value="4">Domain 4: Nutrition in Practice (30%)</option>
-                    <option value="5">Domain 5: Research (10%)</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-herbchar-700 mb-2">Number of Questions</label>
-                  <select id="quiz-count-select" class="w-full px-3 py-2.5 border border-parchment-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-sage-400/30 focus:border-sage-400">
-                    <option value="10">10 Questions (~10 min)</option>
-                    <option value="25">25 Questions (~25 min)</option>
-                    <option value="50">50 Questions (~50 min)</option>
-                  </select>
-                </div>
-                <button id="start-quiz-btn" class="w-full py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
-                  Start Quiz
-                </button>
-              </div>
-            </div>
+        <!-- ─── PRACTICE VIEW ─── -->
+        <div id="view-practice" class="view">
+          <h1 class="font-display text-3xl font-bold text-herbchar-700 mb-1">Practice</h1>
+          <p class="text-sm text-parchment-400 mb-6">Adaptive questions powered by spaced repetition — focus on what you need to learn.</p>
+
+          <!-- Domain filter bar -->
+          <div id="practice-domain-filter" class="flex flex-wrap gap-2 mb-6">
+            <button onclick="loadPractice(null)" data-practice-domain="" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-sage-400 bg-sage-400 text-white transition-colors">All</button>
+            <button onclick="loadPractice(1)" data-practice-domain="1" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 1</button>
+            <button onclick="loadPractice(2)" data-practice-domain="2" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 2</button>
+            <button onclick="loadPractice(3)" data-practice-domain="3" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 3</button>
+            <button onclick="loadPractice(4)" data-practice-domain="4" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 4</button>
+            <button onclick="loadPractice(5)" data-practice-domain="5" class="practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 5</button>
           </div>
 
+          <!-- Stats bar -->
+          <div id="practice-stats" class="flex gap-4 mb-6 text-xs text-parchment-400"></div>
+
+          <!-- Question area -->
+          <div id="practice-area"></div>
+        </div>
+
+        <!-- ─── QUIZ ACTIVE (shared by Domain Exams & Full Exam) ─── -->
+        <div id="view-quiz-active" class="view">
           <!-- Active quiz -->
-          <div id="quiz-active" class="hidden">
+          <div id="quiz-active">
             <!-- Quiz header -->
             <div class="flex items-center justify-between mb-6">
               <div>
@@ -580,25 +565,6 @@
                 Back to Dashboard
               </button>
             </div>
-          </div>
-        </div>
-
-        <!-- ─── FLASHCARDS VIEW ─── -->
-        <div id="view-flashcards" class="view">
-          <div class="mb-6">
-            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Flashcards</h2>
-            <p class="text-sm text-parchment-400 mt-1">Spaced repetition — review cards due today to build long-term memory.</p>
-          </div>
-          <div id="flashcard-domain-filter" class="flex flex-wrap gap-2 mb-6">
-            <button onclick="filterFlashcardsByDomain(null)" data-fc-domain="" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-sage-400 bg-sage-400 text-white transition-colors">All</button>
-            <button onclick="filterFlashcardsByDomain(1)" data-fc-domain="1" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 1</button>
-            <button onclick="filterFlashcardsByDomain(2)" data-fc-domain="2" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 2</button>
-            <button onclick="filterFlashcardsByDomain(3)" data-fc-domain="3" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 3</button>
-            <button onclick="filterFlashcardsByDomain(4)" data-fc-domain="4" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 4</button>
-            <button onclick="filterFlashcardsByDomain(5)" data-fc-domain="5" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 5</button>
-          </div>
-          <div id="flashcard-area" class="max-w-xl mx-auto">
-            <p class="text-sm text-parchment-400 italic text-center py-12">Loading flashcards...</p>
           </div>
         </div>
 
@@ -1070,7 +1036,7 @@
       // Load view data
       if (viewName === 'dashboard') loadDashboard();
       else if (viewName === 'study-guide') loadStudyGuide();
-      else if (viewName === 'flashcards') loadFlashcards(activeFlashcardDomain);
+      else if (viewName === 'practice') loadPractice(activePracticeDomain);
       else if (viewName === 'exam-history') loadExamHistory();
       else if (viewName === 'study-plan') loadStudyPlan();
       else if (viewName === 'domain-exams') loadDomainExams();
@@ -1158,15 +1124,6 @@
         document.getElementById('stat-streak').textContent = data.streak;
         document.getElementById('stat-flashcards').textContent = data.flashcardsMastered;
 
-        // Flashcard due badge
-        const badge = document.getElementById('flashcard-due-badge');
-        if (data.flashcardsDue > 0) {
-          badge.textContent = data.flashcardsDue;
-          badge.classList.remove('hidden');
-        } else {
-          badge.classList.add('hidden');
-        }
-
         // Domain bars
         for (let d = 1; d <= 5; d++) {
           const bar = document.querySelector(`.domain-bar[data-domain="${d}"]`);
@@ -1192,7 +1149,7 @@
                 <p class="text-sm font-medium text-herbchar-700">${r.text}</p>
                 <p class="text-xs text-parchment-400 mt-0.5">${r.detail}</p>
               </div>
-              <button onclick="switchView('${r.type === 'flashcards' ? 'flashcards' : r.type === 'exam' ? 'full-exam' : r.type === 'diagnostic' ? 'practice-quiz' : 'practice-quiz'}')"
+              <button onclick="switchView('${r.type === 'exam' ? 'full-exam' : 'practice'}')"
                 class="ml-auto shrink-0 px-3 py-1.5 text-xs font-semibold text-sage-400 border border-sage-400 rounded hover:bg-sage-400 hover:text-white transition-colors">Start</button>
             </div>
           `).join('');
@@ -1319,17 +1276,16 @@
       try {
         const res = await apiFetch('domain-exams?exam=' + encodeURIComponent(examName));
 
-        // Reuse the practice quiz UI and state
+        // Reuse the shared quiz UI
         quizQuestions = res.questions;
         quizIndex = 0;
         quizAnswers = [];
         quizStartTime = Date.now();
 
-        // Switch to practice quiz view to show the quiz UI
+        // Switch to quiz-active view to show the quiz UI
         document.querySelectorAll('main .view').forEach(v => v.classList.remove('active'));
-        document.getElementById('view-practice-quiz').classList.add('active');
+        document.getElementById('view-quiz-active').classList.add('active');
 
-        document.getElementById('quiz-setup').classList.add('hidden');
         document.getElementById('quiz-active').classList.remove('hidden');
         document.getElementById('quiz-results').classList.add('hidden');
         document.getElementById('quiz-total-num').textContent = quizQuestions.length;
@@ -1340,40 +1296,7 @@
       }
     }
 
-    // ── Practice Quiz ──
-    document.getElementById('start-quiz-btn').addEventListener('click', startQuiz);
-
-    async function startQuiz() {
-      const domain = document.getElementById('quiz-domain-select').value;
-      const count = parseInt(document.getElementById('quiz-count-select').value, 10);
-
-      try {
-        let url = 'questions?';
-        if (domain !== 'all') url += `domain=${domain}&`;
-
-        const allQuestions = await apiFetch(url);
-        if (!allQuestions || allQuestions.length === 0) {
-          showToast('No questions available for this domain yet.');
-          return;
-        }
-
-        const shuffled = allQuestions.sort(() => Math.random() - 0.5);
-        quizQuestions = shuffled.slice(0, Math.min(count, shuffled.length));
-        quizIndex = 0;
-        quizAnswers = [];
-        quizStartTime = Date.now();
-
-        document.getElementById('quiz-setup').classList.add('hidden');
-        document.getElementById('quiz-active').classList.remove('hidden');
-        document.getElementById('quiz-results').classList.add('hidden');
-        document.getElementById('quiz-total-num').textContent = quizQuestions.length;
-
-        renderQuestion();
-      } catch (err) {
-        showToast('Error loading questions: ' + err.message);
-      }
-    }
-
+    // ── Shared Quiz UI (used by Domain Exams & Full Exam) ──
     function renderQuestion() {
       const q = quizQuestions[quizIndex];
       document.getElementById('quiz-current-num').textContent = quizIndex + 1;
@@ -1524,9 +1447,9 @@
       clearInterval(examTimerInterval);
       document.getElementById('exam-timer').classList.add('hidden');
       document.getElementById('exam-timer').classList.remove('text-red-600', 'font-bold');
-      document.getElementById('quiz-setup').classList.remove('hidden');
-      document.getElementById('quiz-active').classList.add('hidden');
+      document.getElementById('quiz-active').classList.remove('hidden');
       document.getElementById('quiz-results').classList.add('hidden');
+      switchView('dashboard');
     }
 
     // ── Full Exam ──
@@ -1544,12 +1467,11 @@
         examIndex = 0;
         examAnswers = new Array(examData.questions.length).fill(null);
 
-        // Switch to exam active UI (reuse quiz UI with exam styling)
-        document.getElementById('quiz-setup').classList.add('hidden');
-        switchView('practice-quiz');
-        document.getElementById('quiz-setup').classList.add('hidden');
+        // Switch to shared quiz active view
+        document.querySelectorAll('main .view').forEach(v => v.classList.remove('active'));
+        document.getElementById('view-quiz-active').classList.add('active');
 
-        // Actually render as full exam — use the quiz active container
+        // Render as full exam — use the quiz active container
         quizQuestions = examData.questions;
         quizIndex = 0;
         quizAnswers = [];
@@ -1627,182 +1549,184 @@
       }
     }
 
-    // ── Flashcards ──
-    let flashcardStack = [];
-    let flashcardIdx = 0;
-    let activeFlashcardDomain = null;
+    // ── Practice (unified) ──
+    let practiceStack = [];
+    let practiceIdx = 0;
+    let practiceCorrect = 0;
+    let practiceIncorrect = 0;
+    let activePracticeDomain = null;
 
-    function filterFlashcardsByDomain(domain) {
-      activeFlashcardDomain = domain;
-      // Update button styles
-      document.querySelectorAll('.fc-domain-btn').forEach(btn => {
-        const btnDomain = btn.dataset.fcDomain;
+    async function loadPractice(domain) {
+      activePracticeDomain = domain;
+
+      // Update active domain filter button styling
+      document.querySelectorAll('.practice-domain-btn').forEach(btn => {
+        const btnDomain = btn.dataset.practiceDomain;
         const isActive = (domain === null && btnDomain === '') || (String(domain) === btnDomain);
         if (isActive) {
-          btn.className = 'fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-sage-400 bg-sage-400 text-white transition-colors';
+          btn.className = 'practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-sage-400 bg-sage-400 text-white transition-colors';
         } else {
-          btn.className = 'fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors';
+          btn.className = 'practice-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors';
         }
       });
-      loadFlashcards(domain);
-    }
 
-    async function loadFlashcards(domain) {
-      const area = document.getElementById('flashcard-area');
-      const domainParam = domain ? `&domain=${domain}` : '';
+      const area = document.getElementById('practice-area');
+      const statsEl = document.getElementById('practice-stats');
+      area.innerHTML = '<p class="text-sm text-parchment-400 italic text-center py-12">Loading practice questions...</p>';
+      statsEl.innerHTML = '';
+
       try {
-        // First try to get cards due for review
-        const dueCards = await apiFetch(`flashcards?due=true&limit=20${domainParam}`);
+        const domainParam = domain ? `&domain=${domain}` : '';
 
-        if (dueCards && dueCards.length > 0) {
-          flashcardStack = dueCards.map(r => ({ ...r.flashcards, review_id: r.id }));
-          flashcardIdx = 0;
-          renderFlashcard();
+        // Fetch from unified practice endpoint (SM-2 spaced repetition)
+        const result = await apiFetch(`practice?limit=20${domainParam}`);
+        const questions = result.questions || [];
+        const dueCount = result.dueCount || 0;
+        const newCount = result.newCount || 0;
+
+        if (questions.length === 0) {
+          area.innerHTML = '<p class="text-sm text-parchment-400 italic text-center py-12">No practice questions available' + (domain ? ' for Domain ' + domain : '') + '. Check back soon!</p>';
           return;
         }
 
-        // No cards due — show new cards to learn
-        const allCards = await apiFetch(`flashcards?limit=20${domainParam}`);
-        if (!allCards || allCards.length === 0) {
-          area.innerHTML = '<p class="text-sm text-parchment-400 italic text-center py-12">No flashcards available' + (domain ? ' for Domain ' + domain : '') + '. Check back soon!</p>';
-          return;
-        }
+        // Shuffle combined set
+        practiceStack = questions.sort(() => Math.random() - 0.5);
+        practiceIdx = 0;
+        practiceCorrect = 0;
+        practiceIncorrect = 0;
 
-        flashcardStack = allCards.sort(() => Math.random() - 0.5).slice(0, 20);
-        flashcardIdx = 0;
-        renderFlashcard();
+        // Stats bar
+        statsEl.innerHTML = `<span>${practiceStack.length} questions</span>${dueCount > 0 ? `<span>${dueCount} due for review</span>` : ''}${newCount > 0 ? `<span>${newCount} new</span>` : ''}`;
+
+        renderPracticeQuestion();
       } catch (err) {
-        area.innerHTML = `<p class="text-sm text-red-500 text-center py-12">Error loading flashcards: ${err.message}</p>`;
+        area.innerHTML = `<p class="text-sm text-red-500 text-center py-12">Error loading practice: ${err.message}</p>`;
       }
     }
 
-    function renderFlashcard() {
-      const area = document.getElementById('flashcard-area');
-      if (flashcardIdx >= flashcardStack.length) {
+    function renderPracticeQuestion() {
+      const area = document.getElementById('practice-area');
+
+      if (practiceIdx >= practiceStack.length) {
+        // Session summary
+        const total = practiceCorrect + practiceIncorrect;
+        const pct = total > 0 ? Math.round((practiceCorrect / total) * 100) : 0;
+        const pctColor = pct >= 80 ? 'text-green-600' : pct >= 60 ? 'text-yellow-600' : 'text-red-500';
         area.innerHTML = `
-          <div class="text-center py-12">
-            <p class="text-xl font-display font-bold text-herbchar-700 mb-2">Session Complete!</p>
-            <p class="text-sm text-parchment-400 mb-6">You've reviewed all due cards. Come back later for more.</p>
-            <button onclick="switchView('dashboard')" class="px-5 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">Back to Dashboard</button>
+          <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-8 max-w-lg mx-auto text-center">
+            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-4">Session Complete</p>
+            <p class="text-4xl font-bold ${pctColor} mb-1">${pct}%</p>
+            <p class="text-sm text-parchment-400 mb-6">${practiceCorrect} correct, ${practiceIncorrect} incorrect out of ${total}</p>
+            <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden mb-6">
+              <div class="h-full ${pct >= 80 ? 'bg-sage-400' : pct >= 60 ? 'bg-yellow-400' : 'bg-red-400'} rounded-full" style="width:${pct}%"></div>
+            </div>
+            <button onclick="loadPractice(activePracticeDomain)" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+              Practice More
+            </button>
+            <button onclick="switchView('dashboard')" class="w-full py-2.5 text-sm text-parchment-400 hover:text-herbchar-700 transition-colors mt-2">
+              Back to Dashboard
+            </button>
           </div>
         `;
         return;
       }
 
-      const card = flashcardStack[flashcardIdx];
+      const q = practiceStack[practiceIdx];
+      const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
+      const options = q.options || [];
 
-      // Parse structured quiz data from back_text
-      let quizData = null;
-      try { quizData = JSON.parse(card.back_text); } catch(e) {}
+      const optionsHtml = options.map((opt, i) => `
+        <button onclick="submitPracticeAnswer(${i})" id="practice-opt-${i}"
+          class="practice-option w-full text-left px-4 py-3 rounded-lg border border-parchment-300 bg-white hover:border-sage-400 hover:bg-sage-50 transition-all flex items-start gap-3">
+          <span class="shrink-0 w-6 h-6 rounded-full border border-parchment-300 flex items-center justify-center text-xs font-semibold text-sage-500">${labels[i]}</span>
+          <span class="text-sm text-herbchar-700">${escapeHtml(opt)}</span>
+        </button>
+      `).join('');
 
-      if (quizData && quizData.options) {
-        // Interactive quiz mode
-        const labels = ['A', 'B', 'C', 'D', 'E'];
-        const optionsHtml = quizData.options.map((opt, i) => `
-          <button onclick="checkFlashcardAnswer(${i})" id="fc-opt-${i}"
-            class="fc-option w-full text-left px-4 py-3 rounded-lg border border-parchment-300 bg-white hover:border-sage-400 hover:bg-sage-50 transition-all text-sm text-herbchar-700">
-            <span class="font-semibold text-sage-500 mr-2">${labels[i]}.</span> ${escapeHtml(opt)}
-          </button>
-        `).join('');
-
-        area.innerHTML = `
-          <p class="text-xs text-parchment-400 mb-4 text-center">Card ${flashcardIdx + 1} of ${flashcardStack.length} · Domain ${card.domain}: ${DOMAIN_NAMES[card.domain]}</p>
-          <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mb-4">
-            <p class="text-base text-herbchar-700 leading-relaxed font-medium mb-1">${escapeHtml(card.front_text)}</p>
-          </div>
-          <div id="fc-options" class="space-y-2 mb-4">${optionsHtml}</div>
-          <div id="fc-result" class="hidden"></div>
-        `;
-      } else {
-        // Fallback: simple flip card for non-quiz cards
-        area.innerHTML = `
-          <p class="text-xs text-parchment-400 mb-4 text-center">Card ${flashcardIdx + 1} of ${flashcardStack.length} · Domain ${card.domain}: ${DOMAIN_NAMES[card.domain]}</p>
-          <div class="flashcard-container w-full" style="min-height:280px;" onclick="this.querySelector('.flashcard-inner').classList.toggle('flipped')">
-            <div class="flashcard-inner relative w-full cursor-pointer" style="min-height:280px;">
-              <div class="flashcard-front absolute inset-0 bg-white rounded-lg shadow-card border border-parchment-300 p-6 flex flex-col justify-center">
-                <p class="text-sm text-herbchar-700 leading-relaxed">${escapeHtml(card.front_text)}</p>
-              </div>
-              <div class="flashcard-back absolute inset-0 bg-sage-50 rounded-lg shadow-card border border-sage-200 p-8 flex items-center justify-center">
-                <p class="text-lg font-display font-bold text-herbchar-700 text-center">${escapeHtml(card.back_text)}</p>
-              </div>
-            </div>
-          </div>
-          <p class="text-xs text-parchment-400 text-center mt-3 mb-4">Click card to flip</p>
-          <div class="flex justify-center gap-2">
-            <button onclick="rateFlashcard(1)" class="px-3 py-2 text-xs font-semibold rounded border border-red-300 text-red-500 hover:bg-red-50">Again</button>
-            <button onclick="rateFlashcard(3)" class="px-3 py-2 text-xs font-semibold rounded border border-yellow-300 text-yellow-600 hover:bg-yellow-50">Good</button>
-            <button onclick="rateFlashcard(5)" class="px-3 py-2 text-xs font-semibold rounded border border-green-300 text-green-600 hover:bg-green-50">Perfect</button>
-          </div>
-        `;
-      }
+      area.innerHTML = `
+        <p class="text-xs text-parchment-400 mb-4">Question ${practiceIdx + 1} of ${practiceStack.length}${q.domain ? ' · Domain ' + q.domain + ': ' + (DOMAIN_NAMES[q.domain] || '') : ''}</p>
+        <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mb-4">
+          <p class="text-base text-herbchar-700 leading-relaxed font-medium">${escapeHtml(q.question_text)}</p>
+        </div>
+        <div id="practice-options" class="space-y-2 mb-4">${optionsHtml}</div>
+        <div id="practice-result" class="hidden"></div>
+      `;
     }
 
-    function checkFlashcardAnswer(selectedIdx) {
-      const card = flashcardStack[flashcardIdx];
-      let quizData;
-      try { quizData = JSON.parse(card.back_text); } catch(e) { return; }
+    async function submitPracticeAnswer(selectedIdx) {
+      const q = practiceStack[practiceIdx];
+      const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
 
-      const correctIdx = quizData.correctIndex;
-      const isCorrect = selectedIdx === correctIdx;
-      const labels = ['A', 'B', 'C', 'D', 'E'];
-
-      // Disable all option buttons and show correct/incorrect
-      document.querySelectorAll('.fc-option').forEach((btn, i) => {
+      // Disable all option buttons
+      document.querySelectorAll('.practice-option').forEach(btn => {
         btn.onclick = null;
         btn.classList.remove('hover:border-sage-400', 'hover:bg-sage-50');
+        btn.style.pointerEvents = 'none';
+      });
+
+      let isCorrect, correctIdx, correctText, explanation, reference;
+
+      try {
+        const result = await apiFetch('practice', {
+          method: 'POST',
+          body: JSON.stringify({ question_id: q.id, selected_answer: selectedIdx }),
+        });
+        isCorrect = result.correct;
+        correctIdx = result.correctAnswer;
+        correctText = result.correctText;
+        explanation = result.explanation;
+        reference = result.textbook_reference;
+      } catch(e) {
+        console.error('Practice submit error:', e);
+        // Can't validate without server — skip
+        return;
+      }
+
+      // Update counters
+      if (isCorrect) practiceCorrect++;
+      else practiceIncorrect++;
+
+      // Highlight correct/incorrect options
+      document.querySelectorAll('.practice-option').forEach((btn, i) => {
         btn.style.cursor = 'default';
         if (i === correctIdx) {
           btn.classList.remove('border-parchment-300', 'bg-white');
           btn.classList.add('border-green-400', 'bg-green-50', 'ring-2', 'ring-green-200');
         } else if (i === selectedIdx && !isCorrect) {
           btn.classList.remove('border-parchment-300', 'bg-white');
-          btn.classList.add('border-red-300', 'bg-red-50', 'line-through', 'opacity-70');
+          btn.classList.add('border-red-300', 'bg-red-50', 'opacity-70');
         } else {
           btn.classList.add('opacity-40');
         }
       });
 
-      // Show result message
-      const resultEl = document.getElementById('fc-result');
+      // Show result
+      const resultEl = document.getElementById('practice-result');
       resultEl.classList.remove('hidden');
-      if (isCorrect) {
-        resultEl.innerHTML = `
-          <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-            <p class="text-green-700 font-semibold mb-1">✓ Correct!</p>
-            <p class="text-sm text-green-600">The answer is <strong>${labels[correctIdx]}. ${escapeHtml(quizData.correctText)}</strong></p>
-          </div>
-          <button onclick="rateFlashcard(${isCorrect ? 4 : 1})" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white font-semibold rounded-lg transition-colors">
-            Next Card →
-          </button>
-        `;
-      } else {
-        resultEl.innerHTML = `
-          <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
-            <p class="text-red-600 font-semibold mb-1">✗ Incorrect</p>
-            <p class="text-sm text-red-500 mb-2">You selected <strong>${labels[selectedIdx]}. ${escapeHtml(quizData.options[selectedIdx])}</strong></p>
-            <p class="text-sm text-herbchar-700">The correct answer is <strong class="text-green-600">${labels[correctIdx]}. ${escapeHtml(quizData.correctText)}</strong></p>
-          </div>
-          <button onclick="rateFlashcard(${isCorrect ? 4 : 1})" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white font-semibold rounded-lg transition-colors">
-            Next Card →
-          </button>
-        `;
-      }
 
-      // Auto-rate: correct = 4 (easy), incorrect = 1 (again) for spaced repetition
+      const icon = isCorrect
+        ? '<svg class="w-5 h-5 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+        : '<svg class="w-5 h-5 text-red-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
+
+      resultEl.innerHTML = `
+        <div class="${isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'} border rounded-lg p-4 mb-4">
+          <div class="flex items-start gap-2 mb-1">
+            ${icon}
+            <p class="text-sm font-semibold ${isCorrect ? 'text-green-700' : 'text-red-600'}">${isCorrect ? 'Correct!' : 'Incorrect — the answer is ' + labels[correctIdx]}</p>
+          </div>
+          ${!isCorrect ? `<p class="text-sm text-herbchar-700 mt-1">The correct answer is <strong class="text-green-600">${labels[correctIdx]}. ${escapeHtml(correctText)}</strong></p>` : ''}
+          ${explanation ? `<p class="text-sm text-herbchar-700/80 leading-relaxed mt-2">${escapeHtml(explanation)}</p>` : ''}
+          ${reference ? `<p class="text-xs text-parchment-400 mt-2 italic">Reference: ${escapeHtml(reference)}</p>` : ''}
+        </div>
+        <button onclick="nextPracticeQuestion()" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white font-semibold rounded-lg transition-colors">
+          Next →
+        </button>
+      `;
     }
 
-    async function rateFlashcard(quality) {
-      const card = flashcardStack[flashcardIdx];
-      try {
-        await apiFetch('review-flashcard', {
-          method: 'POST',
-          body: JSON.stringify({ flashcard_id: card.id, quality }),
-        });
-      } catch (err) {
-        console.error('Review error:', err);
-      }
-      flashcardIdx++;
-      renderFlashcard();
+    function nextPracticeQuestion() {
+      practiceIdx++;
+      renderPracticeQuestion();
     }
 
     function escapeHtml(str) {
