@@ -2123,9 +2123,14 @@
     async function loadStudyDomain(domain) {
       // Highlight active tab
       document.querySelectorAll('.study-domain-tab').forEach(t => {
-        t.classList.toggle('bg-sage-400', parseInt(t.dataset.domain) === domain);
-        t.classList.toggle('text-white', parseInt(t.dataset.domain) === domain);
-        t.classList.toggle('border-sage-400', parseInt(t.dataset.domain) === domain);
+        const isActive = parseInt(t.dataset.domain) === domain;
+        if (isActive) {
+          t.classList.remove('bg-white', 'text-herbchar-700', 'border-parchment-300');
+          t.classList.add('bg-sage-400', 'text-white', 'border-sage-400');
+        } else {
+          t.classList.remove('bg-sage-400', 'text-white', 'border-sage-400');
+          t.classList.add('bg-white', 'text-herbchar-700', 'border-parchment-300');
+        }
       });
 
       const area = document.getElementById('study-content-area');
