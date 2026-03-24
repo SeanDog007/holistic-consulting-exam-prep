@@ -112,6 +112,34 @@
       border-left: 3px solid #B07242;
     }
 
+    /* Module accordion */
+    .module-card { transition: box-shadow 0.15s; }
+    .module-card:hover { box-shadow: 0 2px 8px rgba(42, 48, 36, 0.08), 0 8px 24px rgba(42, 48, 36, 0.06); }
+    .module-header { cursor: pointer; user-select: none; }
+    .module-chevron { transition: transform 0.2s ease; }
+    .module-chevron.open { transform: rotate(180deg); }
+    .module-body { animation: accordion-open 0.2s ease; }
+    .lesson-row { transition: background 0.1s, border-color 0.1s; cursor: pointer; }
+    .lesson-row:hover { background: rgba(107, 127, 94, 0.04); border-color: #6B7F5E; }
+
+    /* Progress ring */
+    .progress-ring-circle { transition: stroke-dashoffset 0.6s cubic-bezier(0.22, 1, 0.36, 1); transform: rotate(-90deg); transform-origin: 50% 50%; }
+
+    /* Lesson viewer */
+    .lesson-viewer-content { max-width: 720px; margin: 0 auto; }
+    .lesson-nav-btn { transition: background 0.15s, border-color 0.15s; }
+    .lesson-nav-btn:hover { border-color: #6B7F5E; background: rgba(107, 127, 94, 0.04); }
+    .lesson-nav-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .lesson-nav-btn:disabled:hover { border-color: #DDD8D0; background: transparent; }
+
+    /* Lesson practice questions */
+    .lesson-quiz-option { transition: border-color 0.15s, background 0.15s, transform 0.1s; cursor: pointer; }
+    .lesson-quiz-option:hover { border-color: #6B7F5E; background: rgba(107, 127, 94, 0.04); }
+    .lesson-quiz-option:active { transform: scale(0.99); }
+    .lesson-quiz-option.correct { border-color: #4CAF50; background: rgba(76, 175, 80, 0.08); pointer-events: none; }
+    .lesson-quiz-option.incorrect { border-color: #e53935; background: rgba(229, 57, 53, 0.06); pointer-events: none; }
+    .lesson-quiz-option.disabled { pointer-events: none; opacity: 0.6; }
+
     /* Domain exam accordion */
     .domain-chevron { transition: transform 0.2s ease; }
     .domain-exam-body { animation: accordion-open 0.2s ease; }
@@ -443,15 +471,15 @@
           </div>
         </div>
 
-        <!-- ─── STUDY GUIDE VIEW ─── -->
+        <!-- ─── STUDY GUIDE / CURRICULUM VIEW ─── -->
         <div id="view-study-guide" class="view">
           <div class="mb-6">
-            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Study Guides</h2>
-            <p class="text-sm text-parchment-400 mt-1">Comprehensive study material organized by exam domain.</p>
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Curriculum</h2>
+            <p class="text-sm text-parchment-400 mt-1">Interactive lessons organized by exam domain. Complete modules to master each topic.</p>
           </div>
 
           <!-- Domain selector -->
-          <div id="study-domain-tabs" class="flex flex-wrap gap-2 mb-6">
+          <div id="study-domain-tabs" class="flex flex-wrap gap-2 mb-4">
             <button data-domain="1" class="study-domain-tab px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors">
               Domain 1 <span class="text-xs text-parchment-400">(35%)</span>
             </button>
@@ -469,10 +497,96 @@
             </button>
           </div>
 
-          <!-- Study content area -->
-          <div id="study-content-area" class="bg-white rounded-lg shadow-card border border-parchment-300">
-            <div class="p-6">
-              <p class="text-sm text-parchment-400 italic">Select a domain above to begin studying.</p>
+          <!-- Domain progress bar -->
+          <div id="domain-progress-bar" class="mb-6 hidden">
+            <div class="flex items-center justify-between mb-1.5">
+              <p id="domain-progress-label" class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400"></p>
+              <p id="domain-progress-pct" class="text-xs font-semibold text-sage-500"></p>
+            </div>
+            <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
+              <div id="domain-progress-fill" class="progress-fill h-full bg-sage-400 rounded-full" style="width:0%"></div>
+            </div>
+          </div>
+
+          <!-- Module accordion list -->
+          <div id="study-modules" class="space-y-3">
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6">
+              <p class="text-sm text-parchment-400 italic">Select a domain above to view modules and lessons.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── LESSON VIEWER ─── -->
+        <div id="view-lesson" class="view">
+          <div class="lesson-viewer-content">
+            <!-- Sticky header -->
+            <div class="sticky top-0 z-10 bg-parchment-100 pb-3 pt-1 -mx-1 px-1">
+              <button onclick="backToModules()" class="inline-flex items-center gap-1.5 text-sm font-medium text-sage-500 hover:text-sage-600 transition-colors mb-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                Back to modules
+              </button>
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h2 id="lesson-title" class="font-display text-2xl font-bold text-herbchar-700 tracking-tight"></h2>
+                  <p id="lesson-subtitle" class="text-sm text-parchment-400 mt-0.5"></p>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <span id="lesson-time-badge" class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-parchment-400 bg-white border border-parchment-300 rounded-full">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <span id="lesson-time-text"></span>
+                  </span>
+                </div>
+              </div>
+              <!-- Exam alert badge -->
+              <div id="lesson-exam-alert" class="hidden mt-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-copper-500 bg-copper-50 border border-copper-200 rounded-full">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M12 3l9.09 16.91H2.91L12 3z"/></svg>
+                  Frequently tested on exam
+                </span>
+              </div>
+            </div>
+
+            <!-- Lesson content -->
+            <div id="lesson-content" class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mt-3">
+              <div id="lesson-body" class="study-content text-sm"></div>
+            </div>
+
+            <!-- Key takeaways -->
+            <div id="lesson-takeaways" class="hidden mt-4 bg-sage-50 border border-sage-200 rounded-lg p-5">
+              <div class="flex items-center gap-2 mb-3">
+                <svg class="w-5 h-5 text-sage-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                <p class="text-sm font-semibold text-sage-700 tracking-wide uppercase">Key Takeaways</p>
+              </div>
+              <div id="lesson-takeaways-content" class="text-sm text-sage-800 space-y-1.5"></div>
+            </div>
+
+            <!-- Practice questions -->
+            <div id="lesson-practice" class="hidden mt-6">
+              <div class="flex items-center gap-2 mb-4">
+                <svg class="w-5 h-5 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <p class="text-sm font-semibold text-herbchar-700 tracking-wide uppercase">Practice Questions</p>
+              </div>
+              <div id="lesson-questions" class="space-y-4"></div>
+            </div>
+
+            <!-- Mark complete button -->
+            <div class="mt-6">
+              <button id="lesson-complete-btn" onclick="markLessonComplete(currentLessonId)" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span id="lesson-complete-text">Mark as Complete</span>
+              </button>
+            </div>
+
+            <!-- Prev / Next navigation -->
+            <div class="flex gap-3 mt-4 mb-8">
+              <button id="lesson-prev-btn" onclick="navigateLesson('prev')" class="lesson-nav-btn flex-1 py-3 px-4 text-sm font-medium text-herbchar-700 bg-white border border-parchment-300 rounded-lg flex items-center justify-center gap-2" disabled>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                <span id="lesson-prev-text">Previous</span>
+              </button>
+              <button id="lesson-next-btn" onclick="navigateLesson('next')" class="lesson-nav-btn flex-1 py-3 px-4 text-sm font-medium text-herbchar-700 bg-white border border-parchment-300 rounded-lg flex items-center justify-center gap-2" disabled>
+                <span id="lesson-next-text">Next</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
             </div>
           </div>
         </div>
@@ -2113,6 +2227,12 @@
       return cleaned;
     }
 
+    // ── Curriculum state ──
+    let currentLessonId = null;
+    let currentDomainLessons = []; // flat list of {id, title, moduleTitle} for prev/next
+    let currentDomainNumber = null;
+    let modulesData = []; // cached module data for current domain
+
     async function loadStudyGuide() {
       // Tab click handlers
       document.querySelectorAll('.study-domain-tab').forEach(tab => {
@@ -2121,6 +2241,8 @@
     }
 
     async function loadStudyDomain(domain) {
+      currentDomainNumber = domain;
+
       // Highlight active tab
       document.querySelectorAll('.study-domain-tab').forEach(t => {
         const isActive = parseInt(t.dataset.domain) === domain;
@@ -2133,45 +2255,321 @@
         }
       });
 
-      const area = document.getElementById('study-content-area');
-      area.innerHTML = '<div class="p-6"><p class="text-sm text-parchment-400">Loading study guide...</p></div>';
+      const container = document.getElementById('study-modules');
+      container.innerHTML = '<div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6"><p class="text-sm text-parchment-400">Loading curriculum...</p></div>';
 
       try {
-        const sections = await apiFetch(`study-progress?domain=${domain}`);
+        const data = await apiFetch(`curriculum?domain=${domain}`);
 
-        if (!sections || sections.length === 0) {
-          area.innerHTML = '<div class="p-6"><p class="text-sm text-parchment-400 italic">No study guide content available for this domain yet. Content is being migrated.</p></div>';
+        if (!data || !data.modules || data.modules.length === 0) {
+          container.innerHTML = '<div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6"><p class="text-sm text-parchment-400 italic">No curriculum content available for this domain yet. Content is being developed.</p></div>';
+          document.getElementById('domain-progress-bar').classList.add('hidden');
           return;
         }
 
-        const completedCount = sections.filter(s => s.progress?.is_completed).length;
-        area.innerHTML = `
-          <div class="p-4 border-b border-parchment-200 flex items-center justify-between">
-            <p class="text-sm text-parchment-400">${completedCount} of ${sections.length} sections completed</p>
-            <div class="w-32 h-1.5 bg-parchment-200 rounded-full overflow-hidden">
-              <div class="progress-fill h-full bg-sage-400 rounded-full" style="width:${sections.length > 0 ? Math.round((completedCount/sections.length)*100) : 0}%"></div>
-            </div>
-          </div>
-          <div class="divide-y divide-parchment-100">
-            ${sections.map(s => `
-              <div class="p-6">
-                <div class="flex items-start justify-between mb-3">
-                  <h3 class="font-display text-lg font-semibold text-herbchar-700">${escapeHtml(s.title)}</h3>
-                  <button onclick="toggleSectionComplete('${s.id}', ${!s.progress?.is_completed})" class="shrink-0 ml-4 p-1 rounded ${s.progress?.is_completed ? 'text-sage-400' : 'text-parchment-300 hover:text-sage-400'} transition-colors" title="${s.progress?.is_completed ? 'Completed' : 'Mark as complete'}">
-                    <svg class="w-5 h-5" fill="${s.progress?.is_completed ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  </button>
+        modulesData = data.modules;
+
+        // Build flat lesson list for prev/next navigation
+        currentDomainLessons = [];
+        modulesData.forEach(m => {
+          (m.lessons || []).forEach(l => {
+            currentDomainLessons.push({ id: l.id, title: l.title, moduleTitle: m.title });
+          });
+        });
+
+        // Domain progress
+        const totalLessons = currentDomainLessons.length;
+        const completedLessons = modulesData.reduce((sum, m) => sum + (m.lessons || []).filter(l => l.is_completed).length, 0);
+        const domainPct = totalLessons > 0 ? Math.round((completedLessons / totalLessons) * 100) : 0;
+
+        const progressBar = document.getElementById('domain-progress-bar');
+        progressBar.classList.remove('hidden');
+        document.getElementById('domain-progress-label').textContent = `Domain ${domain}: ${DOMAIN_NAMES[domain] || ''}`;
+        document.getElementById('domain-progress-pct').textContent = `${completedLessons} / ${totalLessons} lessons · ${domainPct}%`;
+        document.getElementById('domain-progress-fill').style.width = `${domainPct}%`;
+
+        // Render module accordions
+        container.innerHTML = modulesData.map((m, mIdx) => {
+          const lessons = m.lessons || [];
+          const mCompleted = lessons.filter(l => l.is_completed).length;
+          const mTotal = lessons.length;
+          const mPct = mTotal > 0 ? Math.round((mCompleted / mTotal) * 100) : 0;
+          const ringRadius = 16;
+          const ringCircumference = 2 * Math.PI * ringRadius;
+          const ringOffset = ringCircumference - (mPct / 100) * ringCircumference;
+          const estTime = lessons.reduce((sum, l) => sum + (l.estimated_minutes || 5), 0);
+
+          return `
+            <div class="module-card bg-white rounded-lg shadow-card border border-parchment-300 overflow-hidden">
+              <div class="module-header p-5 flex items-center gap-4" onclick="toggleModule(${mIdx})">
+                <!-- Progress ring -->
+                <div class="shrink-0 relative">
+                  <svg width="40" height="40" class="block">
+                    <circle cx="20" cy="20" r="${ringRadius}" fill="none" stroke="#EDE7D8" stroke-width="3"/>
+                    <circle cx="20" cy="20" r="${ringRadius}" fill="none" stroke="${mPct === 100 ? '#4CAF50' : '#6B7F5E'}" stroke-width="3" class="progress-ring-circle"
+                      stroke-dasharray="${ringCircumference}" stroke-dashoffset="${ringOffset}" stroke-linecap="round"/>
+                  </svg>
+                  <span class="absolute inset-0 flex items-center justify-center text-[10px] font-bold ${mPct === 100 ? 'text-green-600' : 'text-herbchar-700'}">${mPct}%</span>
                 </div>
-                ${s.exam_alert ? '<div class="exam-alert px-3 py-2 rounded-md mb-3 text-xs font-medium text-copper-600">This topic appears frequently on the exam</div>' : ''}
-                <div class="study-content text-sm">${cleanStudyContent(s.content_html, s.title)}</div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="font-display text-lg font-semibold text-herbchar-700 leading-snug">${escapeHtml(m.title)}</h3>
+                  ${m.description ? `<p class="text-xs text-parchment-400 mt-0.5 line-clamp-1">${escapeHtml(m.description)}</p>` : ''}
+                </div>
+                <div class="shrink-0 flex items-center gap-3">
+                  <span class="text-xs text-parchment-400 hidden sm:inline">${mTotal} lesson${mTotal !== 1 ? 's' : ''} · ~${estTime} min</span>
+                  <svg class="module-chevron w-5 h-5 text-parchment-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
               </div>
-            `).join('')}
-          </div>
-        `;
+              <div id="module-body-${mIdx}" class="hidden border-t border-parchment-200">
+                ${lessons.length === 0 ? '<p class="p-4 text-sm text-parchment-400 italic">No lessons yet.</p>' :
+                  lessons.map((l, lIdx) => `
+                    <div class="lesson-row flex items-center gap-3 px-5 py-3 ${lIdx < lessons.length - 1 ? 'border-b border-parchment-100' : ''}" onclick="loadLesson('${l.id}')">
+                      <span class="shrink-0 ${l.is_completed ? 'text-green-500' : 'text-parchment-300'}">
+                        ${l.is_completed
+                          ? '<svg class="w-5 h-5" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+                          : '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="2"/></svg>'
+                        }
+                      </span>
+                      <span class="flex-1 text-sm font-medium text-herbchar-700 ${l.is_completed ? 'line-through opacity-60' : ''}">${escapeHtml(l.title)}</span>
+                      ${l.estimated_minutes ? `<span class="text-xs text-parchment-400 shrink-0">~${l.estimated_minutes} min</span>` : ''}
+                    </div>
+                  `).join('')
+                }
+              </div>
+            </div>
+          `;
+        }).join('');
+
       } catch (err) {
-        area.innerHTML = `<div class="p-6"><p class="text-sm text-red-500">Error loading study guide: ${err.message}</p></div>`;
+        container.innerHTML = `<div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6"><p class="text-sm text-red-500">Error loading curriculum: ${err.message}</p></div>`;
       }
     }
 
+    function toggleModule(mIdx) {
+      const body = document.getElementById(`module-body-${mIdx}`);
+      const header = body.previousElementSibling;
+      const chevron = header.querySelector('.module-chevron');
+      if (body.classList.contains('hidden')) {
+        body.classList.remove('hidden');
+        body.classList.add('module-body');
+        chevron.classList.add('open');
+      } else {
+        body.classList.add('hidden');
+        body.classList.remove('module-body');
+        chevron.classList.remove('open');
+      }
+    }
+
+    async function loadLesson(lessonId) {
+      currentLessonId = lessonId;
+
+      // Hide study guide view, show lesson view
+      document.getElementById('view-study-guide').classList.remove('active');
+      document.getElementById('view-lesson').classList.add('active');
+
+      // Show loading state
+      document.getElementById('lesson-body').innerHTML = '<p class="text-sm text-parchment-400">Loading lesson...</p>';
+      document.getElementById('lesson-takeaways').classList.add('hidden');
+      document.getElementById('lesson-practice').classList.add('hidden');
+      document.getElementById('lesson-exam-alert').classList.add('hidden');
+
+      try {
+        const lesson = await apiFetch(`curriculum?lesson=${lessonId}`);
+
+        // Title and subtitle
+        document.getElementById('lesson-title').textContent = lesson.title || 'Lesson';
+        document.getElementById('lesson-subtitle').textContent = lesson.module_title || '';
+
+        // Estimated time
+        document.getElementById('lesson-time-text').textContent = lesson.estimated_minutes ? `${lesson.estimated_minutes} min` : '';
+
+        // Exam alert
+        if (lesson.exam_alert) {
+          document.getElementById('lesson-exam-alert').classList.remove('hidden');
+        } else {
+          document.getElementById('lesson-exam-alert').classList.add('hidden');
+        }
+
+        // Content
+        document.getElementById('lesson-body').innerHTML = lesson.content_html ? cleanStudyContent(lesson.content_html, lesson.title) : '<p class="text-sm text-parchment-400 italic">No content available.</p>';
+
+        // Key takeaways
+        if (lesson.key_takeaways && lesson.key_takeaways.length > 0) {
+          document.getElementById('lesson-takeaways').classList.remove('hidden');
+          document.getElementById('lesson-takeaways-content').innerHTML = lesson.key_takeaways.map(t => `
+            <div class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-sage-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>${escapeHtml(t)}</span>
+            </div>
+          `).join('');
+        } else {
+          document.getElementById('lesson-takeaways').classList.add('hidden');
+        }
+
+        // Practice questions
+        if (lesson.practice_questions && lesson.practice_questions.length > 0) {
+          document.getElementById('lesson-practice').classList.remove('hidden');
+          const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
+          document.getElementById('lesson-questions').innerHTML = lesson.practice_questions.map((q, qIdx) => `
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-5" id="lesson-q-${qIdx}">
+              <p class="text-sm font-medium text-herbchar-700 mb-3">${qIdx + 1}. ${escapeHtml(q.question_text)}</p>
+              <div class="space-y-2">
+                ${(q.options || []).map((opt, oIdx) => `
+                  <div onclick="answerLessonQuestion(${qIdx}, ${oIdx}, '${q.id || ''}')" class="lesson-quiz-option w-full text-left p-3 rounded-md border border-parchment-300 flex items-start gap-3" data-qidx="${qIdx}" data-oidx="${oIdx}">
+                    <span class="shrink-0 w-6 h-6 rounded-full border border-parchment-300 flex items-center justify-center text-xs font-semibold text-parchment-400">${labels[oIdx]}</span>
+                    <span class="text-sm text-herbchar-700">${escapeHtml(opt)}</span>
+                  </div>
+                `).join('')}
+              </div>
+              <div id="lesson-q-feedback-${qIdx}" class="hidden mt-3 text-sm rounded-md p-3"></div>
+            </div>
+          `).join('');
+
+          // Store correct answers for local check
+          window._lessonQuestions = lesson.practice_questions;
+        } else {
+          document.getElementById('lesson-practice').classList.add('hidden');
+        }
+
+        // Mark complete button state
+        const completeBtn = document.getElementById('lesson-complete-btn');
+        const completeText = document.getElementById('lesson-complete-text');
+        if (lesson.is_completed) {
+          completeBtn.classList.remove('bg-sage-400', 'hover:bg-sage-500');
+          completeBtn.classList.add('bg-green-500', 'hover:bg-green-600');
+          completeText.textContent = 'Completed';
+        } else {
+          completeBtn.classList.remove('bg-green-500', 'hover:bg-green-600');
+          completeBtn.classList.add('bg-sage-400', 'hover:bg-sage-500');
+          completeText.textContent = 'Mark as Complete';
+        }
+
+        // Prev/Next navigation
+        updateLessonNav();
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      } catch (err) {
+        document.getElementById('lesson-body').innerHTML = `<p class="text-sm text-red-500">Error loading lesson: ${err.message}</p>`;
+      }
+    }
+
+    function updateLessonNav() {
+      const currentIdx = currentDomainLessons.findIndex(l => l.id === currentLessonId);
+      const prevBtn = document.getElementById('lesson-prev-btn');
+      const nextBtn = document.getElementById('lesson-next-btn');
+      const prevText = document.getElementById('lesson-prev-text');
+      const nextText = document.getElementById('lesson-next-text');
+
+      if (currentIdx > 0) {
+        prevBtn.disabled = false;
+        prevText.textContent = currentDomainLessons[currentIdx - 1].title;
+      } else {
+        prevBtn.disabled = true;
+        prevText.textContent = 'Previous';
+      }
+
+      if (currentIdx < currentDomainLessons.length - 1) {
+        nextBtn.disabled = false;
+        nextText.textContent = currentDomainLessons[currentIdx + 1].title;
+      } else {
+        nextBtn.disabled = true;
+        nextText.textContent = 'Next';
+      }
+    }
+
+    function navigateLesson(direction) {
+      const currentIdx = currentDomainLessons.findIndex(l => l.id === currentLessonId);
+      const newIdx = direction === 'prev' ? currentIdx - 1 : currentIdx + 1;
+      if (newIdx >= 0 && newIdx < currentDomainLessons.length) {
+        loadLesson(currentDomainLessons[newIdx].id);
+      }
+    }
+
+    async function markLessonComplete(lessonId) {
+      if (!lessonId) return;
+      try {
+        await apiFetch('curriculum', {
+          method: 'POST',
+          body: JSON.stringify({ lesson_id: lessonId, is_completed: true }),
+        });
+
+        // Update button state
+        const completeBtn = document.getElementById('lesson-complete-btn');
+        const completeText = document.getElementById('lesson-complete-text');
+        completeBtn.classList.remove('bg-sage-400', 'hover:bg-sage-500');
+        completeBtn.classList.add('bg-green-500', 'hover:bg-green-600');
+        completeText.textContent = 'Completed';
+
+        // Update cached data
+        modulesData.forEach(m => {
+          (m.lessons || []).forEach(l => {
+            if (l.id === lessonId) l.is_completed = true;
+          });
+        });
+
+        showToast('Lesson marked complete!');
+      } catch (err) {
+        showToast('Error: ' + err.message);
+      }
+    }
+
+    function backToModules() {
+      // Hide lesson view, show study guide view
+      document.getElementById('view-lesson').classList.remove('active');
+      document.getElementById('view-study-guide').classList.add('active');
+
+      // Refresh modules to reflect any completion changes
+      if (currentDomainNumber) {
+        loadStudyDomain(currentDomainNumber);
+      }
+    }
+
+    async function answerLessonQuestion(qIdx, selectedIdx, questionId) {
+      const container = document.getElementById(`lesson-q-${qIdx}`);
+      const options = container.querySelectorAll('.lesson-quiz-option');
+      const feedback = document.getElementById(`lesson-q-feedback-${qIdx}`);
+      const q = window._lessonQuestions?.[qIdx];
+      if (!q) return;
+
+      const correctIdx = q.correct_answer_index ?? q.correct_index ?? 0;
+      const isCorrect = selectedIdx === correctIdx;
+
+      // Disable all options
+      options.forEach((opt, i) => {
+        if (i === correctIdx) {
+          opt.classList.add('correct');
+        } else if (i === selectedIdx && !isCorrect) {
+          opt.classList.add('incorrect');
+        } else {
+          opt.classList.add('disabled');
+        }
+      });
+
+      // Show feedback
+      feedback.classList.remove('hidden');
+      if (isCorrect) {
+        feedback.className = 'mt-3 text-sm rounded-md p-3 bg-green-50 border border-green-200 text-green-800';
+        feedback.innerHTML = `<strong>Correct!</strong> ${q.explanation ? escapeHtml(q.explanation) : ''}`;
+      } else {
+        feedback.className = 'mt-3 text-sm rounded-md p-3 bg-red-50 border border-red-200 text-red-800';
+        const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
+        feedback.innerHTML = `<strong>Incorrect.</strong> The correct answer is ${labels[correctIdx]}. ${q.explanation ? escapeHtml(q.explanation) : ''}`;
+      }
+
+      // POST to practice endpoint if we have a question ID
+      if (questionId) {
+        try {
+          await apiFetch('practice', {
+            method: 'POST',
+            body: JSON.stringify({ question_id: questionId, selected_answer: selectedIdx }),
+          });
+        } catch (e) { /* silent */ }
+      }
+    }
+
+    // Legacy support: keep toggleSectionComplete for any lingering references
     async function toggleSectionComplete(sectionId, isCompleted) {
       try {
         await apiFetch('study-progress', {
@@ -2179,7 +2577,6 @@
           body: JSON.stringify({ section_id: sectionId, is_completed: isCompleted }),
         });
         showToast(isCompleted ? 'Section marked complete' : 'Section unmarked');
-        // Reload current domain
         const activeTab = document.querySelector('.study-domain-tab.bg-sage-400');
         if (activeTab) loadStudyDomain(parseInt(activeTab.dataset.domain));
       } catch (err) {
