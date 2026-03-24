@@ -1690,27 +1690,105 @@
       }
 
       const card = flashcardStack[flashcardIdx];
-      area.innerHTML = `
-        <p class="text-xs text-parchment-400 mb-4 text-center">Card ${flashcardIdx + 1} of ${flashcardStack.length} · Domain ${card.domain}: ${DOMAIN_NAMES[card.domain]}</p>
-        <div class="flashcard-container w-full" style="min-height:320px;" onclick="this.querySelector('.flashcard-inner').classList.toggle('flipped')">
-          <div class="flashcard-inner relative w-full cursor-pointer" style="min-height:320px;">
-            <div class="flashcard-front absolute inset-0 bg-white rounded-lg shadow-card border border-parchment-300 p-6 flex flex-col justify-center">
-              <p class="text-sm text-herbchar-700 leading-relaxed whitespace-pre-line">${escapeHtml(card.front_text)}</p>
-            </div>
-            <div class="flashcard-back absolute inset-0 bg-sage-50 rounded-lg shadow-card border border-sage-200 p-8 flex items-center justify-center">
-              <p class="text-lg font-display font-bold text-herbchar-700 text-center">${escapeHtml(card.back_text)}</p>
+
+      // Parse structured quiz data from back_text
+      let quizData = null;
+      try { quizData = JSON.parse(card.back_text); } catch(e) {}
+
+      if (quizData && quizData.options) {
+        // Interactive quiz mode
+        const labels = ['A', 'B', 'C', 'D', 'E'];
+        const optionsHtml = quizData.options.map((opt, i) => `
+          <button onclick="checkFlashcardAnswer(${i})" id="fc-opt-${i}"
+            class="fc-option w-full text-left px-4 py-3 rounded-lg border border-parchment-300 bg-white hover:border-sage-400 hover:bg-sage-50 transition-all text-sm text-herbchar-700">
+            <span class="font-semibold text-sage-500 mr-2">${labels[i]}.</span> ${escapeHtml(opt)}
+          </button>
+        `).join('');
+
+        area.innerHTML = `
+          <p class="text-xs text-parchment-400 mb-4 text-center">Card ${flashcardIdx + 1} of ${flashcardStack.length} · Domain ${card.domain}: ${DOMAIN_NAMES[card.domain]}</p>
+          <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mb-4">
+            <p class="text-base text-herbchar-700 leading-relaxed font-medium mb-1">${escapeHtml(card.front_text)}</p>
+          </div>
+          <div id="fc-options" class="space-y-2 mb-4">${optionsHtml}</div>
+          <div id="fc-result" class="hidden"></div>
+        `;
+      } else {
+        // Fallback: simple flip card for non-quiz cards
+        area.innerHTML = `
+          <p class="text-xs text-parchment-400 mb-4 text-center">Card ${flashcardIdx + 1} of ${flashcardStack.length} · Domain ${card.domain}: ${DOMAIN_NAMES[card.domain]}</p>
+          <div class="flashcard-container w-full" style="min-height:280px;" onclick="this.querySelector('.flashcard-inner').classList.toggle('flipped')">
+            <div class="flashcard-inner relative w-full cursor-pointer" style="min-height:280px;">
+              <div class="flashcard-front absolute inset-0 bg-white rounded-lg shadow-card border border-parchment-300 p-6 flex flex-col justify-center">
+                <p class="text-sm text-herbchar-700 leading-relaxed">${escapeHtml(card.front_text)}</p>
+              </div>
+              <div class="flashcard-back absolute inset-0 bg-sage-50 rounded-lg shadow-card border border-sage-200 p-8 flex items-center justify-center">
+                <p class="text-lg font-display font-bold text-herbchar-700 text-center">${escapeHtml(card.back_text)}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <p class="text-xs text-parchment-400 text-center mt-3 mb-4">Click card to flip</p>
-        <div class="flex justify-center gap-2">
-          <button onclick="rateFlashcard(1)" class="px-3 py-2 text-xs font-semibold rounded border border-red-300 text-red-500 hover:bg-red-50 transition-colors">Again</button>
-          <button onclick="rateFlashcard(2)" class="px-3 py-2 text-xs font-semibold rounded border border-orange-300 text-orange-500 hover:bg-orange-50 transition-colors">Hard</button>
-          <button onclick="rateFlashcard(3)" class="px-3 py-2 text-xs font-semibold rounded border border-yellow-300 text-yellow-600 hover:bg-yellow-50 transition-colors">Good</button>
-          <button onclick="rateFlashcard(4)" class="px-3 py-2 text-xs font-semibold rounded border border-sage-300 text-sage-500 hover:bg-sage-50 transition-colors">Easy</button>
-          <button onclick="rateFlashcard(5)" class="px-3 py-2 text-xs font-semibold rounded border border-green-300 text-green-600 hover:bg-green-50 transition-colors">Perfect</button>
-        </div>
-      `;
+          <p class="text-xs text-parchment-400 text-center mt-3 mb-4">Click card to flip</p>
+          <div class="flex justify-center gap-2">
+            <button onclick="rateFlashcard(1)" class="px-3 py-2 text-xs font-semibold rounded border border-red-300 text-red-500 hover:bg-red-50">Again</button>
+            <button onclick="rateFlashcard(3)" class="px-3 py-2 text-xs font-semibold rounded border border-yellow-300 text-yellow-600 hover:bg-yellow-50">Good</button>
+            <button onclick="rateFlashcard(5)" class="px-3 py-2 text-xs font-semibold rounded border border-green-300 text-green-600 hover:bg-green-50">Perfect</button>
+          </div>
+        `;
+      }
+    }
+
+    function checkFlashcardAnswer(selectedIdx) {
+      const card = flashcardStack[flashcardIdx];
+      let quizData;
+      try { quizData = JSON.parse(card.back_text); } catch(e) { return; }
+
+      const correctIdx = quizData.correctIndex;
+      const isCorrect = selectedIdx === correctIdx;
+      const labels = ['A', 'B', 'C', 'D', 'E'];
+
+      // Disable all option buttons and show correct/incorrect
+      document.querySelectorAll('.fc-option').forEach((btn, i) => {
+        btn.onclick = null;
+        btn.classList.remove('hover:border-sage-400', 'hover:bg-sage-50');
+        btn.style.cursor = 'default';
+        if (i === correctIdx) {
+          btn.classList.remove('border-parchment-300', 'bg-white');
+          btn.classList.add('border-green-400', 'bg-green-50', 'ring-2', 'ring-green-200');
+        } else if (i === selectedIdx && !isCorrect) {
+          btn.classList.remove('border-parchment-300', 'bg-white');
+          btn.classList.add('border-red-300', 'bg-red-50', 'line-through', 'opacity-70');
+        } else {
+          btn.classList.add('opacity-40');
+        }
+      });
+
+      // Show result message
+      const resultEl = document.getElementById('fc-result');
+      resultEl.classList.remove('hidden');
+      if (isCorrect) {
+        resultEl.innerHTML = `
+          <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+            <p class="text-green-700 font-semibold mb-1">✓ Correct!</p>
+            <p class="text-sm text-green-600">The answer is <strong>${labels[correctIdx]}. ${escapeHtml(quizData.correctText)}</strong></p>
+          </div>
+          <button onclick="rateFlashcard(${isCorrect ? 4 : 1})" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white font-semibold rounded-lg transition-colors">
+            Next Card →
+          </button>
+        `;
+      } else {
+        resultEl.innerHTML = `
+          <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
+            <p class="text-red-600 font-semibold mb-1">✗ Incorrect</p>
+            <p class="text-sm text-red-500 mb-2">You selected <strong>${labels[selectedIdx]}. ${escapeHtml(quizData.options[selectedIdx])}</strong></p>
+            <p class="text-sm text-herbchar-700">The correct answer is <strong class="text-green-600">${labels[correctIdx]}. ${escapeHtml(quizData.correctText)}</strong></p>
+          </div>
+          <button onclick="rateFlashcard(${isCorrect ? 4 : 1})" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white font-semibold rounded-lg transition-colors">
+            Next Card →
+          </button>
+        `;
+      }
+
+      // Auto-rate: correct = 4 (easy), incorrect = 1 (again) for spaced repetition
     }
 
     async function rateFlashcard(quality) {
