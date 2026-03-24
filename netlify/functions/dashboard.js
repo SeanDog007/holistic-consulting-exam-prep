@@ -67,14 +67,14 @@ exports.handler = async (event) => {
     .limit(5);
 
   // Flashcard stats
-  const { count: flashcardsDue } = await userClient
-    .from("flashcard_reviews")
+  const { count: questionsDue } = await userClient
+    .from("question_reviews")
     .select("*", { count: "exact", head: true })
     .eq("user_id", user.id)
     .lte("next_review_at", new Date().toISOString());
 
-  const { count: flashcardsMastered } = await userClient
-    .from("flashcard_reviews")
+  const { count: questionsMastered } = await userClient
+    .from("question_reviews")
     .select("*", { count: "exact", head: true })
     .eq("user_id", user.id)
     .gte("interval_days", 21);
@@ -89,8 +89,8 @@ exports.handler = async (event) => {
       recommendations.push({ type: "practice", text: `Practice Domain ${d} questions`, detail: `Your score is ${domainMastery[d].pct}% — below the 70% pass threshold.`, domain: d });
     }
   }
-  if ((flashcardsDue || 0) > 0) {
-    recommendations.push({ type: "flashcards", text: `Review ${flashcardsDue} flashcard${flashcardsDue === 1 ? "" : "s"} due today`, detail: "Keep your spaced repetition streak going." });
+  if ((questionsDue || 0) > 0) {
+    recommendations.push({ type: "practice", text: `Review ${questionsDue} question${questionsDue === 1 ? "" : "s"} due for practice`, detail: "Keep your spaced repetition streak going." });
   }
   if ((exams || []).length === 0 && (attempts || []).length > 50) {
     recommendations.push({ type: "exam", text: "Try a full-length practice exam", detail: "You've practiced enough questions — test yourself under exam conditions." });
@@ -106,8 +106,8 @@ exports.handler = async (event) => {
       examsTaken: (exams || []).length,
       recentExams: exams || [],
       streak,
-      flashcardsDue: flashcardsDue || 0,
-      flashcardsMastered: flashcardsMastered || 0,
+      questionsDue: questionsDue || 0,
+      questionsMastered: questionsMastered || 0,
       recommendations,
     }),
   };

@@ -122,7 +122,7 @@ exports.handler = async (event) => {
     // 1. Look up question (need correct_answer + option text for feedback)
     const { data: question, error: qErr } = await userClient
       .from("questions")
-      .select("correct_answer, options, explanation, textbook_reference")
+      .select("domain, topic, correct_answer, options, explanation, textbook_reference")
       .eq("id", question_id)
       .single();
     if (qErr || !question) return { statusCode: 404, headers: cors, body: JSON.stringify({ error: "Question not found" }) };
@@ -216,6 +216,8 @@ exports.handler = async (event) => {
         correctText,
         explanation: question.explanation || null,
         textbook_reference: question.textbook_reference || null,
+        domain: question.domain,
+        topic: question.topic,
       }),
     };
   }
