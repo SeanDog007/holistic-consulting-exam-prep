@@ -92,12 +92,19 @@
     }
 
     /* Study guide content styling */
-    .study-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: #2A3024; margin: 2rem 0 0.75rem; }
+    .study-content { font-size: 0.9375rem; line-height: 1.8; color: #3a4a3a; }
+    .study-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: #2A3024; margin: 2rem 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e8e4dc; }
     .study-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: #2A3024; margin: 1.5rem 0 0.5rem; }
-    .study-content p { line-height: 1.75; color: #2A3024; margin-bottom: 1rem; }
-    .study-content ul, .study-content ol { padding-left: 1.25rem; margin-bottom: 1rem; line-height: 1.75; color: #2A3024; }
-    .study-content li { margin-bottom: 0.25rem; }
-    .study-content strong { color: #2A3024; font-weight: 600; }
+    .study-content p { line-height: 1.8; color: #3a4a3a; margin-bottom: 0.75rem; }
+    .study-content p:empty, .study-content p:blank { display: none; }
+    .study-content ul, .study-content ol { padding-left: 1.5rem; margin-bottom: 1rem; line-height: 1.8; color: #3a4a3a; }
+    .study-content li { margin-bottom: 0.375rem; }
+    .study-content strong, .study-content b { color: #2A3024; font-weight: 600; }
+    .study-content em { color: #6B7F5E; font-style: italic; }
+    .study-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.875rem; }
+    .study-content th { background: #f5f2ec; text-align: left; padding: 0.5rem 0.75rem; font-weight: 600; color: #2A3024; border-bottom: 2px solid #e8e4dc; }
+    .study-content td { padding: 0.5rem 0.75rem; border-bottom: 1px solid #f0ede6; }
+    .study-content tr:hover td { background: #faf9f6; }
 
     /* Exam alert callout */
     .exam-alert {
@@ -1727,6 +1734,47 @@
     }
 
     // ── Study Guide ──
+    function cleanStudyContent(html, title) {
+      if (!html) return '';
+      let cleaned = html;
+      // Remove empty paragraphs
+      cleaned = cleaned.replace(/<p>\s*(&nbsp;|\s)*<\/p>/gi, '');
+      cleaned = cleaned.replace(/<p>\s*<\/p>/gi, '');
+      // Convert bullet characters to proper list items
+      cleaned = cleaned.replace(/<p>●\s*/gi, '<li>');
+      cleaned = cleaned.replace(/<p>•\s*/gi, '<li>');
+      cleaned = cleaned.replace(/<p>○\s*/gi, '<li class="ml-4">');
+      // If we converted bullets to <li>, wrap in <ul>
+      if (cleaned.includes('<li>') || cleaned.includes('<li class=')) {
+        cleaned = cleaned.replace(/(<li[^>]*>.*?<\/p>)/gi, (m) => m.replace(/<\/p>/i, '</li>'));
+        // Group consecutive <li> into <ul>
+        cleaned = cleaned.replace(/((<li[^>]*>.*?<\/li>\s*)+)/gi, '<ul class="list-disc pl-5 space-y-1 mb-4">$1</ul>');
+      }
+      // For vitamin/mineral entries: add structured labels
+      if (title && title.match(/Vitamin|Mineral|Omega|Zinc|Iron|Calcium|Magnesium|Selenium|Iodine|Chromium|Copper|Manganese|Potassium|Sodium|Phosphorus/i)) {
+        const paragraphs = cleaned.match(/<p>.*?<\/p>/gi) || [];
+        if (paragraphs.length >= 2 && paragraphs.length <= 5) {
+          const labels = ['<strong>Function:</strong> ', '<strong>Sources:</strong> ', '<strong>Deficiency:</strong> ', '<strong>Toxicity:</strong> ', '<strong>Notes:</strong> '];
+          let structured = '<div class="bg-white rounded-lg border border-parchment-200 p-4 space-y-2">';
+          paragraphs.forEach((p, i) => {
+            const inner = p.replace(/<\/?p>/gi, '').trim();
+            if (inner && i < labels.length) {
+              structured += `<p class="text-sm"><span class="text-sage-500 font-medium">${labels[i]}</span>${inner}</p>`;
+            }
+          });
+          structured += '</div>';
+          return structured;
+        }
+      }
+      // Convert A. B. C. D. numbered items to ordered list
+      cleaned = cleaned.replace(/<p>([A-Z])\.\s+/gi, '<li><strong>$1.</strong> ');
+      if (cleaned.includes('<li><strong>')) {
+        cleaned = cleaned.replace(/(<li><strong>[A-Z]\.<\/strong>.*?<\/p>)/gi, (m) => m.replace(/<\/p>/i, '</li>'));
+        cleaned = cleaned.replace(/((<li><strong>[A-Z]\.<\/strong>.*?<\/li>\s*)+)/gi, '<ol class="list-none space-y-2 mb-4">$1</ol>');
+      }
+      return cleaned;
+    }
+
     async function loadStudyGuide() {
       // Tab click handlers
       document.querySelectorAll('.study-domain-tab').forEach(tab => {
@@ -1771,7 +1819,7 @@
                   </button>
                 </div>
                 ${s.exam_alert ? '<div class="exam-alert px-3 py-2 rounded-md mb-3 text-xs font-medium text-copper-600">This topic appears frequently on the exam</div>' : ''}
-                <div class="study-content text-sm">${s.content_html}</div>
+                <div class="study-content text-sm">${cleanStudyContent(s.content_html, s.title)}</div>
               </div>
             `).join('')}
           </div>

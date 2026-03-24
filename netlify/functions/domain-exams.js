@@ -104,10 +104,10 @@ exports.handler = async (event) => {
   // We join through exam_answers -> questions to identify which specific fixed exam an attempt belongs to.
   const { data: attempts, error: attErr } = await userClient
     .from("exam_attempts")
-    .select("id, domain_filter, score_percent")
+    .select("id, domain_filter, score_pct")
     .eq("user_id", user.id)
     .eq("exam_type", "domain")
-    .not("score_percent", "is", null);
+    .not("score_pct", "is", null);
 
   if (attErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: attErr.message }) };
 
@@ -142,9 +142,9 @@ exports.handler = async (event) => {
       if (!name || !name.match(/^Domain \d+ Exam \d+$/)) continue;
       if (!examStats[name]) examStats[name] = { bestScore: null, attempts: 0 };
       examStats[name].attempts += 1;
-      if (attempt.score_percent != null) {
-        if (examStats[name].bestScore == null || attempt.score_percent > examStats[name].bestScore) {
-          examStats[name].bestScore = attempt.score_percent;
+      if (attempt.score_pct != null) {
+        if (examStats[name].bestScore == null || attempt.score_pct > examStats[name].bestScore) {
+          examStats[name].bestScore = attempt.score_pct;
         }
       }
     }
