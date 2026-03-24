@@ -35,7 +35,7 @@ exports.handler = async (event) => {
     const q = questionMap[answer.question_id];
     if (!q) continue;
 
-    const isCorrect = answer.selected_answer === q.correct_answer;
+    const isCorrect = String(answer.selected_answer).toLowerCase() === String(q.correct_answer).toLowerCase();
     if (isCorrect) correctCount++;
 
     // Track domain scores

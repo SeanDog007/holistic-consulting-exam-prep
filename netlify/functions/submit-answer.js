@@ -21,7 +21,7 @@ exports.handler = async (event) => {
   const { data: question, error: qErr } = await userClient.from("questions").select("correct_answer, explanation, textbook_reference").eq("id", question_id).single();
   if (qErr || !question) return { statusCode: 404, headers: cors, body: JSON.stringify({ error: "Question not found" }) };
 
-  const is_correct = selected_answer === question.correct_answer;
+  const is_correct = String(selected_answer).toLowerCase() === String(question.correct_answer).toLowerCase();
 
   // Record attempt
   const { error: insertErr } = await userClient.from("question_attempts").insert({
