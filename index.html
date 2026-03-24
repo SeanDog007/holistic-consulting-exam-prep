@@ -1472,9 +1472,9 @@
 
       try {
         const data = await apiFetch('focus-areas');
-        const areas = data.focus_areas || [];
+        const domains = data.domains || [];
 
-        if (areas.length === 0) {
+        if (domains.length === 0) {
           listEl.innerHTML = '';
           emptyEl.classList.remove('hidden');
           return;
@@ -1482,51 +1482,33 @@
 
         emptyEl.classList.add('hidden');
 
-        // Group by domain
-        const byDomain = {};
-        for (const fa of areas) {
-          if (!byDomain[fa.domain]) byDomain[fa.domain] = [];
-          byDomain[fa.domain].push(fa);
-        }
+        const html = domains.map(d => {
+          const accuracyColor = d.accuracy_pct < 40 ? 'text-red-500' : d.accuracy_pct < 60 ? 'text-yellow-600' : 'text-orange-500';
+          const barColor = d.accuracy_pct < 40 ? 'bg-red-400' : d.accuracy_pct < 60 ? 'bg-yellow-400' : 'bg-orange-400';
+          const daysSince = d.last_wrong_at ? Math.floor((Date.now() - new Date(d.last_wrong_at).getTime()) / (1000 * 60 * 60 * 24)) : null;
+          const recencyText = daysSince === null ? '' : daysSince === 0 ? 'Last missed: today' : daysSince === 1 ? 'Last missed: yesterday' : `Last missed: ${daysSince} days ago`;
 
-        let html = '';
-        for (const domain of Object.keys(byDomain).sort((a, b) => a - b)) {
-          const items = byDomain[domain];
-          const dc = DOMAIN_COLORS[domain] || DOMAIN_COLORS[1];
-          html += `<div>
-            <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-3">Domain ${domain}: ${DOMAIN_NAMES[domain] || ''}</p>
-            <div class="space-y-3">`;
-
-          for (const fa of items) {
-            const daysSince = Math.floor((Date.now() - new Date(fa.last_wrong_at).getTime()) / (1000 * 60 * 60 * 24));
-            const recencyText = daysSince === 0 ? 'Today' : daysSince === 1 ? '1 day ago' : daysSince + ' days ago';
-
-            let priorityLabel, priorityColor;
-            if (fa.priority_score >= 6) { priorityLabel = 'High'; priorityColor = 'bg-red-100 text-red-700'; }
-            else if (fa.priority_score >= 3) { priorityLabel = 'Medium'; priorityColor = 'bg-yellow-100 text-yellow-700'; }
-            else { priorityLabel = 'Low'; priorityColor = 'bg-green-100 text-green-700'; }
-
-            html += `
-              <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4">
-                <div class="flex items-start justify-between gap-3 mb-2">
-                  <div class="min-w-0">
-                    <p class="text-sm font-semibold text-herbchar-700">${escapeHtml(fa.lesson_title)}</p>
-                    <p class="text-xs text-parchment-400 mt-0.5">${escapeHtml(fa.module_title)}</p>
-                  </div>
-                  <div class="flex items-center gap-2 shrink-0">
-                    <span class="px-2 py-0.5 text-[10px] font-semibold rounded ${dc.bg} ${dc.text} ${dc.border} border">D${fa.domain}</span>
-                    <span class="px-2 py-0.5 text-[10px] font-semibold rounded ${priorityColor}">${priorityLabel}</span>
-                  </div>
+          return `
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-5">
+              <div class="flex items-center justify-between mb-3">
+                <div>
+                  <h3 class="font-display text-lg font-semibold text-herbchar-700">Domain ${d.domain}: ${escapeHtml(d.domain_name)}</h3>
+                  <p class="text-xs text-parchment-400 mt-0.5">${d.exam_weight}% of exam</p>
                 </div>
-                <p class="text-xs text-parchment-400 mb-3">${fa.wrong_count} question${fa.wrong_count !== 1 ? 's' : ''} missed &middot; Last: ${recencyText}</p>
-                <div class="flex items-center gap-2">
-                  <button onclick="loadLesson('${fa.lesson_id}', 'focus-areas')" class="px-3 py-1.5 text-xs font-semibold text-white bg-sage-400 rounded hover:bg-sage-500 transition-colors">Study &rarr;</button>
-                  <button onclick="dismissFocusArea('${fa.lesson_id}')" class="px-3 py-1.5 text-xs font-semibold text-parchment-400 border border-parchment-300 rounded hover:bg-parchment-50 transition-colors">Dismiss</button>
-                </div>
-              </div>`;
-          }
-          html += '</div></div>';
-        }
+                <p class="text-2xl font-bold ${accuracyColor}">${d.accuracy_pct}%</p>
+              </div>
+              <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden mb-3">
+                <div class="h-full ${barColor} rounded-full" style="width:${d.accuracy_pct}%"></div>
+              </div>
+              <p class="text-xs text-parchment-400 mb-4">
+                ${d.questions_wrong} of ${d.questions_attempted} questions missed${recencyText ? ' · ' + recencyText : ''}
+              </p>
+              <div class="flex items-center gap-2">
+                <button onclick="switchView('study-guide'); setTimeout(() => { const tab = document.querySelector('.study-domain-tab[data-domain=\\'${d.domain}\\']'); if (tab) tab.click(); }, 100);" class="px-3 py-1.5 text-xs font-semibold text-white bg-sage-400 rounded hover:bg-sage-500 transition-colors">Study Domain ${d.domain} →</button>
+                <button onclick="startPracticeDomain(${d.domain})" class="px-3 py-1.5 text-xs font-semibold text-sage-500 border border-sage-300 rounded hover:bg-sage-50 transition-colors">Practice Questions →</button>
+              </div>
+            </div>`;
+        }).join('');
 
         listEl.innerHTML = html;
       } catch (err) {
@@ -1535,19 +1517,20 @@
       }
     }
 
-    async function dismissFocusArea(lessonId) {
-      try {
-        await markLessonComplete(lessonId);
-        loadFocusAreas();
-      } catch (err) {
-        showToast('Error dismissing focus area: ' + err.message);
-      }
+    function startPracticeDomain(domain) {
+      switchView('practice');
+      // Auto-select domain and start
+      setTimeout(() => {
+        const radio = document.querySelector(`input[name="practice-domain"][value="${domain}"]`);
+        if (radio) radio.checked = true;
+        startPracticeSession();
+      }, 100);
     }
 
     async function updateFocusBadge() {
       try {
         const data = await apiFetch('focus-areas');
-        const count = data.total_count || 0;
+        const count = data.total_weak || 0;
         const badge = document.getElementById('focus-count-badge');
         const stat = document.getElementById('stat-focus-areas');
 
