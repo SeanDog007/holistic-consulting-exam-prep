@@ -574,6 +574,14 @@
             <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Flashcards</h2>
             <p class="text-sm text-parchment-400 mt-1">Spaced repetition — review cards due today to build long-term memory.</p>
           </div>
+          <div id="flashcard-domain-filter" class="flex flex-wrap gap-2 mb-6">
+            <button onclick="filterFlashcardsByDomain(null)" data-fc-domain="" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-sage-400 bg-sage-400 text-white transition-colors">All</button>
+            <button onclick="filterFlashcardsByDomain(1)" data-fc-domain="1" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 1</button>
+            <button onclick="filterFlashcardsByDomain(2)" data-fc-domain="2" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 2</button>
+            <button onclick="filterFlashcardsByDomain(3)" data-fc-domain="3" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 3</button>
+            <button onclick="filterFlashcardsByDomain(4)" data-fc-domain="4" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 4</button>
+            <button onclick="filterFlashcardsByDomain(5)" data-fc-domain="5" class="fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors">Domain 5</button>
+          </div>
           <div id="flashcard-area" class="max-w-xl mx-auto">
             <p class="text-sm text-parchment-400 italic text-center py-12">Loading flashcards...</p>
           </div>
@@ -1047,7 +1055,7 @@
       // Load view data
       if (viewName === 'dashboard') loadDashboard();
       else if (viewName === 'study-guide') loadStudyGuide();
-      else if (viewName === 'flashcards') loadFlashcards();
+      else if (viewName === 'flashcards') loadFlashcards(activeFlashcardDomain);
       else if (viewName === 'exam-history') loadExamHistory();
       else if (viewName === 'study-plan') loadStudyPlan();
       else if (viewName === 'domain-exams') loadDomainExams();
@@ -1598,12 +1606,29 @@
     // ── Flashcards ──
     let flashcardStack = [];
     let flashcardIdx = 0;
+    let activeFlashcardDomain = null;
 
-    async function loadFlashcards() {
+    function filterFlashcardsByDomain(domain) {
+      activeFlashcardDomain = domain;
+      // Update button styles
+      document.querySelectorAll('.fc-domain-btn').forEach(btn => {
+        const btnDomain = btn.dataset.fcDomain;
+        const isActive = (domain === null && btnDomain === '') || (String(domain) === btnDomain);
+        if (isActive) {
+          btn.className = 'fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-sage-400 bg-sage-400 text-white transition-colors';
+        } else {
+          btn.className = 'fc-domain-btn px-3 py-1.5 text-xs font-semibold rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 hover:text-sage-500 hover:bg-sage-50 transition-colors';
+        }
+      });
+      loadFlashcards(domain);
+    }
+
+    async function loadFlashcards(domain) {
       const area = document.getElementById('flashcard-area');
+      const domainParam = domain ? `&domain=${domain}` : '';
       try {
         // First try to get cards due for review
-        const dueCards = await apiFetch('flashcards?due=true&limit=20');
+        const dueCards = await apiFetch(`flashcards?due=true&limit=20${domainParam}`);
 
         if (dueCards && dueCards.length > 0) {
           flashcardStack = dueCards.map(r => ({ ...r.flashcards, review_id: r.id }));
@@ -1613,9 +1638,9 @@
         }
 
         // No cards due — show new cards to learn
-        const allCards = await apiFetch('flashcards?limit=20');
+        const allCards = await apiFetch(`flashcards?limit=20${domainParam}`);
         if (!allCards || allCards.length === 0) {
-          area.innerHTML = '<p class="text-sm text-parchment-400 italic text-center py-12">No flashcards available yet. Check back soon!</p>';
+          area.innerHTML = '<p class="text-sm text-parchment-400 italic text-center py-12">No flashcards available' + (domain ? ' for Domain ' + domain : '') + '. Check back soon!</p>';
           return;
         }
 
