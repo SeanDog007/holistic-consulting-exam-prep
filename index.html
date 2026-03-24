@@ -1685,13 +1685,13 @@
       const card = flashcardStack[flashcardIdx];
       area.innerHTML = `
         <p class="text-xs text-parchment-400 mb-4 text-center">Card ${flashcardIdx + 1} of ${flashcardStack.length} · Domain ${card.domain}: ${DOMAIN_NAMES[card.domain]}</p>
-        <div class="flashcard-container w-full" style="height:280px;" onclick="this.querySelector('.flashcard-inner').classList.toggle('flipped')">
-          <div class="flashcard-inner relative w-full h-full cursor-pointer">
-            <div class="flashcard-front absolute inset-0 bg-white rounded-lg shadow-card border border-parchment-300 p-8 flex items-center justify-center">
-              <p class="text-base text-herbchar-700 text-center leading-relaxed">${escapeHtml(card.front_text)}</p>
+        <div class="flashcard-container w-full" style="min-height:320px;" onclick="this.querySelector('.flashcard-inner').classList.toggle('flipped')">
+          <div class="flashcard-inner relative w-full cursor-pointer" style="min-height:320px;">
+            <div class="flashcard-front absolute inset-0 bg-white rounded-lg shadow-card border border-parchment-300 p-6 flex flex-col justify-center">
+              <p class="text-sm text-herbchar-700 leading-relaxed whitespace-pre-line">${escapeHtml(card.front_text)}</p>
             </div>
             <div class="flashcard-back absolute inset-0 bg-sage-50 rounded-lg shadow-card border border-sage-200 p-8 flex items-center justify-center">
-              <p class="text-base text-herbchar-700 text-center leading-relaxed">${escapeHtml(card.back_text)}</p>
+              <p class="text-lg font-display font-bold text-herbchar-700 text-center">${escapeHtml(card.back_text)}</p>
             </div>
           </div>
         </div>

@@ -17,23 +17,31 @@ exports.handler = async (event) => {
     // Get cards due for review (includes new cards with no review record)
     if (params.due === "true") {
       const limit = params.limit ? parseInt(params.limit) : 20;
+      const domainFilter = params.domain ? parseInt(params.domain) : null;
 
       // 1. Cards with review records that are due
-      const { data: dueReviews } = await userClient
+      let dueQuery = userClient
         .from("flashcard_reviews")
         .select("*, flashcards(*)")
         .eq("user_id", user.id)
         .lte("next_review_at", new Date().toISOString())
         .order("next_review_at", { ascending: true })
         .limit(limit);
+      const { data: dueReviews } = await dueQuery;
+
+      // Filter by domain after fetch (flashcard_reviews doesn't have domain column)
+      const filteredDue = domainFilter
+        ? (dueReviews || []).filter(r => r.flashcards && r.flashcards.domain === domainFilter)
+        : (dueReviews || []);
 
       // 2. New cards — flashcards that have NO review record for this user
-      const { data: allCards } = await userClient
+      let allCardsQuery = userClient
         .from("flashcards")
         .select("*")
-        .eq("is_active", true)
-        .order("domain")
-        .order("topic");
+        .eq("is_active", true);
+      if (domainFilter) allCardsQuery = allCardsQuery.eq("domain", domainFilter);
+      allCardsQuery = allCardsQuery.order("domain").order("topic");
+      const { data: allCards } = await allCardsQuery;
 
       const { data: userReviews } = await userClient
         .from("flashcard_reviews")
@@ -43,10 +51,10 @@ exports.handler = async (event) => {
       const reviewedIds = new Set((userReviews || []).map(r => r.flashcard_id));
       const newCards = (allCards || [])
         .filter(c => !reviewedIds.has(c.id))
-        .slice(0, Math.max(0, limit - (dueReviews || []).length))
+        .slice(0, Math.max(0, limit - filteredDue.length))
         .map(c => ({ flashcard_id: c.id, flashcards: c, is_new: true }));
 
-      const combined = [...(dueReviews || []), ...newCards].slice(0, limit);
+      const combined = [...filteredDue, ...newCards].slice(0, limit);
       return { statusCode: 200, headers: cors, body: JSON.stringify(combined) };
     }
 

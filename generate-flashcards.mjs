@@ -32,15 +32,22 @@ async function main() {
 
   console.log(`${valid.length} questions after filtering (skipped ${questions.length - valid.length}).`);
 
-  // Convert to flashcards
-  const flashcards = valid.map((q) => ({
-    domain: q.domain,
-    topic: q.topic,
-    front_text: q.question_text,
-    back_text: q.options[q.correct_answer],
-    card_type: "text",
-    is_active: true,
-  }));
+  // Convert to flashcards — include answer options on front, correct answer on back
+  const flashcards = valid.map((q) => {
+    const optionLabels = ['A', 'B', 'C', 'D', 'E'];
+    const optionsText = q.options.map((opt, i) => `${optionLabels[i]}. ${opt}`).join('\n');
+    const correctLetter = optionLabels[q.correct_answer];
+    const correctText = q.options[q.correct_answer];
+
+    return {
+      domain: q.domain,
+      topic: q.topic,
+      front_text: `${q.question_text}\n\n${optionsText}`,
+      back_text: `${correctLetter}. ${correctText}`,
+      card_type: "text",
+      is_active: true,
+    };
+  });
 
   // Insert in batches of 50
   const BATCH_SIZE = 50;
