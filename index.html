@@ -1578,10 +1578,10 @@
       btnEl.classList.add('selected', isCorrect ? 'correct' : 'incorrect');
 
       if (!isCorrect) {
-        const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
-        const correctIdx = labels.indexOf(correctAnswer);
+        const labels = ['a', 'b', 'c', 'd', 'e', 'f'];
+        const correctIdx = labels.indexOf(String(correctAnswer).toLowerCase());
         const allBtns = document.querySelectorAll('.quiz-option');
-        if (allBtns[correctIdx]) allBtns[correctIdx].classList.add('correct');
+        if (correctIdx >= 0 && allBtns[correctIdx]) allBtns[correctIdx].classList.add('correct');
       }
 
       quizAnswers.push({ question_id: q.id, selected_answer: answer, is_correct: isCorrect, domain: q.domain });
@@ -1591,7 +1591,7 @@
       document.getElementById('quiz-result-icon').innerHTML = isCorrect
         ? '<svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
         : '<svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
-      document.getElementById('quiz-result-text').textContent = isCorrect ? 'Correct!' : `Incorrect — the answer is ${correctAnswer}`;
+      document.getElementById('quiz-result-text').textContent = isCorrect ? 'Correct!' : `Incorrect — the answer is ${String(correctAnswer).toUpperCase()}`;
       document.getElementById('quiz-result-text').className = 'text-sm font-semibold ' + (isCorrect ? 'text-green-700' : 'text-red-600');
       document.getElementById('quiz-explanation-text').textContent = explanation || 'No explanation available for this question.';
       document.getElementById('quiz-reference').textContent = reference ? `Reference: ${reference}` : '';
