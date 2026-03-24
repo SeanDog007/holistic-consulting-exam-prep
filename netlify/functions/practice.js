@@ -139,13 +139,14 @@ exports.handler = async (event) => {
     const quality = isCorrect ? 4 : 1;
 
     // 3. Get existing review or defaults
-    const { data: existing } = await userClient
+    const { data: existingRows } = await userClient
       .from("question_reviews")
       .select("*")
       .eq("user_id", user.id)
       .eq("question_id", question_id)
-      .single();
+      .limit(1);
 
+    const existing = existingRows && existingRows.length > 0 ? existingRows[0] : null;
     const prevEase = existing?.ease_factor || 2.5;
     const prevInterval = existing?.interval_days || 0;
     const prevReps = existing?.repetition_count || 0;
@@ -180,25 +181,26 @@ exports.handler = async (event) => {
       if (insErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: insErr.message }) };
     }
 
-    // 5. Record attempt in question_attempts (for dashboard stats)
-    const { error: attemptErr } = await userClient.from("question_attempts").insert({
-      user_id: user.id,
-      question_id,
-      selected_answer: selectedLetter,
-      is_correct: isCorrect,
-    });
-    if (attemptErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: attemptErr.message }) };
+    // 5. Record attempt in question_attempts (for dashboard stats) — non-blocking
+    try {
+      await userClient.from("question_attempts").insert({
+        user_id: user.id,
+        question_id,
+        selected_answer: selectedLetter,
+        is_correct: isCorrect,
+      });
+    } catch (e) { console.error("question_attempts insert failed:", e); }
 
-    // 6. Update aggregate stats on questions table (service client bypasses RLS)
-    const serviceClient = getServiceClient();
-    await serviceClient.rpc("increment_field", { row_id: question_id, table_name: "questions", field_name: "times_shown" }).catch(() => {});
-    // Fallback: direct update if RPC doesn't exist
-    const { data: qRow } = await serviceClient.from("questions").select("times_shown, times_correct").eq("id", question_id).single();
-    if (qRow) {
-      const updates = { times_shown: (qRow.times_shown || 0) + 1 };
-      if (isCorrect) updates.times_correct = (qRow.times_correct || 0) + 1;
-      await serviceClient.from("questions").update(updates).eq("id", question_id);
-    }
+    // 6. Update aggregate stats on questions table — non-blocking
+    try {
+      const serviceClient = getServiceClient();
+      const { data: qRow } = await serviceClient.from("questions").select("times_shown, times_correct").eq("id", question_id).single();
+      if (qRow) {
+        const updates = { times_shown: (qRow.times_shown || 0) + 1 };
+        if (isCorrect) updates.times_correct = (qRow.times_correct || 0) + 1;
+        await serviceClient.from("questions").update(updates).eq("id", question_id);
+      }
+    } catch (e) { console.error("stats update failed:", e); }
 
     // 7. Build response with correct answer text (return 0-based index for frontend)
     const correctText = question.options && Array.isArray(question.options)

@@ -1781,7 +1781,14 @@
         reference = result.textbook_reference;
       } catch(e) {
         console.error('Practice submit error:', e);
-        // Can't validate without server — skip
+        // Re-enable buttons so user can try again
+        document.querySelectorAll('.practice-option').forEach(btn => {
+          btn.style.pointerEvents = '';
+          btn.classList.add('hover:border-sage-400', 'hover:bg-sage-50');
+        });
+        const resultEl = document.getElementById('practice-result');
+        resultEl.classList.remove('hidden');
+        resultEl.innerHTML = '<p class="text-sm text-red-500 text-center py-2">Error submitting answer. Please try again.</p>';
         return;
       }
 
