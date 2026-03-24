@@ -1,4 +1,5 @@
 const { getUserClient, getServiceClient, getCorsHeaders, extractToken } = require("./utils/supabase");
+const { batchUpdateFocusAreas } = require("./utils/focus-areas");
 
 exports.handler = async (event) => {
   const cors = getCorsHeaders(event.headers.origin || event.headers.Origin);
@@ -62,6 +63,18 @@ exports.handler = async (event) => {
       is_correct: isCorrect,
       time_taken_seconds: answer.time_taken_seconds || null,
     });
+  }
+
+  // Update focus areas for wrong answers (batched)
+  const wrongQuestionIds = [];
+  for (const answer of answers) {
+    const q = questionMap[answer.question_id];
+    if (!q) continue;
+    const isCorrect = String(answer.selected_answer).toLowerCase() === String(q.correct_answer).toLowerCase();
+    if (!isCorrect) wrongQuestionIds.push(answer.question_id);
+  }
+  if (wrongQuestionIds.length > 0) {
+    try { await batchUpdateFocusAreas(userClient, user.id, wrongQuestionIds); } catch (e) { /* logged internally */ }
   }
 
   // Calculate percentages

@@ -1,4 +1,5 @@
 const { getUserClient, getCorsHeaders, extractToken } = require("./utils/supabase");
+const { updateFocusArea } = require("./utils/focus-areas");
 
 exports.handler = async (event) => {
   const cors = getCorsHeaders(event.headers.origin || event.headers.Origin);
@@ -33,6 +34,11 @@ exports.handler = async (event) => {
   });
 
   if (insertErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: insertErr.message }) };
+
+  // Update focus areas if wrong (non-blocking)
+  if (!is_correct) {
+    try { await updateFocusArea(userClient, user.id, question_id); } catch (e) { /* logged internally */ }
+  }
 
   return {
     statusCode: 200,

@@ -1472,54 +1472,137 @@
 
       try {
         const data = await apiFetch('focus-areas');
-        const domains = data.domains || [];
+        const items = data.focus_areas || [];
 
-        if (domains.length === 0) {
+        if (items.length === 0) {
           listEl.innerHTML = '';
           emptyEl.classList.remove('hidden');
+          // Update badge to 0
+          const badge = document.getElementById('focus-count-badge');
+          if (badge) { badge.textContent = '0'; badge.classList.add('hidden'); }
           return;
         }
 
         emptyEl.classList.add('hidden');
 
-        const html = domains.map(d => {
-          const accuracyColor = d.accuracy_pct < 40 ? 'text-red-500' : d.accuracy_pct < 60 ? 'text-yellow-600' : 'text-orange-500';
-          const barColor = d.accuracy_pct < 40 ? 'bg-red-400' : d.accuracy_pct < 60 ? 'bg-yellow-400' : 'bg-orange-400';
-          const daysSince = d.last_wrong_at ? Math.floor((Date.now() - new Date(d.last_wrong_at).getTime()) / (1000 * 60 * 60 * 24)) : null;
-          const recencyText = daysSince === null ? '' : daysSince === 0 ? 'Last missed: today' : daysSince === 1 ? 'Last missed: yesterday' : `Last missed: ${daysSince} days ago`;
+        // Group by domain
+        const grouped = {};
+        for (const item of items) {
+          if (!grouped[item.domain]) grouped[item.domain] = { name: item.domain_name, items: [] };
+          grouped[item.domain].items.push(item);
+        }
 
-          return `
-            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-5">
-              <div class="flex items-center justify-between mb-3">
-                <div>
-                  <h3 class="font-display text-lg font-semibold text-herbchar-700">Domain ${d.domain}: ${escapeHtml(d.domain_name)}</h3>
-                  <p class="text-xs text-parchment-400 mt-0.5">${d.exam_weight}% of exam</p>
+        const PRIORITY_STYLES = {
+          high: { bg: 'bg-red-50', text: 'text-red-600', border: 'border-red-200', badge: 'bg-red-100 text-red-700' },
+          medium: { bg: 'bg-amber-50', text: 'text-amber-600', border: 'border-amber-200', badge: 'bg-amber-100 text-amber-700' },
+          low: { bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-200', badge: 'bg-blue-100 text-blue-700' },
+        };
+
+        let html = '';
+        for (const [domain, group] of Object.entries(grouped).sort((a, b) => a[0] - b[0])) {
+          html += `<div class="mb-6">
+            <h3 class="font-display text-sm font-bold text-herbchar-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-sage-400"></span>
+              Domain ${domain}: ${escapeHtml(group.name)}
+              <span class="text-parchment-400 font-normal normal-case tracking-normal">(${group.items.length} ${group.items.length === 1 ? 'topic' : 'topics'})</span>
+            </h3>`;
+
+          for (const item of group.items) {
+            const ps = PRIORITY_STYLES[item.priority] || PRIORITY_STYLES.low;
+            const daysSince = item.last_wrong_at ? Math.floor((Date.now() - new Date(item.last_wrong_at).getTime()) / (1000 * 60 * 60 * 24)) : null;
+            const recencyText = daysSince === null ? '' : daysSince === 0 ? 'Last missed: today' : daysSince === 1 ? 'Last missed: yesterday' : `Last missed: ${daysSince} days ago`;
+
+            html += `
+              <div id="fa-card-${item.id}" class="bg-white rounded-lg shadow-card border border-parchment-300 p-4 mb-3 transition-all duration-300">
+                <div class="flex items-start justify-between gap-3 mb-2">
+                  <div class="min-w-0">
+                    <h4 class="font-display text-base font-semibold text-herbchar-700 truncate">${escapeHtml(item.lesson_title)}</h4>
+                    <p class="text-xs text-parchment-400 mt-0.5">${escapeHtml(item.module_title)}</p>
+                  </div>
+                  <span class="shrink-0 px-2 py-0.5 text-[10px] font-bold uppercase rounded-full ${ps.badge}">${item.priority}</span>
                 </div>
-                <p class="text-2xl font-bold ${accuracyColor}">${d.accuracy_pct}%</p>
-              </div>
-              <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden mb-3">
-                <div class="h-full ${barColor} rounded-full" style="width:${d.accuracy_pct}%"></div>
-              </div>
-              <p class="text-xs text-parchment-400 mb-4">
-                ${d.questions_wrong} of ${d.questions_attempted} questions missed${recencyText ? ' · ' + recencyText : ''}
-              </p>
-              <div class="flex items-center gap-2">
-                <button onclick="switchView('study-guide'); setTimeout(() => { const tab = document.querySelector('.study-domain-tab[data-domain=\\'${d.domain}\\']'); if (tab) tab.click(); }, 100);" class="px-3 py-1.5 text-xs font-semibold text-white bg-sage-400 rounded hover:bg-sage-500 transition-colors">Study Domain ${d.domain} →</button>
-                <button onclick="startPracticeDomain(${d.domain})" class="px-3 py-1.5 text-xs font-semibold text-sage-500 border border-sage-300 rounded hover:bg-sage-50 transition-colors">Practice Questions →</button>
-              </div>
-            </div>`;
-        }).join('');
+                <p class="text-xs text-parchment-400 mb-3">
+                  ${item.wrong_count} question${item.wrong_count !== 1 ? 's' : ''} missed${recencyText ? ' · ' + recencyText : ''}
+                </p>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <button onclick="loadLesson('${item.lesson_id}', 'focus-areas')" class="px-3 py-1.5 text-xs font-semibold text-white bg-sage-400 rounded hover:bg-sage-500 transition-colors">Study Lesson →</button>
+                  <button onclick="startPracticeDomain(${item.domain})" class="px-3 py-1.5 text-xs font-semibold text-sage-500 border border-sage-300 rounded hover:bg-sage-50 transition-colors">Practice →</button>
+                  <div class="ml-auto flex items-center gap-1">
+                    <button onclick="dismissFocusArea('${item.id}')" class="px-2 py-1 text-[10px] text-parchment-400 hover:text-parchment-600 transition-colors" title="Dismiss (hide until you miss related questions again)">Dismiss</button>
+                    <button onclick="completeFocusArea('${item.id}')" class="px-2 py-1 text-[10px] font-semibold text-sage-500 hover:text-sage-700 transition-colors" title="Mark complete (also completes in Study Guides)">✓ Complete</button>
+                  </div>
+                </div>
+              </div>`;
+          }
+          html += `</div>`;
+        }
 
         listEl.innerHTML = html;
+
+        // Update badge
+        const badge = document.getElementById('focus-count-badge');
+        if (badge) {
+          badge.textContent = items.length;
+          badge.classList.toggle('hidden', items.length === 0);
+        }
       } catch (err) {
         console.error('Focus areas load error:', err);
         listEl.innerHTML = '<p class="text-sm text-red-500">Could not load focus areas. Please try again.</p>';
       }
     }
 
+    async function dismissFocusArea(id) {
+      const card = document.getElementById('fa-card-' + id);
+      if (card) {
+        card.style.opacity = '0';
+        card.style.transform = 'translateX(20px)';
+      }
+      try {
+        await apiFetch('focus-areas', { method: 'POST', body: JSON.stringify({ id, action: 'dismiss' }) });
+        setTimeout(() => { if (card) card.remove(); cleanUpEmptyDomainHeaders(); }, 300);
+        updateFocusBadge();
+      } catch (err) {
+        console.error('Dismiss error:', err);
+        if (card) { card.style.opacity = '1'; card.style.transform = 'none'; }
+      }
+    }
+
+    async function completeFocusArea(id) {
+      const card = document.getElementById('fa-card-' + id);
+      if (card) {
+        card.style.opacity = '0';
+        card.style.transform = 'translateX(20px)';
+      }
+      try {
+        await apiFetch('focus-areas', { method: 'POST', body: JSON.stringify({ id, action: 'complete' }) });
+        setTimeout(() => { if (card) card.remove(); cleanUpEmptyDomainHeaders(); }, 300);
+        updateFocusBadge();
+      } catch (err) {
+        console.error('Complete error:', err);
+        if (card) { card.style.opacity = '1'; card.style.transform = 'none'; }
+      }
+    }
+
+    function cleanUpEmptyDomainHeaders() {
+      // Remove domain groups that have no more cards
+      const listEl = document.getElementById('focus-areas-list');
+      if (!listEl) return;
+      const groups = listEl.querySelectorAll(':scope > div.mb-6');
+      let totalCards = 0;
+      groups.forEach(g => {
+        const cards = g.querySelectorAll('[id^="fa-card-"]');
+        if (cards.length === 0) g.remove();
+        else totalCards += cards.length;
+      });
+      // If no cards left, show empty state
+      if (totalCards === 0) {
+        listEl.innerHTML = '';
+        document.getElementById('focus-areas-empty')?.classList.remove('hidden');
+      }
+    }
+
     function startPracticeDomain(domain) {
       switchView('practice');
-      // Auto-select domain and start
       setTimeout(() => {
         const radio = document.querySelector(`input[name="practice-domain"][value="${domain}"]`);
         if (radio) radio.checked = true;
@@ -1530,7 +1613,7 @@
     async function updateFocusBadge() {
       try {
         const data = await apiFetch('focus-areas');
-        const count = data.total_weak || 0;
+        const count = data.total_active || 0;
         const badge = document.getElementById('focus-count-badge');
         const stat = document.getElementById('stat-focus-areas');
 

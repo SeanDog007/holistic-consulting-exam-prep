@@ -1,4 +1,5 @@
 const { getUserClient, getServiceClient, getCorsHeaders, extractToken } = require("./utils/supabase");
+const { updateFocusArea } = require("./utils/focus-areas");
 
 // SM-2 algorithm implementation
 function sm2(quality, prevEase, prevInterval, prevReps) {
@@ -191,6 +192,11 @@ exports.handler = async (event) => {
         is_correct: isCorrect,
       });
     } catch (e) { console.error("question_attempts insert failed:", e); }
+
+    // 5b. Update focus areas if wrong
+    if (!isCorrect) {
+      try { await updateFocusArea(userClient, user.id, question_id); } catch (e) { /* logged internally */ }
+    }
 
     // 6. Update aggregate stats on questions table — non-blocking
     try {
