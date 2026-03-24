@@ -509,22 +509,19 @@
               <!-- Session length -->
               <div class="mb-8">
                 <label class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-3 block">Session Length</label>
-                <div class="flex gap-3">
-                  <label class="flex-1 text-center px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
-                    <input type="radio" name="practice-length" value="10" class="hidden peer">
-                    <span class="block text-sm font-medium text-herbchar-700 peer-checked:text-sage-500">Quick</span>
+                <div class="flex gap-3" id="practice-length-options">
+                  <button type="button" onclick="selectPracticeLength(this, 10)" data-length="10" class="practice-length-btn flex-1 text-center px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <span class="block text-sm font-medium text-herbchar-700">Quick</span>
                     <span class="block text-xs text-parchment-400">10 questions</span>
-                  </label>
-                  <label class="flex-1 text-center px-4 py-3 rounded-lg border border-sage-400 bg-sage-50 cursor-pointer hover:border-sage-400 transition-colors">
-                    <input type="radio" name="practice-length" value="20" checked class="hidden peer">
+                  </button>
+                  <button type="button" onclick="selectPracticeLength(this, 20)" data-length="20" class="practice-length-btn flex-1 text-center px-4 py-3 rounded-lg border border-sage-400 bg-sage-50 cursor-pointer hover:border-sage-400 transition-colors">
                     <span class="block text-sm font-medium text-sage-500">Standard</span>
                     <span class="block text-xs text-parchment-400">20 questions</span>
-                  </label>
-                  <label class="flex-1 text-center px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
-                    <input type="radio" name="practice-length" value="40" class="hidden peer">
-                    <span class="block text-sm font-medium text-herbchar-700 peer-checked:text-sage-500">Deep</span>
+                  </button>
+                  <button type="button" onclick="selectPracticeLength(this, 40)" data-length="40" class="practice-length-btn flex-1 text-center px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <span class="block text-sm font-medium text-herbchar-700">Deep</span>
                     <span class="block text-xs text-parchment-400">40 questions</span>
-                  </label>
+                  </button>
                 </div>
               </div>
 
@@ -1609,6 +1606,22 @@
     let practiceDomainResults = {}; // { domain: { correct: N, total: N } }
     let practiceWrongTopics = []; // topics user got wrong
 
+    let selectedPracticeLength = 20;
+
+    function selectPracticeLength(btn, length) {
+      selectedPracticeLength = length;
+      document.querySelectorAll('.practice-length-btn').forEach(b => {
+        b.classList.remove('border-sage-400', 'bg-sage-50');
+        b.classList.add('border-parchment-300', 'bg-white');
+        b.querySelector('.text-sm').classList.remove('text-sage-500');
+        b.querySelector('.text-sm').classList.add('text-herbchar-700');
+      });
+      btn.classList.remove('border-parchment-300', 'bg-white');
+      btn.classList.add('border-sage-400', 'bg-sage-50');
+      btn.querySelector('.text-sm').classList.remove('text-herbchar-700');
+      btn.querySelector('.text-sm').classList.add('text-sage-500');
+    }
+
     function showPracticeSetup() {
       document.getElementById('practice-setup').classList.remove('hidden');
       document.getElementById('practice-active').classList.add('hidden');
@@ -1616,21 +1629,8 @@
 
     function startPracticeSession() {
       const domainRadio = document.querySelector('input[name="practice-domain"]:checked');
-      const lengthRadio = document.querySelector('input[name="practice-length"]:checked');
       const domain = domainRadio?.value ? parseInt(domainRadio.value) : null;
-      const limit = lengthRadio?.value ? parseInt(lengthRadio.value) : 20;
-
-      // Update length button styles
-      document.querySelectorAll('input[name="practice-length"]').forEach(r => {
-        const label = r.closest('label');
-        if (r.checked) {
-          label.classList.remove('border-parchment-300', 'bg-white');
-          label.classList.add('border-sage-400', 'bg-sage-50');
-        } else {
-          label.classList.remove('border-sage-400', 'bg-sage-50');
-          label.classList.add('border-parchment-300', 'bg-white');
-        }
-      });
+      const limit = selectedPracticeLength;
 
       document.getElementById('practice-setup').classList.add('hidden');
       document.getElementById('practice-active').classList.remove('hidden');
