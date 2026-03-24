@@ -105,6 +105,14 @@
       border-left: 3px solid #B07242;
     }
 
+    /* Domain exam accordion */
+    .domain-chevron { transition: transform 0.2s ease; }
+    .domain-exam-body { animation: accordion-open 0.2s ease; }
+    @keyframes accordion-open {
+      from { opacity: 0; max-height: 0; }
+      to { opacity: 1; max-height: 1000px; }
+    }
+
     /* Mobile sidebar */
     @media (max-width: 1023px) {
       .sidebar-overlay {
@@ -241,7 +249,7 @@
           Practice Quiz
         </button>
         <button data-view="domain-exams" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
-          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/></svg>
           Domain Exams
         </button>
         <button data-view="full-exam" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
@@ -591,7 +599,7 @@
         <div id="view-domain-exams" class="view">
           <div class="mb-6">
             <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Domain Exams</h2>
-            <p class="text-sm text-parchment-400 mt-1">Fixed practice exams organized by domain — same questions every time for consistent tracking.</p>
+            <p class="text-sm text-parchment-400 mt-1">Fixed practice exams organized by BCHN domain — same questions every time.</p>
           </div>
           <div id="domain-exams-loading" class="text-sm text-parchment-400">Loading exams...</div>
           <div id="domain-exams-list" class="space-y-4 hidden"></div>
@@ -1222,14 +1230,13 @@
     }
 
     // ── Domain Exams ──
-    const DOMAIN_NAMES = {
-      1: 'Food & Nutrition',
-      2: 'A&P / Biochemistry',
-      3: 'Counseling / Ethics / Scope',
+    const DOMAIN_FULL_NAMES = {
+      1: 'Food and Nutrition',
+      2: 'Anatomy, Physiology, and Biochemistry',
+      3: 'Counseling, Ethics, and Scope of Practice',
       4: 'Nutrition in Practice',
       5: 'Research',
     };
-    const DOMAIN_WEIGHTS = { 1: '35%', 2: '15%', 3: '10%', 4: '30%', 5: '10%' };
 
     async function loadDomainExams() {
       const $loading = document.getElementById('domain-exams-loading');
@@ -1252,23 +1259,33 @@
           section.innerHTML = `
             <button class="domain-exam-toggle w-full flex items-center justify-between p-4 text-left hover:bg-parchment-50 transition-colors" data-domain="${d}">
               <div>
-                <h3 class="font-display text-lg font-bold text-herbchar-700">Domain ${d}: ${DOMAIN_NAMES[d]}</h3>
-                <p class="text-xs text-parchment-400 mt-0.5">${DOMAIN_WEIGHTS[d]} of exam · ${exams.length} exams · ${totalQs} questions</p>
+                <h3 class="font-display text-lg font-bold text-herbchar-700">Domain ${d}: ${DOMAIN_FULL_NAMES[d]}</h3>
+                <p class="text-xs text-parchment-400 mt-0.5">${DOMAIN_WEIGHTS[d]}% of exam · ${exams.length} exams · ${totalQs} questions</p>
               </div>
               <svg class="w-5 h-5 text-parchment-400 transition-transform domain-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="domain-exam-body hidden border-t border-parchment-200 p-4 space-y-2">
-              ${exams.map((exam, i) => `
+              ${exams.map((exam, i) => {
+                const bestScoreHtml = exam.bestScore != null
+                  ? `<span class="inline-flex items-center gap-1 text-xs font-semibold ${exam.bestScore >= 70 ? 'text-green-600' : 'text-copper-400'}">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                      Best: ${exam.bestScore}%
+                    </span>`
+                  : '<span class="text-xs text-parchment-400 italic">Not attempted</span>';
+                return `
                 <div class="flex items-center justify-between p-3 rounded-md border border-parchment-200 hover:border-sage-300 hover:bg-sage-50/30 transition-colors">
                   <div>
-                    <p class="text-sm font-medium text-herbchar-700">Exam ${i + 1}</p>
-                    <p class="text-xs text-parchment-400">${exam.questionCount} questions</p>
+                    <p class="text-sm font-medium text-herbchar-700">${exam.displayName || ('Exam ' + (i + 1))}</p>
+                    <div class="flex items-center gap-3 mt-0.5">
+                      <span class="text-xs text-parchment-400">${exam.questionCount} questions</span>
+                      ${bestScoreHtml}
+                    </div>
                   </div>
                   <button onclick="startDomainExam('${exam.name.replace(/'/g, "\\'")}')" class="px-4 py-1.5 bg-sage-400 hover:bg-sage-500 text-white text-xs font-semibold rounded-md transition-colors">
                     Start
                   </button>
                 </div>
-              `).join('')}
+              `}).join('')}
             </div>
           `;
           $list.appendChild(section);
