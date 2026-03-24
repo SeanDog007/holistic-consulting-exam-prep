@@ -59,8 +59,8 @@ exports.handler = async (event) => {
     // 3. Fetch lessons joined with modules for matching
     const { data: lessons, error: lessonErr } = await userClient
       .from("study_lessons")
-      .select("id, title, study_modules!inner(domain, title)")
-      .order("sort_order", { ascending: true });
+      .select("id, title, study_modules(domain, title)")
+      .order("lesson_order", { ascending: true });
 
     if (lessonErr) throw lessonErr;
 
