@@ -1257,11 +1257,15 @@
 
       try {
         const res = await apiFetch('domain-exams');
-        const { domains } = res;
+        const domainsArray = res.domains || [];
+
+        // Index by domain number for easy lookup
+        const domainMap = {};
+        domainsArray.forEach(d => { domainMap[d.domain] = d.exams || []; });
 
         $list.innerHTML = '';
         for (let d = 1; d <= 5; d++) {
-          const exams = domains[d] || [];
+          const exams = domainMap[d] || [];
           if (exams.length === 0) continue;
 
           const totalQs = exams.reduce((s, e) => s + e.questionCount, 0);
