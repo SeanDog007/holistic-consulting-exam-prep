@@ -106,6 +106,23 @@
     .study-content td { padding: 0.5rem 0.75rem; border-bottom: 1px solid #f0ede6; }
     .study-content tr:hover td { background: #faf9f6; }
 
+    /* Mobile table scroll wrapper */
+    .study-content-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .study-content-wrap table { min-width: 480px; }
+
+    /* Mobile responsive fixes (375px–430px) */
+    @media (max-width: 480px) {
+      .study-content { font-size: 0.875rem; line-height: 1.7; }
+      .study-content h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; }
+      .study-content h3 { font-size: 1.125rem; margin: 1.25rem 0 0.375rem; }
+      .study-content table { font-size: 0.75rem; }
+      .study-content th, .study-content td { padding: 0.375rem 0.5rem; }
+
+      /* Prevent horizontal scroll */
+      body { overflow-x: hidden; }
+      main { overflow-x: hidden; }
+    }
+
     /* Exam alert callout */
     .exam-alert {
       background: linear-gradient(135deg, rgba(176, 114, 66, 0.06), rgba(176, 114, 66, 0.02));
@@ -240,7 +257,7 @@
   <div id="app-shell" class="view">
     <!-- Mobile header -->
     <header class="lg:hidden fixed top-0 left-0 right-0 bg-white border-b border-parchment-300 z-30 px-4 py-3 flex items-center justify-between">
-      <button id="mobile-menu-btn" class="p-1.5 -ml-1.5 text-herbchar-700 hover:bg-parchment-100 rounded">
+      <button id="mobile-menu-btn" class="p-2 -ml-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-herbchar-700 hover:bg-parchment-100 rounded">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
       <div class="text-center">
@@ -250,7 +267,7 @@
     </header>
 
     <!-- Sidebar overlay (mobile) -->
-    <div id="sidebar-overlay" class="sidebar-overlay fixed inset-0 bg-black/30 z-40 lg:hidden hidden"></div>
+    <div id="sidebar-overlay" class="sidebar-overlay fixed inset-0 bg-black/30 z-40 lg:hidden"></div>
 
     <!-- Sidebar -->
     <aside id="sidebar" class="sidebar-panel fixed top-0 left-0 bottom-0 w-64 bg-white border-r border-parchment-300 z-50 lg:translate-x-0 lg:z-10 flex flex-col">
@@ -266,50 +283,26 @@
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
           Dashboard
         </button>
-
-        <p class="px-3 pt-4 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-parchment-400">Study</p>
-        <button data-view="focus-areas" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
-          <svg class="w-4 h-4 text-copper-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          Focus Areas
-          <span id="focus-count-badge" class="ml-auto bg-copper-400 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
-        </button>
         <button data-view="study-guide" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-          Study Guides
-        </button>
-
-        <p class="px-3 pt-4 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-parchment-400">Practice</p>
-        <button data-view="diagnostic" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
-          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><circle cx="12" cy="12" r="6" stroke-width="2"/><circle cx="12" cy="12" r="2" stroke-width="2"/></svg>
-          Diagnostic
+          Curriculum
         </button>
         <button data-view="practice" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
           Practice
         </button>
-
-        <p class="px-3 pt-4 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-parchment-400">Test</p>
-        <button data-view="domain-exams" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
-          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/></svg>
-          Domain Exams
-        </button>
         <button data-view="full-exam" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Full Exam (151 Q)
+          Mock Exam
         </button>
-        <button data-view="exam-history" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
-          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-          Exam History
+        <button data-view="focus-areas" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+          <svg class="w-4 h-4 text-copper-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Focus Areas
+          <span id="focus-count-badge" class="ml-auto bg-copper-400 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
         </button>
-
-        <p class="px-3 pt-4 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-parchment-400">Resources</p>
         <button data-view="exam-day" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
-          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Exam Day Prep
-        </button>
-        <button data-view="study-plan" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-          Study Plan
+          Exam Day
         </button>
 
         <!-- Admin section (hidden for non-admins) -->
@@ -360,6 +353,25 @@
             <p class="text-sm text-parchment-400 mt-1">Here's your exam readiness overview.</p>
           </div>
 
+          <!-- Continue Studying CTA -->
+          <div id="continue-studying-card" class="hidden mb-6">
+            <div class="bg-white rounded-lg shadow-card border border-sage-300 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+              <div class="flex items-center gap-3 flex-1 min-w-0">
+                <div class="w-10 h-10 rounded-full bg-sage-50 border border-sage-200 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                </div>
+                <div class="min-w-0">
+                  <p class="text-xs text-parchment-400">Pick up where you left off</p>
+                  <p id="continue-lesson-title" class="text-sm font-semibold text-herbchar-700 truncate"></p>
+                  <p id="continue-module-name" class="text-xs text-parchment-400 truncate"></p>
+                </div>
+              </div>
+              <button id="continue-studying-btn" onclick="resumeLastLesson()" class="shrink-0 px-5 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                Continue Studying →
+              </button>
+            </div>
+          </div>
+
           <!-- Readiness score + domain breakdown -->
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             <!-- Readiness gauge -->
@@ -380,49 +392,49 @@
             </div>
 
             <!-- Domain breakdown -->
-            <div class="lg:col-span-2 bg-white rounded-lg shadow-card border border-parchment-300 p-6">
+            <div class="lg:col-span-2 bg-white rounded-lg shadow-card border border-parchment-300 p-4 sm:p-6">
               <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-4">Domain Mastery</p>
               <div class="space-y-4" id="domain-bars">
                 <div class="domain-bar" data-domain="1">
-                  <div class="flex justify-between items-baseline mb-1">
-                    <span class="text-sm font-medium text-herbchar-700">Domain 1: Food & Nutrition</span>
-                    <span class="text-xs text-parchment-400"><span class="domain-pct">—</span>% · 35% of exam</span>
+                  <div class="flex justify-between items-baseline mb-1 gap-2">
+                    <span class="text-sm font-medium text-herbchar-700 truncate min-w-0">Domain 1: Food &amp; Nutrition</span>
+                    <span class="text-xs text-parchment-400 shrink-0"><span class="domain-pct">—</span>% · 35%</span>
                   </div>
                   <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
                     <div class="progress-fill h-full bg-sage-400 rounded-full" style="width:0%"></div>
                   </div>
                 </div>
                 <div class="domain-bar" data-domain="2">
-                  <div class="flex justify-between items-baseline mb-1">
-                    <span class="text-sm font-medium text-herbchar-700">Domain 2: A&P / Biochemistry</span>
-                    <span class="text-xs text-parchment-400"><span class="domain-pct">—</span>% · 15% of exam</span>
+                  <div class="flex justify-between items-baseline mb-1 gap-2">
+                    <span class="text-sm font-medium text-herbchar-700 truncate min-w-0">Domain 2: A&amp;P / Biochemistry</span>
+                    <span class="text-xs text-parchment-400 shrink-0"><span class="domain-pct">—</span>% · 15%</span>
                   </div>
                   <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
                     <div class="progress-fill h-full bg-sage-400 rounded-full" style="width:0%"></div>
                   </div>
                 </div>
                 <div class="domain-bar" data-domain="3">
-                  <div class="flex justify-between items-baseline mb-1">
-                    <span class="text-sm font-medium text-herbchar-700">Domain 3: Counseling / Ethics / Scope</span>
-                    <span class="text-xs text-parchment-400"><span class="domain-pct">—</span>% · 10% of exam</span>
+                  <div class="flex justify-between items-baseline mb-1 gap-2">
+                    <span class="text-sm font-medium text-herbchar-700 truncate min-w-0">Domain 3: Counseling / Ethics</span>
+                    <span class="text-xs text-parchment-400 shrink-0"><span class="domain-pct">—</span>% · 10%</span>
                   </div>
                   <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
                     <div class="progress-fill h-full bg-sage-400 rounded-full" style="width:0%"></div>
                   </div>
                 </div>
                 <div class="domain-bar" data-domain="4">
-                  <div class="flex justify-between items-baseline mb-1">
-                    <span class="text-sm font-medium text-herbchar-700">Domain 4: Nutrition in Practice</span>
-                    <span class="text-xs text-parchment-400"><span class="domain-pct">—</span>% · 30% of exam</span>
+                  <div class="flex justify-between items-baseline mb-1 gap-2">
+                    <span class="text-sm font-medium text-herbchar-700 truncate min-w-0">Domain 4: Nutrition in Practice</span>
+                    <span class="text-xs text-parchment-400 shrink-0"><span class="domain-pct">—</span>% · 30%</span>
                   </div>
                   <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
                     <div class="progress-fill h-full bg-sage-400 rounded-full" style="width:0%"></div>
                   </div>
                 </div>
                 <div class="domain-bar" data-domain="5">
-                  <div class="flex justify-between items-baseline mb-1">
-                    <span class="text-sm font-medium text-herbchar-700">Domain 5: Research</span>
-                    <span class="text-xs text-parchment-400"><span class="domain-pct">—</span>% · 10% of exam</span>
+                  <div class="flex justify-between items-baseline mb-1 gap-2">
+                    <span class="text-sm font-medium text-herbchar-700 truncate min-w-0">Domain 5: Research</span>
+                    <span class="text-xs text-parchment-400 shrink-0"><span class="domain-pct">—</span>% · 10%</span>
                   </div>
                   <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
                     <div class="progress-fill h-full bg-sage-400 rounded-full" style="width:0%"></div>
@@ -433,27 +445,27 @@
           </div>
 
           <!-- Quick stats row -->
-          <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
-            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4">
-              <p class="text-xs text-parchment-400 mb-1">Study Streak</p>
-              <p class="text-2xl font-bold text-herbchar-700"><span id="stat-streak">0</span> <span class="text-sm font-normal text-parchment-400">days</span></p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-8">
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-3 sm:p-4">
+              <p class="text-[11px] sm:text-xs text-parchment-400 mb-1">Study Streak</p>
+              <p class="text-xl sm:text-2xl font-bold text-herbchar-700"><span id="stat-streak">0</span> <span class="text-xs sm:text-sm font-normal text-parchment-400">days</span></p>
             </div>
-            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4">
-              <p class="text-xs text-parchment-400 mb-1">Questions Practiced</p>
-              <p class="text-2xl font-bold text-herbchar-700" id="stat-questions">0</p>
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-3 sm:p-4">
+              <p class="text-[11px] sm:text-xs text-parchment-400 mb-1">Questions Practiced</p>
+              <p class="text-xl sm:text-2xl font-bold text-herbchar-700" id="stat-questions">0</p>
             </div>
-            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4">
-              <p class="text-xs text-parchment-400 mb-1">Practice Exams</p>
-              <p class="text-2xl font-bold text-herbchar-700" id="stat-exams">0</p>
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-3 sm:p-4">
+              <p class="text-[11px] sm:text-xs text-parchment-400 mb-1">Practice Exams</p>
+              <p class="text-xl sm:text-2xl font-bold text-herbchar-700" id="stat-exams">0</p>
             </div>
-            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4">
-              <p class="text-xs text-parchment-400 mb-1">Questions Mastered</p>
-              <p class="text-2xl font-bold text-herbchar-700" id="stat-mastered">0</p>
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-3 sm:p-4">
+              <p class="text-[11px] sm:text-xs text-parchment-400 mb-1">Questions Mastered</p>
+              <p class="text-xl sm:text-2xl font-bold text-herbchar-700" id="stat-mastered">0</p>
             </div>
-            <div class="bg-white rounded-lg shadow-card border border-copper-200 p-4">
-              <p class="text-xs text-copper-400 mb-1">Focus Areas</p>
-              <p class="text-2xl font-bold text-copper-500" id="stat-focus-areas">0</p>
-              <p class="text-xs text-parchment-400 mt-1">topics to review</p>
+            <div class="col-span-2 sm:col-span-1 bg-white rounded-lg shadow-card border border-copper-200 p-3 sm:p-4">
+              <p class="text-[11px] sm:text-xs text-copper-400 mb-1">Focus Areas</p>
+              <p class="text-xl sm:text-2xl font-bold text-copper-500" id="stat-focus-areas">0</p>
+              <p class="text-[11px] sm:text-xs text-parchment-400 mt-1">topics to review</p>
             </div>
           </div>
 
@@ -461,13 +473,13 @@
           <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mb-8">
             <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-4">Today's Recommended Actions</p>
             <div id="recommended-actions" class="space-y-3">
-              <div class="flex items-start gap-3 p-3 rounded-md bg-parchment-50 border border-parchment-200">
-                <svg class="w-5 h-5 text-sage-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-                <div>
+              <div class="flex flex-col sm:flex-row sm:items-start gap-3 p-3 rounded-md bg-parchment-50 border border-parchment-200">
+                <svg class="w-5 h-5 text-sage-400 shrink-0 mt-0.5 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                <div class="flex-1">
                   <p class="text-sm font-medium text-herbchar-700">Take the diagnostic assessment</p>
                   <p class="text-xs text-parchment-400 mt-0.5">25 questions to identify your strengths and weak areas. Takes ~15 minutes.</p>
                 </div>
-                <button onclick="switchView('practice')" class="ml-auto shrink-0 px-3 py-1.5 text-xs font-semibold text-sage-400 border border-sage-400 rounded hover:bg-sage-400 hover:text-white transition-colors">Start</button>
+                <button onclick="switchView('practice')" class="self-start sm:ml-auto shrink-0 px-3 py-2 sm:py-1.5 text-xs font-semibold text-sage-400 border border-sage-400 rounded hover:bg-sage-400 hover:text-white transition-colors">Start</button>
               </div>
             </div>
           </div>
@@ -505,21 +517,21 @@
           </div>
 
           <!-- Domain selector -->
-          <div id="study-domain-tabs" class="flex flex-wrap gap-2 mb-4">
-            <button data-domain="1" class="study-domain-tab px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors">
-              Domain 1 <span class="text-xs text-parchment-400">(35%)</span>
+          <div id="study-domain-tabs" class="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 mb-4">
+            <button data-domain="1" class="study-domain-tab px-3 sm:px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors text-center">
+              <span class="sm:hidden">Food &amp; Nutr.</span><span class="hidden sm:inline">Food &amp; Nutrition</span> <span class="text-xs text-parchment-400">(35%)</span>
             </button>
-            <button data-domain="2" class="study-domain-tab px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors">
-              Domain 2 <span class="text-xs text-parchment-400">(15%)</span>
+            <button data-domain="2" class="study-domain-tab px-3 sm:px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors text-center">
+              <span class="sm:hidden">A&amp;P / Biochem</span><span class="hidden sm:inline">A&amp;P / Biochemistry</span> <span class="text-xs text-parchment-400">(15%)</span>
             </button>
-            <button data-domain="3" class="study-domain-tab px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors">
-              Domain 3 <span class="text-xs text-parchment-400">(10%)</span>
+            <button data-domain="3" class="study-domain-tab px-3 sm:px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors text-center">
+              <span class="sm:hidden">Ethics / Scope</span><span class="hidden sm:inline">Counseling / Ethics / Scope</span> <span class="text-xs text-parchment-400">(10%)</span>
             </button>
-            <button data-domain="4" class="study-domain-tab px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors">
-              Domain 4 <span class="text-xs text-parchment-400">(30%)</span>
+            <button data-domain="4" class="study-domain-tab px-3 sm:px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors text-center">
+              <span class="sm:hidden">Nutr. in Practice</span><span class="hidden sm:inline">Nutrition in Practice</span> <span class="text-xs text-parchment-400">(30%)</span>
             </button>
-            <button data-domain="5" class="study-domain-tab px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors">
-              Domain 5 <span class="text-xs text-parchment-400">(10%)</span>
+            <button data-domain="5" class="study-domain-tab px-3 sm:px-4 py-2 text-sm font-medium rounded-md border border-parchment-300 bg-white text-herbchar-700 hover:border-sage-400 transition-colors text-center">
+              <span class="sm:hidden">Research</span><span class="hidden sm:inline">Research</span> <span class="text-xs text-parchment-400">(10%)</span>
             </button>
           </div>
 
@@ -551,14 +563,14 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                 Back to modules
               </button>
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <h2 id="lesson-title" class="font-display text-2xl font-bold text-herbchar-700 tracking-tight"></h2>
-                  <p id="lesson-subtitle" class="text-sm text-parchment-400 mt-0.5"></p>
+              <div class="flex items-start justify-between gap-2">
+                <div class="min-w-0 flex-1">
+                  <h2 id="lesson-title" class="font-display text-xl sm:text-2xl font-bold text-herbchar-700 tracking-tight leading-tight"></h2>
+                  <p id="lesson-subtitle" class="text-xs sm:text-sm text-parchment-400 mt-0.5"></p>
                 </div>
                 <div class="flex items-center gap-2 shrink-0">
-                  <span id="lesson-time-badge" class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-parchment-400 bg-white border border-parchment-300 rounded-full">
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span id="lesson-time-badge" class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium text-parchment-400 bg-white border border-parchment-300 rounded-full">
+                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     <span id="lesson-time-text"></span>
                   </span>
                 </div>
@@ -573,8 +585,8 @@
             </div>
 
             <!-- Lesson content -->
-            <div id="lesson-content" class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mt-3">
-              <div id="lesson-body" class="study-content text-sm"></div>
+            <div id="lesson-content" class="bg-white rounded-lg shadow-card border border-parchment-300 p-4 sm:p-6 mt-3">
+              <div id="lesson-body" class="study-content text-sm overflow-x-auto"></div>
             </div>
 
             <!-- Key takeaways -->
@@ -604,14 +616,14 @@
             </div>
 
             <!-- Prev / Next navigation -->
-            <div class="flex gap-3 mt-4 mb-8">
-              <button id="lesson-prev-btn" onclick="navigateLesson('prev')" class="lesson-nav-btn flex-1 py-3 px-4 text-sm font-medium text-herbchar-700 bg-white border border-parchment-300 rounded-lg flex items-center justify-center gap-2" disabled>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-                <span id="lesson-prev-text">Previous</span>
+            <div class="flex gap-2 sm:gap-3 mt-4 mb-8">
+              <button id="lesson-prev-btn" onclick="navigateLesson('prev')" class="lesson-nav-btn flex-1 min-h-[48px] py-3 px-3 sm:px-4 text-sm font-medium text-herbchar-700 bg-white border border-parchment-300 rounded-lg flex items-center justify-center gap-1 sm:gap-2" disabled>
+                <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                <span id="lesson-prev-text" class="truncate">Previous</span>
               </button>
-              <button id="lesson-next-btn" onclick="navigateLesson('next')" class="lesson-nav-btn flex-1 py-3 px-4 text-sm font-medium text-herbchar-700 bg-white border border-parchment-300 rounded-lg flex items-center justify-center gap-2" disabled>
-                <span id="lesson-next-text">Next</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              <button id="lesson-next-btn" onclick="navigateLesson('next')" class="lesson-nav-btn flex-1 min-h-[48px] py-3 px-3 sm:px-4 text-sm font-medium text-herbchar-700 bg-white border border-parchment-300 rounded-lg flex items-center justify-center gap-1 sm:gap-2" disabled>
+                <span id="lesson-next-text" class="truncate">Next</span>
+                <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
               </button>
             </div>
           </div>
@@ -625,27 +637,46 @@
             <p class="text-sm text-parchment-400 mb-8">Adaptive questions powered by spaced repetition — focus on what you need to learn.</p>
 
             <div class="max-w-lg">
+              <!-- Practice mode -->
+              <div class="mb-6">
+                <label class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-3 block">Mode</label>
+                <div class="grid grid-cols-3 gap-2 sm:gap-3">
+                  <button type="button" onclick="selectPracticeMode('adaptive')" id="mode-adaptive" class="practice-mode-btn text-center px-2 sm:px-4 py-3 rounded-lg border border-sage-400 bg-sage-50 cursor-pointer hover:border-sage-400 transition-colors">
+                    <span class="block text-sm font-medium text-sage-500">Adaptive</span>
+                    <span class="block text-[11px] sm:text-xs text-parchment-400">Spaced repetition</span>
+                  </button>
+                  <button type="button" onclick="selectPracticeMode('domain-exam')" id="mode-domain-exam" class="practice-mode-btn text-center px-2 sm:px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <span class="block text-sm font-medium text-herbchar-700">Domain Exam</span>
+                    <span class="block text-[11px] sm:text-xs text-parchment-400">Timed by domain</span>
+                  </button>
+                  <button type="button" onclick="selectPracticeMode('diagnostic')" id="mode-diagnostic" class="practice-mode-btn text-center px-2 sm:px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                    <span class="block text-sm font-medium text-herbchar-700">Diagnostic</span>
+                    <span class="block text-[11px] sm:text-xs text-parchment-400">Find weak spots</span>
+                  </button>
+                </div>
+              </div>
+
               <!-- Domain selection -->
               <div class="mb-6">
                 <label class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-3 block">Domain</label>
                 <div class="space-y-2">
-                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
-                    <input type="radio" name="practice-domain" value="" checked class="accent-sage-400"> <span class="text-sm text-herbchar-700 font-medium">All Domains</span>
+                  <label class="flex items-center gap-3 px-3 sm:px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors min-h-[48px]">
+                    <input type="radio" name="practice-domain" value="" checked class="accent-sage-400 shrink-0"> <span class="text-sm text-herbchar-700 font-medium flex-1">All Domains</span>
                   </label>
-                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
-                    <input type="radio" name="practice-domain" value="1" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 1: Food &amp; Nutrition</span> <span class="ml-auto text-xs text-parchment-400">35%</span>
+                  <label class="flex items-center gap-3 px-3 sm:px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors min-h-[48px]">
+                    <input type="radio" name="practice-domain" value="1" class="accent-sage-400 shrink-0"> <span class="text-sm text-herbchar-700 flex-1 min-w-0">Domain 1: Food &amp; Nutrition</span> <span class="shrink-0 text-xs text-parchment-400">35%</span>
                   </label>
-                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
-                    <input type="radio" name="practice-domain" value="2" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 2: A&amp;P / Biochemistry</span> <span class="ml-auto text-xs text-parchment-400">15%</span>
+                  <label class="flex items-center gap-3 px-3 sm:px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors min-h-[48px]">
+                    <input type="radio" name="practice-domain" value="2" class="accent-sage-400 shrink-0"> <span class="text-sm text-herbchar-700 flex-1 min-w-0">Domain 2: A&amp;P / Biochemistry</span> <span class="shrink-0 text-xs text-parchment-400">15%</span>
                   </label>
-                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
-                    <input type="radio" name="practice-domain" value="3" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 3: Counseling / Ethics / Scope</span> <span class="ml-auto text-xs text-parchment-400">10%</span>
+                  <label class="flex items-center gap-3 px-3 sm:px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors min-h-[48px]">
+                    <input type="radio" name="practice-domain" value="3" class="accent-sage-400 shrink-0"> <span class="text-sm text-herbchar-700 flex-1 min-w-0">Domain 3: Counseling / Ethics</span> <span class="shrink-0 text-xs text-parchment-400">10%</span>
                   </label>
-                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
-                    <input type="radio" name="practice-domain" value="4" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 4: Nutrition in Practice</span> <span class="ml-auto text-xs text-parchment-400">30%</span>
+                  <label class="flex items-center gap-3 px-3 sm:px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors min-h-[48px]">
+                    <input type="radio" name="practice-domain" value="4" class="accent-sage-400 shrink-0"> <span class="text-sm text-herbchar-700 flex-1 min-w-0">Domain 4: Nutrition in Practice</span> <span class="shrink-0 text-xs text-parchment-400">30%</span>
                   </label>
-                  <label class="flex items-center gap-3 px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
-                    <input type="radio" name="practice-domain" value="5" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 5: Research</span> <span class="ml-auto text-xs text-parchment-400">10%</span>
+                  <label class="flex items-center gap-3 px-3 sm:px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors min-h-[48px]">
+                    <input type="radio" name="practice-domain" value="5" class="accent-sage-400 shrink-0"> <span class="text-sm text-herbchar-700 flex-1 min-w-0">Domain 5: Research</span> <span class="shrink-0 text-xs text-parchment-400">10%</span>
                   </label>
                 </div>
               </div>
@@ -653,18 +684,18 @@
               <!-- Session length -->
               <div class="mb-8">
                 <label class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-3 block">Session Length</label>
-                <div class="flex gap-3" id="practice-length-options">
-                  <button type="button" onclick="selectPracticeLength(this, 10)" data-length="10" class="practice-length-btn flex-1 text-center px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                <div class="grid grid-cols-3 gap-2 sm:gap-3" id="practice-length-options">
+                  <button type="button" onclick="selectPracticeLength(this, 10)" data-length="10" class="practice-length-btn text-center px-2 sm:px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
                     <span class="block text-sm font-medium text-herbchar-700">Quick</span>
-                    <span class="block text-xs text-parchment-400">10 questions</span>
+                    <span class="block text-[11px] sm:text-xs text-parchment-400">10 questions</span>
                   </button>
-                  <button type="button" onclick="selectPracticeLength(this, 20)" data-length="20" class="practice-length-btn flex-1 text-center px-4 py-3 rounded-lg border border-sage-400 bg-sage-50 cursor-pointer hover:border-sage-400 transition-colors">
+                  <button type="button" onclick="selectPracticeLength(this, 20)" data-length="20" class="practice-length-btn text-center px-2 sm:px-4 py-3 rounded-lg border border-sage-400 bg-sage-50 cursor-pointer hover:border-sage-400 transition-colors">
                     <span class="block text-sm font-medium text-sage-500">Standard</span>
-                    <span class="block text-xs text-parchment-400">20 questions</span>
+                    <span class="block text-[11px] sm:text-xs text-parchment-400">20 questions</span>
                   </button>
-                  <button type="button" onclick="selectPracticeLength(this, 40)" data-length="40" class="practice-length-btn flex-1 text-center px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
+                  <button type="button" onclick="selectPracticeLength(this, 40)" data-length="40" class="practice-length-btn text-center px-2 sm:px-4 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer hover:border-sage-400 transition-colors">
                     <span class="block text-sm font-medium text-herbchar-700">Deep</span>
-                    <span class="block text-xs text-parchment-400">40 questions</span>
+                    <span class="block text-[11px] sm:text-xs text-parchment-400">40 questions</span>
                   </button>
                 </div>
               </div>
@@ -691,32 +722,32 @@
           <!-- Active quiz -->
           <div id="quiz-active">
             <!-- Quiz header -->
-            <div class="flex items-center justify-between mb-6">
-              <div>
+            <div class="mb-6">
+              <div class="flex items-center justify-between mb-2">
                 <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400">Question <span id="quiz-current-num">1</span> of <span id="quiz-total-num">10</span></p>
-                <div class="w-full max-w-xs h-1.5 bg-parchment-200 rounded-full mt-2 overflow-hidden">
-                  <div id="quiz-progress-bar" class="progress-fill h-full bg-sage-400 rounded-full" style="width:10%"></div>
+                <div class="flex items-center gap-3">
+                  <p class="text-xs text-parchment-400"><span id="quiz-correct-count">0</span> correct</p>
+                  <p id="exam-timer" class="text-xs font-mono text-herbchar-700 hidden"></p>
+                  <button id="quiz-flag-btn" class="text-xs text-copper-400 hover:text-copper-500 min-h-[32px] min-w-[44px] flex items-center justify-end" title="Flag for review">Flag</button>
                 </div>
               </div>
-              <div class="text-right">
-                <p class="text-xs text-parchment-400"><span id="quiz-correct-count">0</span> correct</p>
-                <p id="exam-timer" class="text-xs font-mono text-herbchar-700 hidden"></p>
-                <button id="quiz-flag-btn" class="text-xs text-copper-400 hover:text-copper-500 mt-1" title="Flag for review">Flag</button>
+              <div class="w-full h-1.5 bg-parchment-200 rounded-full overflow-hidden">
+                <div id="quiz-progress-bar" class="progress-fill h-full bg-sage-400 rounded-full" style="width:10%"></div>
               </div>
             </div>
 
             <!-- Question card -->
-            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mb-4">
-              <div class="flex items-start gap-2 mb-4">
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4 sm:p-6 mb-4">
+              <div class="flex flex-wrap items-start gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                 <span id="quiz-domain-badge" class="shrink-0 px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase rounded bg-sage-50 text-sage-500 border border-sage-200">Domain 1</span>
                 <span id="quiz-difficulty-badge" class="shrink-0 px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase rounded bg-parchment-100 text-parchment-400 border border-parchment-300">Medium</span>
               </div>
-              <p id="quiz-question-text" class="text-base text-herbchar-700 leading-relaxed mb-6"></p>
-              <div id="quiz-options" class="space-y-3"></div>
+              <p id="quiz-question-text" class="text-sm sm:text-base text-herbchar-700 leading-relaxed mb-4 sm:mb-6"></p>
+              <div id="quiz-options" class="space-y-2 sm:space-y-3"></div>
             </div>
 
             <!-- Explanation (shown after answering) -->
-            <div id="quiz-explanation" class="hidden bg-parchment-50 rounded-lg border border-parchment-200 p-5 mb-4">
+            <div id="quiz-explanation" class="hidden bg-parchment-50 rounded-lg border border-parchment-200 p-4 sm:p-5 mb-4">
               <div class="flex items-start gap-2 mb-2">
                 <span id="quiz-result-icon"></span>
                 <p id="quiz-result-text" class="text-sm font-semibold"></p>
@@ -727,10 +758,10 @@
 
             <!-- Next button -->
             <div class="flex justify-end">
-              <button id="quiz-next-btn" class="hidden px-6 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
-                Next Question
+              <button id="quiz-next-btn" class="hidden w-full sm:w-auto min-h-[44px] px-6 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                Next Question →
               </button>
-              <button id="quiz-finish-btn" class="hidden px-6 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+              <button id="quiz-finish-btn" class="hidden w-full sm:w-auto min-h-[44px] px-6 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
                 See Results
               </button>
             </div>
@@ -741,18 +772,20 @@
             <div class="mb-6">
               <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Quiz Complete</h2>
             </div>
-            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mb-6">
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4 sm:p-6 mb-6">
               <div class="text-center mb-6">
                 <p id="quiz-score" class="text-4xl font-bold text-herbchar-700"></p>
                 <p id="quiz-score-label" class="text-sm text-parchment-400 mt-1"></p>
               </div>
               <div id="quiz-domain-results" class="space-y-3"></div>
             </div>
-            <div class="flex gap-3">
-              <button onclick="resetQuiz()" class="px-5 py-2.5 border border-sage-400 text-sage-400 text-sm font-semibold rounded-md hover:bg-sage-400 hover:text-white transition-colors">
+            <!-- Post-result next action CTA -->
+            <div id="quiz-next-action" class="mb-4"></div>
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+              <button onclick="resetQuiz()" class="w-full sm:w-auto px-5 py-2.5 border border-sage-400 text-sage-400 text-sm font-semibold rounded-md hover:bg-sage-400 hover:text-white transition-colors">
                 Take Another Quiz
               </button>
-              <button onclick="switchView('dashboard')" class="px-5 py-2.5 text-sm text-parchment-400 hover:text-herbchar-700 transition-colors">
+              <button onclick="switchView('dashboard')" class="w-full sm:w-auto px-5 py-2.5 text-sm text-parchment-400 hover:text-herbchar-700 transition-colors">
                 Back to Dashboard
               </button>
             </div>
@@ -767,18 +800,18 @@
               <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Diagnostic Assessment</h2>
               <p class="text-sm text-parchment-400 mt-1">A 25-question assessment across all 5 domains to identify your strengths and weak areas. Results personalize your study plan.</p>
             </div>
-            <div class="grid grid-cols-3 gap-4 mb-6 max-w-lg">
-              <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4 text-center">
-                <p class="text-2xl font-bold text-herbchar-700">25</p>
-                <p class="text-xs text-parchment-400 mt-0.5">questions</p>
+            <div class="grid grid-cols-3 gap-3 mb-6 max-w-lg">
+              <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-3 sm:p-4 text-center">
+                <p class="text-xl sm:text-2xl font-bold text-herbchar-700">25</p>
+                <p class="text-[11px] sm:text-xs text-parchment-400 mt-0.5">questions</p>
               </div>
-              <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4 text-center">
-                <p class="text-2xl font-bold text-herbchar-700">5</p>
-                <p class="text-xs text-parchment-400 mt-0.5">per domain</p>
+              <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-3 sm:p-4 text-center">
+                <p class="text-xl sm:text-2xl font-bold text-herbchar-700">5</p>
+                <p class="text-[11px] sm:text-xs text-parchment-400 mt-0.5">per domain</p>
               </div>
-              <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4 text-center">
-                <p class="text-2xl font-bold text-sage-400">~15</p>
-                <p class="text-xs text-parchment-400 mt-0.5">minutes</p>
+              <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-3 sm:p-4 text-center">
+                <p class="text-xl sm:text-2xl font-bold text-sage-400">~15</p>
+                <p class="text-[11px] sm:text-xs text-parchment-400 mt-0.5">minutes</p>
               </div>
             </div>
             <button id="start-diagnostic-btn" onclick="startDiagnostic()" class="px-6 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
@@ -814,11 +847,11 @@
               </div>
             </div>
 
-            <div class="flex gap-3">
-              <button onclick="startDiagnostic()" class="px-5 py-2.5 border border-sage-400 text-sage-400 text-sm font-semibold rounded-md hover:bg-sage-400 hover:text-white transition-colors">
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+              <button onclick="startDiagnostic()" class="w-full sm:w-auto px-5 py-2.5 border border-sage-400 text-sage-400 text-sm font-semibold rounded-md hover:bg-sage-400 hover:text-white transition-colors">
                 Retake Diagnostic
               </button>
-              <button onclick="switchView('practice')" class="px-5 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+              <button onclick="switchView('practice')" class="w-full sm:w-auto px-5 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
                 Start Practicing Weak Areas &rarr;
               </button>
             </div>
@@ -838,7 +871,7 @@
         <!-- ─── FULL EXAM VIEW ─── -->
         <div id="view-full-exam" class="view">
           <div class="mb-6">
-            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Full-Length Exam Simulation</h2>
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Mock Exam</h2>
             <p class="text-sm text-parchment-400 mt-1">151 questions, weighted by domain — just like the real BCHN exam.</p>
           </div>
           <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 max-w-lg">
@@ -879,28 +912,28 @@
         <!-- ─── EXAM DAY PREP VIEW ─── -->
         <div id="view-exam-day" class="view">
           <div class="mb-6">
-            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Exam Day Preparation</h2>
-            <p class="text-sm text-parchment-400 mt-1">Everything you need to know for test day.</p>
+            <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Exam Day</h2>
+            <p class="text-sm text-parchment-400 mt-1">Your study plan, exam logistics, and everything you need for test day.</p>
           </div>
           <div class="space-y-6" id="exam-day-content">
             <!-- Exam logistics -->
             <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6">
               <h3 class="font-display text-lg font-semibold text-herbchar-700 mb-4">Exam Logistics</h3>
-              <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
                 <div class="p-3 bg-parchment-50 rounded-md text-center">
-                  <p class="text-2xl font-bold text-herbchar-700">151</p>
+                  <p class="text-xl sm:text-2xl font-bold text-herbchar-700">151</p>
                   <p class="text-xs text-parchment-400">Questions</p>
                 </div>
                 <div class="p-3 bg-parchment-50 rounded-md text-center">
-                  <p class="text-2xl font-bold text-herbchar-700">70%</p>
+                  <p class="text-xl sm:text-2xl font-bold text-herbchar-700">70%</p>
                   <p class="text-xs text-parchment-400">To Pass</p>
                 </div>
                 <div class="p-3 bg-parchment-50 rounded-md text-center">
-                  <p class="text-2xl font-bold text-sage-400">106</p>
+                  <p class="text-xl sm:text-2xl font-bold text-sage-400">106</p>
                   <p class="text-xs text-parchment-400">Correct Needed</p>
                 </div>
                 <div class="p-3 bg-parchment-50 rounded-md text-center">
-                  <p class="text-lg font-bold text-herbchar-700">ProctorU</p>
+                  <p class="text-base sm:text-lg font-bold text-herbchar-700">ProctorU</p>
                   <p class="text-xs text-parchment-400">Online Delivery</p>
                 </div>
               </div>
@@ -985,6 +1018,35 @@
                 </ul>
               </div>
             </div>
+            <!-- Study Plan (merged from Study Plan view) -->
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6">
+              <h3 class="font-display text-lg font-semibold text-herbchar-700 mb-4">Your Study Plan</h3>
+              <div id="exam-day-study-plan">
+                <p class="text-sm text-parchment-400 mb-4">Set your target exam date to generate a personalized study plan.</p>
+                <div class="space-y-4 max-w-md">
+                  <div>
+                    <label class="block text-sm font-medium text-herbchar-700 mb-1">Target Exam Date</label>
+                    <input type="date" id="exam-day-date-input" class="w-full px-3 py-2.5 border border-parchment-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-sage-400/30 focus:border-sage-400">
+                  </div>
+                  <button onclick="generateExamDayPlan()" class="w-full py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                    Generate Study Plan
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Exam History link -->
+            <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="font-display text-lg font-semibold text-herbchar-700">Exam History</h3>
+                  <p class="text-sm text-parchment-400 mt-0.5">View your past exam scores and progress over time.</p>
+                </div>
+                <button onclick="switchView('exam-history')" class="shrink-0 px-4 py-2 text-sm font-semibold text-sage-400 border border-sage-400 rounded-md hover:bg-sage-400 hover:text-white transition-colors">
+                  View History →
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1013,12 +1075,12 @@
         <!-- ─── ADMIN: STUDENTS VIEW ─── -->
         <div id="view-admin-students" class="view">
           <div class="mb-6">
-            <div class="flex items-center justify-between">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div>
                 <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Student Management</h2>
                 <p class="text-sm text-parchment-400 mt-1">Monitor student progress and manage access.</p>
               </div>
-              <button id="invite-student-btn" class="px-4 py-2 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+              <button id="invite-student-btn" class="w-full sm:w-auto px-4 py-2 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
                 Invite Student
               </button>
             </div>
@@ -1031,16 +1093,16 @@
         <!-- ─── ADMIN: QUESTION BANK VIEW ─── -->
         <div id="view-admin-questions" class="view">
           <div class="mb-6">
-            <div class="flex items-center justify-between">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div>
                 <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Question Bank</h2>
                 <p class="text-sm text-parchment-400 mt-1">Manage exam questions across all domains.</p>
               </div>
               <div class="flex gap-2">
-                <button id="import-questions-btn" class="px-4 py-2 border border-sage-400 text-sage-400 text-sm font-semibold rounded-md hover:bg-sage-400 hover:text-white transition-colors">
+                <button id="import-questions-btn" class="flex-1 sm:flex-none px-4 py-2 border border-sage-400 text-sage-400 text-sm font-semibold rounded-md hover:bg-sage-400 hover:text-white transition-colors">
                   Import CSV
                 </button>
-                <button id="add-question-btn" class="px-4 py-2 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                <button id="add-question-btn" class="flex-1 sm:flex-none px-4 py-2 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
                   Add Question
                 </button>
               </div>
@@ -1048,8 +1110,8 @@
           </div>
 
           <!-- Filters -->
-          <div class="flex flex-wrap gap-3 mb-4">
-            <select id="admin-q-domain-filter" class="px-3 py-2 border border-parchment-300 rounded-md text-sm bg-white">
+          <div class="flex flex-wrap gap-2 sm:gap-3 mb-4">
+            <select id="admin-q-domain-filter" class="flex-1 sm:flex-none px-3 py-2 border border-parchment-300 rounded-md text-sm bg-white min-w-0">
               <option value="">All Domains</option>
               <option value="1">Domain 1</option>
               <option value="2">Domain 2</option>
@@ -1057,14 +1119,14 @@
               <option value="4">Domain 4</option>
               <option value="5">Domain 5</option>
             </select>
-            <select id="admin-q-type-filter" class="px-3 py-2 border border-parchment-300 rounded-md text-sm bg-white">
+            <select id="admin-q-type-filter" class="flex-1 sm:flex-none px-3 py-2 border border-parchment-300 rounded-md text-sm bg-white min-w-0">
               <option value="">All Types</option>
               <option value="mc">Multiple Choice</option>
               <option value="tf">True/False</option>
               <option value="matching">Matching</option>
               <option value="fill">Fill in Blank</option>
             </select>
-            <div class="flex items-center gap-2 ml-auto">
+            <div class="flex items-center gap-2 w-full sm:w-auto sm:ml-auto">
               <span id="admin-q-count" class="text-sm text-parchment-400">0 questions</span>
             </div>
           </div>
@@ -1077,12 +1139,12 @@
         <!-- ─── ADMIN: FLASHCARD MANAGER VIEW ─── -->
         <div id="view-admin-flashcards" class="view">
           <div class="mb-6">
-            <div class="flex items-center justify-between">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div>
                 <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Flashcard Manager</h2>
                 <p class="text-sm text-parchment-400 mt-1">Create and manage flashcard decks.</p>
               </div>
-              <button id="add-flashcard-btn" class="px-4 py-2 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+              <button id="add-flashcard-btn" class="w-full sm:w-auto px-4 py-2 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
                 Add Flashcard
               </button>
             </div>
@@ -1110,7 +1172,7 @@
   <!-- ═══════════════════════════════════════ -->
   <!-- TOAST NOTIFICATION                     -->
   <!-- ═══════════════════════════════════════ -->
-  <div id="toast" class="toast fixed bottom-6 right-6 bg-herbchar-700 text-white px-5 py-3 rounded-lg shadow-elevated text-sm z-50 max-w-sm">
+  <div id="toast" class="toast fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 bg-herbchar-700 text-white px-5 py-3 rounded-lg shadow-elevated text-sm z-50 sm:max-w-sm">
     <p id="toast-message"></p>
   </div>
 
@@ -1297,6 +1359,7 @@
       else if (viewName === 'practice') showPracticeSetup();
       else if (viewName === 'exam-history') loadExamHistory();
       else if (viewName === 'study-plan') loadStudyPlan();
+      else if (viewName === 'exam-day') loadExamDayStudyPlan();
       else if (viewName === 'domain-exams') loadDomainExams();
       else if (viewName === 'admin-students') loadAdminStudents();
       else if (viewName === 'admin-questions') loadAdminQuestions();
@@ -1421,9 +1484,9 @@
           actEl.innerHTML = data.recentExams.map(e => {
             const date = new Date(e.completed_at).toLocaleDateString();
             const color = e.is_passed ? 'text-green-600' : 'text-red-500';
-            return `<div class="flex items-center justify-between py-2 border-b border-parchment-100 last:border-0">
-              <div><p class="text-sm text-herbchar-700">${e.exam_type === 'full' ? 'Full Exam' : e.exam_type === 'diagnostic' ? 'Diagnostic' : 'Practice'}</p><p class="text-xs text-parchment-400">${date}</p></div>
-              <span class="text-sm font-semibold ${color}">${e.score_pct}%</span>
+            return `<div class="flex items-center justify-between gap-3 py-2 border-b border-parchment-100 last:border-0">
+              <div class="min-w-0"><p class="text-sm text-herbchar-700">${e.exam_type === 'full' ? 'Full Exam' : e.exam_type === 'diagnostic' ? 'Diagnostic' : 'Practice'}</p><p class="text-xs text-parchment-400">${date}</p></div>
+              <span class="text-sm font-semibold shrink-0 ${color}">${e.score_pct}%</span>
             </div>`;
           }).join('');
         } else {
@@ -1431,10 +1494,38 @@
         }
         // Update focus areas badge and stat
         updateFocusBadge();
+
+        // Show "Continue Studying" CTA if there's a last lesson
+        showContinueStudyingCard();
       } catch (err) {
         console.error('Dashboard load error:', err);
         showToast('Could not load dashboard data. Please try refreshing.');
       }
+    }
+
+    function showContinueStudyingCard() {
+      try {
+        const raw = localStorage.getItem('lastLesson');
+        if (!raw) return;
+        const last = JSON.parse(raw);
+        if (!last.id || !last.title) return;
+        // Only show if visited within last 30 days
+        if (Date.now() - last.ts > 30 * 24 * 60 * 60 * 1000) return;
+        document.getElementById('continue-lesson-title').textContent = last.title;
+        document.getElementById('continue-module-name').textContent = last.module || '';
+        document.getElementById('continue-studying-card').classList.remove('hidden');
+      } catch(e) {}
+    }
+
+    function resumeLastLesson() {
+      try {
+        const raw = localStorage.getItem('lastLesson');
+        if (!raw) return;
+        const last = JSON.parse(raw);
+        if (!last.id) return;
+        switchView('study-guide');
+        loadLesson(last.id, 'study-guide');
+      } catch(e) {}
     }
 
     function updateReadinessGauge(score) {
@@ -1516,7 +1607,7 @@
               <div id="fa-card-${item.id}" class="bg-white rounded-lg shadow-card border border-parchment-300 p-4 mb-3 transition-all duration-300">
                 <div class="flex items-start justify-between gap-3 mb-2">
                   <div class="min-w-0">
-                    <h4 class="font-display text-base font-semibold text-herbchar-700 truncate">${escapeHtml(item.lesson_title)}</h4>
+                    <h4 class="font-display text-base font-semibold text-herbchar-700 leading-snug">${escapeHtml(item.lesson_title)}</h4>
                     <p class="text-xs text-parchment-400 mt-0.5">${escapeHtml(item.module_title)}</p>
                   </div>
                   <span class="shrink-0 px-2 py-0.5 text-[10px] font-bold uppercase rounded-full ${ps.badge}">${item.priority}</span>
@@ -1524,11 +1615,11 @@
                 <p class="text-xs text-parchment-400 mb-3">
                   ${item.wrong_count} question${item.wrong_count !== 1 ? 's' : ''} missed${recencyText ? ' · ' + recencyText : ''}
                 </p>
-                <div class="flex items-center gap-2 flex-wrap">
-                  <button onclick="loadLesson('${item.lesson_id}', 'focus-areas')" class="px-3 py-1.5 text-xs font-semibold text-white bg-sage-400 rounded hover:bg-sage-500 transition-colors">Study Lesson →</button>
-                  <div class="ml-auto flex items-center gap-1">
-                    <button onclick="dismissFocusArea('${item.id}')" class="px-2 py-1 text-[10px] text-parchment-400 hover:text-parchment-600 transition-colors" title="Dismiss (hide until you miss related questions again)">Dismiss</button>
-                    <button onclick="completeFocusArea('${item.id}')" class="px-2 py-1 text-[10px] font-semibold text-sage-500 hover:text-sage-700 transition-colors" title="Mark complete (also completes in Study Guides)">✓ Complete</button>
+                <div class="flex items-center justify-between gap-2 flex-wrap">
+                  <button onclick="loadLesson('${item.lesson_id}', 'focus-areas')" class="min-h-[36px] px-3 py-1.5 text-xs font-semibold text-white bg-sage-400 rounded hover:bg-sage-500 transition-colors">Study Lesson →</button>
+                  <div class="flex items-center gap-1">
+                    <button onclick="dismissFocusArea('${item.id}')" class="min-h-[36px] px-2 py-1 text-[10px] text-parchment-400 hover:text-parchment-600 transition-colors" title="Dismiss">Dismiss</button>
+                    <button onclick="completeFocusArea('${item.id}')" class="min-h-[36px] px-2 py-1 text-[10px] font-semibold text-sage-500 hover:text-sage-700 transition-colors" title="Mark complete">✓ Complete</button>
                   </div>
                 </div>
               </div>`;
@@ -1750,14 +1841,14 @@
           const section = document.createElement('div');
           section.className = 'bg-white rounded-lg shadow-card border border-parchment-300 overflow-hidden';
           section.innerHTML = `
-            <button class="domain-exam-toggle w-full flex items-center justify-between p-4 text-left hover:bg-parchment-50 transition-colors" data-domain="${d}">
-              <div>
-                <h3 class="font-display text-lg font-bold text-herbchar-700">Domain ${d}: ${DOMAIN_FULL_NAMES[d]}</h3>
-                <p class="text-xs text-parchment-400 mt-0.5">${DOMAIN_WEIGHTS[d]}% of exam · ${exams.length} exams · ${totalQs} questions</p>
+            <button class="domain-exam-toggle w-full flex items-start justify-between gap-3 p-4 text-left hover:bg-parchment-50 transition-colors" data-domain="${d}">
+              <div class="min-w-0">
+                <h3 class="font-display text-base sm:text-lg font-bold text-herbchar-700">Domain ${d}: ${DOMAIN_FULL_NAMES[d]}</h3>
+                <p class="text-xs text-parchment-400 mt-0.5">${DOMAIN_WEIGHTS[d]}% of exam · ${exams.length} exam${exams.length !== 1 ? 's' : ''} · ${totalQs} questions</p>
               </div>
-              <svg class="w-5 h-5 text-parchment-400 transition-transform domain-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <svg class="w-5 h-5 text-parchment-400 transition-transform domain-chevron shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="domain-exam-body hidden border-t border-parchment-200 p-4 space-y-2">
+            <div class="domain-exam-body hidden border-t border-parchment-200 p-3 sm:p-4 space-y-2">
               ${exams.map((exam, i) => {
                 const bestScoreHtml = exam.bestScore != null
                   ? `<span class="inline-flex items-center gap-1 text-xs font-semibold ${exam.bestScore >= 70 ? 'text-green-600' : 'text-copper-400'}">
@@ -1766,15 +1857,15 @@
                     </span>`
                   : '<span class="text-xs text-parchment-400 italic">Not attempted</span>';
                 return `
-                <div class="flex items-center justify-between p-3 rounded-md border border-parchment-200 hover:border-sage-300 hover:bg-sage-50/30 transition-colors">
-                  <div>
-                    <p class="text-sm font-medium text-herbchar-700">${exam.displayName || exam.name || ('Exam ' + (i + 1))}</p>
-                    <div class="flex items-center gap-3 mt-0.5">
+                <div class="flex items-center justify-between gap-3 p-3 rounded-md border border-parchment-200 hover:border-sage-300 hover:bg-sage-50/30 transition-colors">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-herbchar-700 truncate">${exam.displayName || exam.name || ('Exam ' + (i + 1))}</p>
+                    <div class="flex flex-wrap items-center gap-2 mt-0.5">
                       <span class="text-xs text-parchment-400">${exam.questionCount} questions</span>
                       ${bestScoreHtml}
                     </div>
                   </div>
-                  <button onclick="startDomainExam('${exam.name.replace(/'/g, "\\'")}')" class="px-4 py-1.5 bg-sage-400 hover:bg-sage-500 text-white text-xs font-semibold rounded-md transition-colors">
+                  <button onclick="startDomainExam('${exam.name.replace(/'/g, "\\'")}')" class="shrink-0 min-h-[36px] px-4 py-1.5 bg-sage-400 hover:bg-sage-500 text-white text-xs font-semibold rounded-md transition-colors">
                     Start
                   </button>
                 </div>
@@ -1845,10 +1936,10 @@
 
       options.forEach((opt, i) => {
         const btn = document.createElement('button');
-        btn.className = 'quiz-option w-full text-left p-3 rounded-md border border-parchment-300 flex items-start gap-3';
+        btn.className = 'quiz-option w-full text-left px-3 py-3 min-h-[48px] rounded-md border border-parchment-300 flex items-start gap-3';
         btn.innerHTML = `
-          <span class="shrink-0 w-6 h-6 rounded-full border border-parchment-300 flex items-center justify-center text-xs font-semibold text-parchment-400">${labels[i]}</span>
-          <span class="text-sm text-herbchar-700">${opt}</span>
+          <span class="shrink-0 w-6 h-6 mt-0.5 rounded-full border border-parchment-300 flex items-center justify-center text-xs font-semibold text-parchment-400">${labels[i]}</span>
+          <span class="text-sm text-herbchar-700 flex-1 min-w-0">${opt}</span>
         `;
         btn.addEventListener('click', () => selectAnswer(labels[i], btn));
         optionsEl.appendChild(btn);
@@ -1903,10 +1994,16 @@
         : '<svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
       document.getElementById('quiz-result-text').textContent = isCorrect ? 'Correct!' : `Incorrect — the answer is ${String(correctAnswer).toUpperCase()}`;
       document.getElementById('quiz-result-text').className = 'text-sm font-semibold ' + (isCorrect ? 'text-green-700' : 'text-red-600');
-      // Keep explanation simple — just show the study domain reference
-      const domainName = DOMAIN_NAMES[q.domain] || '';
-      document.getElementById('quiz-explanation-text').textContent = isCorrect ? '' : `Study this in Domain ${q.domain}: ${domainName}`;
-      document.getElementById('quiz-reference').textContent = '';
+      // Show the real explanation and textbook reference
+      if (!isCorrect && explanation) {
+        document.getElementById('quiz-explanation-text').textContent = explanation;
+      } else if (!isCorrect) {
+        const domainName = DOMAIN_NAMES[q.domain] || '';
+        document.getElementById('quiz-explanation-text').textContent = `Review Domain ${q.domain}: ${domainName}`;
+      } else {
+        document.getElementById('quiz-explanation-text').textContent = '';
+      }
+      document.getElementById('quiz-reference').textContent = (!isCorrect && reference) ? `📖 ${reference}` : '';
 
       if (quizIndex < quizQuestions.length - 1) {
         document.getElementById('quiz-next-btn').classList.remove('hidden');
@@ -1944,15 +2041,37 @@
         const color = dpct >= 80 ? 'bg-sage-400' : dpct >= 60 ? 'bg-yellow-400' : 'bg-red-400';
         resultsEl.innerHTML += `
           <div>
-            <div class="flex justify-between items-baseline mb-1">
-              <span class="text-sm font-medium text-herbchar-700">Domain ${d}: ${DOMAIN_NAMES[d]}</span>
-              <span class="text-xs text-parchment-400">${dpct}% (${stats.correct}/${stats.total})</span>
+            <div class="flex justify-between items-baseline mb-1 gap-2">
+              <span class="text-sm font-medium text-herbchar-700 truncate min-w-0">${DOMAIN_NAMES[d]}</span>
+              <span class="text-xs text-parchment-400 shrink-0">${dpct}% (${stats.correct}/${stats.total})</span>
             </div>
             <div class="w-full h-2 bg-parchment-200 rounded-full overflow-hidden">
               <div class="progress-fill h-full ${color} rounded-full" style="width:${dpct}%"></div>
             </div>
           </div>
         `;
+      }
+
+      // Post-result next-action CTA
+      const nextActionEl = document.getElementById('quiz-next-action');
+      if (pct < 60) {
+        nextActionEl.innerHTML = `
+          <div class="bg-red-50 border border-red-200 rounded-lg p-4 flex flex-col sm:flex-row sm:items-center gap-3">
+            <div class="flex-1"><p class="text-sm font-semibold text-red-700">Score below 60% — time to review your weak areas</p><p class="text-xs text-red-500 mt-0.5">Focus on the domains where you missed the most questions.</p></div>
+            <button onclick="switchView('focus-areas')" class="shrink-0 px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-sm font-semibold rounded-md transition-colors">Review Focus Areas →</button>
+          </div>`;
+      } else if (pct < 80) {
+        nextActionEl.innerHTML = `
+          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex flex-col sm:flex-row sm:items-center gap-3">
+            <div class="flex-1"><p class="text-sm font-semibold text-yellow-700">Good effort — keep practicing to reach 80%+</p><p class="text-xs text-yellow-600 mt-0.5">You're making progress. A few more rounds should close the gap.</p></div>
+            <button onclick="switchView('practice')" class="shrink-0 px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold rounded-md transition-colors">Keep Practicing →</button>
+          </div>`;
+      } else {
+        nextActionEl.innerHTML = `
+          <div class="bg-green-50 border border-green-200 rounded-lg p-4 flex flex-col sm:flex-row sm:items-center gap-3">
+            <div class="flex-1"><p class="text-sm font-semibold text-green-700">Great score — you may be ready for a mock exam!</p><p class="text-xs text-green-600 mt-0.5">Test yourself under real exam conditions.</p></div>
+            <button onclick="switchView('full-exam')" class="shrink-0 px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold rounded-md transition-colors">Try Mock Exam →</button>
+          </div>`;
       }
 
       // If this was a full exam, submit results to the API
@@ -2103,17 +2222,17 @@
           const scores = e.domain_scores ? Object.entries(e.domain_scores).map(([d, pct]) => `D${d}: ${pct}%`).join(' · ') : '';
           return `
             <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4">
-              <div class="flex items-center justify-between mb-2">
-                <div>
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <div class="min-w-0">
                   <p class="text-sm font-medium text-herbchar-700">${e.exam_type === 'full' ? 'Full Exam' : e.exam_type === 'diagnostic' ? 'Diagnostic' : e.exam_type === 'domain' ? 'Domain Practice' : 'Practice'} — ${date}</p>
                   <p class="text-xs text-parchment-400">${e.total_questions} questions${e.correct_count != null ? ` · ${e.correct_count} correct` : ''}</p>
                 </div>
-                <div class="text-right">
+                <div class="text-right shrink-0">
                   ${e.score_pct != null ? `<p class="text-lg font-bold text-herbchar-700">${e.score_pct}%</p>` : ''}
                   ${status}
                 </div>
               </div>
-              ${scores ? `<p class="text-xs text-parchment-400">${scores}</p>` : ''}
+              ${scores ? `<p class="text-xs text-parchment-400 break-words">${scores}</p>` : ''}
             </div>
           `;
         }).join('');
@@ -2134,6 +2253,24 @@
     let practiceWrongTopics = []; // topics user got wrong
 
     let selectedPracticeLength = 20;
+    let selectedPracticeMode = 'adaptive';
+
+    function selectPracticeMode(mode) {
+      selectedPracticeMode = mode;
+      document.querySelectorAll('.practice-mode-btn').forEach(b => {
+        b.classList.remove('border-sage-400', 'bg-sage-50');
+        b.classList.add('border-parchment-300', 'bg-white');
+        b.querySelector('.text-sm').classList.remove('text-sage-500');
+        b.querySelector('.text-sm').classList.add('text-herbchar-700');
+      });
+      const btn = document.getElementById('mode-' + mode);
+      if (btn) {
+        btn.classList.remove('border-parchment-300', 'bg-white');
+        btn.classList.add('border-sage-400', 'bg-sage-50');
+        btn.querySelector('.text-sm').classList.remove('text-herbchar-700');
+        btn.querySelector('.text-sm').classList.add('text-sage-500');
+      }
+    }
 
     function selectPracticeLength(btn, length) {
       selectedPracticeLength = length;
@@ -2158,6 +2295,18 @@
       const domainRadio = document.querySelector('input[name="practice-domain"]:checked');
       const domain = domainRadio?.value ? parseInt(domainRadio.value) : null;
       const limit = selectedPracticeLength;
+
+      if (selectedPracticeMode === 'diagnostic') {
+        // Launch diagnostic quiz
+        switchView('diagnostic');
+        return;
+      }
+
+      if (selectedPracticeMode === 'domain-exam') {
+        // Navigate to domain exams view
+        switchView('domain-exams');
+        return;
+      }
 
       document.getElementById('practice-setup').classList.add('hidden');
       document.getElementById('practice-active').classList.remove('hidden');
@@ -2217,12 +2366,12 @@
           const dPct = dr.total > 0 ? Math.round((dr.correct / dr.total) * 100) : 0;
           const dColor = dPct >= 80 ? 'bg-sage-400' : dPct >= 60 ? 'bg-yellow-400' : 'bg-red-400';
           return `
-            <div class="flex items-center gap-3">
-              <span class="text-xs text-parchment-400 w-24 shrink-0">D${d}: ${DOMAIN_NAMES[d] || ''}</span>
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-parchment-400 w-28 shrink-0 truncate">${DOMAIN_NAMES[d] || 'D' + d}</span>
               <div class="flex-1 h-1.5 bg-parchment-200 rounded-full overflow-hidden">
                 <div class="h-full ${dColor} rounded-full" style="width:${dPct}%"></div>
               </div>
-              <span class="text-xs font-medium text-herbchar-700 w-12 text-right">${dPct}%</span>
+              <span class="text-xs font-medium text-herbchar-700 w-9 text-right shrink-0">${dPct}%</span>
             </div>
           `;
         }).join('');
@@ -2239,7 +2388,7 @@
         ` : '';
 
         area.innerHTML = `
-          <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-8 max-w-lg mx-auto">
+          <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-5 sm:p-8 max-w-lg mx-auto">
             <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-4 text-center">Session Complete</p>
             <p class="text-4xl font-bold ${pctColor} mb-1 text-center">${pct}%</p>
             <p class="text-sm text-parchment-400 mb-4 text-center">${practiceCorrect} correct, ${practiceIncorrect} incorrect out of ${total}</p>
@@ -2248,7 +2397,23 @@
             </div>
             ${domainRows ? `<div class="space-y-2 mb-4">${domainRows}</div>` : ''}
             ${weakHtml}
-            <div class="mt-6 space-y-2">
+            ${pct < 60 ? `
+              <div class="mt-4 bg-red-50 border border-red-200 rounded-lg p-3 flex flex-col sm:flex-row sm:items-center gap-2">
+                <p class="text-sm font-semibold text-red-700 flex-1">Below 60% — review your focus areas</p>
+                <button onclick="switchView('focus-areas')" class="shrink-0 px-3 py-1.5 bg-red-500 hover:bg-red-600 text-white text-xs font-semibold rounded-md transition-colors">Focus Areas →</button>
+              </div>
+            ` : pct < 80 ? `
+              <div class="mt-4 bg-yellow-50 border border-yellow-200 rounded-lg p-3 flex flex-col sm:flex-row sm:items-center gap-2">
+                <p class="text-sm font-semibold text-yellow-700 flex-1">Keep practicing to hit 80%+</p>
+                <button onclick="showPracticeSetup()" class="shrink-0 px-3 py-1.5 bg-yellow-500 hover:bg-yellow-600 text-white text-xs font-semibold rounded-md transition-colors">Practice More →</button>
+              </div>
+            ` : `
+              <div class="mt-4 bg-green-50 border border-green-200 rounded-lg p-3 flex flex-col sm:flex-row sm:items-center gap-2">
+                <p class="text-sm font-semibold text-green-700 flex-1">80%+ — try a mock exam!</p>
+                <button onclick="switchView('full-exam')" class="shrink-0 px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-md transition-colors">Mock Exam →</button>
+              </div>
+            `}
+            <div class="mt-4 space-y-2">
               <button onclick="showPracticeSetup()" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
                 Practice More
               </button>
@@ -2267,16 +2432,16 @@
 
       const optionsHtml = options.map((opt, i) => `
         <button onclick="submitPracticeAnswer(${i})" id="practice-opt-${i}"
-          class="practice-option w-full text-left px-4 py-3 rounded-lg border border-parchment-300 bg-white hover:border-sage-400 hover:bg-sage-50 transition-all flex items-start gap-3">
-          <span class="shrink-0 w-6 h-6 rounded-full border border-parchment-300 flex items-center justify-center text-xs font-semibold text-sage-500">${labels[i]}</span>
-          <span class="text-sm text-herbchar-700">${escapeHtml(opt)}</span>
+          class="practice-option w-full text-left px-3 sm:px-4 py-3 min-h-[48px] rounded-lg border border-parchment-300 bg-white hover:border-sage-400 hover:bg-sage-50 transition-all flex items-start gap-3">
+          <span class="shrink-0 w-6 h-6 mt-0.5 rounded-full border border-parchment-300 flex items-center justify-center text-xs font-semibold text-sage-500">${labels[i]}</span>
+          <span class="text-sm text-herbchar-700 flex-1 min-w-0">${escapeHtml(opt)}</span>
         </button>
       `).join('');
 
       area.innerHTML = `
-        <p class="text-xs text-parchment-400 mb-4">Question ${practiceIdx + 1} of ${practiceStack.length}${q.domain ? ' · Domain ' + q.domain + ': ' + (DOMAIN_NAMES[q.domain] || '') : ''}</p>
-        <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mb-4">
-          <p class="text-base text-herbchar-700 leading-relaxed font-medium">${escapeHtml(q.question_text)}</p>
+        <p class="text-xs text-parchment-400 mb-3 leading-relaxed">Question ${practiceIdx + 1} of ${practiceStack.length}${q.domain ? ' · Domain ' + q.domain : ''}</p>
+        <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-4 sm:p-6 mb-4">
+          <p class="text-sm sm:text-base text-herbchar-700 leading-relaxed font-medium">${escapeHtml(q.question_text)}</p>
         </div>
         <div id="practice-options" class="space-y-2 mb-4">${optionsHtml}</div>
         <div id="practice-result" class="hidden"></div>
@@ -2362,7 +2527,8 @@
             <div>
               <p class="text-sm font-semibold ${isCorrect ? 'text-green-700' : 'text-red-600'}">${isCorrect ? 'Correct!' : 'Incorrect'}</p>
               ${!isCorrect && correctIdx >= 0 ? `<p class="text-sm text-herbchar-700 mt-1">The correct answer is <strong class="text-green-600">${labels[correctIdx]}${correctText ? '. ' + escapeHtml(correctText) : ''}</strong></p>` : ''}
-              ${!isCorrect && resultDomain ? `<p class="text-xs text-parchment-400 mt-2">Study this in Domain ${resultDomain}: ${DOMAIN_NAMES[resultDomain] || ''}</p>` : ''}
+              ${!isCorrect && explanation ? `<p class="text-sm text-herbchar-700/80 mt-2 leading-relaxed">${escapeHtml(explanation)}</p>` : ''}
+              ${!isCorrect && reference ? `<p class="text-xs text-parchment-400 mt-1">📖 ${escapeHtml(reference)}</p>` : (!isCorrect && resultDomain ? `<p class="text-xs text-parchment-400 mt-2">Domain ${resultDomain}: ${DOMAIN_NAMES[resultDomain] || ''}</p>` : '')}
             </div>
           </div>
         </div>
@@ -2422,6 +2588,9 @@
         cleaned = cleaned.replace(/(<li><strong>[A-Z]\.<\/strong>.*?<\/p>)/gi, (m) => m.replace(/<\/p>/i, '</li>'));
         cleaned = cleaned.replace(/((<li><strong>[A-Z]\.<\/strong>.*?<\/li>\s*)+)/gi, '<ol class="list-none space-y-2 mb-4">$1</ol>');
       }
+      // Wrap tables in scroll container for mobile
+      cleaned = cleaned.replace(/<table/gi, '<div class="overflow-x-auto -mx-1 px-1 my-3"><table style="min-width:400px"');
+      cleaned = cleaned.replace(/<\/table>/gi, '</table></div>');
       return cleaned;
     }
 
@@ -2500,7 +2669,7 @@
 
           return `
             <div class="module-card bg-white rounded-lg shadow-card border border-parchment-300 overflow-hidden">
-              <div class="module-header p-5 flex items-center gap-4" onclick="toggleModule(${mIdx})">
+              <div class="module-header p-4 sm:p-5 flex items-center gap-3 sm:gap-4" onclick="toggleModule(${mIdx})">
                 <!-- Progress ring -->
                 <div class="shrink-0 relative">
                   <svg width="40" height="40" class="block">
@@ -2511,26 +2680,27 @@
                   <span class="absolute inset-0 flex items-center justify-center text-[10px] font-bold ${mPct === 100 ? 'text-green-600' : 'text-herbchar-700'}">${mPct}%</span>
                 </div>
                 <div class="flex-1 min-w-0">
-                  <h3 class="font-display text-lg font-semibold text-herbchar-700 leading-snug">${escapeHtml(m.title)}</h3>
-                  ${m.description ? `<p class="text-xs text-parchment-400 mt-0.5 line-clamp-1">${escapeHtml(m.description)}</p>` : ''}
+                  <h3 class="font-display text-base sm:text-lg font-semibold text-herbchar-700 leading-snug">${escapeHtml(m.title)}</h3>
+                  ${m.description ? `<p class="text-xs text-parchment-400 mt-0.5 line-clamp-2">${escapeHtml(m.description)}</p>` : ''}
+                  <p class="text-xs text-parchment-400 mt-0.5 sm:hidden">${mTotal} lesson${mTotal !== 1 ? 's' : ''} · ~${estTime} min</p>
                 </div>
-                <div class="shrink-0 flex items-center gap-3">
+                <div class="shrink-0 flex items-center gap-2 sm:gap-3">
                   <span class="text-xs text-parchment-400 hidden sm:inline">${mTotal} lesson${mTotal !== 1 ? 's' : ''} · ~${estTime} min</span>
-                  <svg class="module-chevron w-5 h-5 text-parchment-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                  <svg class="module-chevron w-5 h-5 text-parchment-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </div>
               </div>
               <div id="module-body-${mIdx}" class="hidden border-t border-parchment-200">
                 ${lessons.length === 0 ? '<p class="p-4 text-sm text-parchment-400 italic">No lessons yet.</p>' :
                   lessons.map((l, lIdx) => `
-                    <div class="lesson-row flex items-center gap-3 px-5 py-3 ${lIdx < lessons.length - 1 ? 'border-b border-parchment-100' : ''}" onclick="loadLesson('${l.id}', 'study-guide')">
+                    <div class="lesson-row flex items-center gap-3 px-4 sm:px-5 py-3 min-h-[48px] ${lIdx < lessons.length - 1 ? 'border-b border-parchment-100' : ''}" onclick="loadLesson('${l.id}', 'study-guide')">
                       <span class="shrink-0 ${l.is_completed ? 'text-green-500' : 'text-parchment-300'}">
                         ${l.is_completed
                           ? '<svg class="w-5 h-5" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
                           : '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="2"/></svg>'
                         }
                       </span>
-                      <span class="flex-1 text-sm font-medium text-herbchar-700 ${l.is_completed ? 'line-through opacity-60' : ''}">${escapeHtml(l.title)}</span>
-                      ${l.estimated_minutes ? `<span class="text-xs text-parchment-400 shrink-0">~${l.estimated_minutes} min</span>` : ''}
+                      <span class="flex-1 min-w-0 text-sm font-medium text-herbchar-700 ${l.is_completed ? 'line-through opacity-60' : ''}">${escapeHtml(l.title)}</span>
+                      ${l.estimated_minutes ? `<span class="text-xs text-parchment-400 shrink-0 ml-2">~${l.estimated_minutes} min</span>` : ''}
                     </div>
                   `).join('')
                 }
@@ -2563,6 +2733,9 @@
       if (source) lessonSourceView = source;
       currentLessonId = lessonId;
 
+      // Track last viewed lesson for "Continue Studying" CTA
+      try { localStorage.setItem('lastLesson', JSON.stringify({ id: lessonId, ts: Date.now() })); } catch(e) {}
+
       // Hide current view, show lesson view
       document.getElementById('view-study-guide').classList.remove('active');
       document.getElementById('view-focus-areas').classList.remove('active');
@@ -2585,6 +2758,9 @@
         // Title and subtitle
         document.getElementById('lesson-title').textContent = lesson.title || 'Lesson';
         document.getElementById('lesson-subtitle').textContent = mod.title ? `Module: ${mod.title}` : '';
+
+        // Update localStorage with lesson details for "Continue Studying"
+        try { localStorage.setItem('lastLesson', JSON.stringify({ id: lessonId, title: lesson.title || 'Lesson', module: mod.title || '', ts: Date.now() })); } catch(e) {}
 
         // Estimated time
         document.getElementById('lesson-time-text').textContent = lesson.estimated_minutes ? `${lesson.estimated_minutes} min` : '';
@@ -2621,7 +2797,7 @@
               <p class="text-sm font-medium text-herbchar-700 mb-3">${qIdx + 1}. ${escapeHtml(q.question_text)}</p>
               <div class="space-y-2">
                 ${(q.options || []).map((opt, oIdx) => `
-                  <div onclick="answerLessonQuestion(${qIdx}, ${oIdx}, '${q.id || ''}')" class="lesson-quiz-option w-full text-left p-3 rounded-md border border-parchment-300 flex items-start gap-3" data-qidx="${qIdx}" data-oidx="${oIdx}">
+                  <div onclick="answerLessonQuestion(${qIdx}, ${oIdx}, '${q.id || ''}')" class="lesson-quiz-option w-full text-left px-3 py-3 min-h-[48px] rounded-md border border-parchment-300 flex items-start gap-3" data-qidx="${qIdx}" data-oidx="${oIdx}">
                     <span class="shrink-0 w-6 h-6 rounded-full border border-parchment-300 flex items-center justify-center text-xs font-semibold text-parchment-400">${labels[oIdx]}</span>
                     <span class="text-sm text-herbchar-700">${escapeHtml(opt)}</span>
                   </div>
@@ -2631,8 +2807,9 @@
             </div>
           `).join('');
 
-          // Store correct answers for local check
+          // Store correct answers for local check + tracking
           window._lessonQuestions = practiceQs;
+          window._lessonQResults = new Array(practiceQs.length).fill(null); // null=unanswered, true/false
         } else {
           document.getElementById('lesson-practice').classList.add('hidden');
         }
@@ -2767,7 +2944,21 @@
       } else {
         feedback.className = 'mt-3 text-sm rounded-md p-3 bg-red-50 border border-red-200 text-red-800';
         const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
-        feedback.innerHTML = `<strong>Incorrect.</strong> The correct answer is <strong>${labels[correctIdx]}</strong>.`;
+        let feedbackHtml = `<strong>Incorrect.</strong> The correct answer is <strong>${labels[correctIdx]}</strong>.`;
+        if (q.explanation) feedbackHtml += `<p class="mt-2 text-sm text-red-700/80 leading-relaxed">${escapeHtml(q.explanation)}</p>`;
+        if (q.textbook_reference) feedbackHtml += `<p class="mt-1 text-xs text-red-600/60">📖 ${escapeHtml(q.textbook_reference)}</p>`;
+        feedback.innerHTML = feedbackHtml;
+      }
+
+      // Track result for auto-complete
+      if (window._lessonQResults) {
+        window._lessonQResults[qIdx] = isCorrect;
+        // Auto-complete lesson if all questions answered correctly
+        const allAnswered = window._lessonQResults.every(r => r !== null);
+        const allCorrect = window._lessonQResults.every(r => r === true);
+        if (allAnswered && allCorrect && currentLessonId) {
+          markLessonComplete(currentLessonId);
+        }
       }
 
       // POST to practice endpoint if we have a question ID
@@ -2807,12 +2998,12 @@
 
         planEl.innerHTML = `
           <div class="bg-white rounded-lg shadow-card border border-parchment-300 p-6 mb-6">
-            <div class="flex items-center justify-between mb-4">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
               <div>
                 <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400">Target Exam Date</p>
                 <p class="text-lg font-bold text-herbchar-700">${new Date(plan.target_exam_date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
               </div>
-              <p class="text-sm text-parchment-400">${plan.plan_data.weeksUntilExam} weeks remaining</p>
+              <p class="text-sm text-parchment-400 shrink-0">${plan.plan_data.weeksUntilExam} weeks remaining</p>
             </div>
           </div>
           <div class="space-y-4">
@@ -2834,6 +3025,49 @@
         console.error('Study plan error:', err);
         showToast('Could not load study plan.');
       }
+    }
+
+    // Generate plan from Exam Day view
+    async function generateExamDayPlan() {
+      const examDate = document.getElementById('exam-day-date-input').value;
+      if (!examDate) { showToast('Please select a target exam date.'); return; }
+      try {
+        await apiFetch('study-plan', { method: 'POST', body: JSON.stringify({ target_exam_date: examDate }) });
+        showToast('Study plan generated!');
+        loadExamDayStudyPlan();
+        loadStudyPlan(); // keep original view in sync
+      } catch (err) { showToast('Error: ' + err.message); }
+    }
+
+    async function loadExamDayStudyPlan() {
+      try {
+        const plan = await apiFetch('study-plan');
+        if (!plan || !plan.plan_data) return;
+        const weeks = plan.plan_data?.weeks || [];
+        const el = document.getElementById('exam-day-study-plan');
+        el.innerHTML = `
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+            <div>
+              <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400">Target Exam Date</p>
+              <p class="text-lg font-bold text-herbchar-700">${new Date(plan.target_exam_date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+            </div>
+            <p class="text-sm text-parchment-400 shrink-0">${plan.plan_data.weeksUntilExam} weeks remaining</p>
+          </div>
+          <div class="space-y-3 max-h-64 overflow-y-auto">
+            ${weeks.slice(0, 4).map(w => `
+              <div class="p-3 bg-parchment-50 rounded-md">
+                <div class="flex items-start justify-between mb-1">
+                  <p class="text-xs font-semibold text-parchment-400">Week ${w.week}</p>
+                  <p class="text-xs text-parchment-400">${w.start_date}</p>
+                </div>
+                <p class="text-sm font-medium text-herbchar-700 mb-1">${escapeHtml(w.theme)}</p>
+                <ul class="text-xs text-herbchar-700/70 space-y-0.5">${w.activities.slice(0, 3).map(a => `<li>• ${escapeHtml(a)}</li>`).join('')}</ul>
+              </div>
+            `).join('')}
+            ${weeks.length > 4 ? `<p class="text-xs text-parchment-400 text-center">+ ${weeks.length - 4} more weeks — <button onclick="switchView('study-plan')" class="text-sage-400 hover:underline">view full plan</button></p>` : ''}
+          </div>
+        `;
+      } catch(e) { /* silent — plan may not exist yet */ }
     }
 
     document.getElementById('generate-plan-btn').addEventListener('click', async () => {
@@ -2873,12 +3107,12 @@
           const atRisk = daysSinceActive > 7 && !s.is_admin;
           return `
             <div class="bg-white rounded-lg shadow-card border ${atRisk ? 'border-red-200' : 'border-parchment-300'} p-4">
-              <div class="flex items-center justify-between">
-                <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0">
                   <p class="text-sm font-medium text-herbchar-700">${escapeHtml(s.display_name)} ${s.is_admin ? '<span class="text-[10px] bg-copper-100 text-copper-600 px-1.5 py-0.5 rounded ml-1">Admin</span>' : ''} ${!s.is_active ? '<span class="text-[10px] bg-red-100 text-red-600 px-1.5 py-0.5 rounded ml-1">Inactive</span>' : ''}</p>
-                  <p class="text-xs text-parchment-400">${escapeHtml(s.email)} · Last active: ${lastActive}</p>
+                  <p class="text-xs text-parchment-400 truncate">${escapeHtml(s.email)} · Last active: ${lastActive}</p>
                 </div>
-                <div class="text-right">
+                <div class="text-right shrink-0">
                   <p class="text-sm text-herbchar-700">${s.questions_practiced} questions</p>
                   ${s.latest_exam_score != null ? `<p class="text-xs ${s.latest_exam_score >= 70 ? 'text-green-600' : 'text-red-500'}">Last exam: ${s.latest_exam_score}%</p>` : ''}
                 </div>
