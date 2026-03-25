@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCHN Exam Prep — Holistic Consulting</title>
+  <meta name="robots" content="noindex, nofollow">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: { 50: '#f4f7f2', 100: '#e4ebe0', 200: '#c9d7c1', 300: '#a4b898', 400: '#6B7F5E', 500: '#5a6e4e', 600: '#475940', 700: '#394834', 800: '#2A3024', 900: '#1e2319' },
+            copper: { 50: '#fdf6ef', 100: '#f8e4d0', 200: '#f0c49c', 300: '#e5a06a', 400: '#B07242', 500: '#9a5f33', 600: '#804b28', 700: '#663a20', 800: '#4d2c19', 900: '#3a2013' },
+            parchment: { 50: '#FDFAF5', 100: '#F5F1E6', 200: '#EDE7D8', 300: '#DDD8D0', 400: '#C5BFAF' },
+            herbchar: { 700: '#2A3024', 800: '#1e2319', 900: '#151a11' },
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: #F5F1E6; }
+    .view { display: none; }
+    .view.active { display: block; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- LOADING STATE                          -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="loading-view" class="view active">
+    <div class="min-h-screen flex items-center justify-center">
+      <div class="text-center">
+        <h1 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Holistic Consulting</h1>
+        <p class="text-xs font-semibold tracking-[0.16em] uppercase text-sage-400 mt-1">BCHN Exam Prep</p>
+        <div class="w-8 h-8 border-2 border-sage-400 border-t-transparent rounded-full animate-spin mx-auto mt-6"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SALES / LANDING PAGE (unauthenticated) -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="sales-view" class="view">
+    <div class="min-h-screen">
+      <!-- Header -->
+      <header class="bg-white border-b border-parchment-300">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div>
+            <h1 class="font-display text-xl font-bold text-herbchar-700 tracking-tight">Holistic Consulting</h1>
+            <p class="text-[10px] font-semibold tracking-[0.16em] uppercase text-sage-400">BCHN Exam Prep</p>
+          </div>
+          <button onclick="showLogin()" class="text-sm font-medium text-sage-400 hover:text-sage-500 transition-colors">
+            Sign In
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="bg-white border-b border-parchment-300">
+        <div class="max-w-5xl mx-auto px-6 py-16 lg:py-24">
+          <div class="max-w-2xl">
+            <p class="text-xs font-semibold tracking-[0.16em] uppercase text-copper-400 mb-4">Board Certification Prep</p>
+            <h2 class="font-display text-4xl lg:text-5xl font-bold text-herbchar-700 tracking-tight leading-[1.1] mb-6">
+              Pass the BCHN Exam.<br>First Try.
+            </h2>
+            <p class="text-lg text-herbchar-700/70 leading-relaxed mb-8 max-w-lg">
+              Adaptive practice exams, spaced repetition, domain mastery tracking, and a complete study guide — built specifically for the NANP Board Certification in Holistic Nutrition.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 items-start">
+              <button onclick="showCheckout()" 
+                class="px-8 py-3.5 bg-sage-400 hover:bg-sage-500 text-white font-semibold rounded-lg transition-colors text-base shadow-sm">
+                Get Started — $297
+              </button>
+              <p class="text-sm text-parchment-400 pt-2">One-time payment. Lifetime access.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="py-16 lg:py-24">
+        <div class="max-w-5xl mx-auto px-6">
+          <h3 class="font-display text-2xl font-bold text-herbchar-700 mb-12 text-center">Everything You Need to Pass</h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg p-6 border border-parchment-300 shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-sage-50 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h4 class="font-display text-lg font-semibold text-herbchar-700 mb-2">Adaptive Practice Exams</h4>
+              <p class="text-sm text-herbchar-700/60 leading-relaxed">Full-length and domain-specific practice exams that adapt to your weak areas. Mirrors the real BCHN exam format.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 border border-parchment-300 shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-sage-50 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h4 class="font-display text-lg font-semibold text-herbchar-700 mb-2">Spaced Repetition</h4>
+              <p class="text-sm text-herbchar-700/60 leading-relaxed">Science-backed review scheduling ensures you retain what you study. Questions resurface right before you'd forget them.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 border border-parchment-300 shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-sage-50 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              </div>
+              <h4 class="font-display text-lg font-semibold text-herbchar-700 mb-2">Domain Mastery Tracking</h4>
+              <p class="text-sm text-herbchar-700/60 leading-relaxed">See exactly where you stand across all 5 BCHN domains. Focus your study time where it matters most.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 border border-parchment-300 shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-sage-50 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              </div>
+              <h4 class="font-display text-lg font-semibold text-herbchar-700 mb-2">Complete Study Guide</h4>
+              <p class="text-sm text-herbchar-700/60 leading-relaxed">Comprehensive curriculum aligned to the 2026 NANP exam blueprint. Study the material, then test yourself.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 border border-parchment-300 shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-sage-50 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+              </div>
+              <h4 class="font-display text-lg font-semibold text-herbchar-700 mb-2">Smart Recommendations</h4>
+              <p class="text-sm text-herbchar-700/60 leading-relaxed">AI-powered study prioritization tells you exactly what to work on next based on your performance patterns.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 border border-parchment-300 shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-sage-50 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h4 class="font-display text-lg font-semibold text-herbchar-700 mb-2">Readiness Score</h4>
+              <p class="text-sm text-herbchar-700/60 leading-relaxed">Know when you're ready. Our weighted readiness score accounts for domain importance so you test with confidence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-16 lg:py-24 bg-white border-t border-parchment-300">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+          <h3 class="font-display text-3xl font-bold text-herbchar-700 mb-4">Ready to Start Studying?</h3>
+          <p class="text-base text-herbchar-700/60 mb-8 max-w-md mx-auto">
+            One-time purchase. No subscription. Access everything you need to pass the BCHN board exam.
+          </p>
+          <button onclick="showCheckout()"
+            class="px-8 py-3.5 bg-sage-400 hover:bg-sage-500 text-white font-semibold rounded-lg transition-colors text-base shadow-sm">
+            Get Started — $297
+          </button>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-8 border-t border-parchment-300">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+          <p class="text-xs text-parchment-400">© 2026 Holistic Consulting HQ. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- CHECKOUT / EMAIL CAPTURE               -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="checkout-view" class="view">
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div class="w-full max-w-md">
+        <div class="text-center mb-8">
+          <h1 class="font-display text-3xl font-bold text-herbchar-700 tracking-tight">BCHN Exam Prep</h1>
+          <p class="text-xs font-semibold tracking-[0.16em] uppercase text-sage-400 mt-1">Holistic Consulting</p>
+          <div class="w-12 h-0.5 bg-copper-400 mx-auto mt-4"></div>
+        </div>
+        <div class="bg-white rounded-lg shadow-sm p-8 border border-parchment-300">
+          <h2 class="font-display text-xl font-semibold text-herbchar-700 mb-2">Complete Your Purchase</h2>
+          <p class="text-sm text-herbchar-700/60 mb-6">Enter your email to proceed to secure checkout.</p>
+          <form id="checkout-form" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-herbchar-700 mb-1">Email</label>
+              <input type="email" id="checkout-email" required placeholder="you@example.com"
+                class="w-full px-3 py-2.5 border border-parchment-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-sage-400/30 focus:border-sage-400">
+            </div>
+            <p id="checkout-error" class="text-red-600 text-sm hidden"></p>
+            <button type="submit" id="checkout-btn"
+              class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-sage-400/50">
+              Continue to Payment — $297
+            </button>
+          </form>
+          <p class="text-xs text-parchment-400 text-center mt-4">Secure checkout powered by Stripe. One-time payment.</p>
+        </div>
+        <div class="text-center mt-4">
+          <button onclick="showSales()" class="text-sm text-parchment-400 hover:text-sage-400 transition-colors">← Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- LOGIN (magic link)                     -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="login-view" class="view">
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div class="w-full max-w-md">
+        <div class="text-center mb-8">
+          <h1 class="font-display text-3xl font-bold text-herbchar-700 tracking-tight">BCHN Exam Prep</h1>
+          <p class="text-xs font-semibold tracking-[0.16em] uppercase text-sage-400 mt-1">Holistic Consulting</p>
+          <div class="w-12 h-0.5 bg-copper-400 mx-auto mt-4"></div>
+        </div>
+        <div class="bg-white rounded-lg shadow-sm p-8 border border-parchment-300">
+          <h2 class="font-display text-xl font-semibold text-herbchar-700 mb-2">Sign In</h2>
+          <p class="text-sm text-herbchar-700/60 mb-6">Enter your email and we'll send you a sign-in link. No password needed.</p>
+          
+          <!-- Magic link request form -->
+          <form id="magic-link-form" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-herbchar-700 mb-1">Email</label>
+              <input type="email" id="login-email" required placeholder="you@example.com"
+                class="w-full px-3 py-2.5 border border-parchment-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-sage-400/30 focus:border-sage-400">
+            </div>
+            <p id="login-error" class="text-red-600 text-sm hidden"></p>
+            <p id="login-success" class="text-sage-400 text-sm hidden"></p>
+            <button type="submit" id="login-btn"
+              class="w-full py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-sage-400/50">
+              Send Login Link
+            </button>
+          </form>
+        </div>
+        <div class="text-center mt-4 space-x-4">
+          <button onclick="showSales()" class="text-sm text-parchment-400 hover:text-sage-400 transition-colors">← Back</button>
+          <span class="text-parchment-300">|</span>
+          <button onclick="showCheckout()" class="text-sm text-sage-400 hover:text-sage-500 transition-colors">Don't have access? Purchase →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SUCCESS (post-purchase)                -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="success-view" class="view">
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div class="w-full max-w-md text-center">
+        <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-sage-50 flex items-center justify-center">
+          <svg class="w-8 h-8 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h2 class="font-display text-3xl font-bold text-herbchar-700 mb-3">Purchase Complete!</h2>
+        <p class="text-base text-herbchar-700/60 mb-6 max-w-sm mx-auto">
+          Check your email for a login link to access your BCHN Exam Prep portal. It may take a minute to arrive.
+        </p>
+        <button onclick="showLogin()"
+          class="px-6 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+          Sign In Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- AUTHENTICATED + ENROLLED → REDIRECT    -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="access-view" class="view">
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div class="w-full max-w-md text-center">
+        <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-sage-50 flex items-center justify-center">
+          <svg class="w-8 h-8 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-herbchar-700 mb-3">Welcome Back!</h2>
+        <p class="text-base text-herbchar-700/60 mb-2" id="access-email"></p>
+        <p class="text-sm text-herbchar-700/60 mb-6">Redirecting to your Exam Prep portal...</p>
+        <a href="/index.html" class="px-6 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors inline-block">
+          Go to Exam Prep →
+        </a>
+        <div class="mt-4">
+          <a href="/.netlify/functions/logout" class="text-sm text-parchment-400 hover:text-sage-400 transition-colors">Sign out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ERROR MESSAGES                         -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="error-view" class="view">
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div class="w-full max-w-md text-center">
+        <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-red-50 flex items-center justify-center">
+          <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-herbchar-700 mb-3" id="error-title">Something went wrong</h2>
+        <p class="text-base text-herbchar-700/60 mb-6" id="error-message"></p>
+        <button onclick="showLogin()"
+          class="px-6 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+          Try Again
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = window.location.hostname === 'localhost'
+      ? 'http://localhost:8888/.netlify/functions'
+      : '/.netlify/functions';
+
+    // ── View management ──
+    function hideAll() {
+      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    }
+    function showView(id) {
+      hideAll();
+      document.getElementById(id).classList.add('active');
+    }
+    function showSales() { showView('sales-view'); }
+    function showCheckout() { showView('checkout-view'); }
+    function showLogin() { showView('login-view'); }
+
+    // ── Error handling for URL params ──
+    const ERROR_MESSAGES = {
+      missing_token: { title: 'Invalid Link', message: 'This link appears to be incomplete. Please request a new login link.' },
+      link_expired: { title: 'Link Expired', message: 'This login link has expired. Please request a new one — they\'re valid for 15 minutes.' },
+      invalid_link: { title: 'Invalid Link', message: 'This login link is invalid. Please request a new one.' },
+      no_enrollment: { title: 'No Active Enrollment', message: 'This email doesn\'t have an active enrollment. Please purchase access first.' },
+    };
+
+    // ── Init: check URL params and auth state ──
+    async function init() {
+      const params = new URLSearchParams(window.location.search);
+
+      // Check for error params
+      const error = params.get('error');
+      if (error && ERROR_MESSAGES[error]) {
+        document.getElementById('error-title').textContent = ERROR_MESSAGES[error].title;
+        document.getElementById('error-message').textContent = ERROR_MESSAGES[error].message;
+        showView('error-view');
+        cleanUrl();
+        return;
+      }
+
+      // Check for post-purchase success
+      if (params.get('success') === '1') {
+        showView('success-view');
+        cleanUrl();
+        return;
+      }
+
+      // Check for canceled checkout
+      if (params.get('canceled') === '1') {
+        showSales();
+        cleanUrl();
+        return;
+      }
+
+      // Check for authenticated redirect from magic link
+      if (params.get('authenticated') === '1') {
+        cleanUrl();
+        // Fall through to access check below
+      }
+
+      // Check current auth + enrollment state
+      try {
+        const resp = await fetch(`${API_BASE}/check-access`, { credentials: 'include' });
+        const data = await resp.json();
+
+        if (data.authenticated && data.enrolled) {
+          document.getElementById('access-email').textContent = data.email;
+          showView('access-view');
+          return;
+        }
+      } catch (err) {
+        console.error('Access check failed:', err);
+      }
+
+      // Default: show sales page
+      showSales();
+    }
+
+    function cleanUrl() {
+      const url = new URL(window.location);
+      url.search = '';
+      window.history.replaceState({}, '', url);
+    }
+
+    // ── Checkout form ──
+    document.getElementById('checkout-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('checkout-email').value.trim();
+      const errorEl = document.getElementById('checkout-error');
+      const btn = document.getElementById('checkout-btn');
+      errorEl.classList.add('hidden');
+      btn.disabled = true;
+      btn.textContent = 'Redirecting to Stripe...';
+
+      try {
+        const resp = await fetch(`${API_BASE}/create-checkout`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        const data = await resp.json();
+
+        if (!resp.ok || !data.url) {
+          throw new Error(data.error || 'Failed to create checkout session');
+        }
+
+        window.location.href = data.url;
+      } catch (err) {
+        errorEl.textContent = err.message;
+        errorEl.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Continue to Payment — $297';
+      }
+    });
+
+    // ── Magic link form ──
+    document.getElementById('magic-link-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value.trim();
+      const errorEl = document.getElementById('login-error');
+      const successEl = document.getElementById('login-success');
+      const btn = document.getElementById('login-btn');
+      errorEl.classList.add('hidden');
+      successEl.classList.add('hidden');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      try {
+        const resp = await fetch(`${API_BASE}/send-magic-link`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        const data = await resp.json();
+
+        if (!resp.ok) throw new Error(data.error || 'Failed to send link');
+
+        successEl.textContent = '✓ Check your email for a login link.';
+        successEl.classList.remove('hidden');
+        btn.textContent = 'Link Sent';
+      } catch (err) {
+        errorEl.textContent = err.message;
+        errorEl.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Send Login Link';
+      }
+    });
+
+    // ── Boot ──
+    init();
+  </script>
+</body>
+</html>

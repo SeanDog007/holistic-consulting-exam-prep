@@ -4,6 +4,8 @@
   "private": true,
   "description": "BCHN Board Exam Prep Platform for Holistic Consulting GROW members",
   "dependencies": {
-    "@supabase/supabase-js": "^2.49.0"
+    "@supabase/supabase-js": "^2.49.0",
+    "resend": "^6.9.4",
+    "stripe": "^20.4.1"
   }
 }
