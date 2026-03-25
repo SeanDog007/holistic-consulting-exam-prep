@@ -1768,7 +1768,7 @@
                 return `
                 <div class="flex items-center justify-between p-3 rounded-md border border-parchment-200 hover:border-sage-300 hover:bg-sage-50/30 transition-colors">
                   <div>
-                    <p class="text-sm font-medium text-herbchar-700">${exam.displayName || ('Exam ' + (i + 1))}</p>
+                    <p class="text-sm font-medium text-herbchar-700">${exam.displayName || exam.name || ('Exam ' + (i + 1))}</p>
                     <div class="flex items-center gap-3 mt-0.5">
                       <span class="text-xs text-parchment-400">${exam.questionCount} questions</span>
                       ${bestScoreHtml}
@@ -1810,6 +1810,9 @@
         quizIndex = 0;
         quizAnswers = [];
         quizStartTime = Date.now();
+
+        // Store exam data so showQuizResults() can submit to submit-exam
+        examData = { exam_id: res.exam_id, total_questions: res.total_questions, time_limit_minutes: res.time_limit_minutes };
 
         // Switch to quiz-active view to show the quiz UI
         document.querySelectorAll('main .view').forEach(v => v.classList.remove('active'));
@@ -2740,7 +2743,9 @@
       const q = window._lessonQuestions?.[qIdx];
       if (!q) return;
 
-      const correctIdx = q.correct_answer_index ?? q.correct_index ?? 0;
+      // correct_answer is stored as a letter ("a"–"f"); convert to 0-based index
+      const _letterToIdx = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5 };
+      const correctIdx = q.correct_answer_index ?? q.correct_index ?? (_letterToIdx[String(q.correct_answer || '').toLowerCase()] ?? 0);
       const isCorrect = selectedIdx === correctIdx;
 
       // Disable all options
