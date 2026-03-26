@@ -41,7 +41,7 @@ exports.handler = async (event) => {
   return {
     statusCode: 302,
     headers: {
-      Location: `${SITE_URL}/buy.html?authenticated=1`,
+      Location: `${SITE_URL}/index.html`,
       "Set-Cookie": cookie,
       "Cache-Control": "no-cache, no-store",
     },
