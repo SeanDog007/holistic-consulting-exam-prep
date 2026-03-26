@@ -5,6 +5,9 @@
 [functions]
   node_bundler = "esbuild"
 
+[functions."send-study-reminders"]
+  schedule = "0 12 * * *"
+
 [[headers]]
   for = "/.netlify/functions/*"
   [headers.values]

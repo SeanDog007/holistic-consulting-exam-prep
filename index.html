@@ -299,6 +299,11 @@
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
           Practice
         </button>
+        <button data-view="flashcards" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
+          <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          Flashcards
+          <span id="fc-due-badge" class="ml-auto bg-sage-400 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+        </button>
         <button data-view="full-exam" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm text-herbchar-700/70">
           <svg class="w-4 h-4 text-sage-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           Mock Exam
@@ -359,6 +364,63 @@
           <div class="mb-8">
             <h2 class="font-display text-2xl font-bold text-herbchar-700 tracking-tight">Welcome back, <span id="dashboard-name"></span></h2>
             <p class="text-sm text-parchment-400 mt-1">Here's your exam readiness overview.</p>
+          </div>
+
+          <!-- Exam Countdown Banner -->
+          <div id="exam-countdown-banner" class="hidden mb-6">
+            <div id="exam-countdown-inner" class="rounded-xl shadow-card border p-5 sm:p-6 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="flex items-center gap-4 flex-1 min-w-0">
+                  <div id="countdown-icon-ring" class="w-14 h-14 rounded-full flex items-center justify-center shrink-0 border-2">
+                    <span id="countdown-days-num" class="text-2xl font-bold"></span>
+                  </div>
+                  <div class="min-w-0">
+                    <p id="countdown-label" class="text-sm font-semibold"></p>
+                    <p id="countdown-sublabel" class="text-xs mt-0.5"></p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <button onclick="switchView('exam-day')" class="px-4 py-2 text-sm font-semibold text-sage-400 border border-sage-300 rounded-md hover:bg-sage-50 transition-colors">
+                    View Plan
+                  </button>
+                  <button onclick="openExamDatePicker()" class="px-4 py-2 text-sm font-semibold text-parchment-400 hover:text-herbchar-700 transition-colors" title="Change exam date">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exam Date Picker (initially hidden, shown when no date or editing) -->
+          <div id="exam-date-picker-card" class="hidden mb-6">
+            <div class="bg-white rounded-xl shadow-card border border-parchment-300 p-5 sm:p-6">
+              <div class="flex items-start gap-3 mb-4">
+                <div class="w-10 h-10 rounded-full bg-sage-50 border border-sage-200 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-herbchar-700">When is your exam?</p>
+                  <p class="text-xs text-parchment-400 mt-0.5">Set your target date to get a personalized countdown and daily study reminders.</p>
+                </div>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-3 items-end">
+                <div class="flex-1 w-full">
+                  <input type="date" id="dashboard-exam-date-input" class="w-full px-3 py-2.5 border border-parchment-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-sage-400/30 focus:border-sage-400">
+                </div>
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                  <button onclick="saveDashboardExamDate()" class="flex-1 sm:flex-none px-5 py-2.5 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors">
+                    Set Date
+                  </button>
+                  <button id="exam-date-cancel-btn" onclick="cancelExamDatePicker()" class="hidden px-3 py-2.5 text-sm text-parchment-400 hover:text-herbchar-700 transition-colors">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+              <label class="flex items-center gap-2 mt-3 cursor-pointer">
+                <input type="checkbox" id="email-reminders-toggle" checked class="w-4 h-4 rounded border-parchment-300 text-sage-400 focus:ring-sage-400/30">
+                <span class="text-xs text-parchment-400">Send me daily study reminders via email</span>
+              </label>
+            </div>
           </div>
 
           <!-- Continue Studying CTA -->
@@ -739,6 +801,171 @@
             </div>
             <div id="practice-stats" class="flex gap-4 mb-4 text-xs text-parchment-400"></div>
             <div id="practice-area"></div>
+          </div>
+        </div>
+
+        <!-- ─── FLASHCARDS ─── -->
+        <div id="view-flashcards" class="view">
+          <!-- Setup screen -->
+          <div id="fc-setup">
+            <h1 class="font-display text-3xl font-bold text-herbchar-700 mb-1">Flashcards</h1>
+            <p class="text-sm text-parchment-400 mb-6">Review key concepts with spaced repetition. Cards you miss come back more often.</p>
+
+            <!-- Progress summary -->
+            <div id="fc-progress-summary" class="grid grid-cols-3 gap-3 mb-6">
+              <div class="bg-white rounded-lg border border-parchment-300 p-4 text-center">
+                <p class="text-[11px] text-parchment-400 mb-1">Due Now</p>
+                <p id="fc-stat-due" class="text-2xl font-bold text-copper-400">—</p>
+              </div>
+              <div class="bg-white rounded-lg border border-parchment-300 p-4 text-center">
+                <p class="text-[11px] text-parchment-400 mb-1">Known</p>
+                <p id="fc-stat-known" class="text-2xl font-bold text-sage-400">—</p>
+              </div>
+              <div class="bg-white rounded-lg border border-parchment-300 p-4 text-center">
+                <p class="text-[11px] text-parchment-400 mb-1">Mastery</p>
+                <p id="fc-stat-mastery" class="text-2xl font-bold text-herbchar-700">—</p>
+              </div>
+            </div>
+
+            <!-- Domain filter -->
+            <div class="bg-white rounded-lg border border-parchment-300 p-4 mb-4">
+              <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-3">Filter by Domain</p>
+              <div class="space-y-2">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="fc-domain-filter" value="all" class="accent-sage-400" checked> <span class="text-sm text-herbchar-700">All Domains</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="fc-domain-filter" value="focus" class="accent-copper-400"> <span class="text-sm text-copper-500 font-medium">⚡ Focus Areas First</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="fc-domain-filter" value="1" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 1: Food & Nutrition</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="fc-domain-filter" value="2" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 2: A&P / Biochemistry</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="fc-domain-filter" value="3" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 3: Counseling / Ethics / Scope</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="fc-domain-filter" value="4" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 4: Nutrition in Practice</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="fc-domain-filter" value="5" class="accent-sage-400"> <span class="text-sm text-herbchar-700">Domain 5: Research</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Pile selector -->
+            <div class="bg-white rounded-lg border border-parchment-300 p-4 mb-4">
+              <p class="text-xs font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-3">Review Mode</p>
+              <div class="grid grid-cols-3 gap-2">
+                <button onclick="selectFcPile('due')" id="fc-pile-due" class="text-center px-2 py-3 rounded-lg border border-sage-400 bg-sage-50 cursor-pointer text-sm font-medium text-herbchar-700">
+                  📋 Due Cards
+                </button>
+                <button onclick="selectFcPile('missed')" id="fc-pile-missed" class="text-center px-2 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer text-sm font-medium text-herbchar-700/70">
+                  ❌ Missed
+                </button>
+                <button onclick="selectFcPile('known')" id="fc-pile-known" class="text-center px-2 py-3 rounded-lg border border-parchment-300 bg-white cursor-pointer text-sm font-medium text-herbchar-700/70">
+                  ✅ Known
+                </button>
+              </div>
+            </div>
+
+            <button onclick="startFlashcardSession()" id="fc-start-btn" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-lg transition-colors">
+              Start Review →
+            </button>
+          </div>
+
+          <!-- Active flashcard session -->
+          <div id="fc-active" class="hidden">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <h2 class="font-display text-xl font-bold text-herbchar-700">Flashcards</h2>
+                <p id="fc-session-info" class="text-xs text-parchment-400">Card 1 of 20</p>
+              </div>
+              <button onclick="endFlashcardSession()" class="text-xs text-parchment-400 hover:text-herbchar-700 transition-colors">← Back</button>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="w-full h-1.5 bg-parchment-200 rounded-full mb-6 overflow-hidden">
+              <div id="fc-progress-bar" class="h-full bg-sage-400 rounded-full progress-fill" style="width: 0%"></div>
+            </div>
+
+            <!-- Flashcard -->
+            <div class="flashcard-container w-full" style="height: 320px;" onclick="flipFlashcard()">
+              <div id="fc-card-inner" class="flashcard-inner w-full h-full relative cursor-pointer">
+                <!-- Front -->
+                <div class="flashcard-front absolute inset-0 bg-white rounded-xl border border-parchment-300 shadow-card flex flex-col items-center justify-center p-6 sm:p-8">
+                  <p class="text-[10px] font-semibold tracking-[0.12em] uppercase text-parchment-400 mb-3" id="fc-card-domain">Domain 1</p>
+                  <p class="text-lg sm:text-xl text-herbchar-700 font-medium text-center leading-relaxed" id="fc-card-front">Loading...</p>
+                  <p class="text-xs text-parchment-400 mt-4">Tap to reveal answer</p>
+                </div>
+                <!-- Back -->
+                <div class="flashcard-back absolute inset-0 bg-white rounded-xl border border-sage-300 shadow-card flex flex-col items-center justify-center p-6 sm:p-8" style="border-left: 4px solid #6B7F5E;">
+                  <p class="text-[10px] font-semibold tracking-[0.12em] uppercase text-sage-400 mb-3">Answer</p>
+                  <p class="text-base sm:text-lg text-herbchar-700 text-center leading-relaxed" id="fc-card-back">Loading...</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Got it / Missed it buttons -->
+            <div id="fc-answer-btns" class="grid grid-cols-2 gap-3 mt-6 hidden">
+              <button onclick="reviewFlashcard(1)" class="py-3 bg-white border-2 border-red-300 text-red-600 font-semibold rounded-lg hover:bg-red-50 transition-colors flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                Missed It
+              </button>
+              <button onclick="reviewFlashcard(5)" class="py-3 bg-white border-2 border-green-300 text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colors flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Got It
+              </button>
+            </div>
+
+            <!-- Session stats -->
+            <div class="grid grid-cols-3 gap-3 mt-6">
+              <div class="text-center">
+                <p class="text-[10px] text-parchment-400">Remaining</p>
+                <p id="fc-remaining" class="text-lg font-bold text-herbchar-700">—</p>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-parchment-400">Got It</p>
+                <p id="fc-got-count" class="text-lg font-bold text-sage-400">0</p>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-parchment-400">Missed</p>
+                <p id="fc-missed-count" class="text-lg font-bold text-copper-400">0</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Session complete -->
+          <div id="fc-complete" class="hidden">
+            <div class="text-center py-8">
+              <div class="w-16 h-16 bg-sage-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <h2 class="font-display text-2xl font-bold text-herbchar-700 mb-2">Session Complete!</h2>
+              <p class="text-sm text-parchment-400 mb-6">Great work reviewing your flashcards.</p>
+
+              <div class="grid grid-cols-2 gap-4 max-w-sm mx-auto mb-6">
+                <div class="bg-green-50 rounded-lg p-4 text-center border border-green-200">
+                  <p class="text-2xl font-bold text-green-600" id="fc-final-got">0</p>
+                  <p class="text-xs text-green-600">Got It</p>
+                </div>
+                <div class="bg-red-50 rounded-lg p-4 text-center border border-red-200">
+                  <p class="text-2xl font-bold text-red-500" id="fc-final-missed">0</p>
+                  <p class="text-xs text-red-500">Missed</p>
+                </div>
+              </div>
+
+              <div class="space-y-2 max-w-sm mx-auto">
+                <button onclick="startFlashcardSession()" class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-lg transition-colors">
+                  Review Again →
+                </button>
+                <button onclick="endFlashcardSession()" class="w-full py-2 text-sm text-parchment-400 hover:text-herbchar-700 transition-colors">
+                  Back to Setup
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1406,6 +1633,7 @@
       else if (viewName === 'admin-students') loadAdminStudents();
       else if (viewName === 'admin-questions') loadAdminQuestions();
       else if (viewName === 'diagnostic') loadDiagnostic();
+      else if (viewName === 'flashcards') loadFlashcardSetup();
       else if (viewName === 'admin-flashcards') loadAdminFlashcards();
       else if (viewName === 'admin-analytics') loadAdminAnalytics();
       else if (viewName === 'focus-areas') loadFocusAreas();
@@ -1529,9 +1757,197 @@
 
         // Show study plan card if active plan exists
         renderStudyPlanCard(data);
+
+        // Load exam countdown
+        loadExamCountdown();
       } catch (err) {
         console.error('Dashboard load error:', err);
         showToast('Could not load dashboard data. Please try refreshing.');
+      }
+    }
+
+    // ── Exam Countdown ──
+    let _examDateCache = null;
+
+    async function loadExamCountdown() {
+      const banner = document.getElementById('exam-countdown-banner');
+      const picker = document.getElementById('exam-date-picker-card');
+      if (!banner || !picker) return;
+
+      try {
+        const data = await apiFetch('exam-date');
+        _examDateCache = data;
+
+        if (data.exam_date) {
+          renderCountdownBanner(data.exam_date);
+          banner.classList.remove('hidden');
+          picker.classList.add('hidden');
+        } else {
+          // No exam date set — show the picker
+          banner.classList.add('hidden');
+          picker.classList.remove('hidden');
+          document.getElementById('exam-date-cancel-btn').classList.add('hidden');
+          document.getElementById('email-reminders-toggle').checked = data.email_reminders_enabled !== false;
+        }
+      } catch (e) {
+        // Fallback: check localStorage or study plan
+        try {
+          const raw = localStorage.getItem('hcq-study-plan');
+          if (raw) {
+            const local = JSON.parse(raw);
+            if (local.examDate) {
+              renderCountdownBanner(local.examDate);
+              banner.classList.remove('hidden');
+              picker.classList.add('hidden');
+              return;
+            }
+          }
+        } catch (e2) {}
+        // No date anywhere — show picker
+        banner.classList.add('hidden');
+        picker.classList.remove('hidden');
+        document.getElementById('exam-date-cancel-btn').classList.add('hidden');
+      }
+    }
+
+    function renderCountdownBanner(examDateStr) {
+      const banner = document.getElementById('exam-countdown-banner');
+      const inner = document.getElementById('exam-countdown-inner');
+      const ring = document.getElementById('countdown-icon-ring');
+      const numEl = document.getElementById('countdown-days-num');
+      const labelEl = document.getElementById('countdown-label');
+      const subEl = document.getElementById('countdown-sublabel');
+
+      const examDate = new Date(examDateStr + 'T00:00:00');
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const msPerDay = 24 * 60 * 60 * 1000;
+      const daysUntil = Math.ceil((examDate - today) / msPerDay);
+
+      if (daysUntil < 0) {
+        // Exam is past
+        inner.className = 'rounded-xl shadow-card border border-parchment-300 bg-white p-5 sm:p-6 transition-all';
+        ring.className = 'w-14 h-14 rounded-full flex items-center justify-center shrink-0 border-2 border-parchment-300 bg-parchment-50';
+        numEl.textContent = '✓';
+        numEl.className = 'text-2xl text-parchment-400';
+        labelEl.textContent = 'Exam date has passed';
+        labelEl.className = 'text-sm font-semibold text-parchment-400';
+        subEl.textContent = 'Update your exam date if you need to reschedule.';
+        subEl.className = 'text-xs mt-0.5 text-parchment-400';
+        return;
+      }
+
+      // Urgency levels
+      let borderClass, bgClass, ringBorder, ringBg, numColor, labelColor, subColor, subText;
+
+      if (daysUntil <= 7) {
+        // RED — urgent
+        borderClass = 'border-red-300';
+        bgClass = 'bg-red-50';
+        ringBorder = 'border-red-400';
+        ringBg = 'bg-red-100';
+        numColor = 'text-red-600';
+        labelColor = 'text-red-700';
+        subColor = 'text-red-500';
+        subText = daysUntil === 0 ? 'Today is exam day! You\'ve got this.' :
+                  daysUntil === 1 ? 'Tomorrow is exam day. Get a good night\'s rest.' :
+                  'Final stretch — focus on weak areas and rest well.';
+      } else if (daysUntil <= 14) {
+        // AMBER — approaching
+        borderClass = 'border-amber-300';
+        bgClass = 'bg-amber-50';
+        ringBorder = 'border-amber-400';
+        ringBg = 'bg-amber-100';
+        numColor = 'text-amber-600';
+        labelColor = 'text-amber-700';
+        subColor = 'text-amber-500';
+        subText = 'Two weeks out. Prioritize practice exams and review.';
+      } else {
+        // GREEN/SAGE — calm
+        borderClass = 'border-sage-300';
+        bgClass = 'bg-sage-50';
+        ringBorder = 'border-sage-300';
+        ringBg = 'bg-sage-100';
+        numColor = 'text-sage-600';
+        labelColor = 'text-herbchar-700';
+        subColor = 'text-parchment-400';
+        subText = 'Steady preparation. You\'re on track.';
+      }
+
+      inner.className = `rounded-xl shadow-card border ${borderClass} ${bgClass} p-5 sm:p-6 transition-all`;
+      ring.className = `w-14 h-14 rounded-full flex items-center justify-center shrink-0 border-2 ${ringBorder} ${ringBg}`;
+      numEl.textContent = daysUntil;
+      numEl.className = `text-2xl font-bold ${numColor}`;
+      labelEl.textContent = `${daysUntil} day${daysUntil !== 1 ? 's' : ''} until your exam`;
+      labelEl.className = `text-sm font-semibold ${labelColor}`;
+      subEl.textContent = subText;
+      subEl.className = `text-xs mt-0.5 ${subColor}`;
+    }
+
+    function openExamDatePicker() {
+      const banner = document.getElementById('exam-countdown-banner');
+      const picker = document.getElementById('exam-date-picker-card');
+      banner.classList.add('hidden');
+      picker.classList.remove('hidden');
+      document.getElementById('exam-date-cancel-btn').classList.remove('hidden');
+      // Pre-fill with current date if we have one
+      if (_examDateCache?.exam_date) {
+        document.getElementById('dashboard-exam-date-input').value = _examDateCache.exam_date;
+      }
+      document.getElementById('email-reminders-toggle').checked = _examDateCache?.email_reminders_enabled !== false;
+    }
+
+    function cancelExamDatePicker() {
+      const banner = document.getElementById('exam-countdown-banner');
+      const picker = document.getElementById('exam-date-picker-card');
+      if (_examDateCache?.exam_date) {
+        picker.classList.add('hidden');
+        banner.classList.remove('hidden');
+      }
+    }
+
+    async function saveDashboardExamDate() {
+      const dateInput = document.getElementById('dashboard-exam-date-input');
+      const remindersToggle = document.getElementById('email-reminders-toggle');
+      const examDate = dateInput.value;
+
+      if (!examDate) {
+        showToast('Please select a date.');
+        return;
+      }
+
+      // Validate date is in the future
+      const selected = new Date(examDate + 'T00:00:00');
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      if (selected < today) {
+        showToast('Please select a future date.');
+        return;
+      }
+
+      try {
+        const result = await apiFetch('exam-date', {
+          method: 'POST',
+          body: JSON.stringify({
+            exam_date: examDate,
+            email_reminders_enabled: remindersToggle.checked,
+          }),
+        });
+
+        _examDateCache = {
+          exam_date: result.exam_date,
+          email_reminders_enabled: result.email_reminders_enabled,
+        };
+
+        // Show the countdown
+        renderCountdownBanner(result.exam_date);
+        document.getElementById('exam-countdown-banner').classList.remove('hidden');
+        document.getElementById('exam-date-picker-card').classList.add('hidden');
+
+        showToast('Exam date saved!' + (remindersToggle.checked ? ' Daily reminders enabled.' : ''));
+      } catch (err) {
+        console.error('Failed to save exam date:', err);
+        showToast('Failed to save exam date. Please try again.');
       }
     }
 
@@ -3921,6 +4337,273 @@
         showToast('Error: ' + err.message);
       }
     }
+
+    // ═══════════════════════════════════════
+    // FLASHCARDS — Student-facing spaced repetition
+    // ═══════════════════════════════════════
+
+    let fcAllCards = [];
+    let fcReviewMap = {};
+    let fcSessionCards = [];
+    let fcSessionIndex = 0;
+    let fcGotCount = 0;
+    let fcMissedCount = 0;
+    let fcSelectedPile = 'due';
+    let fcFocusDomains = [];
+
+    async function loadFlashcardSetup() {
+      // Show setup, hide active/complete
+      document.getElementById('fc-setup').classList.remove('hidden');
+      document.getElementById('fc-active').classList.add('hidden');
+      document.getElementById('fc-complete').classList.add('hidden');
+
+      try {
+        const data = await apiFetch('flashcards');
+        fcAllCards = data.cards || [];
+        fcReviewMap = data.reviews || {};
+
+        // Try to load focus areas for prioritization
+        try {
+          const fa = await apiFetch('focus-areas');
+          fcFocusDomains = (fa.focus_areas || []).map(f => f.domain).filter(Boolean);
+        } catch (e) { fcFocusDomains = []; }
+
+        updateFlashcardStats();
+      } catch (err) {
+        showToast('Error loading flashcards: ' + err.message);
+      }
+    }
+
+    function updateFlashcardStats() {
+      const now = new Date();
+      let dueCount = 0, knownCount = 0, reviewedCount = 0;
+
+      for (const card of fcAllCards) {
+        const review = fcReviewMap[card.id];
+        if (!review) {
+          dueCount++; // Never seen = due
+        } else if (review.repetition_count >= 1 && new Date(review.next_review_at) > now) {
+          knownCount++;
+          reviewedCount++;
+        } else {
+          dueCount++;
+          if (review.repetition_count > 0) reviewedCount++;
+        }
+      }
+
+      document.getElementById('fc-stat-due').textContent = dueCount;
+      document.getElementById('fc-stat-known').textContent = knownCount;
+      const mastery = fcAllCards.length > 0 ? Math.round((knownCount / fcAllCards.length) * 100) : 0;
+      document.getElementById('fc-stat-mastery').textContent = mastery + '%';
+
+      // Update badge in sidebar
+      const badge = document.getElementById('fc-due-badge');
+      if (dueCount > 0) {
+        badge.textContent = dueCount > 99 ? '99+' : dueCount;
+        badge.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+      }
+
+      // Update start button
+      const btn = document.getElementById('fc-start-btn');
+      const filtered = getFilteredCards();
+      btn.textContent = filtered.length > 0 ? `Start Review (${filtered.length} cards) →` : 'No cards available';
+      btn.disabled = filtered.length === 0;
+      btn.classList.toggle('opacity-50', filtered.length === 0);
+    }
+
+    function selectFcPile(pile) {
+      fcSelectedPile = pile;
+      ['due', 'missed', 'known'].forEach(p => {
+        const el = document.getElementById(`fc-pile-${p}`);
+        if (p === pile) {
+          el.classList.add('border-sage-400', 'bg-sage-50');
+          el.classList.remove('border-parchment-300', 'bg-white', 'text-herbchar-700/70');
+          el.classList.add('text-herbchar-700');
+        } else {
+          el.classList.remove('border-sage-400', 'bg-sage-50');
+          el.classList.add('border-parchment-300', 'bg-white', 'text-herbchar-700/70');
+          el.classList.remove('text-herbchar-700');
+        }
+      });
+      updateFlashcardStats();
+    }
+
+    function getFilteredCards() {
+      const now = new Date();
+      const domainFilter = document.querySelector('input[name="fc-domain-filter"]:checked')?.value || 'all';
+
+      let cards = [...fcAllCards];
+
+      // Domain filter
+      if (domainFilter === 'focus') {
+        // Prioritize focus area domains, then include others
+        const focusCards = cards.filter(c => fcFocusDomains.includes(c.domain));
+        const otherCards = cards.filter(c => !fcFocusDomains.includes(c.domain));
+        cards = [...focusCards, ...otherCards];
+      } else if (domainFilter !== 'all') {
+        cards = cards.filter(c => c.domain === parseInt(domainFilter));
+      }
+
+      // Pile filter
+      if (fcSelectedPile === 'due') {
+        cards = cards.filter(c => {
+          const r = fcReviewMap[c.id];
+          if (!r) return true; // Never seen
+          return new Date(r.next_review_at) <= now;
+        });
+      } else if (fcSelectedPile === 'missed') {
+        cards = cards.filter(c => {
+          const r = fcReviewMap[c.id];
+          return r && r.repetition_count === 0 && r.reviewed_at;
+        });
+      } else if (fcSelectedPile === 'known') {
+        cards = cards.filter(c => {
+          const r = fcReviewMap[c.id];
+          return r && r.repetition_count >= 1;
+        });
+      }
+
+      // Sort: focus areas first, then by due date
+      cards.sort((a, b) => {
+        // Focus areas first if using focus mode
+        if (domainFilter === 'focus') {
+          const aFocus = fcFocusDomains.includes(a.domain) ? 0 : 1;
+          const bFocus = fcFocusDomains.includes(b.domain) ? 0 : 1;
+          if (aFocus !== bFocus) return aFocus - bFocus;
+        }
+        // Then by due date (most overdue first)
+        const aReview = fcReviewMap[a.id];
+        const bReview = fcReviewMap[b.id];
+        const aDate = aReview ? new Date(aReview.next_review_at) : new Date(0);
+        const bDate = bReview ? new Date(bReview.next_review_at) : new Date(0);
+        return aDate - bDate;
+      });
+
+      return cards;
+    }
+
+    function startFlashcardSession() {
+      fcSessionCards = getFilteredCards();
+      if (fcSessionCards.length === 0) {
+        showToast('No cards to review right now!');
+        return;
+      }
+
+      fcSessionIndex = 0;
+      fcGotCount = 0;
+      fcMissedCount = 0;
+
+      document.getElementById('fc-setup').classList.add('hidden');
+      document.getElementById('fc-complete').classList.add('hidden');
+      document.getElementById('fc-active').classList.remove('hidden');
+
+      showCurrentFlashcard();
+    }
+
+    function showCurrentFlashcard() {
+      if (fcSessionIndex >= fcSessionCards.length) {
+        showFlashcardComplete();
+        return;
+      }
+
+      const card = fcSessionCards[fcSessionIndex];
+      const inner = document.getElementById('fc-card-inner');
+
+      // Reset flip
+      inner.classList.remove('flipped');
+      document.getElementById('fc-answer-btns').classList.add('hidden');
+
+      // Populate card
+      document.getElementById('fc-card-domain').textContent = `Domain ${card.domain}: ${DOMAIN_NAMES[card.domain] || ''}`;
+      document.getElementById('fc-card-front').textContent = card.front_text;
+
+      // Parse back_text — may be JSON (from question import) or plain text
+      let backText = card.back_text;
+      try {
+        const parsed = JSON.parse(backText);
+        if (parsed.correctText) {
+          backText = parsed.correctText;
+          if (parsed.options) {
+            backText = '✓ ' + parsed.correctText;
+          }
+        }
+      } catch (e) { /* plain text is fine */ }
+      document.getElementById('fc-card-back').textContent = backText;
+
+      // Update session info
+      document.getElementById('fc-session-info').textContent = `Card ${fcSessionIndex + 1} of ${fcSessionCards.length}`;
+      const pct = ((fcSessionIndex) / fcSessionCards.length) * 100;
+      document.getElementById('fc-progress-bar').style.width = pct + '%';
+      document.getElementById('fc-remaining').textContent = fcSessionCards.length - fcSessionIndex;
+      document.getElementById('fc-got-count').textContent = fcGotCount;
+      document.getElementById('fc-missed-count').textContent = fcMissedCount;
+    }
+
+    function flipFlashcard() {
+      const inner = document.getElementById('fc-card-inner');
+      if (!inner.classList.contains('flipped')) {
+        inner.classList.add('flipped');
+        document.getElementById('fc-answer-btns').classList.remove('hidden');
+      }
+    }
+
+    async function reviewFlashcard(quality) {
+      const card = fcSessionCards[fcSessionIndex];
+
+      if (quality >= 4) {
+        fcGotCount++;
+      } else {
+        fcMissedCount++;
+      }
+
+      // Send review to server
+      try {
+        const result = await apiFetch('review-flashcard', {
+          method: 'POST',
+          body: JSON.stringify({ flashcard_id: card.id, quality }),
+        });
+        // Update local review map
+        fcReviewMap[card.id] = {
+          ...fcReviewMap[card.id],
+          flashcard_id: card.id,
+          quality,
+          interval_days: result.interval_days,
+          repetition_count: result.repetition_count,
+          next_review_at: result.next_review_at,
+          ease_factor: result.ease_factor,
+          reviewed_at: new Date().toISOString(),
+        };
+      } catch (err) {
+        // Store locally as fallback
+        console.error('Review save error:', err);
+      }
+
+      fcSessionIndex++;
+      showCurrentFlashcard();
+    }
+
+    function showFlashcardComplete() {
+      document.getElementById('fc-active').classList.add('hidden');
+      document.getElementById('fc-complete').classList.remove('hidden');
+      document.getElementById('fc-final-got').textContent = fcGotCount;
+      document.getElementById('fc-final-missed').textContent = fcMissedCount;
+      // Refresh stats
+      updateFlashcardStats();
+    }
+
+    function endFlashcardSession() {
+      document.getElementById('fc-active').classList.add('hidden');
+      document.getElementById('fc-complete').classList.add('hidden');
+      document.getElementById('fc-setup').classList.remove('hidden');
+      updateFlashcardStats();
+    }
+
+    // Listen for domain filter changes
+    document.querySelectorAll('input[name="fc-domain-filter"]').forEach(r => {
+      r.addEventListener('change', () => updateFlashcardStats());
+    });
 
     // ═══════════════════════════════════════
     // ADMIN: Flashcard Manager
