@@ -1464,7 +1464,7 @@
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
         ...options.headers,
       };
-      const resp = await fetch(`${API_BASE}/${endpoint}`, { ...options, headers });
+      const resp = await fetch(`${API_BASE}/${endpoint}`, { ...options, headers, credentials: 'include' });
       if (!resp.ok) {
         const err = await resp.json().catch(() => ({ error: 'Request failed' }));
         throw new Error(err.error || 'Request failed');

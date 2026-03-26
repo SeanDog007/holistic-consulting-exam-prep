@@ -8,14 +8,24 @@ function getServiceClient() {
 }
 
 function getUserClient(token) {
-  // Service client bypasses RLS (avoids infinite recursion in admin policies on
-  // student_profiles). All functions verify auth via getUser() and use explicit
-  // user_id filters, so application-level security is maintained.
+  // Magic-link cookie auth: return a synthetic client that fakes Supabase auth
+  if (token && token.startsWith('__MAGIC_LINK__:')) {
+    const email = token.slice('__MAGIC_LINK__:'.length);
+    const sc = getServiceClient();
+    return {
+      auth: {
+        getUser: () => Promise.resolve({ data: { user: { id: 'direct-' + email, email } }, error: null }),
+        signOut: () => Promise.resolve(),
+      },
+      from: sc.from.bind(sc),
+      rpc: sc.rpc.bind(sc),
+    };
+  }
+
+  // Standard Supabase JWT auth
   const sc = getServiceClient();
   return {
     auth: {
-      // Pass token explicitly — server-side has no session storage, so
-      // getUser() without args can't find the JWT from global headers.
       getUser: () => sc.auth.getUser(token),
       signOut: () => sc.auth.signOut(),
     },
@@ -49,7 +59,43 @@ function getCorsHeaders(origin) {
 function extractToken(headers) {
   const auth = headers.authorization || headers.Authorization || "";
   if (auth.startsWith("Bearer ")) return auth.slice(7);
+  
+  // Fallback: check magic-link cookie
+  const { getSessionUser } = require("./auth");
+  const email = getSessionUser(headers);
+  if (email) return '__MAGIC_LINK__:' + email;
+  
   return null;
 }
 
-module.exports = { getServiceClient, getUserClient, getAdminClient, getCorsHeaders, extractToken };
+// Extract magic-link session email from cookie (for direct Stripe purchases)
+function extractMagicLinkEmail(headers) {
+  const { getSessionUser } = require("./auth");
+  return getSessionUser(headers);
+}
+
+// Unified auth: returns { email, userId, source } or null
+// Checks magic-link cookie first, then Supabase JWT
+async function getAuthUser(event) {
+  const headers = event.headers || {};
+
+  // 1. Try magic-link cookie auth
+  const mlEmail = extractMagicLinkEmail(headers);
+  if (mlEmail) {
+    return { email: mlEmail, userId: 'direct-' + mlEmail, source: 'magic-link' };
+  }
+
+  // 2. Try Supabase JWT
+  const token = extractToken(headers);
+  if (token) {
+    const userClient = getUserClient(token);
+    const { data: { user }, error } = await userClient.auth.getUser();
+    if (!error && user) {
+      return { email: user.email, userId: user.id, source: 'supabase' };
+    }
+  }
+
+  return null;
+}
+
+module.exports = { getServiceClient, getUserClient, getAdminClient, getCorsHeaders, extractToken, extractMagicLinkEmail, getAuthUser };
