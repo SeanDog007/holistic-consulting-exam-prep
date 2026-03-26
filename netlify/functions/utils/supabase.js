@@ -8,17 +8,43 @@ function getServiceClient() {
 }
 
 function getUserClient(token) {
-  // Magic-link cookie auth: return a synthetic client that fakes Supabase auth
+  // Magic-link cookie auth: look up the real Supabase auth user by email
   if (token && token.startsWith('__MAGIC_LINK__:')) {
     const email = token.slice('__MAGIC_LINK__:'.length);
-    // Generate a deterministic UUID v5-style ID from email so it works in UUID columns
-    const crypto = require('crypto');
-    const hash = crypto.createHash('sha256').update('direct:' + email).digest('hex');
-    const syntheticId = [hash.slice(0,8), hash.slice(8,12), '4' + hash.slice(13,16), '8' + hash.slice(17,20), hash.slice(20,32)].join('-');
     const sc = getServiceClient();
+    
+    // Look up real auth.users record so FK constraints work
+    const lookupUser = async () => {
+      try {
+        // Try to find existing auth user
+        const { data, error } = await sc.auth.admin.listUsers();
+        if (!error && data && data.users) {
+          const existing = data.users.find(u => u.email && u.email.toLowerCase() === email.toLowerCase());
+          if (existing) return { id: existing.id, email: existing.email };
+        }
+        // If not found, create one
+        const { data: created, error: createErr } = await sc.auth.admin.createUser({
+          email: email,
+          email_confirm: true,
+          user_metadata: { source: 'direct-stripe' },
+        });
+        if (!createErr && created && created.user) return { id: created.user.id, email: created.user.email };
+      } catch (e) {
+        console.error('[getUserClient] Auth user lookup failed:', e.message);
+      }
+      // Last resort: deterministic UUID
+      const crypto = require('crypto');
+      const hash = crypto.createHash('sha256').update('direct:' + email).digest('hex');
+      const fallbackId = [hash.slice(0,8), hash.slice(8,12), '4' + hash.slice(13,16), '8' + hash.slice(17,20), hash.slice(20,32)].join('-');
+      return { id: fallbackId, email };
+    };
+
     return {
       auth: {
-        getUser: () => Promise.resolve({ data: { user: { id: syntheticId, email } }, error: null }),
+        getUser: async () => {
+          const user = await lookupUser();
+          return { data: { user }, error: null };
+        },
         signOut: () => Promise.resolve(),
       },
       from: sc.from.bind(sc),
