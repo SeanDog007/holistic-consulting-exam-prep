@@ -435,6 +435,14 @@
 
         if (!resp.ok) throw new Error(data.error || 'Failed to send link');
 
+        if (data.noAccount) {
+          errorEl.textContent = data.message || "We don't have an account matching that email. Please use the email you purchased with, or enroll first.";
+          errorEl.classList.remove('hidden');
+          btn.disabled = false;
+          btn.textContent = 'Send Login Link';
+          return;
+        }
+
         successEl.textContent = '✓ Check your email for a login link.';
         successEl.classList.remove('hidden');
         btn.textContent = 'Link Sent';

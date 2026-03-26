@@ -55,8 +55,18 @@ exports.handler = async (event) => {
     // Check enrollment — only enrolled users can request magic links
     const enrolled = await hasEnrollment(normalizedEmail);
     
-    // Always return success (don't leak whether email is enrolled)
-    // But only actually send the email if enrolled
+    if (!enrolled) {
+      return {
+        statusCode: 200,
+        headers: cors,
+        body: JSON.stringify({
+          success: false,
+          noAccount: true,
+          message: "We don't have an account matching that email. Please use the email you purchased with, or enroll first.",
+        }),
+      };
+    }
+
     if (enrolled) {
       const token = generateMagicToken(normalizedEmail);
       const magicUrl = `${SITE_URL}/.netlify/functions/verify-magic-link?token=${encodeURIComponent(token)}`;
