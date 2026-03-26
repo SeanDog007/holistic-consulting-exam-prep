@@ -11,10 +11,14 @@ function getUserClient(token) {
   // Magic-link cookie auth: return a synthetic client that fakes Supabase auth
   if (token && token.startsWith('__MAGIC_LINK__:')) {
     const email = token.slice('__MAGIC_LINK__:'.length);
+    // Generate a deterministic UUID v5-style ID from email so it works in UUID columns
+    const crypto = require('crypto');
+    const hash = crypto.createHash('sha256').update('direct:' + email).digest('hex');
+    const syntheticId = [hash.slice(0,8), hash.slice(8,12), '4' + hash.slice(13,16), '8' + hash.slice(17,20), hash.slice(20,32)].join('-');
     const sc = getServiceClient();
     return {
       auth: {
-        getUser: () => Promise.resolve({ data: { user: { id: 'direct-' + email, email } }, error: null }),
+        getUser: () => Promise.resolve({ data: { user: { id: syntheticId, email } }, error: null }),
         signOut: () => Promise.resolve(),
       },
       from: sc.from.bind(sc),
@@ -62,8 +66,8 @@ function extractToken(headers) {
   
   // Fallback: check magic-link cookie
   const { getSessionUser } = require("./auth");
-  const email = getSessionUser(headers);
-  if (email) return '__MAGIC_LINK__:' + email;
+  const result = getSessionUser(headers);
+  if (result && result.email) return '__MAGIC_LINK__:' + result.email;
   
   return null;
 }
@@ -71,7 +75,8 @@ function extractToken(headers) {
 // Extract magic-link session email from cookie (for direct Stripe purchases)
 function extractMagicLinkEmail(headers) {
   const { getSessionUser } = require("./auth");
-  return getSessionUser(headers);
+  const result = getSessionUser(headers);
+  return result ? result.email : null;
 }
 
 // Unified auth: returns { email, userId, source } or null
