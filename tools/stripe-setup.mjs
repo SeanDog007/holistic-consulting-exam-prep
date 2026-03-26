@@ -37,7 +37,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const PRODUCT_NAME = "BCHN Exam Prep";
 const PRODUCT_DESCRIPTION = "Adaptive practice exams, spaced repetition, domain mastery tracking, and complete study guide for BCHN board certification.";
-const PRICE_CENTS = 29700; // $297 one-time — Sean can adjust this
+const PRICE_CENTS = parseInt(process.env.PRICE_CENTS || "30000", 10); // $300 one-time
 
 async function main() {
   console.log("Setting up BCHN Exam Prep in Stripe...\n");
