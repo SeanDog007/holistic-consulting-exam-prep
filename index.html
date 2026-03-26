@@ -1253,13 +1253,29 @@
     // ── Auth ──
     async function checkSession() {
       try {
+        // First: check magic-link cookie auth (new Stripe direct flow)
+        try {
+          const mlResp = await fetch('/.netlify/functions/check-access', { credentials: 'include' });
+          const mlData = await mlResp.json();
+          if (mlData.authenticated && mlData.enrolled) {
+            // Magic link session is valid — create a lightweight user object
+            currentUser = { email: mlData.email, id: 'direct-' + mlData.email };
+            userProfile = { email: mlData.email, display_name: mlData.email.split('@')[0] };
+            accessProfile = { role: 'student', access_exam_prep: true };
+            showApp();
+            return;
+          }
+        } catch (mlErr) {
+          console.log('Magic link check skipped:', mlErr.message);
+        }
+
+        // Fallback: check Supabase auth (legacy flow)
         const { data: { session } } = await sb.auth.getSession();
         if (session) {
           currentUser = session.user;
           try {
             await loadUserProfile();
           } catch (profileErr) {
-            // Profile load failed — session may be stale/expired
             console.error('Profile load failed, clearing session:', profileErr);
             await sb.auth.signOut();
             currentUser = null;
@@ -1269,12 +1285,13 @@
           }
           showApp();
         } else {
-          showLogin();
+          // No auth at all — redirect to buy page
+          window.location.href = '/buy.html';
         }
       } catch (err) {
         console.error('Session check failed:', err);
         await sb.auth.signOut().catch(() => {});
-        showLogin();
+        window.location.href = '/buy.html';
       }
     }
 
