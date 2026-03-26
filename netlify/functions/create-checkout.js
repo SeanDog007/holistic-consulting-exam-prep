@@ -33,6 +33,7 @@ exports.handler = async (event) => {
       payment_method_types: ["card"],
       customer_email: email.toLowerCase(),
       line_items: [{ price: PRICE_ID, quantity: 1 }],
+      allow_promotion_codes: true,
       success_url: `${SITE_URL}/buy.html?success=1&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${SITE_URL}/buy.html?canceled=1`,
       metadata: {
