@@ -81,7 +81,7 @@
             <div class="flex flex-col sm:flex-row gap-4 items-start">
               <button onclick="showCheckout()" 
                 class="px-8 py-3.5 bg-sage-400 hover:bg-sage-500 text-white font-semibold rounded-lg transition-colors text-base shadow-sm">
-                Get Started — $297
+                Get Started — $300
               </button>
               <p class="text-sm text-parchment-400 pt-2">One-time payment. Lifetime access.</p>
             </div>
@@ -149,7 +149,7 @@
           </p>
           <button onclick="showCheckout()"
             class="px-8 py-3.5 bg-sage-400 hover:bg-sage-500 text-white font-semibold rounded-lg transition-colors text-base shadow-sm">
-            Get Started — $297
+            Get Started — $300
           </button>
         </div>
       </section>
@@ -186,7 +186,7 @@
             <p id="checkout-error" class="text-red-600 text-sm hidden"></p>
             <button type="submit" id="checkout-btn"
               class="w-full py-3 bg-sage-400 hover:bg-sage-500 text-white text-sm font-semibold rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-sage-400/50">
-              Continue to Payment — $297
+              Continue to Payment — $300
             </button>
           </form>
           <p class="text-xs text-parchment-400 text-center mt-4">Secure checkout powered by Stripe. One-time payment.</p>
@@ -409,7 +409,7 @@
         errorEl.textContent = err.message;
         errorEl.classList.remove('hidden');
         btn.disabled = false;
-        btn.textContent = 'Continue to Payment — $297';
+        btn.textContent = 'Continue to Payment — $300';
       }
     });
 
