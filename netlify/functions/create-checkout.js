@@ -27,6 +27,8 @@ exports.handler = async (event) => {
     }
 
     const stripe = getStripe();
+    console.log("[create-checkout] PRICE_ID:", PRICE_ID);
+    console.log("[create-checkout] STRIPE_SECRET_KEY present:", !!process.env.STRIPE_SECRET_KEY);
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -48,11 +50,11 @@ exports.handler = async (event) => {
       body: JSON.stringify({ url: session.url }),
     };
   } catch (err) {
-    console.error("[create-checkout] Error:", err.message);
+    console.error("[create-checkout] Error:", err.message, err.type || "", err.code || "");
     return {
       statusCode: 500,
       headers: cors,
-      body: JSON.stringify({ error: "Failed to create checkout session" }),
+      body: JSON.stringify({ error: "Failed to create checkout session", detail: err.message }),
     };
   }
 };
