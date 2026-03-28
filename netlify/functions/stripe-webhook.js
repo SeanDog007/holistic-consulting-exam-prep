@@ -42,7 +42,7 @@ exports.handler = async (event) => {
 
   if (stripeEvent.type === "checkout.session.completed") {
     const session = stripeEvent.data.object;
-    const email = (session.customer_email || session.metadata?.buyer_email || "").toLowerCase();
+    const email = (session.customer_email || session.customer_details?.email || session.metadata?.buyer_email || "").toLowerCase();
 
     if (!email) {
       console.error("[stripe-webhook] No email found in checkout session");
