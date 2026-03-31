@@ -66,15 +66,20 @@ exports.handler = async (event) => {
       // Don't return 500 — Stripe will retry. Log and move on.
     }
 
-    // 2. Sync to Kit (ConvertKit)
-    if (process.env.KIT_API_KEY) {
+    // 2. Sync to Kit (ConvertKit) with HC: tags
+    if (process.env.KIT_API_SECRET || process.env.KIT_API_KEY) {
       try {
         await addSubscriber({
           email,
           firstName: (session.customer_details?.name || "").split(" ")[0],
-          tags: ["bchn-exam-prep-purchased", "exam-prep-customer"],
+          tags: [
+            "HC:src:exam-prep",
+            "HC:int:bchn-exam",
+            "HC:stage:buyer",
+            "HC:bought:exam-prep",
+          ],
         });
-        console.log(`[stripe-webhook] Kit subscriber synced: ${email}`);
+        console.log(`[stripe-webhook] Kit subscriber synced with HC: tags: ${email}`);
       } catch (kitErr) {
         console.error("[stripe-webhook] Kit sync failed:", kitErr.message);
       }
