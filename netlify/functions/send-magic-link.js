@@ -73,11 +73,11 @@ exports.handler = async (event) => {
 
       await sendEmail({
         to: normalizedEmail,
-        subject: "Your BCHN Exam Prep Login Link",
+        subject: "Your BCHN® Exam Prep Login Link",
         html: `
           <div style="font-family: 'DM Sans', -apple-system, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px 24px;">
             <h1 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; color: #2A3024; margin-bottom: 8px;">
-              BCHN Exam Prep
+              BCHN® Exam Prep
             </h1>
             <p style="color: #6B7F5E; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px;">
               Holistic Consulting

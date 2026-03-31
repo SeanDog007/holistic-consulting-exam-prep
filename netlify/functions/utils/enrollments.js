@@ -1,5 +1,5 @@
 /**
- * Enrollment store for direct-purchase BCHN Exam Prep.
+ * Enrollment store for direct-purchase BCHN® Exam Prep.
  *
  * Uses Supabase table `direct_enrollments` to store purchase records.
  * Falls back to a simple check if the table doesn't exist yet.

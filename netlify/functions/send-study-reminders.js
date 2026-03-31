@@ -118,7 +118,7 @@ exports.handler = async (event) => {
       const html = `
 <div style="font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px 24px;">
   <h1 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; color: #2A3024; margin-bottom: 4px;">
-    BCHN Exam Prep
+    BCHN® Exam Prep
   </h1>
   <p style="color: #6B7F5E; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px;">
     Daily Study Reminder
@@ -159,7 +159,7 @@ exports.handler = async (event) => {
 
       const result = await sendEmail({
         to: student.email,
-        subject: `${daysUntilExam} day${daysUntilExam !== 1 ? "s" : ""} until your BCHN exam${urgencyLabel ? " — " + urgencyLabel : ""}`,
+        subject: `${daysUntilExam} day${daysUntilExam !== 1 ? "s" : ""} until your BCHN® exam${urgencyLabel ? " — " + urgencyLabel : ""}`,
         html,
         tags: [{ name: "category", value: "exam-prep-daily-reminder" }],
       });

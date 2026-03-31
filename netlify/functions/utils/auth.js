@@ -1,5 +1,5 @@
 /**
- * Magic-link auth utilities for BCHN Exam Prep direct purchase flow.
+ * Magic-link auth utilities for BCHN® Exam Prep direct purchase flow.
  *
  * Uses HMAC-signed tokens (no database needed) for both magic links and sessions.
  * Modeled after FMA's auth pattern.

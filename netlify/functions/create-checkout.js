@@ -1,5 +1,5 @@
 /**
- * create-checkout — Creates a Stripe Checkout session for BCHN Exam Prep.
+ * create-checkout — Creates a Stripe Checkout session for BCHN® Exam Prep.
  *
  * POST /api/create-checkout
  * Body: { email: string }
