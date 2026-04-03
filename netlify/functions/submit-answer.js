@@ -22,7 +22,10 @@ exports.handler = async (event) => {
   const { data: question, error: qErr } = await userClient.from("questions").select("correct_answer, explanation, textbook_reference").eq("id", question_id).single();
   if (qErr || !question) return { statusCode: 404, headers: cors, body: JSON.stringify({ error: "Question not found" }) };
 
-  const is_correct = String(selected_answer).toLowerCase() === String(question.correct_answer).toLowerCase();
+  // correct_answer may be a 0-based index (number) or a letter; normalize both to compare
+  const _idxToLetter = ['a', 'b', 'c', 'd', 'e', 'f'];
+  const _normAnswer = (v) => { const n = Number(v); return (!isNaN(n) && Number.isInteger(n) && n >= 0 && n <= 5) ? _idxToLetter[n] : String(v).toLowerCase(); };
+  const is_correct = _normAnswer(selected_answer) === _normAnswer(question.correct_answer);
 
   // Record attempt
   const { error: insertErr } = await userClient.from("question_attempts").insert({
@@ -45,7 +48,7 @@ exports.handler = async (event) => {
     headers: cors,
     body: JSON.stringify({
       is_correct,
-      correct_answer: question.correct_answer,
+      correct_answer: _normAnswer(question.correct_answer),
       explanation: question.explanation,
       textbook_reference: question.textbook_reference,
     }),

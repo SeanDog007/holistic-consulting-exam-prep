@@ -3821,9 +3821,10 @@
       const q = window._lessonQuestions?.[qIdx];
       if (!q) return;
 
-      // correct_answer is stored as a letter ("a"–"f"); convert to 0-based index
+      // correct_answer may be a 0-based index (number) OR a letter ("a"–"f"); handle both
       const _letterToIdx = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5 };
-      const correctIdx = q.correct_answer_index ?? q.correct_index ?? (_letterToIdx[String(q.correct_answer || '').toLowerCase()] ?? 0);
+      const _rawAnswer = q.correct_answer;
+      const correctIdx = q.correct_answer_index ?? q.correct_index ?? (typeof _rawAnswer === 'number' ? _rawAnswer : (_letterToIdx[String(_rawAnswer || '').toLowerCase()] ?? 0));
       const isCorrect = selectedIdx === correctIdx;
 
       // Disable all options

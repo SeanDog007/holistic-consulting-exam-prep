@@ -128,12 +128,13 @@ exports.handler = async (event) => {
       .single();
     if (qErr || !question) return { statusCode: 404, headers: cors, body: JSON.stringify({ error: "Question not found" }) };
 
-    // correct_answer is stored as a letter ("a", "b", "c", "d")
+    // correct_answer may be a 0-based index (number) or a letter ("a"–"f"); handle both
     // selected_answer comes from client as 0-based index
     const indexToLetter = ['a', 'b', 'c', 'd', 'e', 'f'];
     const letterToIndex = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5 };
+    const _raw = question.correct_answer;
+    const correctLetter = (typeof _raw === 'number' && _raw >= 0 && _raw <= 5) ? indexToLetter[_raw] : String(_raw).toLowerCase();
     const selectedLetter = indexToLetter[selected_answer] || '';
-    const correctLetter = String(question.correct_answer).toLowerCase();
     const isCorrect = selectedLetter === correctLetter;
     const correctIdx = letterToIndex[correctLetter] ?? -1;
 
