@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /buy.html
+Allow: /sitemap.xml
+Disallow: /.netlify/
+Disallow: /index.html
+
+Sitemap: https://prep.holisticconsultinghq.com/sitemap.xml
