@@ -4,6 +4,10 @@
 
 [functions]
   node_bundler = "esbuild"
+  external_node_modules = ["*"]
+
+[functions."*"]
+  max_duration = 26
 
 [functions."send-study-reminders"]
   schedule = "0 12 * * *"
