@@ -895,7 +895,9 @@
           "risk": "high",
           "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
         }
-      ]
+      ],
+      "resolved": true,
+      "resolution": "All 57 negative/exception questions verified with correct answer keys"
     },
     "duplicate-options": {
       "description": "Questions that had or still have duplicate answer options",
@@ -974,7 +976,9 @@
           "risk": "medium",
           "reason": "Near-duplicate — verify if intentionally different or should be merged"
         }
-      ]
+      ],
+      "resolved": true,
+      "resolution": "All 7 pairs verified as intentionally different questions — no merges needed"
     },
     "anatomy-clinical": {
       "description": "Anatomy/clinical questions flagged for factual accuracy review",
@@ -1206,7 +1210,9 @@
           "risk": "medium",
           "reason": "Contains anatomy/clinical terms — verify factual accuracy"
         }
-      ]
+      ],
+      "resolved": true,
+      "resolution": "All 15 anatomy/clinical questions verified factually correct"
     },
     "answer-key-skew": {
       "description": "Long runs of same answer or suspicious distribution patterns",
@@ -2770,7 +2776,11 @@
           "risk": "low",
           "reason": "Needs domain classification"
         }
-      ]
+      ],
+      "resolved": true,
+      "resolution": "All 115 questions assigned to domains (D1:34, D2:34, D3:16, D4:25, D5:13)"
     }
-  }
+  },
+  "resolvedInPass2": 194,
+  "remainingForReview": 2
 }

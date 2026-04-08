@@ -275,7 +275,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 1",
-    "question_text": "What is the part of plants that is unable to be digested and therefore passes through the GI tract, providing numerous health benefits along the way.",
+    "question_text": "What is the part of plants that is unable to be digested and therefore passes through the GI tract, providing numerous health benefits along the way?",
     "question_type": "multiple_choice",
     "options": [
       "Carbohydrates",
@@ -349,7 +349,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 1",
-    "question_text": "Which of the following best describes what the word “essential” means when it refers to essential nutrients.",
+    "question_text": "Which of the following best describes what the word “essential” means when it refers to essential nutrients?",
     "question_type": "multiple_choice",
     "options": [
       "These nutrients must be obtained from the diet because the body does not produce them endogenously or in adequate amounts",
@@ -501,7 +501,7 @@
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 1",
     "question_text": "A baked potato has a higher glycemic index than a boiled sweet potato.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -619,7 +619,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 2",
-    "question_text": "Which of the following is a type of food reaction and signifies delayed hypersensitivity reactions that may be dose dependent and caused from food additives, enzyme insufficiency, histamine reactions, or food compounds such as lectins and oxalates.",
+    "question_text": "Which of the following is a type of food reaction and signifies delayed hypersensitivity reactions that may be dose dependent and caused from food additives, enzyme insufficiency, histamine reactions, or food compounds such as lectins and oxalates?",
     "question_type": "multiple_choice",
     "options": [
       "Immunoglobulin A",
@@ -709,7 +709,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 2",
-    "question_text": "Which of the following is true about dietary supplements:",
+    "question_text": "Which of the following is true about dietary supplements?",
     "question_type": "multiple_choice",
     "options": [
       "Can play a beneficial role in a client's health",
@@ -938,7 +938,7 @@
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 2",
     "question_text": "Adequate fluid intake is essential for regulating body temperature, transporting nutrients and oxygen to cells, removing waste products, and lubricating joints.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -1119,7 +1119,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 2",
-    "question_text": "Which vitamin is commonly found in nuts, seeds, and green leafy vegetables and serves as an antioxidant.",
+    "question_text": "Which vitamin is commonly found in nuts, seeds, and green leafy vegetables and serves as an antioxidant?",
     "question_type": "multiple_choice",
     "options": [
       "Vitamin E",
@@ -1677,7 +1677,7 @@
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 3",
     "question_text": "Cholecalciferol is the preferred form of vitamin D supplementation.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -1855,8 +1855,8 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 3",
-    "question_text": "When supplementing, calcium should not be taken in divided doses throughout the day.",
-    "question_type": "multiple_choice",
+    "question_text": "When supplementing, calcium should not be taken in divided doses throughout the day?",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -1941,7 +1941,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 3",
-    "question_text": "Which nutrient is involved in over 300 metabolic reactions and is found in dark leafy greens, nuts, and seeds. High doses of zinc and calcium can interfere with its absorption.",
+    "question_text": "Which nutrient is involved in over 300 metabolic reactions and is found in dark leafy greens, nuts, and seeds. High doses of zinc and calcium can interfere with its absorption?",
     "question_type": "multiple_choice",
     "options": [
       "Vitamin A",
@@ -2138,7 +2138,7 @@
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 4",
     "question_text": "Food additives are used either to prevent foods' spoiling or to enhance their flavor.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -2172,7 +2172,7 @@
       "Saccharin",
       "Aspartame",
       "Sucralose",
-      "Monk fruit extrack"
+      "Monk fruit extract"
     ],
     "correct_answer": 3,
     "difficulty": "medium",
@@ -2274,7 +2274,7 @@
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 4",
     "question_text": "A complete protein source is one that provides all of the nine essential amino acids.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -2513,7 +2513,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 4",
-    "question_text": "Which of the following is not true regarding the \"Recommended Dietary Allowance (RDA)\"",
+    "question_text": "Which of the following is not true regarding the \"Recommended Dietary Allowance (RDA)\"?",
     "question_type": "multiple_choice",
     "options": [
       "Developed to reduce the rate of severe nutrition deficiency diseases such as scury",
@@ -2784,7 +2784,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 5",
-    "question_text": "Which B vitamin is crucial for cell division and the production of red blood cells",
+    "question_text": "Which B vitamin is crucial for cell division and the production of red blood cells?",
     "question_type": "multiple_choice",
     "options": [
       "Folate",
@@ -3055,7 +3055,7 @@
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 5",
     "question_text": "Low protein foods are generally high in phosphorous.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -3144,7 +3144,7 @@
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 5",
     "question_text": "Excess iodine can inhibit thyroid gland synthesis which is why the recommended dietary levels or supplementation of iodine should not exceed 1 mg per day.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -3564,7 +3564,7 @@
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 6",
     "question_text": "While inulin is not utilized by the body for energy, it is broken down into other sugars when artichokes are stored for any length of time.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -3638,7 +3638,7 @@
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 6",
     "question_text": "Beta-carotene, which is present in high levels in carrots, provides protection against macular degeneration and the development of cataracts.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -3772,7 +3772,7 @@
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 6",
     "question_text": "A boiled potato has a higher glycemic index than a baked potato.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -4059,7 +4059,7 @@
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 1",
     "question_text": "Biotransformation refers to the biochemical reactions that occur in the body to transform and eliminate xenobiotics and endogenous compounds.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -4072,7 +4072,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 1",
-    "question_text": "Which phase of Detoxification involves the activation and conversion of compounds.",
+    "question_text": "Which phase of Detoxification involves the activation and conversion of compounds?",
     "question_type": "multiple_choice",
     "options": [
       "Phase 1",
@@ -4102,7 +4102,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 1",
-    "question_text": "Which phase of detoxification involves the conjugation of activated compounds with endogenous molecules, making them more water-soluble for elimination.",
+    "question_text": "Which phase of detoxification involves the conjugation of activated compounds with endogenous molecules, making them more water-soluble for elimination?",
     "question_type": "multiple_choice",
     "options": [
       "Phase 1",
@@ -4147,7 +4147,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 1",
-    "question_text": "Which of the following occurs when there is an imbalance between the production of reactive oxygen species (ROS) and the body's ability to neutralize them with antioxidants. Choose the best answer.",
+    "question_text": "Which of the following occurs when there is an imbalance between the production of reactive oxygen species (ROS) and the body's ability to neutralize them with antioxidants. Choose the best answer?",
     "question_type": "multiple_choice",
     "options": [
       "Oxidative stress",
@@ -4554,7 +4554,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 2",
-    "question_text": "Which phase of detoxification includes a process known as conjugation where a protective compound binds a toxin by adding a small chemical to it. The conjugation reaction then either neutralizes the toxin or makes it more easily excreted through the urine or bile.",
+    "question_text": "Which phase of detoxification includes a process known as conjugation where a protective compound binds a toxin by adding a small chemical to it. The conjugation reaction then either neutralizes the toxin or makes it more easily excreted through the urine or bile?",
     "question_type": "multiple_choice",
     "options": [
       "Phase 1",
@@ -4704,7 +4704,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 2",
-    "question_text": "Which of the following is a type of white blood cell.",
+    "question_text": "Which of the following is a type of white blood cell?",
     "question_type": "multiple_choice",
     "options": [
       "Neutrophils",
@@ -4720,7 +4720,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 2",
-    "question_text": "What is the name for the type of basophil that takes up residence along blood vessels and are responsible for releasing histamine and other compounds involved in allergic reactions.",
+    "question_text": "What is the name for the type of basophil that takes up residence along blood vessels and are responsible for releasing histamine and other compounds involved in allergic reactions?",
     "question_type": "multiple_choice",
     "options": [
       "Mast cells",
@@ -4978,7 +4978,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 2",
-    "question_text": "Which of the following supports the digestion of protein in the stomach",
+    "question_text": "Which of the following supports the digestion of protein in the stomach?",
     "question_type": "multiple_choice",
     "options": [
       "Salivary amylase",
@@ -4994,7 +4994,7 @@
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 2",
     "question_text": "Peroxisomes are the cell organelles in which fatty acids longer than 20 carbons (known as very long chain fatty acids) undergo beta oxidation.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -5024,7 +5024,7 @@
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 2",
     "question_text": "Blood that has perfused the pancreas, spleen, and GI tract will next perfuse the heart through the hepatic portal vein.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -5190,7 +5190,7 @@
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 3",
     "question_text": "Soluble fibers are able to dissolve in water and include substances such as cellulose, hemicellulose, and lignin.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -5249,7 +5249,7 @@
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 3",
     "question_text": "Pyridoxal phosphate is needed in transamination reactions.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -5278,7 +5278,7 @@
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 3",
     "question_text": "All enzymes are proteins.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -5291,7 +5291,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 3",
-    "question_text": "What is the overall role of enzymes",
+    "question_text": "What is the overall role of enzymes?",
     "question_type": "multiple_choice",
     "options": [
       "To catalyze biochemical reactions by lessening the energy requirements for a particular chemical reaction.",
@@ -5321,7 +5321,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 3",
-    "question_text": "Which of the following amino acids is non-essential meaning that the body is able to produce adequate amounts on its own.",
+    "question_text": "Which of the following amino acids is non-essential meaning that the body is able to produce adequate amounts on its own?",
     "question_type": "multiple_choice",
     "options": [
       "Valine",
@@ -5731,7 +5731,7 @@
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 4",
     "question_text": "The lymphatic system is important in the absorption of lipids?",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -5760,7 +5760,7 @@
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 4",
     "question_text": "Production of protein does not require much ATP.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -5879,7 +5879,7 @@
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 5",
     "question_text": "Sweating losses can exceed 2 liters per hour for some athletes.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6225,7 +6225,7 @@
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 5",
     "question_text": "Nutraceuticals can be of plant, animal, or microbial origin.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6239,7 +6239,7 @@
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
     "question_text": "Holistic Nutrition Professionals cannot practice medical nutrition therapy, which is the provision of nutrition care services for the treatment or management of a disease or medical condition.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6252,7 +6252,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
-    "question_text": "Which of the following is not true",
+    "question_text": "Which of the following is not true?",
     "question_type": "multiple_choice",
     "options": [
       "The definition of “Medical Nutrition Therapy” may differ from state to state.",
@@ -6267,8 +6267,8 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
-    "question_text": "When a state law limits the ability to individualize recommendations by those other than a Licensed Dietitian or Nutritionist, Holistic Health Practitioners can still provide general health and nutrition education/information.",
-    "question_type": "multiple_choice",
+    "question_text": "When a state law limits the ability to individualize recommendations by those other than a Licensed Dietitian or Nutritionist, Holistic Health Practitioners can still provide general health and nutrition education/information?",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6282,7 +6282,7 @@
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
     "question_text": "A meal plan is not considered “individualized” nutrition service.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6296,7 +6296,7 @@
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
     "question_text": "If a particular state restricts individualized recommendations by anyone other than a Licensed Dietitian or Nutritionist, a Holistic Nutrition Professional may still provide information to a client about food selection, food preparation, normal nutritional requirements, and sources of nutrients in food.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6310,7 +6310,7 @@
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
     "question_text": "Holistic Nutrition Professionals can make recommendations for dietary supplements and herb and advise their clients about taking these products.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6324,7 +6324,7 @@
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
     "question_text": "It is important for Holistic Nutrition Professionals to state that they are not a Licensed Dietitian or Nutritionist certified by the state.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6338,7 +6338,7 @@
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
     "question_text": "Holistic Nutrition Professionals are the same as a Registered Dietitian and Certified Nutrition Specialist.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6352,7 +6352,7 @@
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
     "question_text": "Holistic Nutrition Professionals teach a whole, organic, chemical free food approach to health while RD’s are encouraged to teach the USDA’s MyPlate approach set by the government.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6441,7 +6441,7 @@
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
     "question_text": "Holistic Nutrition Professionals can make health claims.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6501,7 +6501,7 @@
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
     "question_text": "An NANP member will choose whom he or she will serve. Having undertaken a client, however, they may not neglect the client unless discharged",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6529,7 +6529,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
-    "question_text": "Which of following are determinants of food behavior for preschool children, middle childhood, adolescents, and older adults.",
+    "question_text": "Which of following are determinants of food behavior for preschool children, middle childhood, adolescents, and older adults?",
     "question_type": "multiple_choice",
     "options": [
       "Culture",
@@ -6560,7 +6560,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
-    "question_text": "What is the term used to describe a supportive process guiding a client toward nutritional well-being.",
+    "question_text": "What is the term used to describe a supportive process guiding a client toward nutritional well-being?",
     "question_type": "multiple_choice",
     "options": [
       "Consulting",
@@ -6575,7 +6575,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
-    "question_text": "What is the term used to describe the learned patterns of thinking, feeling, and behaving that are shared by a group of people.",
+    "question_text": "What is the term used to describe the learned patterns of thinking, feeling, and behaving that are shared by a group of people?",
     "question_type": "multiple_choice",
     "options": [
       "Family",
@@ -6607,7 +6607,7 @@
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
     "question_text": "Indicating to a client that everything will be fine unlikely to be productive because it can belittle the client and is not realistic.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -6771,7 +6771,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
-    "question_text": "Which is a technique that helps clients actively participate in clarifying issues and exploring solutions.",
+    "question_text": "Which is a technique that helps clients actively participate in clarifying issues and exploring solutions?",
     "question_type": "multiple_choice",
     "options": [
       "Client centered counseling",
@@ -6786,7 +6786,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
-    "question_text": "Which technique focuses on identifying strengths and expanding on past successes.",
+    "question_text": "Which technique focuses on identifying strengths and expanding on past successes?",
     "question_type": "multiple_choice",
     "options": [
       "Client centered counseling",
@@ -6877,7 +6877,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
-    "question_text": "What is an example of effective counseling nonverbal behavior.",
+    "question_text": "What is an example of effective counseling nonverbal behavior?",
     "question_type": "multiple_choice",
     "options": [
       "Good posture",
@@ -6894,7 +6894,7 @@
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
     "question_text": "Empathy is the true understanding of another’s perspective and experience without judging, criticizing, or blaming.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -7030,7 +7030,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 3",
-    "question_text": "Which of the following describes challenging destructive thoughts, beliefs, and internal self-talk and substituting self-enhancing conditions.",
+    "question_text": "Which of the following describes challenging destructive thoughts, beliefs, and internal self-talk and substituting self-enhancing conditions?",
     "question_type": "multiple_choice",
     "options": [
       "Journaling",
@@ -7246,7 +7246,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 3",
-    "question_text": "What are the two components of readiness to make a behavior change.",
+    "question_text": "What are the two components of readiness to make a behavior change?",
     "question_type": "multiple_choice",
     "options": [
       "Importance and time",
@@ -7742,7 +7742,7 @@
     "domain": 4,
     "topic": "Nutrition in Practice",
     "exam_source": "Domain 4 Exam 1",
-    "question_text": "What is something that many people suffering from alcoholism tend to do.",
+    "question_text": "What is something that many people suffering from alcoholism tend to do?",
     "question_type": "multiple_choice",
     "options": [
       "Excessive intake of protein",
@@ -7819,7 +7819,7 @@
     "topic": "Nutrition in Practice",
     "exam_source": "Domain 4 Exam 1",
     "question_text": "Food allergies may play a role in asthma.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -8003,7 +8003,7 @@
     "topic": "Nutrition in Practice",
     "exam_source": "Domain 4 Exam 1",
     "question_text": "Regular canker sores are associated with food allergies.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -8596,7 +8596,7 @@
     "topic": "Nutrition in Practice",
     "exam_source": "Domain 4 Exam 2",
     "question_text": "Consuming concentrated sources of sugar reduces the ability of white blood cells to kill bacteria.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -8610,7 +8610,7 @@
     "topic": "Nutrition in Practice",
     "exam_source": "Domain 4 Exam 2",
     "question_text": "A low fiber diet is typically recommended to treat constipation.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -8809,7 +8809,7 @@
     "topic": "Nutrition in Practice",
     "exam_source": "Domain 4 Exam 2",
     "question_text": "Food allergy or sensitivity does not play a primary role in many cases of migraine headaches.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -9563,7 +9563,7 @@
     "topic": "Nutrition in Practice",
     "exam_source": "Domain 4 Exam 3",
     "question_text": "Black tea provides significantly more health benefits than green tea due to its higher polyphenol contents.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -9881,7 +9881,7 @@
     "domain": 4,
     "topic": "Nutrition in Practice",
     "exam_source": "Domain 4 Exam 3",
-    "question_text": "Which fruit may be a good recommendation for someone with bronchitis due to its protein digesting enzyme, bromelain which have been shown to break down thick mucus and exert some mild antibiotic effects.",
+    "question_text": "Which fruit may be a good recommendation for someone with bronchitis due to its protein digesting enzyme, bromelain which have been shown to break down thick mucus and exert some mild antibiotic effects?",
     "question_type": "multiple_choice",
     "options": [
       "Guava",
@@ -9973,7 +9973,7 @@
     "topic": "Research",
     "exam_source": "Domain 5 Exam 1",
     "question_text": "Getting your data from the internet is a copyright infringement.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -9987,7 +9987,7 @@
     "topic": "Research",
     "exam_source": "Domain 5 Exam 1",
     "question_text": "It is important to cite all your sources, except the ones you pull off Wikipedia since this is free information.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10113,7 +10113,7 @@
     "topic": "Research",
     "exam_source": "Domain 5 Exam 1",
     "question_text": "Holistic nutrition professionals should prioritize evidence-based practice, which involves integrating the best available research evidence with clinical expertise and client values.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10237,7 +10237,7 @@
     "topic": "Research",
     "exam_source": "Domain 5 Exam 1",
     "question_text": "In the hierarchy of evidence pyramid, meta-analysis research studies fall above case reports.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10251,7 +10251,7 @@
     "topic": "Research",
     "exam_source": "Domain 5 Exam 1",
     "question_text": "In the hierarchy of evidence pyramid, randomized controlled trials are below systematic reviews.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10265,7 +10265,7 @@
     "topic": "Research",
     "exam_source": "Domain 5 Exam 1",
     "question_text": "In the hierarchy of evidence pyramid, cohort studies are the most reliable source of research data which is why they are at the top of the pyramid.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10308,7 +10308,7 @@
     "domain": 5,
     "topic": "Research",
     "exam_source": "Domain 5 Exam 2",
-    "question_text": "What type of research includes utilizes secondary sources to make reports? Examples might include textbooks and Wikipedia.",
+    "question_text": "What type of research includes utilizes secondary sources to make reports? Examples might include textbooks and Wikipedia?",
     "question_type": "multiple_choice",
     "options": [
       "Primary",
@@ -10356,7 +10356,7 @@
     "topic": "Research",
     "exam_source": "Domain 5 Exam 2",
     "question_text": "A method for determining if an article is relevant to your research is to skim the introduction and conclusion.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10369,8 +10369,8 @@
     "domain": 5,
     "topic": "Research",
     "exam_source": "Domain 5 Exam 2",
-    "question_text": "When reading a source, practitioners should not accept a claim just because an authority asserts it.",
-    "question_type": "multiple_choice",
+    "question_text": "When reading a source, practitioners should not accept a claim just because an authority asserts it?",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10383,7 +10383,7 @@
     "domain": 5,
     "topic": "Research",
     "exam_source": "Domain 5 Exam 2",
-    "question_text": "When using claims from other sources to support your own arguments, it is important to...",
+    "question_text": "When using claims from other sources to support your own arguments, it is important to..?",
     "question_type": "multiple_choice",
     "options": [
       "Report conclusion of the source",
@@ -10398,7 +10398,7 @@
     "domain": 5,
     "topic": "Research",
     "exam_source": "Domain 5 Exam 2",
-    "question_text": "When using information from outside sources to support your work, it is important to...",
+    "question_text": "When using information from outside sources to support your work, it is important to..?",
     "question_type": "multiple_choice",
     "options": [
       "Record not just what the authors said but how they use the information (context)",
@@ -10478,7 +10478,7 @@
     "topic": "Research",
     "exam_source": "Domain 5 Exam 2",
     "question_text": "Keywords represent the main concepts of a research topic and help readers search for and find relevant articles.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10492,7 +10492,7 @@
     "topic": "Research",
     "exam_source": "Domain 5 Exam 2",
     "question_text": "Paraphrasing the works of another author too closely can increase the risk of and lead to plagiarism.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10506,7 +10506,7 @@
     "topic": "Research",
     "exam_source": "Domain 5 Exam 2",
     "question_text": "If using information or ideas from an outside sources, only intext citations OR a reference list is required.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10809,7 +10809,7 @@
     "topic": "Research",
     "exam_source": "Domain 5 Exam 3",
     "question_text": "If a website is supported by an individual vs an organization then it is typically reliable.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10880,7 +10880,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 5,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What are some ways that the internet can be a valuable component of a research plan?",
@@ -10896,7 +10896,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 5,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following are methods for determining if an online source is not reliable?",
@@ -10912,11 +10912,11 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 5,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "If using information or ideas from an outside source, only intext citations or a reference list is required",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -10926,7 +10926,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "If a particular state restricts individualized recommendations by anyone other than a Licensed Dietitian or Nutritionist, a Holistic Nutrition Professional may still provide what type of information to a client?",
@@ -10942,7 +10942,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following may Holistic Nutrition Professionals not provide to their clients?",
@@ -10958,7 +10958,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following statements is false?",
@@ -10974,7 +10974,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is true?",
@@ -10990,7 +10990,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is true regarding NANP members?",
@@ -11006,7 +11006,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is a disadvantage of group counseling?",
@@ -11022,7 +11022,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following factors has been shown to influence food choice?",
@@ -11038,7 +11038,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which stage of change recognizes a need to change but the person continues to find reasons not the change?",
@@ -11054,10 +11054,10 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
-    "question_text": "Which stage of change is seen in clients who have no intention of changing within the next 6 months? They may even resist change.",
+    "question_text": "Which stage of change is seen in clients who have no intention of changing within the next 6 months? They may even resist change?",
     "question_type": "multiple_choice",
     "options": [
       "Contemplation",
@@ -11070,7 +11070,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which stage of change is seen in clients who believe that changing their behavior will provide more benefits than harm and they are committed to making change soon?",
@@ -11086,7 +11086,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What is the term used to describe a person’s confidence in their ability to perform a behavior?",
@@ -11102,7 +11102,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "_________ is the true understanding of another’s perspective and experience without judging, criticizing, or blaming.",
@@ -11118,7 +11118,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is not a key components of mindful eating?",
@@ -11134,7 +11134,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 5,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "A quality research paper should include all the following except:",
@@ -11150,7 +11150,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is linked to chronic ear infections?",
@@ -11165,7 +11165,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which test is commonly used to detect antibodies in the blood?",
@@ -11181,7 +11181,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which herb has laxative effects?",
@@ -11197,7 +11197,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which food should be avoided during acute intestinal illness?",
@@ -11213,10 +11213,10 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 5,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
-    "question_text": "When writing a paper, use a block quote if the quote is longer than _______ lines or ________ words.",
+    "question_text": "When writing a paper, use a block quote if the quote is longer than _______ lines or ________ words?",
     "question_type": "multiple_choice",
     "options": [
       "2 ; 50",
@@ -11228,7 +11228,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which mineral is particularly known for binding oxalates in the gut?",
@@ -11243,7 +11243,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Individuals with celiac disease may also have to avoid which foods?",
@@ -11258,7 +11258,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which group of B vitamins are important for regulating homocysteine levels in the body?",
@@ -11273,11 +11273,11 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "If your client storms out of the office when you make recommendations like cutting out processed food the best course of action is to do nothing, the client will only make changes when they are ready",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -11287,7 +11287,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Steroid hormones are synthesized from ___________",
@@ -11303,11 +11303,11 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "If a client who is not progressing as expected and is very frustrated and unhappy with your program, it may be appropriate to have a discussion with the client on potentially parting ways.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -11317,7 +11317,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "________ is a vital compound found in every cell of the body. It plays a role in cellular energy production and serves as a cofactor in the electron transport chain of the mitochondria. Its primary functions includes helping to convert nutrients into ATP. It also serves as a cellular antioxidant and is important for cardiovascular health.",
@@ -11332,7 +11332,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is a common source of aluminum?",
@@ -11348,7 +11348,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which form of estrogen is the primary form that the body makes after menopause?",
@@ -11363,7 +11363,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which form of estrogen is the primary form made during pregnancy?",
@@ -11378,7 +11378,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following forms of estrogen is the primary form made by the body during reproductive years?",
@@ -11393,7 +11393,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "_____________ is a skin rash triggered by food, environmental exposures, or medications. A low histamine diet may be appropriate.",
@@ -11408,7 +11408,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "___________ is an infection or irritation of the bronchi. Causes are thought to be bacteria and viruses. Supportive foods include antioxidant rich foods especially pineapple and garlic.",
@@ -11423,7 +11423,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following produces thyroid releasing hormone (TRH)?",
@@ -11438,7 +11438,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following produces thyroid stimulating hormone (TSH)?",
@@ -11453,7 +11453,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following produces T4 and T3?",
@@ -11468,7 +11468,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "________________ is commonly used as a supplement to help manage osteoarthritis. It is believed to support cartilage repair and reduce inflammation, potentially improving joint function and relieving pain associated with osteoarthritis.",
@@ -11483,11 +11483,11 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Raw foods contains fewer live enzymes because they are activated only when cooking on high heat.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -11497,7 +11497,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 5,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "How can you narrow down a research topic effectively?",
@@ -11512,7 +11512,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "In patients with Multiple Sclerosis (MS), what is often found in their cerebrospinal fluid (CSF)?",
@@ -11527,7 +11527,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is thought to be a contributing factor or trigger of multiple sclerosis?",
@@ -11543,7 +11543,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which enzymes is used to break down protein and is produced in the stomach by the gastric chief cells?",
@@ -11558,11 +11558,11 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Beets, kale, collards, spinach, and green beans are low oxalate foods.",
-    "question_type": "multiple_choice",
+    "question_type": "true_false",
     "options": [
       "True",
       "False"
@@ -11572,7 +11572,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which foods can support hemorrhoids?",
@@ -11588,7 +11588,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following releases gonadal releasing hormone?",
@@ -11603,7 +11603,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following releases follicle stimulating hormone?",
@@ -11618,7 +11618,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following releases estrogen and progesterone?",
@@ -11633,7 +11633,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What is the role of calcium in muscle contraction in cardiac muscle?",
@@ -11648,7 +11648,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which part of the small intestine is primarily responsible for lipid absorption?",
@@ -11663,7 +11663,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What is annatto, and what is one of its uses?",
@@ -11678,7 +11678,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following can help support and/or prevent urinary tract infections (UTIs)?",
@@ -11693,7 +11693,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What is erythropoietin (EPO) and what is its primary function?",
@@ -11708,7 +11708,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What effect does cooking vegetables have on glutathione levels?",
@@ -11723,7 +11723,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What is one of the key roles of the lymphatic system?",
@@ -11738,7 +11738,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What are the main functions of the hormone secretin?",
@@ -11753,7 +11753,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Long term use of oral contraceptives can contribute to the depletion of which nutrients?",
@@ -11769,7 +11769,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following statements about diverticulitis is true?",
@@ -11784,7 +11784,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "___________ is characterized by greasy scaling of the skin that appears similar to psoriasis. It is associated with dandruff and oiliness. Candida overgrowth may be an underlying root cause. Food allergies, a deficiency in B6 and/or biotin, and stress may also be contributing factors. Nutrition therapy involves addressing potential food allergies and biotin deficiency, and avoid a processed and refined diet.",
@@ -11799,7 +11799,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What is the best way to avoid food additives such as preservatives, artificial colorings, and sweeteners?",
@@ -11815,7 +11815,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is the most reliable way to identify gluten in food ingredients?",
@@ -11830,7 +11830,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following best describes the Jarisch-Herxheimer reaction?",
@@ -11845,7 +11845,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Nutritional therapies for chronic fatigue syndrome include high doses of vitamin C, Magnesium, essential fatty acids, NADH, CoQ10, L carnitine, ginseng, and stress management techniques.",
@@ -11861,7 +11861,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is true about lymph nodes?",
@@ -11876,7 +11876,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is true about phagocytes?",
@@ -11891,7 +11891,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following best describes herbal choleretics?",
@@ -11907,7 +11907,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following conditions has Uva Ursi traditionally been used to treat?",
@@ -11922,7 +11922,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following conditions can result from biotin deficiency in children?",
@@ -11938,7 +11938,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What nutrient is important to limit with a client who is suffering from gout?",
@@ -11953,7 +11953,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is true about the role of digestive enzymes?",
@@ -11969,7 +11969,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following types of foods can help strengthen vein structure and support hemorrhoid relief or prevention?",
@@ -11985,7 +11985,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is a role of the amino acid arginine?",
@@ -12001,7 +12001,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is a function of glutamine in the human body?",
@@ -12016,7 +12016,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is a role of the amino acid lysine in the body?",
@@ -12031,7 +12031,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following factors can contribute to mild dehydration?",
@@ -12047,7 +12047,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following terms on a food label indicates that sugar has been added to the food?",
@@ -12062,7 +12062,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is a function of the trigeminal nerve?",
@@ -12078,7 +12078,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which condition is characterized by swelling caused by too much fluid trapped in the body's tissues?",
@@ -12093,7 +12093,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following factors can increase the risk of developing cataracts?",
@@ -12108,7 +12108,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What is the function of alveoli in the lungs?",
@@ -12124,7 +12124,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What is a common result of a deviated septum?",
@@ -12139,7 +12139,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "_________________ are inorganic salts that are used as preservatives in many foods such as dried fruits, deli meats, and canned vegetables.",
@@ -12154,7 +12154,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Cellulose, pectin, and hemicellulose are considered fibers while fibrinogen is considered a ______________.",
@@ -12169,7 +12169,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "The hepatic vein is located in the __________________.",
@@ -12184,7 +12184,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is true about Peyer’s patches?",
@@ -12199,7 +12199,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Alpha linolenic acid is what type of fatty acid?",
@@ -12214,7 +12214,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Erythropoietin hormone is secreted by the ____________",
@@ -12229,7 +12229,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "The tonsils, adenoids, and spleen are all part of the ____________ system.",
@@ -12244,7 +12244,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following does pH measure?",
@@ -12259,7 +12259,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Trigeminal pain is located in the ____________ area.",
@@ -12274,7 +12274,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What is the site of most ATP production within the cells?",
@@ -12290,7 +12290,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "All the following stimulate food intake, except:",
@@ -12306,7 +12306,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "What is the normal fasting blood glucose concentration?",
@@ -12321,7 +12321,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is least likely to break down carbohydrates?",
@@ -12337,7 +12337,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Professional health organizations such, as the American Heart Association, and the Dietary Guidelines for Americans 2015–2025 recommend that people consume _________ of calories per day from added sugar.",
@@ -12352,7 +12352,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which bodily organ plays a key role in detoxification?",
@@ -12368,10 +12368,10 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
-    "question_text": "What is the term for deficient gastric acid secretion (low stomach acid).",
+    "question_text": "What is the term for deficient gastric acid secretion (low stomach acid)?",
     "question_type": "multiple_choice",
     "options": [
       "Hyperkalemia",
@@ -12383,7 +12383,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Increased calcium resorption in kidney tubules is stimulated by:",
@@ -12399,7 +12399,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following gluten free grains may need to be removed with celiac disease?",
@@ -12415,7 +12415,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following nutrients helps to regulate cholesterol levels by binding to bile acids, which results in the body using up its cholesterol to make more bile?",
@@ -12431,7 +12431,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following would not be a well-supported recommendation for a client suffering from anemia?",
@@ -12447,7 +12447,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which B vitamin has been shown to lower LDL cholesterol?",
@@ -12463,7 +12463,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Which of the following is a high purine food that should be avoided with gout?",
@@ -12478,7 +12478,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Energy deficiency produces which of the following:",
@@ -12494,7 +12494,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "The recommended dietary component of osteoporosis treatment involves:",
@@ -12509,7 +12509,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "The most common cause of chronic kidney disease (CKD) is:",
@@ -12525,7 +12525,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Aloe vera (aloe barbadensis) is traditionally use for the following condition:",
@@ -12540,7 +12540,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 4,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "The following herb has been shown to relieve symptoms of premenstrual syndrome and menopause",
@@ -12556,7 +12556,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Intestinal absorption of dietary iron may be enhanced by concurrent ingestion of:",
@@ -12571,7 +12571,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "High intakes of zinc will interfere with the absorption and utilization of which mineral(s):",
@@ -12586,7 +12586,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "The most difficult challenge facing a nutritionist or nutrition counselor is to:",
@@ -12602,7 +12602,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "Symptoms of vitamin A overdose include all the following EXCEPT:",
@@ -12618,7 +12618,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "All the following are functions of fat in human health except:",
@@ -12634,7 +12634,7 @@
     "source": "circle_import"
   },
   {
-    "domain": 0,
+    "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
     "question_text": "This type of lipoprotein transports cholesterol from the liver to places in the body where it is needed:",

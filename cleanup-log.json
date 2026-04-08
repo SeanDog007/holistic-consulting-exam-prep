@@ -6,5 +6,1283 @@
       "questionIndex": 813,
       "detail": "Exact duplicate of Q321: \"Within the electron transport system, which of the following are involved in ATP\""
     }
-  ]
+  ],
+  "pass2": {
+    "timestamp": "2026-04-08T14:07:28.984Z",
+    "totalFixes": 209,
+    "breakdown": {
+      "domainAssignments": 122,
+      "tfTypeFixed": 56,
+      "questionMarksAdded": 37,
+      "typosFixed": 1,
+      "tfCasingFixed": 0
+    },
+    "verifiedNoChange": {
+      "nearDuplicates": "7 pairs verified as intentionally different — kept all",
+      "answerKeyRisk": "57 questions verified correct — no inversions found",
+      "anatomyClinical": "15 questions verified factually correct"
+    },
+    "actions": [
+      {
+        "action": "remove-duplicate",
+        "questionIndex": 813,
+        "detail": "Exact duplicate of Q321: \"Within the electron transport system, which of the following are involved in ATP\""
+      },
+      {
+        "action": "assign-domain",
+        "index": 721,
+        "domain": 5,
+        "question": "What are some ways that the internet can be a valuable compo"
+      },
+      {
+        "action": "assign-domain",
+        "index": 722,
+        "domain": 5,
+        "question": "Which of the following are methods for determining if an onl"
+      },
+      {
+        "action": "assign-domain",
+        "index": 723,
+        "domain": 5,
+        "question": "If using information or ideas from an outside source, only i"
+      },
+      {
+        "action": "assign-domain",
+        "index": 724,
+        "domain": 3,
+        "question": "If a particular state restricts individualized recommendatio"
+      },
+      {
+        "action": "assign-domain",
+        "index": 725,
+        "domain": 3,
+        "question": "Which of the following may Holistic Nutrition Professionals "
+      },
+      {
+        "action": "assign-domain",
+        "index": 726,
+        "domain": 3,
+        "question": "Which of the following statements is false?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 727,
+        "domain": 3,
+        "question": "Which of the following is true?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 728,
+        "domain": 3,
+        "question": "Which of the following is true regarding NANP members?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 729,
+        "domain": 3,
+        "question": "Which of the following is a disadvantage of group counseling"
+      },
+      {
+        "action": "assign-domain",
+        "index": 730,
+        "domain": 3,
+        "question": "Which of the following factors has been shown to influence f"
+      },
+      {
+        "action": "assign-domain",
+        "index": 731,
+        "domain": 3,
+        "question": "Which stage of change recognizes a need to change but the pe"
+      },
+      {
+        "action": "assign-domain",
+        "index": 732,
+        "domain": 3,
+        "question": "Which stage of change is seen in clients who have no intenti"
+      },
+      {
+        "action": "assign-domain",
+        "index": 733,
+        "domain": 3,
+        "question": "Which stage of change is seen in clients who believe that ch"
+      },
+      {
+        "action": "assign-domain",
+        "index": 734,
+        "domain": 3,
+        "question": "What is the term used to describe a person’s confidence in t"
+      },
+      {
+        "action": "assign-domain",
+        "index": 735,
+        "domain": 3,
+        "question": "_________ is the true understanding of another’s perspective"
+      },
+      {
+        "action": "assign-domain",
+        "index": 736,
+        "domain": 3,
+        "question": "Which of the following is not a key components of mindful ea"
+      },
+      {
+        "action": "assign-domain",
+        "index": 737,
+        "domain": 5,
+        "question": "A quality research paper should include all the following ex"
+      },
+      {
+        "action": "assign-domain",
+        "index": 738,
+        "domain": 4,
+        "question": "Which of the following is linked to chronic ear infections?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 739,
+        "domain": 4,
+        "question": "Which test is commonly used to detect antibodies in the bloo"
+      },
+      {
+        "action": "assign-domain",
+        "index": 740,
+        "domain": 4,
+        "question": "Which herb has laxative effects?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 741,
+        "domain": 4,
+        "question": "Which food should be avoided during acute intestinal illness"
+      },
+      {
+        "action": "assign-domain",
+        "index": 742,
+        "domain": 5,
+        "question": "When writing a paper, use a block quote if the quote is long"
+      },
+      {
+        "action": "assign-domain",
+        "index": 743,
+        "domain": 1,
+        "question": "Which mineral is particularly known for binding oxalates in "
+      },
+      {
+        "action": "assign-domain",
+        "index": 744,
+        "domain": 1,
+        "question": "Individuals with celiac disease may also have to avoid which"
+      },
+      {
+        "action": "assign-domain",
+        "index": 745,
+        "domain": 1,
+        "question": "Which group of B vitamins are important for regulating homoc"
+      },
+      {
+        "action": "assign-domain",
+        "index": 746,
+        "domain": 3,
+        "question": "If your client storms out of the office when you make recomm"
+      },
+      {
+        "action": "assign-domain",
+        "index": 747,
+        "domain": 2,
+        "question": "Steroid hormones are synthesized from ___________"
+      },
+      {
+        "action": "assign-domain",
+        "index": 748,
+        "domain": 3,
+        "question": "If a client who is not progressing as expected and is very f"
+      },
+      {
+        "action": "assign-domain",
+        "index": 749,
+        "domain": 2,
+        "question": "________ is a vital compound found in every cell of the body"
+      },
+      {
+        "action": "assign-domain",
+        "index": 750,
+        "domain": 1,
+        "question": "Which of the following is a common source of aluminum?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 751,
+        "domain": 2,
+        "question": "Which form of estrogen is the primary form that the body mak"
+      },
+      {
+        "action": "assign-domain",
+        "index": 752,
+        "domain": 2,
+        "question": "Which form of estrogen is the primary form made during pregn"
+      },
+      {
+        "action": "assign-domain",
+        "index": 753,
+        "domain": 2,
+        "question": "Which of the following forms of estrogen is the primary form"
+      },
+      {
+        "action": "assign-domain",
+        "index": 754,
+        "domain": 4,
+        "question": "_____________ is a skin rash triggered by food, environmenta"
+      },
+      {
+        "action": "assign-domain",
+        "index": 755,
+        "domain": 4,
+        "question": "___________ is an infection or irritation of the bronchi. Ca"
+      },
+      {
+        "action": "assign-domain",
+        "index": 756,
+        "domain": 2,
+        "question": "Which of the following produces thyroid releasing hormone (T"
+      },
+      {
+        "action": "assign-domain",
+        "index": 757,
+        "domain": 2,
+        "question": "Which of the following produces thyroid stimulating hormone "
+      },
+      {
+        "action": "assign-domain",
+        "index": 758,
+        "domain": 2,
+        "question": "Which of the following produces T4 and T3?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 759,
+        "domain": 4,
+        "question": "________________ is commonly used as a supplement to help ma"
+      },
+      {
+        "action": "assign-domain",
+        "index": 760,
+        "domain": 1,
+        "question": "Raw foods contains fewer live enzymes because they are activ"
+      },
+      {
+        "action": "assign-domain",
+        "index": 761,
+        "domain": 5,
+        "question": "How can you narrow down a research topic effectively?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 762,
+        "domain": 4,
+        "question": "In patients with Multiple Sclerosis (MS), what is often foun"
+      },
+      {
+        "action": "assign-domain",
+        "index": 763,
+        "domain": 4,
+        "question": "Which of the following is thought to be a contributing facto"
+      },
+      {
+        "action": "assign-domain",
+        "index": 764,
+        "domain": 2,
+        "question": "Which enzymes is used to break down protein and is produced "
+      },
+      {
+        "action": "assign-domain",
+        "index": 765,
+        "domain": 1,
+        "question": "Beets, kale, collards, spinach, and green beans are low oxal"
+      },
+      {
+        "action": "assign-domain",
+        "index": 766,
+        "domain": 4,
+        "question": "Which foods can support hemorrhoids?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 767,
+        "domain": 2,
+        "question": "Which of the following releases gonadal releasing hormone?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 768,
+        "domain": 2,
+        "question": "Which of the following releases follicle stimulating hormone"
+      },
+      {
+        "action": "assign-domain",
+        "index": 769,
+        "domain": 2,
+        "question": "Which of the following releases estrogen and progesterone?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 770,
+        "domain": 2,
+        "question": "What is the role of calcium in muscle contraction in cardiac"
+      },
+      {
+        "action": "assign-domain",
+        "index": 771,
+        "domain": 2,
+        "question": "Which part of the small intestine is primarily responsible f"
+      },
+      {
+        "action": "assign-domain",
+        "index": 772,
+        "domain": 1,
+        "question": "What is annatto, and what is one of its uses?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 773,
+        "domain": 4,
+        "question": "Which of the following can help support and/or prevent urina"
+      },
+      {
+        "action": "assign-domain",
+        "index": 774,
+        "domain": 2,
+        "question": "What is erythropoietin (EPO) and what is its primary functio"
+      },
+      {
+        "action": "assign-domain",
+        "index": 775,
+        "domain": 1,
+        "question": "What effect does cooking vegetables have on glutathione leve"
+      },
+      {
+        "action": "assign-domain",
+        "index": 776,
+        "domain": 2,
+        "question": "What is one of the key roles of the lymphatic system?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 777,
+        "domain": 2,
+        "question": "What are the main functions of the hormone secretin?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 778,
+        "domain": 4,
+        "question": "Long term use of oral contraceptives can contribute to the d"
+      },
+      {
+        "action": "assign-domain",
+        "index": 779,
+        "domain": 4,
+        "question": "Which of the following statements about diverticulitis is tr"
+      },
+      {
+        "action": "assign-domain",
+        "index": 780,
+        "domain": 4,
+        "question": "___________ is characterized by greasy scaling of the skin t"
+      },
+      {
+        "action": "assign-domain",
+        "index": 781,
+        "domain": 1,
+        "question": "What is the best way to avoid food additives such as preserv"
+      },
+      {
+        "action": "assign-domain",
+        "index": 782,
+        "domain": 1,
+        "question": "Which of the following is the most reliable way to identify "
+      },
+      {
+        "action": "assign-domain",
+        "index": 783,
+        "domain": 4,
+        "question": "Which of the following best describes the Jarisch-Herxheimer"
+      },
+      {
+        "action": "assign-domain",
+        "index": 784,
+        "domain": 1,
+        "question": "Nutritional therapies for chronic fatigue syndrome include h"
+      },
+      {
+        "action": "assign-domain",
+        "index": 785,
+        "domain": 2,
+        "question": "Which of the following is true about lymph nodes?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 786,
+        "domain": 2,
+        "question": "Which of the following is true about phagocytes?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 787,
+        "domain": 4,
+        "question": "Which of the following best describes herbal choleretics?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 788,
+        "domain": 4,
+        "question": "Which of the following conditions has Uva Ursi traditionally"
+      },
+      {
+        "action": "assign-domain",
+        "index": 789,
+        "domain": 1,
+        "question": "Which of the following conditions can result from biotin def"
+      },
+      {
+        "action": "assign-domain",
+        "index": 790,
+        "domain": 4,
+        "question": "What nutrient is important to limit with a client who is suf"
+      },
+      {
+        "action": "assign-domain",
+        "index": 791,
+        "domain": 2,
+        "question": "Which of the following is true about the role of digestive e"
+      },
+      {
+        "action": "assign-domain",
+        "index": 792,
+        "domain": 4,
+        "question": "Which of the following types of foods can help strengthen ve"
+      },
+      {
+        "action": "assign-domain",
+        "index": 793,
+        "domain": 1,
+        "question": "Which of the following is a role of the amino acid arginine?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 794,
+        "domain": 1,
+        "question": "Which of the following is a function of glutamine in the hum"
+      },
+      {
+        "action": "assign-domain",
+        "index": 795,
+        "domain": 1,
+        "question": "Which of the following is a role of the amino acid lysine in"
+      },
+      {
+        "action": "assign-domain",
+        "index": 796,
+        "domain": 1,
+        "question": "Which of the following factors can contribute to mild dehydr"
+      },
+      {
+        "action": "assign-domain",
+        "index": 797,
+        "domain": 1,
+        "question": "Which of the following terms on a food label indicates that "
+      },
+      {
+        "action": "assign-domain",
+        "index": 798,
+        "domain": 2,
+        "question": "Which of the following is a function of the trigeminal nerve"
+      },
+      {
+        "action": "assign-domain",
+        "index": 799,
+        "domain": 2,
+        "question": "Which condition is characterized by swelling caused by too m"
+      },
+      {
+        "action": "assign-domain",
+        "index": 800,
+        "domain": 4,
+        "question": "Which of the following factors can increase the risk of deve"
+      },
+      {
+        "action": "assign-domain",
+        "index": 801,
+        "domain": 2,
+        "question": "What is the function of alveoli in the lungs?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 802,
+        "domain": 2,
+        "question": "What is a common result of a deviated septum?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 803,
+        "domain": 1,
+        "question": "_________________ are inorganic salts that are used as prese"
+      },
+      {
+        "action": "assign-domain",
+        "index": 804,
+        "domain": 1,
+        "question": "Cellulose, pectin, and hemicellulose are considered fibers w"
+      },
+      {
+        "action": "assign-domain",
+        "index": 805,
+        "domain": 2,
+        "question": "The hepatic vein is located in the __________________."
+      },
+      {
+        "action": "assign-domain",
+        "index": 806,
+        "domain": 2,
+        "question": "Which of the following is true about Peyer’s patches?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 807,
+        "domain": 1,
+        "question": "Alpha linolenic acid is what type of fatty acid?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 808,
+        "domain": 2,
+        "question": "Erythropoietin hormone is secreted by the ____________"
+      },
+      {
+        "action": "assign-domain",
+        "index": 809,
+        "domain": 2,
+        "question": "The tonsils, adenoids, and spleen are all part of the ______"
+      },
+      {
+        "action": "assign-domain",
+        "index": 810,
+        "domain": 1,
+        "question": "Which of the following does pH measure?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 811,
+        "domain": 2,
+        "question": "Trigeminal pain is located in the ____________ area."
+      },
+      {
+        "action": "assign-domain",
+        "index": 812,
+        "domain": 2,
+        "question": "What is the site of most ATP production within the cells?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 813,
+        "domain": 2,
+        "question": "All the following stimulate food intake, except:"
+      },
+      {
+        "action": "assign-domain",
+        "index": 814,
+        "domain": 1,
+        "question": "What is the normal fasting blood glucose concentration?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 815,
+        "domain": 1,
+        "question": "Which of the following is least likely to break down carbohy"
+      },
+      {
+        "action": "assign-domain",
+        "index": 816,
+        "domain": 1,
+        "question": "Professional health organizations such, as the American Hear"
+      },
+      {
+        "action": "assign-domain",
+        "index": 817,
+        "domain": 2,
+        "question": "Which bodily organ plays a key role in detoxification?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 818,
+        "domain": 2,
+        "question": "What is the term for deficient gastric acid secretion (low s"
+      },
+      {
+        "action": "assign-domain",
+        "index": 819,
+        "domain": 2,
+        "question": "Increased calcium resorption in kidney tubules is stimulated"
+      },
+      {
+        "action": "assign-domain",
+        "index": 820,
+        "domain": 1,
+        "question": "Which of the following gluten free grains may need to be rem"
+      },
+      {
+        "action": "assign-domain",
+        "index": 821,
+        "domain": 1,
+        "question": "Which of the following nutrients helps to regulate cholester"
+      },
+      {
+        "action": "assign-domain",
+        "index": 822,
+        "domain": 4,
+        "question": "Which of the following would not be a well-supported recomme"
+      },
+      {
+        "action": "assign-domain",
+        "index": 823,
+        "domain": 1,
+        "question": "Which B vitamin has been shown to lower LDL cholesterol?"
+      },
+      {
+        "action": "assign-domain",
+        "index": 824,
+        "domain": 1,
+        "question": "Which of the following is a high purine food that should be "
+      },
+      {
+        "action": "assign-domain",
+        "index": 825,
+        "domain": 1,
+        "question": "Energy deficiency produces which of the following:"
+      },
+      {
+        "action": "assign-domain",
+        "index": 826,
+        "domain": 4,
+        "question": "The recommended dietary component of osteoporosis treatment "
+      },
+      {
+        "action": "assign-domain",
+        "index": 827,
+        "domain": 4,
+        "question": "The most common cause of chronic kidney disease (CKD) is:"
+      },
+      {
+        "action": "assign-domain",
+        "index": 828,
+        "domain": 4,
+        "question": "Aloe vera (aloe barbadensis) is traditionally use for the fo"
+      },
+      {
+        "action": "assign-domain",
+        "index": 829,
+        "domain": 4,
+        "question": "The following herb has been shown to relieve symptoms of pre"
+      },
+      {
+        "action": "assign-domain",
+        "index": 830,
+        "domain": 1,
+        "question": "Intestinal absorption of dietary iron may be enhanced by con"
+      },
+      {
+        "action": "assign-domain",
+        "index": 831,
+        "domain": 1,
+        "question": "High intakes of zinc will interfere with the absorption and "
+      },
+      {
+        "action": "assign-domain",
+        "index": 832,
+        "domain": 3,
+        "question": "The most difficult challenge facing a nutritionist or nutrit"
+      },
+      {
+        "action": "assign-domain",
+        "index": 833,
+        "domain": 1,
+        "question": "Symptoms of vitamin A overdose include all the following EXC"
+      },
+      {
+        "action": "assign-domain",
+        "index": 834,
+        "domain": 1,
+        "question": "All the following are functions of fat in human health excep"
+      },
+      {
+        "action": "assign-domain",
+        "index": 835,
+        "domain": 1,
+        "question": "This type of lipoprotein transports cholesterol from the liv"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 33,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 62,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 111,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 123,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 142,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 151,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 203,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 209,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 237,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 242,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 251,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 270,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 332,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 334,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 345,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 349,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 351,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 381,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 383,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 391,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 414,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 415,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 417,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 418,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 419,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 420,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 421,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 422,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 423,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 429,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 433,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 440,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 459,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 520,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 532,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 571,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 572,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 585,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 634,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 661,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 662,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 670,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 678,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 679,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 680,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 686,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 687,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 694,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 695,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 696,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 716,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 723,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 746,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 748,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 760,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "fix-question-type",
+        "index": 765,
+        "from": "multiple_choice",
+        "to": "true_false"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 18,
+        "before": "g the way.",
+        "after": "g the way?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 23,
+        "before": "nutrients.",
+        "after": "nutrients?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 41,
+        "before": " oxalates.",
+        "after": " oxalates?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 47,
+        "before": "pplements:",
+        "after": "pplements?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 74,
+        "before": "tioxidant.",
+        "after": "tioxidant?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 123,
+        "before": "t the day.",
+        "after": "t the day?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 129,
+        "before": "bsorption.",
+        "after": "bsorption?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 167,
+        "before": "nce (RDA)\"",
+        "after": "ce (RDA)\"?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 185,
+        "before": "lood cells",
+        "after": "ood cells?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 271,
+        "before": "compounds.",
+        "after": "compounds?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 273,
+        "before": "imination.",
+        "after": "imination?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 276,
+        "before": "st answer.",
+        "after": "st answer?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 303,
+        "before": "e or bile.",
+        "after": "e or bile?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 313,
+        "before": "lood cell.",
+        "after": "lood cell?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 314,
+        "before": "reactions.",
+        "after": "reactions?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 331,
+        "before": "he stomach",
+        "after": "e stomach?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 352,
+        "before": "of enzymes",
+        "after": "f enzymes?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 354,
+        "before": "n its own.",
+        "after": "n its own?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 416,
+        "before": "s not true",
+        "after": " not true?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 417,
+        "before": "formation.",
+        "after": "formation?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 435,
+        "before": "er adults.",
+        "after": "er adults?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 437,
+        "before": "ell-being.",
+        "after": "ell-being?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 438,
+        "before": "of people.",
+        "after": "of people?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 451,
+        "before": "solutions.",
+        "after": "solutions?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 452,
+        "before": "successes.",
+        "after": "successes?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 458,
+        "before": " behavior.",
+        "after": " behavior?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 468,
+        "before": "onditions.",
+        "after": "onditions?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 482,
+        "before": "or change.",
+        "after": "or change?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 515,
+        "before": "end to do.",
+        "after": "end to do?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 655,
+        "before": "c effects.",
+        "after": "c effects?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 683,
+        "before": "Wikipedia.",
+        "after": "Wikipedia?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 687,
+        "before": "sserts it.",
+        "after": "sserts it?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 688,
+        "before": "tant to...",
+        "after": "tant to..?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 689,
+        "before": "tant to...",
+        "after": "tant to..?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 732,
+        "before": "st change.",
+        "after": "st change?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 742,
+        "before": "___ words.",
+        "after": "___ words?"
+      },
+      {
+        "action": "add-question-mark",
+        "index": 818,
+        "before": "ach acid).",
+        "after": "ach acid)?"
+      },
+      {
+        "action": "fix-typo",
+        "index": 144,
+        "option": 3,
+        "before": "Monk fruit extrack",
+        "after": "Monk fruit extract"
+      }
+    ]
+  }
 }
