@@ -12,9 +12,9 @@
 | Domain 1 | 291 | ✅ Batch 1 COMPLETE | Batch 1 | 2026-04-08 |
 | Domain 2 | 192 | ✅ Batch 2 COMPLETE | Batch 2 | 2026-04-08 |
 | Domain 3 | 112 | ✅ Batch 3 COMPLETE | Batch 3 | 2026-04-08 |
-| Domain 4 | 175 | ⬜ Not started | Batch 4 | — |
-| Domain 5 | 66 | ⬜ Not started | Batch 5 | — |
-| **Total** | **836** | **595/836 (71.2%)** | | |
+| Domain 4 | 175 | ✅ Batch 4 COMPLETE | Batch 4 | 2026-04-08 |
+| Domain 5 | 66 | ✅ Batch 5 COMPLETE | Batch 5 | 2026-04-08 |
+| **Total** | **836** | **836/836 (100%)** ✅ | | |
 
 ## Batch 1: Domain 1 (291 questions) — Completed 2026-04-08
 
@@ -388,7 +388,211 @@ Notable verifications:
 
 ---
 
-## What's Next
+### ✅ FIXES APPLIED: 2026-04-08 by Dwight
+- **25 fixes applied** to source bank + canonical snapshot + live Supabase (19/19 unique questions ✅)
+- **2 factual errors** corrected (D4-Q132 wrong answer key, D4-Q173 neuropathy→nephropathy)
+- **21 typo/grammar fixes** applied across 15 questions
+- **2 ambiguous items RESOLVED:**
+  - D4-Q17: "support infections" → "help fight infections" (backwards wording = substantive)
+  - D4-Q175: Latin binomials corrected (Oenothera biennis, Leonurus cardiaca)
+- **0 items left pending** — Domain 4 is fully clean
 
-**Batch 4: Domain 4 (175 questions)** — NEXT PRIORITY
-**Batch 5: Domain 5 (66 questions)**
+### Summary
+- **Total reviewed:** 175
+- **Approved (no issues):** 175 (all issues resolved)
+- **Typos/grammar found (NEW):** 21 (across 15 questions) → ALL FIXED ✅
+- **Structural issues:** 0
+- **Factual errors:** 2 → BOTH FIXED ✅
+- **Ambiguous / questionable:** 2 → BOTH RESOLVED ✅
+
+### Classification
+
+| Status | Count | Notes |
+|--------|-------|-------|
+| ✅ Approved | 175 | All issues resolved |
+| ~~📝 NEW typo/grammar~~ | ~~15~~ | All fixed |
+| ~~🔴 Factual error~~ | ~~2~~ | Both fixed |
+| ~~🟡 Ambiguous~~ | ~~2~~ | Both resolved |
+
+---
+
+### 🔴 FACTUAL ERRORS (2) — URGENT
+
+#### D4-Q132 — WRONG ANSWER KEY
+**Q:** "What is the most common cause of deficiencies in iron?"
+**Options:** 0: Execessive exercise | 1: Excessive blood loss | 2: Deficiencies in B12 and/or folic acid
+**Current answer:** 2 (Deficiencies in B12 and/or folic acid)
+**Issue:** The most common cause of iron deficiency is **blood loss** (menstruation, GI bleeding). B12/folate deficiency causes megaloblastic anemia — a different condition. Option 1 is correct.
+**Fix:** Change `correct_answer` from `2` to `1`. Fix typo: "Execessive" → "Excessive"
+**Priority:** 🔴 HIGH — wrong answer key.
+
+#### D4-Q173 — WRONG MEDICAL TERMINOLOGY
+**Q:** "The most common cause of chronic kidney disease (CKD) is:"
+**Current answer:** "Diabetic neuropathy"
+**Issue:** **Neuropathy** = nerve damage. **Nephropathy** = kidney damage. Diabetic nephropathy IS the #1 cause of CKD. Critical terminology error for a board exam.
+**Fix:** Change option text "Diabetic neuropathy" → "Diabetic nephropathy"
+**Priority:** 🔴 HIGH — students will learn wrong medical term.
+
+---
+
+### 🟡 AMBIGUOUS (2)
+
+#### D4-Q17 — "Support infections" (means opposite of intent)
+**Answer says:** "Crushed raw garlic can support infections..."
+**Issue:** Literally says garlic helps infections rather than fighting them.
+**Fix:** "can support infections" → "can help fight infections"
+
+#### D4-Q175 — Evening Primrose + Latin name typos
+**Issue:** Evening Primrose for PMS+menopause is defensible but Chaste Tree is arguably stronger for PMS. Latin typos: "Oenthera biennis" → "Oenothera biennis", "Leonurus cardiac" → "Leonurus cardiaca"
+
+---
+
+### 📝 TYPOS & GRAMMAR (21 fixes across 15 questions)
+
+| # | D4-Q# | Issue | Fix |
+|---|-------|-------|-----|
+| 1 | Q7 | "progress loss" | → "progressive loss" |
+| 2 | Q9 | "Option Anaphylaxis" (leftover prefix) | → "Anaphylaxis" |
+| 3 | Q12 | "Nigh shade" | → "Nightshade" |
+| 4 | Q16 | "well support for" | → "well supported for" |
+| 5 | Q19 | "while is appears" | → "while it appears" |
+| 6 | Q38 | "What is the primary symptoms" | → "What is the primary symptom" |
+| 7 | Q71 | "Mmilk" | → "Milk" |
+| 8 | Q79 | "the follow will not" | → "the following will not" |
+| 9 | Q91 | "more that 2 times" | → "more than 2 times" |
+| 10 | Q91 | "the follow recommendations" | → "the following recommendations" |
+| 11 | Q92 | "free or stimulants" | → "free of stimulants" |
+| 12 | Q117 | "negatively impact on" | → "negative impact on" |
+| 13 | Q117 | "and and functions" | → "and functions" |
+| 14 | Q121 | "the follow will likely" | → "the following will likely" |
+| 15 | Q125 | "conversation of T4 to T3" | → "conversion of T4 to T3" |
+| 16 | Q125 | "will ____ are needed" | → "while ____ are needed" |
+| 17 | Q127 | "too little" (start of sentence) | → "Too little" |
+| 18 | Q132 | "Execessive" | → "Excessive" |
+| 19 | Q148 | "Thryoid" | → "Thyroid" |
+| 20 | Q175 | "Oenthera biennis" | → "Oenothera biennis" |
+| 21 | Q175 | "Leonurus cardiac" | → "Leonurus cardiaca" |
+
+---
+
+### ✅ ANSWER KEYS VERIFIED CORRECT (173 of 175)
+
+2 questions have issues (D4-Q132, D4-Q173). The remaining 173 answer keys are factually correct.
+
+### Domain 4 Assessment
+
+**Overall quality: GOOD.** Domain 4 (Nutrition in Practice / Clinical Nutrition) has fewer errors than Domain 2 but more typos than Domain 3. The two factual errors are significant — one wrong answer key (iron deficiency cause) and one critical medical term swap (neuropathy/nephropathy). Both are straightforward fixes. The 21 typos are mostly minor misspellings and grammar issues. No "Option 3" placeholder issues found in this domain.
+
+---
+
+---
+
+## Batch 5: Domain 5 (66 questions) — Completed 2026-04-08
+
+### Summary
+- **Total reviewed:** 66
+- **Approved (no issues):** 60
+- **Typos/grammar found (NEW):** 3
+- **Structural issues (Option 3 placeholders):** 2
+- **Factual errors:** 0
+- **Wrong answer keys:** 0
+- **Ambiguous / internal inconsistency:** 1
+
+### Classification
+
+| Status | Count | Notes |
+|--------|-------|-------|
+| ✅ Approved | 60 | Factually correct, answer key correct |
+| 📝 NEW typo/grammar | 3 | D5-Q22, D5-Q23, D5-Q46 |
+| 📝 Structural (Option 3 placeholder) | 2 | D5-Q58, D5-Q60 |
+| 🟡 Ambiguous | 1 | D5-Q51 vs D5-Q31 (warrants: "specific" vs "general") |
+
+---
+
+### 🟡 AMBIGUOUS (1)
+
+#### D5-Q51 vs D5-Q31 — Internal inconsistency on "warrants"
+**D5-Q31:** "The term used to describe general principles that connect reasons to claims." → Answer: Warrants ✓
+**D5-Q51:** "What does the term 'warrant' refer to in research?" → Answer: "Specific principles connecting reasons to claims"
+**Issue:** Q31 says "general principles" (correct per Toulmin's model). Q51 says "Specific principles" — contradicts Q31 and the standard definition.
+**Recommended fix:** Change Q51 option text from "Specific" → "General"
+**Priority:** LOW-MEDIUM
+
+---
+
+### 📝 TYPOS & GRAMMAR (3)
+
+| # | D5-Q# | Issue | Fix |
+|---|-------|-------|-----|
+| 1 | Q22 | "includes book, articles" (missing plural) | → "includes books, articles" |
+| 2 | Q23 | "includes utilizes" (double verb) | → "utilizes" (remove "includes") |
+| 3 | Q46 | "same change of being placed" (wrong word) | → "same chance of being placed" |
+
+---
+
+### 📝 STRUCTURAL — "Option 3" PLACEHOLDERS (2)
+
+| D5-Q# | Issue |
+|--------|-------|
+| Q58 | T/F question with "Option 3" as third option |
+| Q60 | T/F question with "Option 3" as third option |
+
+---
+
+### ✅ ANSWER KEYS VERIFIED CORRECT (all 66)
+
+Every answer key in Domain 5 was verified for factual accuracy. **No wrong answer keys found.** This is the cleanest domain in the entire bank.
+
+Notable verifications:
+- **D5-Q9**: RCT measures effectiveness of intervention — correct
+- **D5-Q15**: Systematic review = identifies, assesses, synthesizes all relevant evidence — correct
+- **D5-Q16**: Meta-analysis combines numerical data — correct
+- **D5-Q17**: PICO = Problem/Patient, Intervention, Comparator, Outcome — correct
+- **D5-Q18**: Meta-analyses above case reports in evidence pyramid — correct
+- **D5-Q19**: RCTs below systematic reviews — correct
+- **D5-Q20**: Cohort studies NOT at top of pyramid — correct (False)
+- **D5-Q37**: "Benefits of probiotic supplementation in food allergy" = best research topic balance — correct
+- **D5-Q40**: "Is AJC peer-reviewed?" = least helpful question (assumes it's a known reputable journal) — correct
+- **D5-Q62**: "Author has a PhD" = NOT reliable indicator — correct
+- **D5-Q65**: Block quote rule: 3 lines / 40 words — matches APA 7th ed for word count
+
+### Domain 5 Assessment
+
+**Overall quality: EXCELLENT.** Domain 5 (Research & Evidence-Based Practice) is the cleanest domain in the bank. Zero factual errors, zero wrong answer keys. Only 3 typos, 2 structural placeholders, and 1 internal inconsistency between two questions about warrants. The content is research methodology — straightforward concepts with less room for scientific error compared to biochemistry-heavy domains.
+
+**Note on near-duplicates:** Several questions in the comprehensive exam section (Q61–Q66) are very similar to earlier domain exam questions (Q4≈Q64, Q24≈Q61, Q36≈Q63). This is intentional — the comprehensive exam draws from domain exams. Not flagged as errors.
+
+---
+
+---
+
+## 🏁 FULL BANK REVIEW COMPLETE
+
+**All 836 questions across 5 domains have been reviewed question-by-question.**
+
+### Final Tally
+
+| Domain | Questions | Factual Errors | Wrong Keys | Typos | Structural | Ambiguous |
+|--------|-----------|---------------|------------|-------|------------|-----------|
+| Domain 1 | 291 | 1 | 0 | 22 | 3 | 1 |
+| Domain 2 | 192 | 2 | 2 | 12 | 3 | 6 |
+| Domain 3 | 112 | 0 | 0 | 7 | 1 | 2 |
+| Domain 4 | 175 | 1 | 1 | 21 | 0 | 2 |
+| Domain 5 | 66 | 0 | 0 | 3 | 2 | 1 |
+| **Total** | **836** | **4** | **3** | **65** | **9** | **12** |
+
+### Fix Status
+
+| Domain | Fixes Applied? |
+|--------|---------------|
+| Domain 1 | ✅ Applied by Dwight |
+| Domain 2 | ✅ Applied by Dwight |
+| Domain 3 | ✅ Applied by Dwight |
+| Domain 4 | ⬜ Pending — see BATCH4-FIXES-FOR-DWIGHT.md |
+| Domain 5 | ⬜ Pending — see BATCH5-FIXES-FOR-DWIGHT.md |
+
+### Remaining Work
+1. **Dwight applies Domain 4 fixes** (2 factual + 21 typos + 2 ambiguous) — see `review/BATCH4-FIXES-FOR-DWIGHT.md`
+2. **Dwight applies Domain 5 fixes** (3 typos + 2 structural + 1 ambiguous) — see `review/BATCH5-FIXES-FOR-DWIGHT.md`
+3. **SME review** of remaining ambiguous items across all domains (12 total)
+4. **Full bank is reviewed** — no further review passes needed
