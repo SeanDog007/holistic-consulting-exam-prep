@@ -292,23 +292,32 @@ Notable verifications:
 
 ## Batch 3: Domain 3 (112 questions) — Completed 2026-04-08
 
+### ✅ FIXES APPLIED: 2026-04-08 by Dwight
+- **10 fixes applied** to source bank + canonical snapshot + live Supabase (10/10 ✅)
+- **7 typo/grammar fixes** applied
+- **1 structural fix** (Option 3 placeholder removed)
+- **2 ambiguous items RESOLVED:**
+  - D3-Q36: Reworded stem "changing the environment" → "changing harmful thoughts and behaviors" (matches CBT)
+  - D3-Q44: Replaced "Reflective listening" (verbal) → "Facial expressions" (nonverbal)
+- **0 items left pending** — Domain 3 is fully clean
+
 ### Summary
 - **Total reviewed:** 112
 - **Approved (no issues):** 101
-- **Typos/grammar found (NEW):** 7
-- **Structural issues (Option 3 placeholders):** 1
+- **Typos/grammar found (NEW):** 7 → ALL FIXED ✅
+- **Structural issues (Option 3 placeholders):** 1 → FIXED ✅
 - **Factual errors:** 0
-- **Ambiguous / questionable:** 2
+- **Ambiguous / questionable:** 2 → BOTH RESOLVED ✅
 - **Wrong answer keys:** 0
 
 ### Classification
 
 | Status | Count | Notes |
 |--------|-------|-------|
-| ✅ Approved | 101 | Factually correct, answer key correct |
-| 📝 NEW typo/grammar | 7 | See detailed list below |
-| 📝 Structural (Option 3 placeholder) | 1 | D3-Q12 |
-| 🟡 Ambiguous | 2 | D3-Q36, D3-Q44 |
+| ✅ Approved | 112 | All issues resolved |
+| ~~📝 NEW typo/grammar~~ | ~~7~~ | All fixed |
+| ~~📝 Structural~~ | ~~1~~ | Fixed |
+| ~~🟡 Ambiguous~~ | ~~2~~ | Both resolved |
 
 ---
 

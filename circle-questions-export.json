@@ -6306,7 +6306,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
-    "question_text": "Holistic Nutrition Professionals can make recommendations for dietary supplements and herb and advise their clients about taking these products.",
+    "question_text": "Holistic Nutrition Professionals can make recommendations for dietary supplements and herbs and advise their clients about taking these products.",
     "question_type": "true_false",
     "options": [
       "True",
@@ -6395,8 +6395,7 @@
     "question_type": "multiple_choice",
     "options": [
       "True",
-      "False",
-      "Option 3"
+      "False"
     ],
     "correct_answer": 0,
     "difficulty": "medium",
@@ -6603,7 +6602,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
-    "question_text": "Indicating to a client that everything will be fine unlikely to be productive because it can belittle the client and is not realistic.",
+    "question_text": "Indicating to a client that everything will be fine is unlikely to be productive because it can belittle the client and is not realistic.",
     "question_type": "true_false",
     "options": [
       "True",
@@ -6617,7 +6616,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
-    "question_text": "You are meeting with a client that is resistance to change. What is the best approach to take?",
+    "question_text": "You are meeting with a client that is resistant to change. What is the best approach to take?",
     "question_type": "multiple_choice",
     "options": [
       "Provide the client is a list of recommendations and ignore the fact that they are not ready to make a change",
@@ -6753,7 +6752,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
-    "question_text": "What type of therapy is focused on changing the environment?",
+    "question_text": "What type of therapy is focused on changing harmful thoughts and behaviors?",
     "question_type": "multiple_choice",
     "options": [
       "Cognitive Behavioral Therapy",
@@ -6879,7 +6878,7 @@
     "options": [
       "Good posture",
       "Eye contact",
-      "Reflective listening",
+      "Facial expressions",
       "All answers are correct"
     ],
     "correct_answer": 3,
@@ -7058,7 +7057,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 3",
-    "question_text": "The degree of hunger can influence food purchases and make consumers more like to make impulse purchases. What is one method to prevent this?",
+    "question_text": "The degree of hunger can influence food purchases and make consumers more likely to make impulse purchases. What is one method to prevent this?",
     "question_type": "multiple_choice",
     "options": [
       "Do not shop when hungry",
@@ -7212,7 +7211,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 3",
-    "question_text": "Which of the following is a key components of attending behavior?",
+    "question_text": "Which of the following is a key component of attending behavior?",
     "question_type": "multiple_choice",
     "options": [
       "Eye contact",
@@ -7498,7 +7497,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 3",
-    "question_text": "What behavior change technique includes the counselor and client working together to identify a barriers to change and brainstorming possible solutions?",
+    "question_text": "What behavior change technique includes the counselor and client working together to identify barriers to change and brainstorming possible solutions?",
     "question_type": "multiple_choice",
     "options": [
       "Problem solving",
@@ -12591,7 +12590,7 @@
     "options": [
       "Classify individuals",
       "Assess nutritional status",
-      "Motivate behavior medication",
+      "Motivate behavior modification",
       "Recommend solutions"
     ],
     "correct_answer": 2,
