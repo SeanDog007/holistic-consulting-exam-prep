@@ -1,0 +1,32 @@
+[
+  {
+    "d5q": 22,
+    "desc": "Fix plural: \"includes book\" → \"includes books\"",
+    "category": "typo"
+  },
+  {
+    "d5q": 23,
+    "desc": "Fix double verb + awkward phrasing: consolidated into clean single sentence",
+    "category": "typo"
+  },
+  {
+    "d5q": 46,
+    "desc": "Fix typo: \"change\" → \"chance\"",
+    "category": "typo"
+  },
+  {
+    "d5q": 51,
+    "desc": "Fix inconsistency: \"Specific principles\" → \"General principles\" (matches Q31 + Toulmin's model)",
+    "category": "ambiguous-resolved"
+  },
+  {
+    "d5q": 58,
+    "desc": "Remove placeholder \"Option 3\" from T/F question",
+    "category": "structural"
+  },
+  {
+    "d5q": 60,
+    "desc": "Remove placeholder \"Option 3\" from T/F question",
+    "category": "structural"
+  }
+]

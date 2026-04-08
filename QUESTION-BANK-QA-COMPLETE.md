@@ -21,7 +21,8 @@ This file should be treated as the baseline source for future imports, edits, an
 - **Domain 0:** 0
 
 ## What Was Completed
-This QA cycle included:
+
+### Phase 1: Structural QA
 - removal of exact duplicates
 - duplicate-option cleanup
 - correction of known answer-key errors
@@ -31,6 +32,16 @@ This QA cycle included:
 - assignment of formerly unassigned domain-0 questions
 - conversion of true/false items to proper `true_false` type where applicable
 - sync of approved fixes to the live Supabase `questions` table
+
+### Phase 2: Full-Bank Factual Review (836/836 questions — 100% complete)
+- **All 836 questions reviewed question-by-question** across 5 domains
+- Domain 1 (291): reviewed + fixes applied ✅
+- Domain 2 (192): reviewed + fixes applied ✅
+- Domain 3 (112): reviewed + fixes applied ✅
+- Domain 4 (175): reviewed + fixes applied ✅ (25 fixes — 2026-04-08)
+- Domain 5 (66): reviewed + fixes applied ✅ (6 fixes — 2026-04-08)
+- **Total issues found:** 4 factual errors, 3 wrong answer keys, 65 typos, 9 structural, 12 ambiguous
+- **ALL fixes applied across ALL 5 domains.** Review cycle fully closed.
 
 ## Operational Status
 At the end of this cycle:

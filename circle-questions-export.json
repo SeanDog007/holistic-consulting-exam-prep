@@ -349,7 +349,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 1",
-    "question_text": "Which of the following best describes what the word \u201cessential\u201d means when it refers to essential nutrients?",
+    "question_text": "Which of the following best describes what the word “essential” means when it refers to essential nutrients?",
     "question_type": "multiple_choice",
     "options": [
       "These nutrients must be obtained from the diet because the body does not produce them endogenously or in adequate amounts",
@@ -363,7 +363,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 1",
-    "question_text": "How many amino acids are considered\u00a0essential and must be obtained from the diet?",
+    "question_text": "How many amino acids are considered essential and must be obtained from the diet?",
     "question_type": "multiple_choice",
     "options": [
       "4",
@@ -408,7 +408,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 1",
-    "question_text": "What is considered a \u201ccomplete\u201d protein?",
+    "question_text": "What is considered a “complete” protein?",
     "question_type": "multiple_choice",
     "options": [
       "The protein source must contain all nine essential amino acids",
@@ -423,7 +423,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 1",
-    "question_text": "What is the term used to describe nonessential amino acids that are \u201cEssential\u201d under certain circumstances such during serious illness or injury?",
+    "question_text": "What is the term used to describe nonessential amino acids that are “Essential” under certain circumstances such during serious illness or injury?",
     "question_type": "multiple_choice",
     "options": [
       "Conditionally essential",
@@ -453,7 +453,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 1",
-    "question_text": "Which of the following foods would be\u00a0best for supporting phase 2 detoxification?",
+    "question_text": "Which of the following foods would be best for supporting phase 2 detoxification?",
     "question_type": "multiple_choice",
     "options": [
       "Bone broth",
@@ -694,7 +694,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 2",
-    "question_text": "What is the name given to a group of proteins found in high amounts in legumes and grains that are considered an \u201canti-nutrient\u201d as they can interfere with the digestion of nutrients like calcium, iron, zinc, and phosphorous?",
+    "question_text": "What is the name given to a group of proteins found in high amounts in legumes and grains that are considered an “anti-nutrient” as they can interfere with the digestion of nutrients like calcium, iron, zinc, and phosphorous?",
     "question_type": "multiple_choice",
     "options": [
       "Lectins",
@@ -3982,7 +3982,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 1",
-    "question_text": "Which of the following terms describes an imbalance or disruption in the\u00a0diversity and composition of the gut microbiota and is often associated with gastrointestinal symptoms and increased risk of various health conditions?",
+    "question_text": "Which of the following terms describes an imbalance or disruption in the diversity and composition of the gut microbiota and is often associated with gastrointestinal symptoms and increased risk of various health conditions?",
     "question_type": "multiple_choice",
     "options": [
       "GERD",
@@ -4656,7 +4656,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 2",
-    "question_text": "Which part of the autonomic nervous system is considered the \u201cfight or flight\u201d state?",
+    "question_text": "Which part of the autonomic nervous system is considered the “fight or flight” state?",
     "question_type": "multiple_choice",
     "options": [
       "Sympathetic",
@@ -4671,7 +4671,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 2",
-    "question_text": "What part of the autonomic nervous system is considered the \u201crest and digest\u201d state and is responsible for the process of digestion, repair, restoration, and rejuvenation?",
+    "question_text": "What part of the autonomic nervous system is considered the “rest and digest” state and is responsible for the process of digestion, repair, restoration, and rejuvenation?",
     "question_type": "multiple_choice",
     "options": [
       "Sympathetic",
@@ -4686,7 +4686,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 2",
-    "question_text": "What is the stomach\u2019s optimal pH range?",
+    "question_text": "What is the stomach’s optimal pH range?",
     "question_type": "multiple_choice",
     "options": [
       "1.5 - 2.5",
@@ -5037,7 +5037,7 @@
     "question_text": "Which of the following enzymes initiates and regulates fatty acid synthesis?",
     "question_type": "multiple_choice",
     "options": [
-      "Enoyl-ACP reductase and \u03b2-hydroyacyl-ACP dehydratase",
+      "Enoyl-ACP reductase and β-hydroyacyl-ACP dehydratase",
       "Acetyl carboxylase and fatty acid synthase",
       "Glucose-6-phosphate dehydrogenase and gluconolactonase"
     ],
@@ -5082,7 +5082,7 @@
     "question_text": "A build-up of cholesterol in a cell may:",
     "question_type": "multiple_choice",
     "options": [
-      "decrease the cell\u2019s ability to absorb the cholesterol in the blood",
+      "decrease the cell’s ability to absorb the cholesterol in the blood",
       "inhibit lipoprotein lipase in the blood.",
       "increase the amount of lipids and chylomicrons."
     ],
@@ -6252,8 +6252,8 @@
     "question_text": "Which of the following is not true?",
     "question_type": "multiple_choice",
     "options": [
-      "The definition of \u201cMedical Nutrition Therapy\u201d may differ from state to state.",
-      "Each state has exemptions regarding \u201cgeneral nutrition information.\u201d",
+      "The definition of “Medical Nutrition Therapy” may differ from state to state.",
+      "Each state has exemptions regarding “general nutrition information.”",
       "Holistic Nutrition Professionals can be licensed in some states."
     ],
     "correct_answer": 2,
@@ -6278,7 +6278,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
-    "question_text": "A meal plan is not considered \u201cindividualized\u201d nutrition service.",
+    "question_text": "A meal plan is not considered “individualized” nutrition service.",
     "question_type": "true_false",
     "options": [
       "True",
@@ -6348,7 +6348,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
-    "question_text": "Holistic Nutrition Professionals teach a whole, organic, chemical free food approach to health while RD\u2019s are encouraged to teach the USDA\u2019s MyPlate approach set by the government.",
+    "question_text": "Holistic Nutrition Professionals teach a whole, organic, chemical free food approach to health while RD’s are encouraged to teach the USDA’s MyPlate approach set by the government.",
     "question_type": "true_false",
     "options": [
       "True",
@@ -6391,7 +6391,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 1",
-    "question_text": "A Holistic Nutrition Professional\u2019s job is to bring unbiased health and nutrition information to friends, neighbors, associates, and the media.",
+    "question_text": "A Holistic Nutrition Professional’s job is to bring unbiased health and nutrition information to friends, neighbors, associates, and the media.",
     "question_type": "multiple_choice",
     "options": [
       "True",
@@ -6513,7 +6513,7 @@
     "question_text": "Which of the following is not true about the NANP Code of Ethics?",
     "question_type": "multiple_choice",
     "options": [
-      "NANP members can use the term Board Certified in Holistic Nutrition\u00ae or BCHN\u00ae without the express written permission and approval of NANP.",
+      "NANP members can use the term Board Certified in Holistic Nutrition® or BCHN® without the express written permission and approval of NANP.",
       "An NANP member will seek consultation in doubtful or difficult cases, and whenever it appears that the services of other professionals are warranted to provide more complete or better quality advice.",
       "NANP members will oppose without hesitation the illegal or unethical conduct of fellow members."
     ],
@@ -6889,7 +6889,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 2",
-    "question_text": "Empathy is the true understanding of another\u2019s perspective and experience without judging, criticizing, or blaming.",
+    "question_text": "Empathy is the true understanding of another’s perspective and experience without judging, criticizing, or blaming.",
     "question_type": "true_false",
     "options": [
       "True",
@@ -7088,7 +7088,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 3",
-    "question_text": "If a client is \u201cnot ready\u201d to implement physical activity and seems resistant to the idea, what is an appropriate step a counselor can take?",
+    "question_text": "If a client is “not ready” to implement physical activity and seems resistant to the idea, what is an appropriate step a counselor can take?",
     "question_type": "multiple_choice",
     "options": [
       "Summarize benefits of physical activity",
@@ -7272,7 +7272,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 3",
-    "question_text": "What phase in the counseling interview process includes assessing the client\u2019s readiness to change?",
+    "question_text": "What phase in the counseling interview process includes assessing the client’s readiness to change?",
     "question_type": "multiple_choice",
     "options": [
       "Exploration/Education",
@@ -7287,7 +7287,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 3",
-    "question_text": "What phase in the counseling interview process includes tailoring the intervention to the client\u2019s motivation level?",
+    "question_text": "What phase in the counseling interview process includes tailoring the intervention to the client’s motivation level?",
     "question_type": "multiple_choice",
     "options": [
       "Exploration/Education",
@@ -7392,7 +7392,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 3",
-    "question_text": "What domain of the nutrition care process includes the client\u2019s age, health history, and living situation?",
+    "question_text": "What domain of the nutrition care process includes the client’s age, health history, and living situation?",
     "question_type": "multiple_choice",
     "options": [
       "Client history",
@@ -7437,7 +7437,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 3",
-    "question_text": "Which dietary assessment tool/procedure is convenient and quick but relies on memory and may not represent the client\u2019s usual diet?",
+    "question_text": "Which dietary assessment tool/procedure is convenient and quick but relies on memory and may not represent the client’s usual diet?",
     "question_type": "multiple_choice",
     "options": [
       "Food frequency questionnaire",
@@ -7452,7 +7452,7 @@
     "domain": 3,
     "topic": "Counseling, Ethics, and Scope of Practice",
     "exam_source": "Domain 3 Exam 3",
-    "question_text": "Which dietary assessment tool/procedure provides an overall picture of the client\u2019s diet but does not give a clear picture as to what their actual meal pattern is?",
+    "question_text": "Which dietary assessment tool/procedure provides an overall picture of the client’s diet but does not give a clear picture as to what their actual meal pattern is?",
     "question_type": "multiple_choice",
     "options": [
       "Food frequency questionnaire",
@@ -9342,7 +9342,7 @@
     "domain": 4,
     "topic": "Nutrition in Practice",
     "exam_source": "Domain 4 Exam 3",
-    "question_text": "Most urinary tract infections are caused by the\u00a0________ bacterium while other risk factors are pregnancy, menopause, and sexual intercourse.",
+    "question_text": "Most urinary tract infections are caused by the ________ bacterium while other risk factors are pregnancy, menopause, and sexual intercourse.",
     "question_type": "multiple_choice",
     "options": [
       "Klebsiella pneumoniae",
@@ -10032,7 +10032,7 @@
     "question_type": "multiple_choice",
     "options": [
       "To steal and pass off the ideas or words of another as your own",
-      "To use an author\u2019s production without crediting the source",
+      "To use an author’s production without crediting the source",
       "To present as new and original an idea or product derived from an existing source",
       "All answers are correct"
     ],
@@ -10060,7 +10060,7 @@
     "domain": 5,
     "topic": "Research",
     "exam_source": "Domain 5 Exam 1",
-    "question_text": "When writing an article that draws on the work of multiple researchers, which of the following is NOT an example of manipulating the research author\u2019s intention?",
+    "question_text": "When writing an article that draws on the work of multiple researchers, which of the following is NOT an example of manipulating the research author’s intention?",
     "question_type": "multiple_choice",
     "options": [
       "Listing a resource that has nothing to do with your article just to make the resources section appear more complete",
@@ -10534,7 +10534,7 @@
     "question_text": "Which of the following statements about plagiarism is false?",
     "question_type": "multiple_choice",
     "options": [
-      "Using someone\u2019s ideas, but not exact words, without giving them credit is plagiarism.",
+      "Using someone’s ideas, but not exact words, without giving them credit is plagiarism.",
       "If you paraphrase closely but do not quote exactly you do not need to cite the source.",
       "Most writers who plagiarize do so inadvertently because they fail to take careful notes."
     ],
@@ -11085,7 +11085,7 @@
     "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
-    "question_text": "What is the term used to describe a person\u2019s confidence in their ability to perform a behavior?",
+    "question_text": "What is the term used to describe a person’s confidence in their ability to perform a behavior?",
     "question_type": "multiple_choice",
     "options": [
       "Self-efficacy",
@@ -11101,7 +11101,7 @@
     "domain": 3,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
-    "question_text": "_________ is the true understanding of another\u2019s perspective and experience without judging, criticizing, or blaming.",
+    "question_text": "_________ is the true understanding of another’s perspective and experience without judging, criticizing, or blaming.",
     "question_type": "multiple_choice",
     "options": [
       "Self-efficacy",
@@ -11139,7 +11139,7 @@
       "Abstract and method",
       "Resources and acknowledgements",
       "Summary of findings",
-      "Researchers\u2019 opinions"
+      "Researchers’ opinions"
     ],
     "correct_answer": 3,
     "difficulty": "medium",
@@ -12113,7 +12113,7 @@
       "They help produce red blood cells.",
       "They filter out toxins from the air.",
       "They take up oxygen we breathe in and supply it to the body.",
-      "They regulate the body\u2019s temperature."
+      "They regulate the body’s temperature."
     ],
     "correct_answer": 2,
     "difficulty": "medium",
@@ -12183,7 +12183,7 @@
     "domain": 2,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
-    "question_text": "Which of the following is true about Peyer\u2019s patches?",
+    "question_text": "Which of the following is true about Peyer’s patches?",
     "question_type": "multiple_choice",
     "options": [
       "They are small masses of lymphatic tissue found in the lining of the stomach.",
@@ -12246,8 +12246,8 @@
     "question_text": "Which of the following does pH measure?",
     "question_type": "multiple_choice",
     "options": [
-      "The concentration of hydroxide ions (OH\u207b)",
-      "The concentration of hydrogen ions (H\u207a)",
+      "The concentration of hydroxide ions (OH⁻)",
+      "The concentration of hydrogen ions (H⁺)",
       "The temperature of a solution"
     ],
     "correct_answer": 1,
@@ -12308,9 +12308,9 @@
     "question_text": "What is the normal fasting blood glucose concentration?",
     "question_type": "multiple_choice",
     "options": [
-      "50\u201360 mg/100 mL",
-      "70\u2013110 mg/100 mL",
-      "120\u2013130 mg/100 mL"
+      "50–60 mg/100 mL",
+      "70–110 mg/100 mL",
+      "120–130 mg/100 mL"
     ],
     "correct_answer": 1,
     "difficulty": "medium",
@@ -12336,7 +12336,7 @@
     "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
-    "question_text": "Professional health organizations such as the American Heart Association, and the Dietary Guidelines for Americans 2020\u20132025 recommend that people consume _________ of calories per day from added sugar.",
+    "question_text": "Professional health organizations such as the American Heart Association, and the Dietary Guidelines for Americans 2020–2025 recommend that people consume _________ of calories per day from added sugar.",
     "question_type": "multiple_choice",
     "options": [
       "less than 10%",
@@ -12386,7 +12386,7 @@
     "question_type": "multiple_choice",
     "options": [
       "Increased levels of parathyroid hormone.",
-      "1\u03b1Hydroxylase",
+      "1αHydroxylase",
       "Calbindin",
       "Increased calcitonin level"
     ],
@@ -12620,7 +12620,7 @@
     "question_text": "All the following are functions of fat in human health except:",
     "question_type": "multiple_choice",
     "options": [
-      "Serving as the body\u2019s primary and preferred fuel source",
+      "Serving as the body’s primary and preferred fuel source",
       "Protect organs",
       "Regulation of body temperature",
       "Building blocks of cell membranes, hormones, vitamins, and transport molecules"
