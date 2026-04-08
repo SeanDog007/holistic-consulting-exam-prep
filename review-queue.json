@@ -21,7 +21,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 10,
@@ -37,7 +37,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 12,
@@ -52,7 +52,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 13,
@@ -67,7 +67,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 26,
@@ -82,7 +82,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 39,
@@ -97,7 +97,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 61,
@@ -113,7 +113,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 66,
@@ -129,7 +129,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 89,
@@ -144,7 +144,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 105,
@@ -160,7 +160,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 106,
@@ -176,7 +176,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 144,
@@ -192,7 +192,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 4",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 155,
@@ -207,7 +207,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 4",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 158,
@@ -222,7 +222,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 4",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 166,
@@ -237,7 +237,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 4",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 167,
@@ -252,7 +252,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 4",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 236,
@@ -267,7 +267,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 6",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 278,
@@ -282,7 +282,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 327,
@@ -298,7 +298,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 328,
@@ -314,7 +314,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 346,
@@ -329,7 +329,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 348,
@@ -344,7 +344,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 365,
@@ -360,7 +360,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 4",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 369,
@@ -376,7 +376,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 4",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 416,
@@ -384,29 +384,29 @@
           "correctAnswer": 2,
           "correctOptionText": "Holistic Nutrition Professionals can be licensed in some states.",
           "options": [
-            "The definition of “Medical Nutrition Therapy” may differ from state to state.",
-            "Each state has exemptions regarding “general nutrition information.”",
+            "The definition of \u201cMedical Nutrition Therapy\u201d may differ from state to state.",
+            "Each state has exemptions regarding \u201cgeneral nutrition information.\u201d",
             "Holistic Nutrition Professionals can be licensed in some states."
           ],
           "domain": 3,
           "examSource": "Domain 3 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 434,
           "question": "Which of the following is not true about the NANP Code of Ethics?",
           "correctAnswer": 0,
-          "correctOptionText": "NANP members can use the term Board Certified in Holistic Nutrition® or BCHN® without the express written permission and approval of NANP.",
+          "correctOptionText": "NANP members can use the term Board Certified in Holistic Nutrition\u00ae or BCHN\u00ae without the express written permission and approval of NANP.",
           "options": [
-            "NANP members can use the term Board Certified in Holistic Nutrition® or BCHN® without the express written permission and approval of NANP.",
+            "NANP members can use the term Board Certified in Holistic Nutrition\u00ae or BCHN\u00ae without the express written permission and approval of NANP.",
             "An NANP member will seek consultation in doubtful or difficult cases, and whenever it appears that the services of other professionals are warranted to provide more complete or better quality advice.",
             "NANP members will oppose without hesitation the illegal or unethical conduct of fellow members."
           ],
           "domain": 3,
           "examSource": "Domain 3 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 528,
@@ -422,7 +422,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 554,
@@ -437,7 +437,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 559,
@@ -453,7 +453,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 564,
@@ -469,7 +469,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 573,
@@ -485,7 +485,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 582,
@@ -501,7 +501,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 596,
@@ -516,7 +516,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 599,
@@ -532,7 +532,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 601,
@@ -547,7 +547,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 605,
@@ -563,7 +563,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 606,
@@ -579,7 +579,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 609,
@@ -595,7 +595,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 610,
@@ -610,7 +610,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 615,
@@ -626,7 +626,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 619,
@@ -642,7 +642,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 629,
@@ -658,7 +658,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 643,
@@ -674,7 +674,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 650,
@@ -690,7 +690,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 652,
@@ -705,7 +705,7 @@
           "domain": 4,
           "examSource": "Domain 4 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 662,
@@ -719,7 +719,7 @@
           "domain": 5,
           "examSource": "Domain 5 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 664,
@@ -735,11 +735,11 @@
           "domain": 5,
           "examSource": "Domain 5 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 667,
-          "question": "When writing an article that draws on the work of multiple researchers, which of the following is NOT an example of manipulating the research author’s intention?",
+          "question": "When writing an article that draws on the work of multiple researchers, which of the following is NOT an example of manipulating the research author\u2019s intention?",
           "correctAnswer": 3,
           "correctOptionText": "Taking a direct, full sentence quote and citing it properly",
           "options": [
@@ -751,7 +751,7 @@
           "domain": 5,
           "examSource": "Domain 5 Exam 1",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 698,
@@ -759,14 +759,14 @@
           "correctAnswer": 1,
           "correctOptionText": "If you paraphrase closely but do not quote exactly you do not need to cite the source.",
           "options": [
-            "Using someone’s ideas, but not exact words, without giving them credit is plagiarism.",
+            "Using someone\u2019s ideas, but not exact words, without giving them credit is plagiarism.",
             "If you paraphrase closely but do not quote exactly you do not need to cite the source.",
             "Most writers who plagiarize do so inadvertently because they fail to take careful notes."
           ],
           "domain": 5,
           "examSource": "Domain 5 Exam 2",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 710,
@@ -781,7 +781,7 @@
           "domain": 5,
           "examSource": "Domain 5 Exam 3",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 722,
@@ -797,7 +797,7 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 726,
@@ -813,7 +813,7 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 736,
@@ -829,23 +829,23 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 737,
           "question": "A quality research paper should include all the following except:",
           "correctAnswer": 3,
-          "correctOptionText": "Researchers’ opinions",
+          "correctOptionText": "Researchers\u2019 opinions",
           "options": [
             "Abstract and method",
             "Resources and acknowledgements",
             "Summary of findings",
-            "Researchers’ opinions"
+            "Researchers\u2019 opinions"
           ],
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 813,
@@ -861,7 +861,7 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 833,
@@ -877,15 +877,15 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         },
         {
           "index": 834,
           "question": "All the following are functions of fat in human health except:",
           "correctAnswer": 0,
-          "correctOptionText": "Serving as the body’s primary and preferred fuel source",
+          "correctOptionText": "Serving as the body\u2019s primary and preferred fuel source",
           "options": [
-            "Serving as the body’s primary and preferred fuel source",
+            "Serving as the body\u2019s primary and preferred fuel source",
             "Protect organs",
             "Regulation of body temperature",
             "Building blocks of cell membranes, hormones, vitamins, and transport molecules"
@@ -893,7 +893,7 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "high",
-          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+          "reason": "Negative/exception phrasing \u2014 verify answer key is correct (not inverted)"
         }
       ],
       "resolved": true,
@@ -901,10 +901,12 @@
     },
     "duplicate-options": {
       "description": "Questions that had or still have duplicate answer options",
-      "questions": []
+      "questions": [],
+      "resolved": true,
+      "resolution": "0 questions \u2014 no duplicate options found"
     },
     "near-duplicates": {
-      "description": "Questions very similar to others — may need dedup or differentiation",
+      "description": "Questions very similar to others \u2014 may need dedup or differentiation",
       "questions": [
         {
           "indexA": 33,
@@ -914,7 +916,7 @@
           "questionB": "A boiled potato has a higher glycemic index than a baked potato.",
           "domain": 1,
           "risk": "medium",
-          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+          "reason": "Near-duplicate \u2014 verify if intentionally different or should be merged"
         },
         {
           "indexA": 294,
@@ -924,7 +926,7 @@
           "questionB": "On the pH scale, values below 7 are considered acidic.",
           "domain": 2,
           "risk": "medium",
-          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+          "reason": "Near-duplicate \u2014 verify if intentionally different or should be merged"
         },
         {
           "indexA": 306,
@@ -934,7 +936,7 @@
           "questionB": "Lipase is an enzyme responsible for breaking down which macronutrient?",
           "domain": 2,
           "risk": "medium",
-          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+          "reason": "Near-duplicate \u2014 verify if intentionally different or should be merged"
         },
         {
           "indexA": 306,
@@ -944,7 +946,7 @@
           "questionB": "Protease is an enzyme responsible for breaking down which macronutrient?",
           "domain": 2,
           "risk": "medium",
-          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+          "reason": "Near-duplicate \u2014 verify if intentionally different or should be merged"
         },
         {
           "indexA": 307,
@@ -954,7 +956,7 @@
           "questionB": "Protease is an enzyme responsible for breaking down which macronutrient?",
           "domain": 2,
           "risk": "medium",
-          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+          "reason": "Near-duplicate \u2014 verify if intentionally different or should be merged"
         },
         {
           "indexA": 602,
@@ -964,7 +966,7 @@
           "questionB": "Which of the following is a well supported recommendation for menopause?",
           "domain": 4,
           "risk": "medium",
-          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+          "reason": "Near-duplicate \u2014 verify if intentionally different or should be merged"
         },
         {
           "indexA": 650,
@@ -974,11 +976,11 @@
           "questionB": "Which of the following is not a well supported recommendation for atherosclerosis?",
           "domain": 4,
           "risk": "medium",
-          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+          "reason": "Near-duplicate \u2014 verify if intentionally different or should be merged"
         }
       ],
       "resolved": true,
-      "resolution": "All 7 pairs verified as intentionally different questions — no merges needed"
+      "resolution": "All 7 pairs verified as intentionally different questions \u2014 no merges needed"
     },
     "anatomy-clinical": {
       "description": "Anatomy/clinical questions flagged for factual accuracy review",
@@ -996,7 +998,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 1",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 165,
@@ -1011,7 +1013,7 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 4",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 247,
@@ -1026,11 +1028,11 @@
           "domain": 1,
           "examSource": "Domain 1 Exam 6",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 265,
-          "question": "Which of the following terms describes an imbalance or disruption in the diversity and composition of the gut microbiota and is often associated with gastrointestinal symptoms and increased risk of va",
+          "question": "Which of the following terms describes an imbalance or disruption in the\u00a0diversity and composition of the gut microbiota and is often associated with gastrointestinal symptoms and increased risk of va",
           "correctAnswer": 1,
           "correctOptionText": "Dysbiosis",
           "options": [
@@ -1041,7 +1043,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 1",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 328,
@@ -1057,7 +1059,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 2",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 334,
@@ -1071,7 +1073,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 2",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 344,
@@ -1087,7 +1089,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 3",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 360,
@@ -1102,7 +1104,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 4",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 408,
@@ -1117,7 +1119,7 @@
           "domain": 2,
           "examSource": "Domain 2 Exam 5",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 741,
@@ -1133,7 +1135,7 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 764,
@@ -1148,7 +1150,7 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 770,
@@ -1163,7 +1165,7 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 805,
@@ -1178,7 +1180,7 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 818,
@@ -1193,7 +1195,7 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         },
         {
           "index": 830,
@@ -1208,7 +1210,7 @@
           "domain": 0,
           "examSource": "Full Length Comprehensive Exam",
           "risk": "medium",
-          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+          "reason": "Contains anatomy/clinical terms \u2014 verify factual accuracy"
         }
       ],
       "resolved": true,
@@ -1233,7 +1235,9 @@
           "risk": "low",
           "reason": "5 consecutive questions with answer=1 in Full Length Comprehensive Exam"
         }
-      ]
+      ],
+      "resolved": true,
+      "resolution": "Statistical coincidence \u2014 5 consecutive same-answer runs verified correct, no actual errors"
     },
     "domain-unassigned": {
       "description": "Questions with domain=0 that need classification",
@@ -1420,7 +1424,7 @@
         },
         {
           "index": 734,
-          "question": "What is the term used to describe a person’s confidence in their ability to perform a behavior?",
+          "question": "What is the term used to describe a person\u2019s confidence in their ability to perform a behavior?",
           "options": [
             "Self-efficacy",
             "Confidence",
@@ -1434,7 +1438,7 @@
         },
         {
           "index": 735,
-          "question": "_________ is the true understanding of another’s perspective and experience without judging, criticizing, or blaming.",
+          "question": "_________ is the true understanding of another\u2019s perspective and experience without judging, criticizing, or blaming.",
           "options": [
             "Self-efficacy",
             "Compassion",
@@ -1467,7 +1471,7 @@
             "Abstract and method",
             "Resources and acknowledgements",
             "Summary of findings",
-            "Researchers’ opinions"
+            "Researchers\u2019 opinions"
           ],
           "correctAnswer": 3,
           "examSource": "Full Length Comprehensive Exam",
@@ -2312,7 +2316,7 @@
             "They help produce red blood cells.",
             "They filter out toxins from the air.",
             "They take up oxygen we breathe in and supply it to the body.",
-            "They regulate the body’s temperature."
+            "They regulate the body\u2019s temperature."
           ],
           "correctAnswer": 2,
           "examSource": "Full Length Comprehensive Exam",
@@ -2373,7 +2377,7 @@
         },
         {
           "index": 806,
-          "question": "Which of the following is true about Peyer’s patches?",
+          "question": "Which of the following is true about Peyer\u2019s patches?",
           "options": [
             "They are small masses of lymphatic tissue found in the lining of the stomach.",
             "They play a role in the immune system by monitoring and responding to harmful substances in the digestive tract.",
@@ -2427,8 +2431,8 @@
           "index": 810,
           "question": "Which of the following does pH measure?",
           "options": [
-            "The concentration of hydroxide ions (OH⁻)",
-            "The concentration of hydrogen ions (H⁺)",
+            "The concentration of hydroxide ions (OH\u207b)",
+            "The concentration of hydrogen ions (H\u207a)",
             "The temperature of a solution"
           ],
           "correctAnswer": 1,
@@ -2481,9 +2485,9 @@
           "index": 814,
           "question": "What is the normal fasting blood glucose concentration?",
           "options": [
-            "50–60 mg/100 mL",
-            "70–110 mg/100 mL",
-            "120–130 mg/100 mL"
+            "50\u201360 mg/100 mL",
+            "70\u2013110 mg/100 mL",
+            "120\u2013130 mg/100 mL"
           ],
           "correctAnswer": 1,
           "examSource": "Full Length Comprehensive Exam",
@@ -2506,7 +2510,7 @@
         },
         {
           "index": 816,
-          "question": "Professional health organizations such, as the American Heart Association, and the Dietary Guidelines for Americans 2015–2025 recommend that people consume _________ of calories per day from added sug",
+          "question": "Professional health organizations such, as the American Heart Association, and the Dietary Guidelines for Americans 2015\u20132025 recommend that people consume _________ of calories per day from added sug",
           "options": [
             "less than 10%",
             "25%",
@@ -2549,7 +2553,7 @@
           "question": "Increased calcium resorption in kidney tubules is stimulated by:",
           "options": [
             "Increased levels of parathyroid hormone.",
-            "1αHydroxylase",
+            "1\u03b1Hydroxylase",
             "Calbindin",
             "Increased calcitonin level"
           ],
@@ -2753,7 +2757,7 @@
           "index": 834,
           "question": "All the following are functions of fat in human health except:",
           "options": [
-            "Serving as the body’s primary and preferred fuel source",
+            "Serving as the body\u2019s primary and preferred fuel source",
             "Protect organs",
             "Regulation of body temperature",
             "Building blocks of cell membranes, hormones, vitamins, and transport molecules"
@@ -2781,6 +2785,6 @@
       "resolution": "All 115 questions assigned to domains (D1:34, D2:34, D3:16, D4:25, D5:13)"
     }
   },
-  "resolvedInPass2": 194,
-  "remainingForReview": 2
+  "resolvedInPass2": 196,
+  "remainingForReview": 0
 }
