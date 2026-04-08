@@ -18,13 +18,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is not an antioxidant?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 1,
@@ -33,13 +33,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "What key mitochondrial nutrient that is needed to manufacture energy within cell...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 2,
@@ -48,13 +48,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient in particular is vital for the health of the colon?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 3,
@@ -63,13 +63,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Carotenes are a precursor for which nutrient?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 4,
@@ -78,13 +78,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "_________ is the plant compound (phytonutrient) that is found in the skin of gra...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 5,
@@ -93,13 +93,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which fatty acid, promotes inflammation through its associated eicosanoids?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 6,
@@ -108,13 +108,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which fatty acids reduces inflammation through its associated eicosanoids?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 7,
@@ -123,13 +123,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Stachyose, verbascose, and raffinose in beans are which type of carbohydrate?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 8,
@@ -138,13 +138,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following fiber types have low fermentability?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 9,
@@ -153,13 +153,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following plant foods has the largest amount of fat?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 10,
@@ -168,13 +168,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following foods is not high in pectin?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 11,
@@ -183,13 +183,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "What is the best source for optimal nutrition?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 12,
@@ -198,13 +198,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is false?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 13,
@@ -213,13 +213,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is not one of the components of holistic nutrition and ho...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 14,
@@ -228,13 +228,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient is known for neutralizing free radicals and is found in colorful ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 15,
@@ -243,13 +243,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which class of herbs primarily help to support the adrenal glands and stress?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 16,
@@ -258,13 +258,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "The thousands of bioactive chemical compounds found in plants that provide prote...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 17,
@@ -273,13 +273,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is considered an anti-nutrient?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 18,
@@ -288,13 +288,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "What is the part of plants that is unable to be digested and therefore passes th...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 19,
@@ -303,13 +303,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "___________ are considered a catalyst for chemical reactions in the body",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 20,
@@ -318,13 +318,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Are whole fruits, vegetables, and legumes considered acidic or alkaline on the p...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 21,
@@ -333,13 +333,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Are meats considered alkaline or acidic on the pH scale?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 22,
@@ -348,13 +348,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "When dietary protein is digested, it is broken down into what type of molecule t...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 23,
@@ -363,13 +363,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following best describes what the word “essential” means when it re...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 24,
@@ -378,13 +378,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "How many amino acids are considered essential and must be obtained from the diet...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 25,
@@ -393,13 +393,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which polyunsaturated fatty acid is considered essential?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 26,
@@ -408,13 +408,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is not a source of all the essential amino acids?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 27,
@@ -423,13 +423,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "What is considered a “complete” protein?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 28,
@@ -438,13 +438,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "What is the term used to describe nonessential amino acids that are “Essential” ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 29,
@@ -453,13 +453,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is a precursor to the antioxidant, glutathione?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 30,
@@ -468,13 +468,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following foods would be best for supporting phase 2 detoxification...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 31,
@@ -483,13 +483,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrients are needed to support phase 1 detoxification?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 32,
@@ -498,13 +498,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which does not slow down the absorption of sugar into the bloodstream?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 33,
@@ -513,13 +513,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "true_false",
       "question_preview": "A baked potato has a higher glycemic index than a boiled sweet potato.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 34,
@@ -528,13 +528,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "What occurs during the process of refining carbohydrates that causes them to neg...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 35,
@@ -543,13 +543,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which classification of saccharides contains 1 sugar unit?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 36,
@@ -558,13 +558,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which classification of saccharides contains 2 sugar units?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 37,
@@ -573,13 +573,13 @@
       "exam_source": "Domain 1 Exam 1",
       "question_type": "multiple_choice",
       "question_preview": "Which classification of saccharides contains more than 10 sugar units?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 38,
@@ -588,13 +588,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "____________ is the term used to describe ingredients or a protein in food that ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 39,
@@ -603,13 +603,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is not one of the 9 main food allergens?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 40,
@@ -618,13 +618,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is present for true allergies and can cause hives, troubl...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 41,
@@ -633,13 +633,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is a type of food reaction and signifies delayed hypersen...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 42,
@@ -648,13 +648,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "What is the term used to describe living microorganisms that provide a known hea...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 43,
@@ -663,13 +663,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "What is a substrate that provides a known health benefit such as increasing the ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 44,
@@ -678,13 +678,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "While fiber is commonly recognized as the primary source of prebiotics, ________...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 45,
@@ -693,13 +693,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Most often lactose intolerance is due to a lack of what enzyme?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 46,
@@ -708,13 +708,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "What is the name given to a group of proteins found in high amounts in legumes a...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 47,
@@ -723,13 +723,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is true about dietary supplements?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 48,
@@ -738,13 +738,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Consuming which types of foods can best prevent exposure to harmful chemicals?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 49,
@@ -753,13 +753,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "___________is about making mindful food choices that are good for both our bodie...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 50,
@@ -768,13 +768,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which chemical is often found in plastic, canned goods, and paper receipts?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 51,
@@ -783,13 +783,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "______________ can significantly impact our food choices and overall approach to...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 52,
@@ -798,13 +798,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "A(n) __________ diet is essential for overall health and well-being. It refers t...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 53,
@@ -813,13 +813,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "To ensure a balanced diet, it is important to pay attention to which of the foll...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 54,
@@ -828,13 +828,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "What type of nutrients are the main sources of energy for the human body and are...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 55,
@@ -843,13 +843,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "___________ provide the body with glucose, which is used as fuel for the brain a...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 56,
@@ -858,13 +858,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "____________ are important for building and repairing tissues in the body, inclu...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 57,
@@ -873,13 +873,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "___________ are a source of energy and play a role in hormone production, cell f...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 58,
@@ -888,13 +888,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Vitamins, minerals, and trace elements are classified as ____________",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 59,
@@ -903,13 +903,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following nutrients helps to support the absorption of calcium?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 60,
@@ -918,13 +918,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which micronutrient competes with zinc for absorption?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 61,
@@ -933,13 +933,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is not true about micronutrients that are crucial for sup...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 62,
@@ -948,13 +948,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "true_false",
       "question_preview": "Adequate fluid intake is essential for regulating body temperature, transporting...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 63,
@@ -963,13 +963,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following are true regarding hydration?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 64,
@@ -978,13 +978,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Choose the best answer: Which nutrient plays an important role in digestion, pre...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 65,
@@ -993,13 +993,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "_________ fiber, found in foods like whole grains, nuts, and vegetables, helps t...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 66,
@@ -1008,13 +1008,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is not a strategy to promote healthy portion control?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 67,
@@ -1023,13 +1023,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Portion size should be individualized based on which factors such as age, gender...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 68,
@@ -1038,13 +1038,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which vitamin is essential for vision and immune function?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 69,
@@ -1053,13 +1053,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which group of vitamins is known for support energy metabolism from food?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 70,
@@ -1068,13 +1068,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which B vitamins is especially important for its role in supporting the nervous ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 71,
@@ -1083,13 +1083,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient deficiency can lead to night blindness, impaired immune function,...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 72,
@@ -1098,13 +1098,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Deficiency of which B vitamin can lead to hair loss?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 73,
@@ -1113,13 +1113,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which antioxidant plays an important role in collagen synthesis?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 74,
@@ -1128,13 +1128,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which vitamin is commonly found in nuts, seeds, and green leafy vegetables and s...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 75,
@@ -1143,13 +1143,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which form of iron found in food is most bioavaible?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 76,
@@ -1158,13 +1158,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "What are sources of heme iron?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 77,
@@ -1173,13 +1173,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "What are food sources of non-heme iron?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 78,
@@ -1188,13 +1188,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which electrolyte is known for contributing to elevated blood pressure if consum...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 79,
@@ -1203,13 +1203,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient is important for red blood cell formation and oxygen transport?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 80,
@@ -1218,13 +1218,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "The Recommended Dietary Allowance (RDA) for protein is _________ grams per kilog...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 81,
@@ -1233,13 +1233,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Consuming too much protein can also have negative health effects, including whic...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 82,
@@ -1248,13 +1248,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following would be the best option to help someone increase their d...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 83,
@@ -1263,13 +1263,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following foods would be the best source to help someone increase t...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 84,
@@ -1278,13 +1278,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Fats serve several vital functions in the body, including which of the following...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 85,
@@ -1293,13 +1293,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "The Dietary Guidelines for Americans recommend that carbohydrates should contrib...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 86,
@@ -1308,13 +1308,13 @@
       "exam_source": "Domain 1 Exam 2",
       "question_type": "multiple_choice",
       "question_preview": "Which macronutrient provides the body with a quick source of fuel?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 87,
@@ -1323,13 +1323,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "These fats are typically solid at room temperature and are mainly found in anima...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 88,
@@ -1338,13 +1338,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "These fats are liquid at room temperature and are primarily derived from plant-b...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 89,
@@ -1353,13 +1353,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is not a category of unsaturated fats?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 90,
@@ -1368,13 +1368,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Omega 3 and omega 6 fatty acids are classified as which of the following:",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 91,
@@ -1383,13 +1383,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "These fats are created through the process of hydrogenation, which solidifies li...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 92,
@@ -1398,13 +1398,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is considered an essential fat?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 93,
@@ -1413,13 +1413,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following would be the best source of antioxidants?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 94,
@@ -1428,13 +1428,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which set of nutrients are considered antioxidants?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 95,
@@ -1443,13 +1443,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Unstable molecules that can damage cells and contribute to the development of ch...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 96,
@@ -1458,13 +1458,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "While there is no recommended daily intakes for antioxidants, what is the minimu...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 97,
@@ -1473,13 +1473,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Bioactive compounds found in plants. They are responsible for the vibrant colors...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 98,
@@ -1488,13 +1488,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which phytonutrients are commonly found in orange and yellow fruits and vegetabl...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 99,
@@ -1503,13 +1503,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "These foods are cultivated without the use of synthetic pesticides, herbicides, ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 100,
@@ -1518,13 +1518,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which therapeutic food contains sulfur compounds that contribute to its potentia...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 101,
@@ -1533,13 +1533,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is an example of a probiotic rich fermented food?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 102,
@@ -1548,13 +1548,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which food is commonly known for its high amounts of polyphenols knowns as catec...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 103,
@@ -1563,13 +1563,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which phytonutrients is commonly known for supporting eye health?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 104,
@@ -1578,13 +1578,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which types of vegetables are rich in glucosinolates, which are sulfur-containin...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 105,
@@ -1593,13 +1593,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following foods is not considered a high oxalate food?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 106,
@@ -1608,13 +1608,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following foods is not considered a low oxalate vegetable?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 107,
@@ -1623,13 +1623,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Essential fatty acids are converted into compounds known as",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 108,
@@ -1638,13 +1638,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which compound is needed to make bile acids and many hormones?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 109,
@@ -1653,13 +1653,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient is found in carrots and sweet potatoes and supports immune system...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 110,
@@ -1668,13 +1668,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient is found in fatty fish and supports calcium absorption and insuli...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 111,
@@ -1683,13 +1683,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "true_false",
       "question_preview": "Cholecalciferol is the preferred form of vitamin D supplementation.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 112,
@@ -1698,13 +1698,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which fat soluble vitamin serves as an antioxidant and prevents the formation of...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 113,
@@ -1713,13 +1713,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which form of vitamin K is synthesized by bacteria in the GI tract?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 114,
@@ -1728,13 +1728,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which form of vitamin K is synthesized by plants?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 115,
@@ -1743,13 +1743,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient enhances non heme iron absorption?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 116,
@@ -1758,13 +1758,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient supports proper blood clotting and bone metabolism?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 117,
@@ -1773,13 +1773,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Excessive amounts of alcohol can lead to a deficiency in this water soluble nutr...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 118,
@@ -1788,13 +1788,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "This B vitamin is especially important for neurotransmitter synthesis.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 119,
@@ -1803,13 +1803,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "This B vitamin plays a role in the synthesis of fatty acids and breakdown of ami...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 120,
@@ -1818,13 +1818,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient is important to supplement alongside B12?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 121,
@@ -1833,13 +1833,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient can help prevent neural tube defects in developing babies?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 122,
@@ -1848,13 +1848,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Cobalamin is the name given to which B vitamin that is crucial for DNA synthesis...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 123,
@@ -1863,13 +1863,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "true_false",
       "question_preview": "When supplementing, calcium should not be taken in divided doses throughout the ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 124,
@@ -1878,13 +1878,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which is the active and absorbable form of iron?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 125,
@@ -1893,13 +1893,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which food source contains ferric iron?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 126,
@@ -1908,13 +1908,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which food source contains ferrous iron?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 127,
@@ -1923,13 +1923,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which name is used to describe non heme iron found in plants?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 128,
@@ -1938,13 +1938,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which name is used to describe heme iron found in meat?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 129,
@@ -1953,13 +1953,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient is involved in over 300 metabolic reactions and is found in dark ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 130,
@@ -1968,13 +1968,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient can interfere with the bioavailability of copper when taken in do...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 131,
@@ -1983,13 +1983,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrients is needed to support the conversation of thyroid hormone into it...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 132,
@@ -1998,13 +1998,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which food sources if rich in selenium?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 133,
@@ -2013,13 +2013,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which nutrient it needed for the synthesis of thyroid hormone?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 134,
@@ -2028,13 +2028,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which can help to reduce goitrogens in food?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 135,
@@ -2043,13 +2043,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following food groups is the best source of iodine?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 136,
@@ -2058,13 +2058,13 @@
       "exam_source": "Domain 1 Exam 3",
       "question_type": "multiple_choice",
       "question_preview": "__________ is required for normal iron metabolism and red blood cell formation. ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 137,
@@ -2073,13 +2073,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "This electrolyte works in balance with sodium for fluid regulation and is essent...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 138,
@@ -2088,13 +2088,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Ground beef should be cooked to what internal temperature?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 139,
@@ -2103,13 +2103,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is a method or preventing foodborne illness?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 140,
@@ -2118,13 +2118,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following terms describes the use of ionizing radiation on food to ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 141,
@@ -2133,13 +2133,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "The term used to describe how the genes of plants or animals have been changed i...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 142,
@@ -2148,13 +2148,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "true_false",
       "question_preview": "Food additives are used either to prevent foods' spoiling or to enhance their fl...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 143,
@@ -2163,13 +2163,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which food additive has been shown to induce asthma, hives, and other allergic r...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 144,
@@ -2178,13 +2178,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is not a common artificial sweetener?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 145,
@@ -2193,13 +2193,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Consuming which types of foods can help to reduce one's exposure to pesticide re...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 146,
@@ -2208,13 +2208,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "The building blocks of all protein are _________.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 147,
@@ -2223,13 +2223,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "The RDA for protein needed per day for an adult is __________.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 148,
@@ -2238,13 +2238,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following conditions or situations requires additional protein per ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 149,
@@ -2253,13 +2253,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is an essential amino acid?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 150,
@@ -2268,13 +2268,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is a non-essential amino acid?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 151,
@@ -2283,13 +2283,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "true_false",
       "question_preview": "A complete protein source is one that provides all of the nine essential amino a...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 152,
@@ -2298,13 +2298,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is considered a complete protein source?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 153,
@@ -2313,13 +2313,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which amino acid plays a particular role in the production of nitric oxide and r...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 154,
@@ -2328,13 +2328,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which amino acid serves as the fuel for cells lining the intestines and for prop...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 155,
@@ -2343,13 +2343,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is not a simple sugar?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 156,
@@ -2358,13 +2358,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Sucrose, maltose and lactose are all examples of ____________.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 157,
@@ -2373,13 +2373,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "The ______________ provides a numerical value that expresses the rise in blood g...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 158,
@@ -2388,13 +2388,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "The fermentation of dietary fiber produces all of the following except _________...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 159,
@@ -2403,13 +2403,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Consuming a diet high in ________________ can cause cell membranes to become les...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 160,
@@ -2418,13 +2418,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "_______________ means that a hydrogen molecule is added to the natural unsaturat...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 161,
@@ -2433,13 +2433,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Essential fatty acids are transformed into regulatory compounds known as _______...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 162,
@@ -2448,13 +2448,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "_______________ is the predominant form of fat in our cell membranes.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 163,
@@ -2463,13 +2463,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "__________ is responsible for transporting fats from the liver to body cells.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 164,
@@ -2478,13 +2478,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "_______________ is responsible for returning fat to the liver for use as energy ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 165,
@@ -2493,13 +2493,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which is referred to as the cardiac risk factor ratios because they reflect whet...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 166,
@@ -2508,13 +2508,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is not true regarding fat soluble vitamins?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 167,
@@ -2523,13 +2523,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is not true regarding the \"Recommended Dietary Allowance ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 168,
@@ -2538,13 +2538,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is used when the RDA cannot be determined?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 169,
@@ -2553,13 +2553,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Disorders of the liver or kidneys can lead to impaired conversion of which fat s...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 170,
@@ -2568,13 +2568,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Alpha-tocopherol is the chemical name for which fat soluble vitamin that serves ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 171,
@@ -2583,13 +2583,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Vitamin ______ is found in green leafy vegetables and may be one of the protecti...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 172,
@@ -2598,13 +2598,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Night blindness or poor dark adaptations is an early consequence of which vitami...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 173,
@@ -2613,13 +2613,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Early ______________ deficiency is characterized by cracking of the lips and cor...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 174,
@@ -2628,13 +2628,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "_______________ deficiency is results in a syndrome known as beriberi where symp...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 175,
@@ -2643,13 +2643,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "Which B vitamin can be made from tryptophan?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 176,
@@ -2658,13 +2658,13 @@
       "exam_source": "Domain 1 Exam 4",
       "question_type": "multiple_choice",
       "question_preview": "________________ deficiency can lead to pellagra which is characterized by the t...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 177,
@@ -2673,13 +2673,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Vitamin B1 is known as _________________",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 178,
@@ -2688,13 +2688,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Vitamin B2 is known as _________________",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 179,
@@ -2703,13 +2703,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Vitamin B3 is known as __________________",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 180,
@@ -2718,13 +2718,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "B5 is known as ___________________",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 181,
@@ -2733,13 +2733,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Vitamin B9 is known as _______________",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 182,
@@ -2748,13 +2748,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "B12 is known as __________________",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 183,
@@ -2763,13 +2763,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "B6 is known as _______________",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 184,
@@ -2778,13 +2778,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Deficiency of which B vitamin is linked to depression due to its vital role in n...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 185,
@@ -2793,13 +2793,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which B vitamin is crucial for cell division and the production of red blood cel...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 186,
@@ -2808,13 +2808,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Neural tube defects is linked to a deficiency in which B vitamin?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 187,
@@ -2823,13 +2823,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "A deficiency in B12 will result in a _______________ deficiency.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 188,
@@ -2838,13 +2838,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is the best source of biotin?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 189,
@@ -2853,13 +2853,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is the best source of folic acid?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 190,
@@ -2868,13 +2868,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is the best source of B6?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 191,
@@ -2883,13 +2883,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is the best source of pantothenic acid?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 192,
@@ -2898,13 +2898,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "What is the best source of niacin?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 193,
@@ -2913,13 +2913,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "What is the best source of riboflavin?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 194,
@@ -2928,13 +2928,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "What is the best source of thiamin?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 195,
@@ -2943,13 +2943,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "What is the best source of B12?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 196,
@@ -2958,13 +2958,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "What is the best source of choline?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 197,
@@ -2973,13 +2973,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Without _____________ fats become trapped in the liver. Therefore, this nutrient...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 198,
@@ -2988,13 +2988,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which water soluble vitamin supports the production of collagen?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 199,
@@ -3003,13 +3003,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "What is the most abundant mineral in the body?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 200,
@@ -3018,13 +3018,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which mineral supports muscle contracts, the regulation of heartbeat, and buildi...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 201,
@@ -3033,13 +3033,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "__________ deficiency in children may lead to rickets.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 202,
@@ -3048,13 +3048,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following foods has the highest concentration of calcium?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 203,
@@ -3063,13 +3063,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "true_false",
       "question_preview": "Low protein foods are generally high in phosphorous.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 204,
@@ -3078,13 +3078,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "About 60% of __________________ in the body is found in bone.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 205,
@@ -3093,13 +3093,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "________________ deficiency is common in the geriatric population and in women d...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 206,
@@ -3108,13 +3108,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which foods contains the highest concentration of magnesium?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 207,
@@ -3123,13 +3123,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "The thyroid gland adds iodine to the amino acid _______________ to create thyroi...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 208,
@@ -3138,13 +3138,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Goiters result when which trace mineral is too low in the body?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 209,
@@ -3153,13 +3153,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "true_false",
       "question_preview": "Excess iodine can inhibit thyroid gland synthesis which is why the recommended d...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 210,
@@ -3168,13 +3168,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "__________ plays a central role in the hemoglobin molecule of our red blood cell...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 211,
@@ -3183,13 +3183,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "_______________ deficiency is the most common nutrient deficiency in the U.S.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 212,
@@ -3198,13 +3198,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "_____________ is a component of the antioxidant glutathione peroxidase and works...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 213,
@@ -3213,13 +3213,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "____________ is a trace mineral suggested to function in hormone, cholesterol, a...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 214,
@@ -3228,13 +3228,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which situation require additional iron intake?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 215,
@@ -3243,13 +3243,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following are the best sources of selenium?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 216,
@@ -3258,13 +3258,13 @@
       "exam_source": "Domain 1 Exam 5",
       "question_type": "multiple_choice",
       "question_preview": "Which population often shows marginal zinc deficiency in the U.S.?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 217,
@@ -3273,13 +3273,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "___________ is very similar to choline. When choline donates one of its methyl g...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 218,
@@ -3288,13 +3288,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Which is the main nutrient involved in controlling homocysteine levels?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 219,
@@ -3303,13 +3303,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Betaine is known for its ability to help the liver process _____________.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 220,
@@ -3318,13 +3318,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "_____________ is a vitaminlike compound that stimulates the breakdown of long-ch...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 221,
@@ -3333,13 +3333,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "______________ deficiency is linked to a large number of heart disorders.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 222,
@@ -3348,13 +3348,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Carnitine is synthesized from the amino acid ______________.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 223,
@@ -3363,13 +3363,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Carnosine is a small protein compound composed of the amino acids __________ and...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 224,
@@ -3378,13 +3378,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "________________ is suggested to protect against radiation damage, improve the f...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 225,
@@ -3393,13 +3393,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Some _______________ are converted to vitamin A while all exert antioxidant acti...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 226,
@@ -3408,13 +3408,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Which food is known for being a good source of lycopene?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 227,
@@ -3423,13 +3423,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "______________ is the green pigment of plants found in the chloroplast compartme...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 228,
@@ -3438,13 +3438,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is a good source of Ellagic acid?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 229,
@@ -3453,13 +3453,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is a good source of chlorophyll?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 230,
@@ -3468,13 +3468,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "_____________ is a potent antioxidant that blocks the cancer causing actions of ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 231,
@@ -3483,13 +3483,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is the best food source of live enzymes?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 232,
@@ -3498,13 +3498,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is the well known enzyme found in pineapple?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 233,
@@ -3513,13 +3513,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Which group of phytonutrients have been found to support collagen metabolism?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 234,
@@ -3528,13 +3528,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Cysteine, glutamic acid, and glycine make up which compound?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 235,
@@ -3543,13 +3543,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "____________ helps the body convert fat soluble toxins into a water soluble form...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 236,
@@ -3558,13 +3558,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Artichokes are particularly great for which population due to their rich content...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 237,
@@ -3573,13 +3573,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "true_false",
       "question_preview": "While inulin is not utilized by the body for energy, it is broken down into othe...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 238,
@@ -3588,13 +3588,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Arugula is a __________________ vegetable known for its anticancer compounds kno...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 239,
@@ -3603,13 +3603,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "The pigments that gives beets their rich, purple color is known as ___________. ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 240,
@@ -3618,13 +3618,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Broccoli is particularly supportive for the prevention of which condition due to...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 241,
@@ -3633,13 +3633,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Indole-3-carbinole in cabbage has been shown to increase the rate at which _____...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 242,
@@ -3648,13 +3648,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "true_false",
       "question_preview": "Beta-carotene, which is present in high levels in carrots, provides protection a...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 243,
@@ -3663,13 +3663,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Celery is known for its phytochemical compounds known as ______________ which sh...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 244,
@@ -3678,13 +3678,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "______________-based juices can serve as a great electrolyte drink after workout...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 245,
@@ -3693,13 +3693,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "_____________ are excellent sources of silica, a trace mineral that contributes ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 246,
@@ -3708,13 +3708,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Dandelion is known to support the _____________ due to it boosting the flow of b...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 247,
@@ -3723,13 +3723,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "____________ is referred to as an intestinal antispasmodic, or compound that rel...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 248,
@@ -3738,13 +3738,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Which medicinal food contains the compound known as allicin?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 249,
@@ -3753,13 +3753,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "____________ is a good nondairy source of calcium",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 250,
@@ -3768,13 +3768,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Onions are a particularly good source of organic _______ compounds.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 251,
@@ -3783,13 +3783,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "true_false",
       "question_preview": "A boiled potato has a higher glycemic index than a baked potato.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 252,
@@ -3798,13 +3798,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Adding _________________ to a high glycemic and carb heavy meal can reduce the g...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 253,
@@ -3813,13 +3813,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Winter squash is particularly rich in _______________.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 254,
@@ -3828,13 +3828,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Avocados are high in which type of fat?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 255,
@@ -3843,13 +3843,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "Bananas are rich in _________ making it supportive of blood pressure regulation.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 256,
@@ -3858,13 +3858,13 @@
       "exam_source": "Domain 1 Exam 6",
       "question_type": "multiple_choice",
       "question_preview": "_____________ are known for their health benefits largely due to the compound kn...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 257,
@@ -11163,13 +11163,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which mineral is particularly known for binding oxalates in the gut?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 744,
@@ -11178,13 +11178,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Individuals with celiac disease may also have to avoid which foods?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 745,
@@ -11193,13 +11193,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which group of B vitamins are important for regulating homocysteine levels in th...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 746,
@@ -11268,13 +11268,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is a common source of aluminum?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 751,
@@ -11418,13 +11418,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "true_false",
       "question_preview": "Raw foods contains fewer live enzymes because they are activated only when cooki...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 761,
@@ -11493,13 +11493,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "true_false",
       "question_preview": "Beets, kale, collards, spinach, and green beans are low oxalate foods.",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 766,
@@ -11598,13 +11598,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "What is annatto, and what is one of its uses?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 773,
@@ -11643,13 +11643,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "What effect does cooking vegetables have on glutathione levels?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 776,
@@ -11733,13 +11733,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "What is the best way to avoid food additives such as preservatives, artificial c...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 782,
@@ -11748,13 +11748,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is the most reliable way to identify gluten in food ingre...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 783,
@@ -11778,13 +11778,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Nutritional therapies for chronic fatigue syndrome include high doses of vitamin...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 785,
@@ -11853,13 +11853,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following conditions can result from biotin deficiency in children?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 790,
@@ -11913,13 +11913,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is a role of the amino acid arginine?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 794,
@@ -11928,13 +11928,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is a function of glutamine in the human body?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 795,
@@ -11943,13 +11943,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is a role of the amino acid lysine in the body?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 796,
@@ -11958,13 +11958,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following factors can contribute to mild dehydration?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 797,
@@ -11973,13 +11973,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following terms on a food label indicates that sugar has been added...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 798,
@@ -12063,13 +12063,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "_________________ are inorganic salts that are used as preservatives in many foo...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 804,
@@ -12078,13 +12078,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Cellulose, pectin, and hemicellulose are considered fibers while fibrinogen is c...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 805,
@@ -12123,13 +12123,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Alpha linolenic acid is what type of fatty acid?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 808,
@@ -12168,13 +12168,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following does pH measure?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 811,
@@ -12228,13 +12228,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "What is the normal fasting blood glucose concentration?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 815,
@@ -12243,13 +12243,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is least likely to break down carbohydrates?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 816,
@@ -12258,13 +12258,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Professional health organizations such, as the American Heart Association, and t...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "revised",
+      "reviewer": "Ryan (review) + Dwight (fix)",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
-      "fix_applied": null,
-      "confidence": null
+      "issues_found": true,
+      "fix_applied": "2026-04-08",
+      "confidence": "high"
     },
     {
       "index": 817,
@@ -12318,13 +12318,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following gluten free grains may need to be removed with celiac dis...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 821,
@@ -12333,13 +12333,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following nutrients helps to regulate cholesterol levels by binding...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 822,
@@ -12363,13 +12363,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which B vitamin has been shown to lower LDL cholesterol?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 824,
@@ -12378,13 +12378,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Which of the following is a high purine food that should be avoided with gout?",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 825,
@@ -12393,13 +12393,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Energy deficiency produces which of the following:",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 826,
@@ -12468,13 +12468,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Intestinal absorption of dietary iron may be enhanced by concurrent ingestion of...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 831,
@@ -12483,13 +12483,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "High intakes of zinc will interfere with the absorption and utilization of which...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 832,
@@ -12513,13 +12513,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "Symptoms of vitamin A overdose include all the following EXCEPT:",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 834,
@@ -12528,13 +12528,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "All the following are functions of fat in human health except:",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     },
     {
       "index": 835,
@@ -12543,13 +12543,13 @@
       "exam_source": "Full Length Comprehensive Exam",
       "question_type": "multiple_choice",
       "question_preview": "This type of lipoprotein transports cholesterol from the liver to places in the ...",
-      "status": "pending",
-      "reviewer": null,
-      "review_date": null,
+      "status": "approved",
+      "reviewer": "Ryan",
+      "review_date": "2026-04-08",
       "notes": null,
-      "issues_found": null,
+      "issues_found": false,
       "fix_applied": null,
-      "confidence": null
+      "confidence": "high"
     }
   ]
 }

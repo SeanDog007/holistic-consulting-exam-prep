@@ -129,7 +129,7 @@
     "options": [
       "Celluloses",
       "Gums",
-      "Mucilage's"
+      "Mucilages"
     ],
     "correct_answer": 0,
     "difficulty": "medium",
@@ -143,7 +143,7 @@
     "question_type": "multiple_choice",
     "options": [
       "One-half cup of leafy green vegetables",
-      "1 mediums sweet potato",
+      "1 medium sweet potato",
       "Avocado"
     ],
     "correct_answer": 2,
@@ -324,7 +324,7 @@
     "options": [
       "Alkaline",
       "Acidic",
-      "Option 3"
+      "Neutral"
     ],
     "correct_answer": 1,
     "difficulty": "medium",
@@ -927,7 +927,7 @@
       "Calcium is needed for bone structure and strength",
       "Magnesium helps to activate vitamin D into its active form",
       "Vitamin D promotes calcium absorption",
-      "Vitamin B12 stimulates to production of collagen"
+      "Vitamin B12 stimulates the production of collagen"
     ],
     "correct_answer": 3,
     "difficulty": "medium",
@@ -1016,7 +1016,7 @@
     "question_text": "Portion size should be individualized based on which factors such as age, gender, activity level, and health status.",
     "question_type": "multiple_choice",
     "options": [
-      "Age and gener",
+      "Age and gender",
       "Activity level",
       "Health status",
       "All answers are correct"
@@ -1044,7 +1044,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 2",
-    "question_text": "Which group of vitamins is known for support energy metabolism from food?",
+    "question_text": "Which group of vitamins is known for supporting energy metabolism from food?",
     "question_type": "multiple_choice",
     "options": [
       "B vitamins",
@@ -1059,7 +1059,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 2",
-    "question_text": "Which B vitamins is especially important for its role in supporting the nervous system and helping to convert amino acids into neurotransmitters?",
+    "question_text": "Which B vitamin is especially important for its role in supporting the nervous system and helping to convert amino acids into neurotransmitters?",
     "question_type": "multiple_choice",
     "options": [
       "B6",
@@ -1134,7 +1134,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 2",
-    "question_text": "Which form of iron found in food is most bioavaible?",
+    "question_text": "Which form of iron found in food is most bioavailable?",
     "question_type": "multiple_choice",
     "options": [
       "Non heme iron",
@@ -1151,7 +1151,7 @@
     "question_text": "What are sources of heme iron?",
     "question_type": "multiple_choice",
     "options": [
-      "poultry, salmon, beef, and eggs",
+      "poultry, salmon, beef, and lamb",
       "spinach, oatmeal, nuts, and seeds"
     ],
     "correct_answer": 0,
@@ -1437,7 +1437,7 @@
     "question_text": "Unstable molecules that can damage cells and contribute to the development of chronic diseases.",
     "question_type": "multiple_choice",
     "options": [
-      "Free radicaals",
+      "Free radicals",
       "Cholesterol",
       "Phytoestrogens"
     ],
@@ -1454,7 +1454,7 @@
     "options": [
       "4 servings",
       "5 servings",
-      "6 serviings"
+      "6 servings"
     ],
     "correct_answer": 1,
     "difficulty": "medium",
@@ -1916,7 +1916,7 @@
     "options": [
       "Ferric iron",
       "Ferrous iron",
-      "Option 3"
+      "Chelated iron"
     ],
     "correct_answer": 0,
     "difficulty": "medium",
@@ -1931,7 +1931,7 @@
     "options": [
       "Ferric iron",
       "Ferrous iron",
-      "Option 3"
+      "Chelated iron"
     ],
     "correct_answer": 1,
     "difficulty": "medium",
@@ -1971,7 +1971,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 3",
-    "question_text": "Which nutrients is needed to support the conversation of thyroid hormone into its active form?",
+    "question_text": "Which nutrients is needed to support the conversion of thyroid hormone into its active form?",
     "question_type": "multiple_choice",
     "options": [
       "Choline",
@@ -1986,7 +1986,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 3",
-    "question_text": "Which food sources if rich in selenium?",
+    "question_text": "Which food source is rich in selenium?",
     "question_type": "multiple_choice",
     "options": [
       "Brazil nuts",
@@ -2001,7 +2001,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 3",
-    "question_text": "Which nutrient it needed for the synthesis of thyroid hormone?",
+    "question_text": "Which nutrient is needed for the synthesis of thyroid hormone?",
     "question_type": "multiple_choice",
     "options": [
       "Iron",
@@ -2050,7 +2050,7 @@
     "question_type": "multiple_choice",
     "options": [
       "Copper",
-      "Calccium",
+      "Calcium",
       "Magnesium"
     ],
     "correct_answer": 0,
@@ -2425,7 +2425,7 @@
     "question_text": "Essential fatty acids are transformed into regulatory compounds known as ____________ which carry out many important tasks in the body including playing a role in the regulation of blood pressure, inflammation, allergic responses, hormone synthesis, and heart function.",
     "question_type": "multiple_choice",
     "options": [
-      "Phopholipids",
+      "Phospholipids",
       "Amino acids",
       "Prostaglandins"
     ],
@@ -2516,7 +2516,7 @@
     "question_text": "Which of the following is not true regarding the \"Recommended Dietary Allowance (RDA)\"?",
     "question_type": "multiple_choice",
     "options": [
-      "Developed to reduce the rate of severe nutrition deficiency diseases such as scury",
+      "Developed to reduce the rate of severe nutrition deficiency diseases such as scurvy",
       "Individuals with special nutritional needs are not covered by the RDAs",
       "There is scientific basis that RDAs meet the needs of individuals"
     ],
@@ -2604,7 +2604,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 4",
-    "question_text": "Early ______________ deficiency is characterized by cracking of the lips and corners of the mouth, an inflamed tongue, and burning and icthing of the eyes, lips, mouth, and tongue.",
+    "question_text": "Early ______________ deficiency is characterized by cracking of the lips and corners of the mouth, an inflamed tongue, and burning and itching of the eyes, lips, mouth, and tongue.",
     "question_type": "multiple_choice",
     "options": [
       "Thiamin",
@@ -2619,7 +2619,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 4",
-    "question_text": "_______________ deficiency is results in a syndrome known as beriberi where symptoms include mental confusion, muscle wasting, high blood pressure, and fluid retention.",
+    "question_text": "_______________ deficiency results in a syndrome known as beriberi where symptoms include mental confusion, muscle wasting, high blood pressure, and fluid retention.",
     "question_type": "multiple_choice",
     "options": [
       "Thiamin",
@@ -2713,7 +2713,7 @@
     "question_type": "multiple_choice",
     "options": [
       "Folate",
-      "Cobalmin",
+      "Cobalamin",
       "Pantothenic acid"
     ],
     "correct_answer": 2,
@@ -3083,7 +3083,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 5",
-    "question_text": "________________ deficiency is common in the geriatric population and in women during the premenstrual period. Deficiency can lead o mental confusion, irritability, weakness, heart disturbances, and problems in nerve conduction.",
+    "question_text": "________________ deficiency is common in the geriatric population and in women during the premenstrual period. Deficiency can lead to mental confusion, irritability, weakness, heart disturbances, and problems in nerve conduction.",
     "question_type": "multiple_choice",
     "options": [
       "Zinc",
@@ -3368,7 +3368,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 6",
-    "question_text": "________________ is suggested to protect against radiation damage, improve the function of the heart, and promote wound healing. I is also suggested to be a water soluble counterpart to vitamin E in protecting cell membranes from oxidative damage.",
+    "question_text": "________________ is suggested to protect against radiation damage, improve the function of the heart, and promote wound healing. It is also suggested to be a water soluble counterpart to vitamin E in protecting cell membranes from oxidative damage.",
     "question_type": "multiple_choice",
     "options": [
       "Lutein",
@@ -3580,7 +3580,7 @@
     "question_text": "Arugula is a __________________ vegetable known for its anticancer compounds known as glucosinolates.",
     "question_type": "multiple_choice",
     "options": [
-      "Nightsade",
+      "Nightshade",
       "Cruciferous",
       "Tuber"
     ],
@@ -3651,7 +3651,7 @@
     "domain": 1,
     "topic": "Food and Nutrition",
     "exam_source": "Domain 1 Exam 6",
-    "question_text": "Celery is known for its phytochemical compounds known as ______________ which show anticancer properties and the ability to enhance while blood cell activity.",
+    "question_text": "Celery is known for its phytochemical compounds known as ______________ which show anticancer properties and the ability to enhance white blood cell activity.",
     "question_type": "multiple_choice",
     "options": [
       "EGCG",
@@ -12340,7 +12340,7 @@
     "domain": 1,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
-    "question_text": "Professional health organizations such, as the American Heart Association, and the Dietary Guidelines for Americans 2015–2025 recommend that people consume _________ of calories per day from added sugar.",
+    "question_text": "Professional health organizations such as the American Heart Association, and the Dietary Guidelines for Americans 2020–2025 recommend that people consume _________ of calories per day from added sugar.",
     "question_type": "multiple_choice",
     "options": [
       "less than 10%",
