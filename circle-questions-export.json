@@ -3876,7 +3876,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 1",
-    "question_text": "Which condition is characterized by abdominal pain, boating, altered bowel habits, and changes in bowel movements?",
+    "question_text": "Which condition is characterized by abdominal pain, bloating, altered bowel habits, and changes in bowel movements?",
     "question_type": "multiple_choice",
     "options": [
       "Irritable bowel syndrome",
@@ -4121,8 +4121,7 @@
     "question_type": "multiple_choice",
     "options": [
       "True",
-      "False",
-      "Option 3"
+      "False"
     ],
     "correct_answer": 0,
     "difficulty": "medium",
@@ -4177,7 +4176,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 1",
-    "question_text": "Which of the following is not an examples of an antioxidant?",
+    "question_text": "Which of the following is not an example of an antioxidant?",
     "question_type": "multiple_choice",
     "options": [
       "superoxide dismutase, catalase, and glutathione peroxidase",
@@ -4312,7 +4311,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 1",
-    "question_text": "Which neurotransmitters originates from the tryptophan pathway and is associated with mood disorders?",
+    "question_text": "Which neurotransmitter originates from the tryptophan pathway and is associated with mood disorders?",
     "question_type": "multiple_choice",
     "options": [
       "Serotonin",
@@ -4327,7 +4326,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 1",
-    "question_text": "Which of the following neurotransmitters originates from the tyrosine pathway?",
+    "question_text": "Which of the following neurotransmitter originates from the tyrosine pathway?",
     "question_type": "multiple_choice",
     "options": [
       "Serotonin",
@@ -4342,7 +4341,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 1",
-    "question_text": "Which neurotransmitters helps to calm the nervous system?",
+    "question_text": "Which neurotransmitter helps to calm the nervous system?",
     "question_type": "multiple_choice",
     "options": [
       "GABA",
@@ -4387,7 +4386,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 1",
-    "question_text": "Dysregulation in ____________ synthesis can lead to weakened connective tissues, contribute to join instability, skin elasticity issues, and other structural problems.",
+    "question_text": "Dysregulation in ____________ synthesis can lead to weakened connective tissues, contribute to joint instability, skin elasticity issues, and other structural problems.",
     "question_type": "multiple_choice",
     "options": [
       "Connective tissue",
@@ -4421,8 +4420,7 @@
     "question_type": "multiple_choice",
     "options": [
       "True",
-      "False",
-      "Option 3"
+      "False"
     ],
     "correct_answer": 1,
     "difficulty": "medium",
@@ -4436,8 +4434,7 @@
     "question_type": "multiple_choice",
     "options": [
       "True",
-      "False",
-      "Option 3"
+      "False"
     ],
     "correct_answer": 0,
     "difficulty": "medium",
@@ -4890,7 +4887,7 @@
     "question_type": "multiple_choice",
     "options": [
       "Enteric nervous system",
-      "Sphincter of Ohdi",
+      "Sphincter of Oddi",
       "Hepatic portal vein"
     ],
     "correct_answer": 2,
@@ -4951,7 +4948,7 @@
     "question_text": "An enzyme in the stomach that can hydrolyze protein is:",
     "question_type": "multiple_choice",
     "options": [
-      "trypsin",
+      "pepsin",
       "bicarbonate",
       "enterokinase"
     ],
@@ -5100,7 +5097,7 @@
     "question_text": "Which of the following is a true statement?",
     "question_type": "multiple_choice",
     "options": [
-      "Option 1Trans fatty acids kink or bend, and they are abundant in nature.",
+      "Trans fatty acids kink or bend, and they are abundant in nature.",
       "Cis fatty acids kink or bend, and they are abundant in nature.",
       "Both cis and trans fatty acids kink or bend and are abundant in nature."
     ],
@@ -5433,7 +5430,7 @@
     "options": [
       "6",
       "7",
-      "8"
+      "9"
     ],
     "correct_answer": 2,
     "difficulty": "medium",
@@ -5655,7 +5652,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 4",
-    "question_text": "What is the precursor to eicosanoids, a large group of active compounds that include prostaglandins, thromboxane's, and leukotrienes?",
+    "question_text": "What is the precursor to eicosanoids, a large group of active compounds that include prostaglandins, thromboxanes, and leukotrienes?",
     "question_type": "multiple_choice",
     "options": [
       "Essential fatty acids",
@@ -5803,7 +5800,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 5",
-    "question_text": "What type of muscle fibers are recruited first during muscle contrations?",
+    "question_text": "What type of muscle fibers are recruited first during muscle contractions?",
     "question_type": "multiple_choice",
     "options": [
       "Type I",
@@ -5892,12 +5889,12 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 5",
-    "question_text": "Which of the following is a considered a carotenoid?",
+    "question_text": "Which of the following is considered a carotenoid?",
     "question_type": "multiple_choice",
     "options": [
-      "Retinol",
-      "Retinal",
-      "Retinoic acid",
+      "Beta-carotene",
+      "Lycopene",
+      "Lutein",
       "All answers are correct"
     ],
     "correct_answer": 3,
@@ -5908,7 +5905,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 5",
-    "question_text": "Which nutrient plays a vital role in night vision, cell differentiation, reproduction, skin health, and bone heatlh?",
+    "question_text": "Which nutrient plays a vital role in night vision, cell differentiation, reproduction, skin health, and bone health?",
     "question_type": "multiple_choice",
     "options": [
       "Vitamin A",
@@ -5953,7 +5950,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 5",
-    "question_text": "Which nutrient is an anticoagulant and supports the synthesis of the bone proteins Gla protein (osteocalcin) and matrix Gla protein (MGP)?",
+    "question_text": "Which nutrient is essential for blood clotting (coagulation) and supports the synthesis of the bone proteins Gla protein (osteocalcin) and matrix Gla protein (MGP)?",
     "question_type": "multiple_choice",
     "options": [
       "Vitamin D",
@@ -11324,7 +11321,7 @@
     "question_type": "multiple_choice",
     "options": [
       "Co Enzyme Q10",
-      "Resveraterol",
+      "Resveratrol",
       "Lycopene"
     ],
     "correct_answer": 0,
