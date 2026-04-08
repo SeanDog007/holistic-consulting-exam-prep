@@ -1587,7 +1587,7 @@
     "question_text": "Which of the following foods is not considered a high oxalate food?",
     "question_type": "multiple_choice",
     "options": [
-      "Green peppers",
+      "Spinach",
       "Beets",
       "Eggplant",
       "Onions"
@@ -9112,15 +9112,15 @@
     "domain": 4,
     "topic": "Nutrition in Practice",
     "exam_source": "Domain 4 Exam 2",
-    "question_text": "Which of the following recommendations is not appropriate for a client suffering from IBS?",
+    "question_text": "Which of the following is generally NOT recommended for managing IBS symptoms?",
     "question_type": "multiple_choice",
     "options": [
       "Relaxation therapy",
-      "Low fiber diet",
-      "Enteric coated peppermint oil",
-      "High fiber diet"
+      "Enteric-coated peppermint oil capsules",
+      "A diet high in refined sugar and processed foods",
+      "Identifying and eliminating food triggers"
     ],
-    "correct_answer": 1,
+    "correct_answer": 2,
     "difficulty": "medium",
     "source": "circle_import"
   },
@@ -9805,13 +9805,13 @@
     "domain": 4,
     "topic": "Nutrition in Practice",
     "exam_source": "Domain 4 Exam 3",
-    "question_text": "Which of the following is not a well supported recommendation for asthma?",
+    "question_text": "Which of the following is NOT a well-supported nutritional recommendation for asthma management?",
     "question_type": "multiple_choice",
     "options": [
-      "Organic coffee and tea",
-      "Elimination of food allergies",
+      "A diet high in sodium and processed foods",
+      "Elimination of food allergies and sensitivities",
       "High intake of dietary antioxidants",
-      "Using olive oil instead of foods high in animal  fats such as butter"
+      "Using olive oil instead of foods high in animal fats such as butter"
     ],
     "correct_answer": 0,
     "difficulty": "medium",
