@@ -12292,6 +12292,22 @@
     "domain": 0,
     "topic": "Comprehensive",
     "exam_source": "Full Length Comprehensive Exam",
+    "question_text": "Within the electron transport system, which of the following are involved in ATP formation?",
+    "question_type": "multiple_choice",
+    "options": [
+      "cytochrome c oxidase",
+      "NADH and FADH2",
+      "coenzyme Q",
+      "All answers are correct"
+    ],
+    "correct_answer": 3,
+    "difficulty": "medium",
+    "source": "circle_import"
+  },
+  {
+    "domain": 0,
+    "topic": "Comprehensive",
+    "exam_source": "Full Length Comprehensive Exam",
     "question_text": "All the following stimulate food intake, except:",
     "question_type": "multiple_choice",
     "options": [

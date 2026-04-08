@@ -1,214 +1,242 @@
 {
-  "timestamp": "2026-04-08T13:33:24.853Z",
-  "totalQuestions": 877,
-  "totalIssues": 540,
+  "timestamp": "2026-04-08T13:38:40.094Z",
+  "totalQuestions": 836,
+  "totalIssues": 438,
   "bySeverity": {
-    "error": 42,
-    "warning": 171,
-    "review": 78,
-    "info": 249
+    "error": 0,
+    "warning": 129,
+    "review": 75,
+    "info": 234
   },
   "byCategory": {
-    "structural": 219,
-    "dupes": 52,
-    "content": 86,
+    "structural": 182,
+    "dupes": 7,
+    "content": 80,
     "answer-key": 2,
-    "format": 181
+    "format": 167
   },
   "issues": [
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 22,
+      "questionIndex": 20,
       "message": "Only 2 options (binary question)",
       "detail": "Options: Alkaline | Acidic"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 25,
+      "questionIndex": 23,
       "message": "Only 2 options (binary question)",
       "detail": "Options: These nutrients must be obtained from the diet because the body does not produce them endogenously or in adequate amounts | These nutrients are crucial for human health and the body produces them endogenously"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 35,
+      "questionIndex": 33,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 65,
+      "questionIndex": 62,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 78,
+      "questionIndex": 75,
       "message": "Only 2 options (binary question)",
       "detail": "Options: Non heme iron | Heme iron"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 79,
+      "questionIndex": 76,
       "message": "Only 2 options (binary question)",
       "detail": "Options: poultry, salmon, beef, and eggs | spinach, oatmeal, nuts, and seeds"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 80,
+      "questionIndex": 77,
       "message": "Only 2 options (binary question)",
       "detail": "Options: meat, fish, eggs, poultry | spinach, oatmeal, nuts, and seeds"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 114,
+      "questionIndex": 111,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 126,
+      "questionIndex": 123,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 127,
+      "questionIndex": 124,
       "message": "Only 2 options (binary question)",
       "detail": "Options: Ferric | Ferrous"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 128,
+      "questionIndex": 125,
       "message": "Only 2 options (binary question)",
       "detail": "Options: Spinach | Beef"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 129,
+      "questionIndex": 126,
       "message": "Only 2 options (binary question)",
       "detail": "Options: Spinach | Beef"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 145,
+      "questionIndex": 142,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 154,
+      "questionIndex": 151,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 206,
+      "questionIndex": 203,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 212,
+      "questionIndex": 209,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 240,
+      "questionIndex": 237,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 245,
+      "questionIndex": 242,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 254,
+      "questionIndex": 251,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 273,
+      "questionIndex": 270,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 337,
+      "questionIndex": 332,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 339,
+      "questionIndex": 334,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 350,
+      "questionIndex": 345,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 354,
+      "questionIndex": 349,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 356,
+      "questionIndex": 351,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 386,
+      "questionIndex": 381,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 388,
+      "questionIndex": 383,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 396,
+      "questionIndex": 391,
+      "message": "True/False question stored as MC",
+      "detail": "Options: True | False"
+    },
+    {
+      "category": "structural",
+      "severity": "info",
+      "questionIndex": 414,
+      "message": "True/False question stored as MC",
+      "detail": "Options: True | False"
+    },
+    {
+      "category": "structural",
+      "severity": "info",
+      "questionIndex": 415,
+      "message": "True/False question stored as MC",
+      "detail": "Options: True | False"
+    },
+    {
+      "category": "structural",
+      "severity": "info",
+      "questionIndex": 417,
+      "message": "True/False question stored as MC",
+      "detail": "Options: True | False"
+    },
+    {
+      "category": "structural",
+      "severity": "info",
+      "questionIndex": 418,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
@@ -229,6 +257,13 @@
     {
       "category": "structural",
       "severity": "info",
+      "questionIndex": 421,
+      "message": "True/False question stored as MC",
+      "detail": "Options: True | False"
+    },
+    {
+      "category": "structural",
+      "severity": "info",
       "questionIndex": 422,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
@@ -243,189 +278,161 @@
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 424,
-      "message": "True/False question stored as MC",
-      "detail": "Options: True | False"
-    },
-    {
-      "category": "structural",
-      "severity": "info",
       "questionIndex": 425,
-      "message": "True/False question stored as MC",
-      "detail": "Options: True | False"
-    },
-    {
-      "category": "structural",
-      "severity": "info",
-      "questionIndex": 426,
-      "message": "True/False question stored as MC",
-      "detail": "Options: True | False"
-    },
-    {
-      "category": "structural",
-      "severity": "info",
-      "questionIndex": 427,
-      "message": "True/False question stored as MC",
-      "detail": "Options: True | False"
-    },
-    {
-      "category": "structural",
-      "severity": "info",
-      "questionIndex": 428,
-      "message": "True/False question stored as MC",
-      "detail": "Options: True | False"
-    },
-    {
-      "category": "structural",
-      "severity": "info",
-      "questionIndex": 430,
       "message": "Only 2 options (binary question)",
       "detail": "Options: Generalized | Personalized"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 434,
+      "questionIndex": 429,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 438,
+      "questionIndex": 433,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 445,
+      "questionIndex": 440,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 464,
+      "questionIndex": 459,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 525,
+      "questionIndex": 520,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 537,
+      "questionIndex": 532,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 575,
+      "questionIndex": 570,
       "message": "Only 2 options (binary question)",
       "detail": "Options: Systolic ; Diastolic | Diastolic ; Systolic"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 576,
+      "questionIndex": 571,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 577,
+      "questionIndex": 572,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 590,
+      "questionIndex": 585,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 639,
+      "questionIndex": 634,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 666,
+      "questionIndex": 661,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 667,
+      "questionIndex": 662,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 675,
+      "questionIndex": 670,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 683,
+      "questionIndex": 678,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 684,
+      "questionIndex": 679,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 685,
+      "questionIndex": 680,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 691,
+      "questionIndex": 686,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 692,
+      "questionIndex": 687,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 699,
+      "questionIndex": 694,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 700,
+      "questionIndex": 695,
+      "message": "True/False question stored as MC",
+      "detail": "Options: True | False"
+    },
+    {
+      "category": "structural",
+      "severity": "info",
+      "questionIndex": 696,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
@@ -433,1484 +440,903 @@
       "category": "structural",
       "severity": "info",
       "questionIndex": 701,
-      "message": "True/False question stored as MC",
-      "detail": "Options: True | False"
-    },
-    {
-      "category": "structural",
-      "severity": "info",
-      "questionIndex": 706,
       "message": "Only 2 options (binary question)",
       "detail": "Options: a systematic error that rarely causes inaccurate research findings. | likely to cause inaccurate research findings."
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 721,
+      "questionIndex": 716,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 726,
+      "questionIndex": 721,
       "message": "Domain is 0 (unassigned)",
       "detail": "What are some ways that the internet can be a valuable component of a research p"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 727,
+      "questionIndex": 722,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following are methods for determining if an online source is not re"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 728,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "When you determine that a source is relevant to your research questions and wort"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 729,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which of the following is the term for a list of possible sources featuring both"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 730,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "The term used to describe general principles that connect reasons to claims."
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 731,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "The section that explains to readers what they will find in the article, paper, "
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 732,
+      "questionIndex": 723,
       "message": "Domain is 0 (unassigned)",
       "detail": "If using information or ideas from an outside source, only intext citations or a"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 732,
+      "questionIndex": 723,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 733,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which of the following statements about plagiarism is false?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 734,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which one of the following is least helpful in determining whether a source is r"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 735,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which of the following is false:"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 736,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "When conducting research on PubMed, what is the best example of a search that is"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 737,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "A method for determining if an article is relevant to your research is to skim t"
-    },
-    {
-      "category": "structural",
-      "severity": "info",
-      "questionIndex": 737,
-      "message": "True/False question stored as MC",
-      "detail": "Options: True | False"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 738,
+      "questionIndex": 724,
       "message": "Domain is 0 (unassigned)",
       "detail": "If a particular state restricts individualized recommendations by anyone other t"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 739,
+      "questionIndex": 725,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following may Holistic Nutrition Professionals not provide to their"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 740,
+      "questionIndex": 726,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following statements is false?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 741,
+      "questionIndex": 727,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is true?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 742,
+      "questionIndex": 728,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is true regarding NANP members?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 743,
+      "questionIndex": 729,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is a disadvantage of group counseling?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 744,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "What does \"SMART\" goal stand for?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 745,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "What is the term used to describe a supportive process guiding a client toward n"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 746,
+      "questionIndex": 730,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following factors has been shown to influence food choice?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 747,
+      "questionIndex": 731,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which stage of change recognizes a need to change but the person continues to fi"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 748,
+      "questionIndex": 732,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which stage of change is seen in clients who have no intention of changing withi"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 749,
+      "questionIndex": 733,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which stage of change is seen in clients who believe that changing their behavio"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 750,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "What stage of change is a client in if they are currently working on changing th"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 751,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "What stage of change is a client in if they have been engaging in a new benefici"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 752,
+      "questionIndex": 734,
       "message": "Domain is 0 (unassigned)",
       "detail": "What is the term used to describe a person’s confidence in their ability to perf"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 753,
+      "questionIndex": 735,
       "message": "Domain is 0 (unassigned)",
       "detail": "_________ is the true understanding of another’s perspective and experience with"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 754,
+      "questionIndex": 736,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is not a key components of mindful eating?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 755,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "What can be recommended to a client who struggles with food intake at social gat"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 756,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which of the following is false?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 757,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "What phase in the counseling interview process includes the greeting and introdu"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 758,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "What phase in the counseling interview process includes tailoring the interventi"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 759,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "What are the 5 domains of the nutrition care process?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 760,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "What is the technique of exchanging a healthy behavior or response for a problem"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 761,
+      "questionIndex": 737,
       "message": "Domain is 0 (unassigned)",
       "detail": "A quality research paper should include all the following except:"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 762,
+      "questionIndex": 738,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is linked to chronic ear infections?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 763,
+      "questionIndex": 739,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which test is commonly used to detect antibodies in the blood?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 764,
+      "questionIndex": 740,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which herb has laxative effects?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 765,
+      "questionIndex": 741,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which food should be avoided during acute intestinal illness?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 766,
+      "questionIndex": 742,
       "message": "Domain is 0 (unassigned)",
       "detail": "When writing a paper, use a block quote if the quote is longer than _______ line"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 767,
+      "questionIndex": 743,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which mineral is particularly known for binding oxalates in the gut?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 768,
+      "questionIndex": 744,
       "message": "Domain is 0 (unassigned)",
       "detail": "Individuals with celiac disease may also have to avoid which foods?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 769,
+      "questionIndex": 745,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which group of B vitamins are important for regulating homocysteine levels in th"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 770,
+      "questionIndex": 746,
       "message": "Domain is 0 (unassigned)",
       "detail": "If your client storms out of the office when you make recommendations like cutti"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 770,
+      "questionIndex": 746,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 771,
+      "questionIndex": 747,
       "message": "Domain is 0 (unassigned)",
       "detail": "Steroid hormones are synthesized from ___________"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 772,
+      "questionIndex": 748,
       "message": "Domain is 0 (unassigned)",
       "detail": "If a client who is not progressing as expected and is very frustrated and unhapp"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 772,
+      "questionIndex": 748,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 773,
+      "questionIndex": 749,
       "message": "Domain is 0 (unassigned)",
       "detail": "________ is a vital compound found in every cell of the body. It plays a role in"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 774,
+      "questionIndex": 750,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is a common source of aluminum?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 775,
+      "questionIndex": 751,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which form of estrogen is the primary form that the body makes after menopause?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 776,
+      "questionIndex": 752,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which form of estrogen is the primary form made during pregnancy?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 777,
+      "questionIndex": 753,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following forms of estrogen is the primary form made by the body du"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 778,
+      "questionIndex": 754,
       "message": "Domain is 0 (unassigned)",
       "detail": "_____________ is a skin rash triggered by food, environmental exposures, or medi"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 779,
+      "questionIndex": 755,
       "message": "Domain is 0 (unassigned)",
       "detail": "___________ is an infection or irritation of the bronchi. Causes are thought to "
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 780,
+      "questionIndex": 756,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following produces thyroid releasing hormone (TRH)?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 781,
+      "questionIndex": 757,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following produces thyroid stimulating hormone (TSH)?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 782,
+      "questionIndex": 758,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following produces T4 and T3?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 783,
+      "questionIndex": 759,
       "message": "Domain is 0 (unassigned)",
       "detail": "________________ is commonly used as a supplement to help manage osteoarthritis."
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 784,
+      "questionIndex": 760,
       "message": "Domain is 0 (unassigned)",
       "detail": "Raw foods contains fewer live enzymes because they are activated only when cooki"
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 784,
+      "questionIndex": 760,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 785,
+      "questionIndex": 761,
       "message": "Domain is 0 (unassigned)",
       "detail": "How can you narrow down a research topic effectively?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 786,
+      "questionIndex": 762,
       "message": "Domain is 0 (unassigned)",
       "detail": "In patients with Multiple Sclerosis (MS), what is often found in their cerebrosp"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 787,
+      "questionIndex": 763,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is thought to be a contributing factor or trigger of mult"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 788,
+      "questionIndex": 764,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which enzymes is used to break down protein and is produced in the stomach by th"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 789,
+      "questionIndex": 765,
       "message": "Domain is 0 (unassigned)",
       "detail": "Beets, kale, collards, spinach, and green beans are low oxalate foods."
     },
     {
       "category": "structural",
       "severity": "info",
-      "questionIndex": 789,
+      "questionIndex": 765,
       "message": "True/False question stored as MC",
       "detail": "Options: True | False"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 790,
+      "questionIndex": 766,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which foods can support hemorrhoids?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 791,
+      "questionIndex": 767,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following releases gonadal releasing hormone?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 792,
+      "questionIndex": 768,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following releases follicle stimulating hormone?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 793,
+      "questionIndex": 769,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following releases estrogen and progesterone?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 794,
+      "questionIndex": 770,
       "message": "Domain is 0 (unassigned)",
       "detail": "What is the role of calcium in muscle contraction in cardiac muscle?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 795,
+      "questionIndex": 771,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which part of the small intestine is primarily responsible for lipid absorption?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 796,
+      "questionIndex": 772,
       "message": "Domain is 0 (unassigned)",
       "detail": "What is annatto, and what is one of its uses?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 797,
+      "questionIndex": 773,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following can help support and/or prevent urinary tract infections "
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 798,
+      "questionIndex": 774,
       "message": "Domain is 0 (unassigned)",
       "detail": "What is erythropoietin (EPO) and what is its primary function?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 799,
+      "questionIndex": 775,
       "message": "Domain is 0 (unassigned)",
       "detail": "What effect does cooking vegetables have on glutathione levels?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 800,
+      "questionIndex": 776,
       "message": "Domain is 0 (unassigned)",
       "detail": "What is one of the key roles of the lymphatic system?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 801,
+      "questionIndex": 777,
       "message": "Domain is 0 (unassigned)",
       "detail": "What are the main functions of the hormone secretin?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 802,
+      "questionIndex": 778,
       "message": "Domain is 0 (unassigned)",
       "detail": "Long term use of oral contraceptives can contribute to the depletion of which nu"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 803,
+      "questionIndex": 779,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following statements about diverticulitis is true?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 804,
+      "questionIndex": 780,
       "message": "Domain is 0 (unassigned)",
       "detail": "___________ is characterized by greasy scaling of the skin that appears similar "
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 805,
+      "questionIndex": 781,
       "message": "Domain is 0 (unassigned)",
       "detail": "What is the best way to avoid food additives such as preservatives, artificial c"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 806,
+      "questionIndex": 782,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is the most reliable way to identify gluten in food ingre"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 807,
+      "questionIndex": 783,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following best describes the Jarisch-Herxheimer reaction?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 808,
+      "questionIndex": 784,
       "message": "Domain is 0 (unassigned)",
       "detail": "Nutritional therapies for chronic fatigue syndrome include high doses of vitamin"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 809,
+      "questionIndex": 785,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is true about lymph nodes?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 810,
+      "questionIndex": 786,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is true about phagocytes?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 811,
+      "questionIndex": 787,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following best describes herbal choleretics?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 812,
+      "questionIndex": 788,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following conditions has Uva Ursi traditionally been used to treat?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 813,
+      "questionIndex": 789,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following conditions can result from biotin deficiency in children?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 814,
+      "questionIndex": 790,
       "message": "Domain is 0 (unassigned)",
       "detail": "What nutrient is important to limit with a client who is suffering from gout?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 815,
+      "questionIndex": 791,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is true about the role of digestive enzymes?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 816,
+      "questionIndex": 792,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following types of foods can help strengthen vein structure and sup"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 817,
+      "questionIndex": 793,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is a role of the amino acid arginine?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 818,
+      "questionIndex": 794,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is a function of glutamine in the human body?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 819,
+      "questionIndex": 795,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is a role of the amino acid lysine in the body?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 820,
+      "questionIndex": 796,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following factors can contribute to mild dehydration?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 821,
+      "questionIndex": 797,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following terms on a food label indicates that sugar has been added"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 822,
+      "questionIndex": 798,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is a function of the trigeminal nerve?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 823,
+      "questionIndex": 799,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which condition is characterized by swelling caused by too much fluid trapped in"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 824,
+      "questionIndex": 800,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following factors can increase the risk of developing cataracts?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 825,
+      "questionIndex": 801,
       "message": "Domain is 0 (unassigned)",
       "detail": "What is the function of alveoli in the lungs?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 826,
+      "questionIndex": 802,
       "message": "Domain is 0 (unassigned)",
       "detail": "What is a common result of a deviated septum?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 827,
+      "questionIndex": 803,
       "message": "Domain is 0 (unassigned)",
       "detail": "_________________ are inorganic salts that are used as preservatives in many foo"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 828,
+      "questionIndex": 804,
       "message": "Domain is 0 (unassigned)",
       "detail": "Cellulose, pectin, and hemicellulose are considered fibers while fibrinogen is c"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 829,
+      "questionIndex": 805,
       "message": "Domain is 0 (unassigned)",
       "detail": "The hepatic vein is located in the __________________."
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 830,
+      "questionIndex": 806,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is true about Peyer’s patches?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 831,
+      "questionIndex": 807,
       "message": "Domain is 0 (unassigned)",
       "detail": "Alpha linolenic acid is what type of fatty acid?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 832,
+      "questionIndex": 808,
       "message": "Domain is 0 (unassigned)",
       "detail": "Erythropoietin hormone is secreted by the ____________"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 833,
+      "questionIndex": 809,
       "message": "Domain is 0 (unassigned)",
       "detail": "The tonsils, adenoids, and spleen are all part of the ____________ system."
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 834,
+      "questionIndex": 810,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following does pH measure?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 835,
+      "questionIndex": 811,
       "message": "Domain is 0 (unassigned)",
       "detail": "Trigeminal pain is located in the ____________ area."
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 836,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "What is cell signaling?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 837,
+      "questionIndex": 812,
       "message": "Domain is 0 (unassigned)",
       "detail": "What is the site of most ATP production within the cells?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 838,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "48.\tWithin the electron transport system, which of the following are involved in"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 839,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "White blood cells are also called:"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 840,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which of the following correctly lists the components of the large intestine in "
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 841,
+      "questionIndex": 813,
       "message": "Domain is 0 (unassigned)",
       "detail": "All the following stimulate food intake, except:"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 842,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "An enzyme in the stomach that can hydrolyze protein is:"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 843,
+      "questionIndex": 814,
       "message": "Domain is 0 (unassigned)",
       "detail": "What is the normal fasting blood glucose concentration?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 844,
+      "questionIndex": 815,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is least likely to break down carbohydrates?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 845,
+      "questionIndex": 816,
       "message": "Domain is 0 (unassigned)",
       "detail": "Professional health organizations such, as the American Heart Association, and t"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 846,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "What is the term used to describe the cell’s ability to maintain a constant and "
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 847,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "How many sodium ions are pumped out of the cells for every two potassium ions th"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 848,
+      "questionIndex": 817,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which bodily organ plays a key role in detoxification?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 849,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Amylase is an enzyme responsible for breaking down which macronutrient?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 850,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Lipase is an enzyme responsible for breaking down which macronutrient?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 851,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Protease is an enzyme responsible for breaking down which macronutrient?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 852,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which part of the autonomic nervous system is considered the “fight or flight” s"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 853,
+      "questionIndex": 818,
       "message": "Domain is 0 (unassigned)",
       "detail": "What is the term for deficient gastric acid secretion (low stomach acid)."
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 854,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which gland secretes melatonin?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 855,
+      "questionIndex": 819,
       "message": "Domain is 0 (unassigned)",
       "detail": "Increased calcium resorption in kidney tubules is stimulated by:"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 856,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which specific nutrients have been shown to have a beneficial impact on acne?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 857,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which of the following foods may be related to delayed onset asthma reactions?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 858,
+      "questionIndex": 820,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following gluten free grains may need to be removed with celiac dis"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 859,
+      "questionIndex": 821,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following nutrients helps to regulate cholesterol levels by binding"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 860,
+      "questionIndex": 822,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following would not be a well-supported recommendation for a client"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 861,
+      "questionIndex": 823,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which B vitamin has been shown to lower LDL cholesterol?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 862,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which plant food contains the active ingredient known as allicin that has been s"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 863,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which food has been found to cause constipation in many children?"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 864,
-      "message": "Domain is 0 (unassigned)",
-      "detail": "Which of the following should be the primary goal for a client suffering from ec"
-    },
-    {
-      "category": "structural",
-      "severity": "warning",
-      "questionIndex": 865,
+      "questionIndex": 824,
       "message": "Domain is 0 (unassigned)",
       "detail": "Which of the following is a high purine food that should be avoided with gout?"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 866,
+      "questionIndex": 825,
       "message": "Domain is 0 (unassigned)",
       "detail": "Energy deficiency produces which of the following:"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 867,
+      "questionIndex": 826,
       "message": "Domain is 0 (unassigned)",
       "detail": "The recommended dietary component of osteoporosis treatment involves:"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 868,
+      "questionIndex": 827,
       "message": "Domain is 0 (unassigned)",
       "detail": "The most common cause of chronic kidney disease (CKD) is:"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 869,
+      "questionIndex": 828,
       "message": "Domain is 0 (unassigned)",
       "detail": "Aloe vera (aloe barbadensis) is traditionally use for the following condition:"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 870,
+      "questionIndex": 829,
       "message": "Domain is 0 (unassigned)",
-      "detail": "114.\tThe following herb has been shown to relieve symptoms of premenstrual syndr"
+      "detail": "The following herb has been shown to relieve symptoms of premenstrual syndrome a"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 871,
+      "questionIndex": 830,
       "message": "Domain is 0 (unassigned)",
       "detail": "Intestinal absorption of dietary iron may be enhanced by concurrent ingestion of"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 872,
+      "questionIndex": 831,
       "message": "Domain is 0 (unassigned)",
       "detail": "High intakes of zinc will interfere with the absorption and utilization of which"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 873,
+      "questionIndex": 832,
       "message": "Domain is 0 (unassigned)",
       "detail": "The most difficult challenge facing a nutritionist or nutrition counselor is to:"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 874,
+      "questionIndex": 833,
       "message": "Domain is 0 (unassigned)",
       "detail": "Symptoms of vitamin A overdose include all the following EXCEPT:"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 875,
+      "questionIndex": 834,
       "message": "Domain is 0 (unassigned)",
       "detail": "All the following are functions of fat in human health except:"
     },
     {
       "category": "structural",
       "severity": "warning",
-      "questionIndex": 876,
+      "questionIndex": 835,
       "message": "Domain is 0 (unassigned)",
       "detail": "This type of lipoprotein transports cholesterol from the liver to places in the "
     },
     {
       "category": "dupes",
-      "severity": "error",
-      "questionIndex": 18,
-      "message": "Exact duplicate of question 17",
-      "detail": "Which of the following is considered an anti-nutrient?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 19,
-      "message": "Exact duplicate of question 17",
-      "detail": "Which of the following is considered an anti-nutrient?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 48,
-      "message": "Exact duplicate of question 17",
-      "detail": "Which of the following is considered an “anti-nutrient”?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 304,
-      "message": "Exact duplicate of question 1",
-      "detail": "What key mitochondrial nutrient that is needed to manufacture energy within cells is reduced from st"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 313,
-      "message": "Exact duplicate of question 2",
-      "detail": "Which nutrient in particular is vital for the health of the colon?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 728,
-      "message": "Exact duplicate of question 722",
-      "detail": "When you determine that a source is relevant to your research questions and worth reading, what step"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 729,
-      "message": "Exact duplicate of question 695",
-      "detail": "Which of the following is the term for a list of possible sources featuring both a citation and a br"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 730,
-      "message": "Exact duplicate of question 696",
-      "detail": "The term used to describe general principles that connect reasons to claims."
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 731,
-      "message": "Exact duplicate of question 697",
-      "detail": "The section that explains to readers what they will find in the article, paper, or report."
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 733,
-      "message": "Exact duplicate of question 703",
-      "detail": "Which of the following statements about plagiarism is false?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 734,
-      "message": "Exact duplicate of question 704",
-      "detail": "Which one of the following is least helpful in determining whether a source is reliable and worth co"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 735,
-      "message": "Exact duplicate of question 12",
-      "detail": "Which of the following is false:"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 736,
-      "message": "Exact duplicate of question 724",
-      "detail": "When conducting research on PubMed, what is the best example of a search that is specific, but not t"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 737,
-      "message": "Exact duplicate of question 691",
-      "detail": "A method for determining if an article is relevant to your research is to skim the introduction and "
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 744,
-      "message": "Exact duplicate of question 441",
-      "detail": "What does \"SMART\" goal stand for?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 745,
-      "message": "Exact duplicate of question 442",
-      "detail": "What is the term used to describe a supportive process guiding a client toward nutritional well-bein"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 750,
-      "message": "Exact duplicate of question 450",
-      "detail": "What stage of change is a client in if they are currently working on changing their behavior?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 751,
-      "message": "Exact duplicate of question 451",
-      "detail": "What stage of change is a client in if they have been engaging in a new beneficial behavior for 8 mo"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 755,
-      "message": "Exact duplicate of question 474",
-      "detail": "What can be recommended to a client who struggles with food intake at social gatherings?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 756,
-      "message": "Exact duplicate of question 12",
-      "detail": "Which of the following is false?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 757,
-      "message": "Exact duplicate of question 488",
-      "detail": "What phase in the counseling interview process includes the greeting and introductions?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 758,
-      "message": "Exact duplicate of question 490",
-      "detail": "What phase in the counseling interview process includes tailoring the intervention to the client’s m"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 759,
-      "message": "Exact duplicate of question 493",
-      "detail": "What are the 5 domains of the nutrition care process?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 760,
-      "message": "Exact duplicate of question 502",
-      "detail": "What is the technique of exchanging a healthy behavior or response for a problem or unhealthy behavi"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 836,
-      "message": "Exact duplicate of question 324",
-      "detail": "What is cell signaling?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 839,
-      "message": "Exact duplicate of question 328",
-      "detail": "White blood cells are also called:"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 840,
-      "message": "Exact duplicate of question 329",
-      "detail": "Which of the following correctly lists the components of the large intestine in correct order?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 842,
-      "message": "Exact duplicate of question 334",
-      "detail": "An enzyme in the stomach that can hydrolyze protein is:"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 846,
-      "message": "Exact duplicate of question 300",
-      "detail": "What is the term used to describe the cell’s ability to maintain a constant and steady internal envi"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 847,
-      "message": "Exact duplicate of question 301",
-      "detail": "How many sodium ions are pumped out of the cells for every two potassium ions that are pumped in"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 849,
-      "message": "Exact duplicate of question 310",
-      "detail": "Amylase is an enzyme responsible for breaking down which macronutrient?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 850,
-      "message": "Exact duplicate of question 311",
-      "detail": "Lipase is an enzyme responsible for breaking down which macronutrient?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 851,
-      "message": "Exact duplicate of question 312",
-      "detail": "Protease is an enzyme responsible for breaking down which macronutrient?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 852,
-      "message": "Exact duplicate of question 315",
-      "detail": "Which part of the autonomic nervous system is considered the “fight or flight” state?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 854,
-      "message": "Exact duplicate of question 322",
-      "detail": "Which gland secretes melatonin?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 856,
-      "message": "Exact duplicate of question 517",
-      "detail": "Which specific nutrients have been shown to have a beneficial impact on acne?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 857,
-      "message": "Exact duplicate of question 526",
-      "detail": "Which of the following foods may be related to delayed onset asthma reactions?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 862,
-      "message": "Exact duplicate of question 571",
-      "detail": "Which plant food contains the active ingredient known as allicin that has been shown to inhibit the "
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 863,
-      "message": "Exact duplicate of question 579",
-      "detail": "Which food has been found to cause constipation in many children?"
-    },
-    {
-      "category": "dupes",
-      "severity": "error",
-      "questionIndex": 864,
-      "message": "Exact duplicate of question 585",
-      "detail": "Which of the following should be the primary goal for a client suffering from eczema?"
-    },
-    {
-      "category": "dupes",
       "severity": "warning",
-      "questionIndex": 740,
-      "message": "Near-duplicate of Q735 (similarity: 86%)",
-      "detail": "A: Which of the following is false:\nB: Which of the following statements is false?"
-    },
-    {
-      "category": "dupes",
-      "severity": "warning",
-      "questionIndex": 756,
-      "message": "Near-duplicate of Q740 (similarity: 86%)",
-      "detail": "A: Which of the following statements is false?\nB: Which of the following is false?"
-    },
-    {
-      "category": "dupes",
-      "severity": "warning",
-      "questionIndex": 850,
-      "message": "Near-duplicate of Q849 (similarity: 82%)",
-      "detail": "A: Amylase is an enzyme responsible for breaking down which macronutrient?\nB: Lipase is an enzyme responsible for breaking down which macronutrient?"
-    },
-    {
-      "category": "dupes",
-      "severity": "warning",
-      "questionIndex": 851,
-      "message": "Near-duplicate of Q849 (similarity: 82%)",
-      "detail": "A: Amylase is an enzyme responsible for breaking down which macronutrient?\nB: Protease is an enzyme responsible for breaking down which macronutrient?"
-    },
-    {
-      "category": "dupes",
-      "severity": "warning",
-      "questionIndex": 851,
-      "message": "Near-duplicate of Q850 (similarity: 82%)",
-      "detail": "A: Lipase is an enzyme responsible for breaking down which macronutrient?\nB: Protease is an enzyme responsible for breaking down which macronutrient?"
-    },
-    {
-      "category": "dupes",
-      "severity": "warning",
-      "questionIndex": 254,
-      "message": "Near-duplicate of Q35 (similarity: 90%)",
+      "questionIndex": 251,
+      "message": "Near-duplicate of Q33 (similarity: 90%)",
       "detail": "A: A baked potato has a higher glycemic index than a boiled sweet potato.\nB: A boiled potato has a higher glycemic index than a baked potato."
     },
     {
       "category": "dupes",
       "severity": "warning",
-      "questionIndex": 298,
-      "message": "Near-duplicate of Q297 (similarity: 82%)",
+      "questionIndex": 295,
+      "message": "Near-duplicate of Q294 (similarity: 82%)",
       "detail": "A: On the pH scale, values below 7 are considered basic.\nB: On the pH scale, values below 7 are considered acidic."
     },
     {
       "category": "dupes",
       "severity": "warning",
-      "questionIndex": 311,
-      "message": "Near-duplicate of Q310 (similarity: 82%)",
+      "questionIndex": 307,
+      "message": "Near-duplicate of Q306 (similarity: 82%)",
       "detail": "A: Amylase is an enzyme responsible for breaking down which macronutrient?\nB: Lipase is an enzyme responsible for breaking down which macronutrient?"
     },
     {
       "category": "dupes",
       "severity": "warning",
-      "questionIndex": 312,
-      "message": "Near-duplicate of Q310 (similarity: 82%)",
+      "questionIndex": 308,
+      "message": "Near-duplicate of Q306 (similarity: 82%)",
       "detail": "A: Amylase is an enzyme responsible for breaking down which macronutrient?\nB: Protease is an enzyme responsible for breaking down which macronutrient?"
     },
     {
       "category": "dupes",
       "severity": "warning",
-      "questionIndex": 312,
-      "message": "Near-duplicate of Q311 (similarity: 82%)",
+      "questionIndex": 308,
+      "message": "Near-duplicate of Q307 (similarity: 82%)",
       "detail": "A: Lipase is an enzyme responsible for breaking down which macronutrient?\nB: Protease is an enzyme responsible for breaking down which macronutrient?"
     },
     {
       "category": "dupes",
       "severity": "warning",
-      "questionIndex": 612,
-      "message": "Near-duplicate of Q607 (similarity: 83%)",
+      "questionIndex": 607,
+      "message": "Near-duplicate of Q602 (similarity: 83%)",
       "detail": "A: Which of the following is a well supported recommendation for insomnia?\nB: Which of the following is a well supported recommendation for menopause?"
     },
     {
       "category": "dupes",
       "severity": "warning",
-      "questionIndex": 657,
-      "message": "Near-duplicate of Q655 (similarity: 85%)",
+      "questionIndex": 652,
+      "message": "Near-duplicate of Q650 (similarity: 85%)",
       "detail": "A: Which of the following is not a well supported recommendation for asthma?\nB: Which of the following is not a well supported recommendation for atherosclerosi"
     },
     {
@@ -1951,581 +1377,539 @@
     {
       "category": "content",
       "severity": "warning",
-      "questionIndex": 26,
+      "questionIndex": 24,
       "message": "Very short option (< 2 chars)",
       "detail": "Options: 4 | 9 | 12"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 28,
+      "questionIndex": 26,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a source of all the essential amino acids?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 41,
+      "questionIndex": 39,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not one of the 9 main food allergens?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 64,
+      "questionIndex": 61,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not true about micronutrients that are crucial for supporting bone health?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 69,
+      "questionIndex": 66,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a strategy to promote healthy portion control?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 92,
+      "questionIndex": 89,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a category of unsaturated fats?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 108,
+      "questionIndex": 105,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following foods is not considered a high oxalate food?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 109,
+      "questionIndex": 106,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following foods is not considered a low oxalate vegetable?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 147,
+      "questionIndex": 144,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a common artificial sweetener?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 158,
+      "questionIndex": 155,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a simple sugar?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 161,
+      "questionIndex": 158,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "The fermentation of dietary fiber produces all of the following except __________."
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 168,
+      "questionIndex": 165,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "Which is referred to as the cardiac risk factor ratios because they reflect whether cholesterol is b"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 169,
+      "questionIndex": 166,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not true regarding fat soluble vitamins?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 170,
+      "questionIndex": 167,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not true regarding the \"Recommended Dietary Allowance (RDA)\""
     },
     {
       "category": "content",
-      "severity": "error",
-      "questionIndex": 172,
-      "message": "Duplicate options within the same question",
-      "detail": "Options: Vitamin A | Vitamin E | Vitamin D | Vitamin E"
-    },
-    {
-      "category": "content",
       "severity": "review",
-      "questionIndex": 239,
+      "questionIndex": 236,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Artichokes are particularly great for which population due to their rich contents of inulin , which "
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 250,
+      "questionIndex": 247,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "____________ is referred to as an intestinal antispasmodic, or compound that relieves intestinal spa"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 268,
+      "questionIndex": 265,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "Which of the following terms describes an imbalance or disruption in the diversity and composition o"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 281,
+      "questionIndex": 278,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not an examples of an antioxidant?"
     },
     {
       "category": "content",
       "severity": "warning",
-      "questionIndex": 299,
+      "questionIndex": 296,
       "message": "Very short option (< 2 chars)",
       "detail": "Options: 4 | 5 | 6 | 7"
     },
     {
       "category": "content",
       "severity": "warning",
-      "questionIndex": 301,
+      "questionIndex": 298,
       "message": "Very short option (< 2 chars)",
       "detail": "Options: 3 | 2 | 1"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 332,
+      "questionIndex": 327,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "All of the following stimulate appetite cravings and food intake, except:"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 333,
+      "questionIndex": 328,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "All of the following are components of pancreatic juice, EXCEPT:"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 333,
+      "questionIndex": 328,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "All of the following are components of pancreatic juice, EXCEPT:"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 339,
+      "questionIndex": 334,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "Blood that has perfused the pancreas, spleen, and GI tract will next perfuse the heart through the h"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 349,
+      "questionIndex": 344,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "Which of the following increases gastric emptying?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 351,
+      "questionIndex": 346,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "which of the following is not an essential fatty acid?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 353,
+      "questionIndex": 348,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a sulfur containing amino acid?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 365,
+      "questionIndex": 360,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "What condition is caused by redistribution of water among body compartments and can be caused by inf"
     },
     {
       "category": "content",
       "severity": "warning",
-      "questionIndex": 366,
+      "questionIndex": 361,
       "message": "Very short option (< 2 chars)",
       "detail": "Options: 6 | 7 | 8"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 370,
+      "questionIndex": 365,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a function/role of protein in the body?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 374,
+      "questionIndex": 369,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the follow amino acids is not involved in neurotransmission and brain function (choose the "
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 413,
+      "questionIndex": 408,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "___________ is a cofactor for more than 200 enzymes and it is absorbed by small intestinal enterocyt"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 421,
+      "questionIndex": 416,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not true"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 439,
+      "questionIndex": 434,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not true about the NANP Code of Ethics?"
     },
     {
       "category": "content",
       "severity": "warning",
-      "questionIndex": 448,
+      "questionIndex": 443,
       "message": "Very short option (< 2 chars)",
       "detail": "Options: 3 | 4 | 5"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 466,
+      "questionIndex": 461,
       "message": "\"All of the above\" option present — verify carefully",
       "detail": "Correct: option 3"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 469,
+      "questionIndex": 464,
       "message": "\"All of the above\" option present — verify carefully",
       "detail": "Correct: option 3"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 533,
+      "questionIndex": 528,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Chemotherapy can cause fatigue, loss of appetite, and nausea. Which dietary recommendation is not ap"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 559,
+      "questionIndex": 554,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following foods is not known for possibly triggering anxiety by raising blood lactic ac"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 564,
+      "questionIndex": 559,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following food recommendations is not appropriate for a client with elevated cholestero"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 569,
+      "questionIndex": 564,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not true regarding magnesium's effect on blood pressure?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 578,
+      "questionIndex": 573,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following recommendations is not well supported to treat constipation?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 587,
+      "questionIndex": 582,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a well supported recommendation for gallstone prevention?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 601,
+      "questionIndex": 596,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not true regarding blood pressure?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 604,
+      "questionIndex": 599,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Hives are primarily caused by the release of histamine in the skin. Which of the following foods is "
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 606,
+      "questionIndex": 601,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the follow recommendations is not well supported for a client who catches colds easily more"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 610,
+      "questionIndex": 605,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following recommendations is not appropriate for a client suffering from IBS?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 611,
+      "questionIndex": 606,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following recommendations is not well supported for kidney stones?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 614,
+      "questionIndex": 609,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a well supported recommendation for multiple sclerosis?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 615,
+      "questionIndex": 610,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following recommendations is not well supported for osteoarthritis?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 620,
+      "questionIndex": 615,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following dietary recommendations is not well supported for psoriasis?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 624,
+      "questionIndex": 619,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not well supported for rheumatoid arthritis?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 634,
+      "questionIndex": 629,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not well supported for IBS?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 648,
+      "questionIndex": 643,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Anemia can be caused by all of the following except:"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 655,
+      "questionIndex": 650,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a well supported recommendation for asthma?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 657,
+      "questionIndex": 652,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a well supported recommendation for atherosclerosis?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 667,
+      "questionIndex": 662,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "It is important to cite all your sources, except the ones you pull off Wikipedia since this is free "
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 669,
+      "questionIndex": 664,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "A quality research paper should include all of the following except:"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 672,
+      "questionIndex": 667,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "When writing an article that draws on the work of multiple researchers, which of the following is NO"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 674,
+      "questionIndex": 669,
       "message": "\"All of the above\" option present — verify carefully",
       "detail": "Correct: option 1"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 703,
+      "questionIndex": 698,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following statements about plagiarism is false?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 715,
+      "questionIndex": 710,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is NOT a characteristic of reliable sources?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 727,
+      "questionIndex": 722,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following are methods for determining if an online source is not reliable?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 733,
-      "message": "Negative/exception question — high-risk for answer key errors",
-      "detail": "Which of the following statements about plagiarism is false?"
-    },
-    {
-      "category": "content",
-      "severity": "review",
-      "questionIndex": 735,
-      "message": "Negative/exception question — high-risk for answer key errors",
-      "detail": "Which of the following is false:"
-    },
-    {
-      "category": "content",
-      "severity": "review",
-      "questionIndex": 740,
+      "questionIndex": 726,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following statements is false?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 754,
+      "questionIndex": 736,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Which of the following is not a key components of mindful eating?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 756,
-      "message": "Negative/exception question — high-risk for answer key errors",
-      "detail": "Which of the following is false?"
-    },
-    {
-      "category": "content",
-      "severity": "review",
-      "questionIndex": 761,
+      "questionIndex": 737,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "A quality research paper should include all the following except:"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 765,
+      "questionIndex": 741,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "Which food should be avoided during acute intestinal illness?"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 788,
+      "questionIndex": 764,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "Which enzymes is used to break down protein and is produced in the stomach by the gastric chief cell"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 794,
+      "questionIndex": 770,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "What is the role of calcium in muscle contraction in cardiac muscle?"
     },
     {
       "category": "content",
-      "severity": "error",
-      "questionIndex": 811,
-      "message": "Duplicate options within the same question",
-      "detail": "Options: Herbal choleretics are herbs that promote the release of bile from the gallbladder. | Herbal choleretics are herbs that stimulate the production of digestive enzymes in the pancreas. | Herbal choleretics are herbs that inhibit bile production and reduce bile flow from the gallbladder. | Herbal choleretics are herbs that inhibit bile production and reduce bile flow from the gallbladder."
-    },
-    {
-      "category": "content",
       "severity": "review",
-      "questionIndex": 829,
+      "questionIndex": 805,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "The hepatic vein is located in the __________________."
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 841,
+      "questionIndex": 813,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "All the following stimulate food intake, except:"
     },
     {
       "category": "content",
-      "severity": "warning",
-      "questionIndex": 847,
-      "message": "Very short option (< 2 chars)",
-      "detail": "Options: 1 | 2 | 3"
-    },
-    {
-      "category": "content",
       "severity": "review",
-      "questionIndex": 853,
+      "questionIndex": 818,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "What is the term for deficient gastric acid secretion (low stomach acid)."
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 871,
+      "questionIndex": 830,
       "message": "Anatomy-related question — manual accuracy review recommended",
       "detail": "Intestinal absorption of dietary iron may be enhanced by concurrent ingestion of:"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 874,
+      "questionIndex": 833,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "Symptoms of vitamin A overdose include all the following EXCEPT:"
     },
     {
       "category": "content",
       "severity": "review",
-      "questionIndex": 875,
+      "questionIndex": 834,
       "message": "Negative/exception question — high-risk for answer key errors",
       "detail": "All the following are functions of fat in human health except:"
     },
     {
       "category": "answer-key",
       "severity": "warning",
-      "questionIndex": 661,
+      "questionIndex": 656,
       "message": "5 consecutive same answer (1) in Domain 4 Exam 3",
       "detail": null
     },
     {
       "category": "answer-key",
       "severity": "warning",
-      "questionIndex": 798,
+      "questionIndex": 774,
       "message": "5 consecutive same answer (1) in Full Length Comprehensive Exam",
       "detail": null
     },
@@ -2539,238 +1923,231 @@
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 20,
+      "questionIndex": 18,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "What is the part of plants that is unable to be digested and therefore passes th"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 25,
+      "questionIndex": 23,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which of the following best describes what the word “essential” means when it re"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 35,
+      "questionIndex": 33,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A baked potato has a higher glycemic index than a boiled sweet potato."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 37,
+      "questionIndex": 35,
       "message": "Inconsistent option capitalization",
       "detail": "monosaccharides | disaccharides | Polysaccharides"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 43,
+      "questionIndex": 41,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which of the following is a type of food reaction and signifies delayed hypersen"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 50,
+      "questionIndex": 47,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which of the following is true about dietary supplements:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 56,
+      "questionIndex": 53,
       "message": "Inconsistent option capitalization",
       "detail": "portion sizes | limiting consumption of processed and sugary foods | diversity | All answers are correct"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 65,
+      "questionIndex": 62,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Adequate fluid intake is essential for regulating body temperature, transporting"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 67,
+      "questionIndex": 64,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Choose the best answer: Which nutrient plays an important role in digestion, pre"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 70,
+      "questionIndex": 67,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Portion size should be individualized based on which factors such as age, gender"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 77,
+      "questionIndex": 74,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which vitamin is commonly found in nuts, seeds, and green leafy vegetables and s"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 90,
+      "questionIndex": 87,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "These fats are typically solid at room temperature and are mainly found in anima"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 91,
+      "questionIndex": 88,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "These fats are liquid at room temperature and are primarily derived from plant-b"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 93,
+      "questionIndex": 90,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Omega 3 and omega 6 fatty acids are classified as which of the following:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 94,
+      "questionIndex": 91,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "These fats are created through the process of hydrogenation, which solidifies li"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 98,
+      "questionIndex": 95,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Unstable molecules that can damage cells and contribute to the development of ch"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 100,
+      "questionIndex": 97,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Bioactive compounds found in plants. They are responsible for the vibrant colors"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 102,
+      "questionIndex": 99,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "These foods are cultivated without the use of synthetic pesticides, herbicides, "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 110,
+      "questionIndex": 107,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Essential fatty acids are converted into compounds known as"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 114,
+      "questionIndex": 111,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Cholecalciferol is the preferred form of vitamin D supplementation."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 120,
+      "questionIndex": 117,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Excessive amounts of alcohol can lead to a deficiency in this water soluble nutr"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 121,
+      "questionIndex": 118,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "This B vitamin is especially important for neurotransmitter synthesis."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 122,
+      "questionIndex": 119,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "This B vitamin plays a role in the synthesis of fatty acids and breakdown of ami"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 126,
+      "questionIndex": 123,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "When supplementing, calcium should not be taken in divided doses throughout the "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 132,
+      "questionIndex": 129,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which nutrient is involved in over 300 metabolic reactions and is found in dark "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 140,
+      "questionIndex": 137,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "This electrolyte works in balance with sodium for fluid regulation and is essent"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 144,
+      "questionIndex": 141,
       "message": "Inconsistent option capitalization",
       "detail": "Irradiation | hydrogenation | Genetically modified foods"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 145,
+      "questionIndex": 142,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Food additives are used either to prevent foods' spoiling or to enhance their fl"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 154,
+      "questionIndex": 151,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A complete protein source is one that provides all of the nine essential amino a"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 163,
-      "message": "Double spaces in question text",
-      "detail": null
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 170,
+      "questionIndex": 167,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which of the following is not true regarding the \"Recommended Dietary Allowance "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 179,
+      "questionIndex": 176,
       "message": "Inconsistent option capitalization",
       "detail": "thiamin | Riboflavin | Niacin"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 187,
+      "questionIndex": 184,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Deficiency of which B vitamin is linked to depression due to its vital role in n"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 188,
+      "questionIndex": 185,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which B vitamin is crucial for cell division and the production of red blood cel"
     },
@@ -2778,1021 +2155,930 @@
       "category": "format",
       "severity": "info",
       "questionIndex": 200,
-      "message": "Double spaces in question text",
-      "detail": null
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 203,
       "message": "Inconsistent option capitalization",
       "detail": "zinc | Iron | Calcium"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 206,
+      "questionIndex": 203,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Low protein foods are generally high in phosphorous."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 212,
+      "questionIndex": 209,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Excess iodine can inhibit thyroid gland synthesis which is why the recommended d"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 220,
-      "message": "Double spaces in question text",
-      "detail": null
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 239,
+      "questionIndex": 236,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Artichokes are particularly great for which population due to their rich content"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 240,
+      "questionIndex": 237,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "While inulin is not utilized by the body for energy, it is broken down into othe"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 242,
-      "message": "Double spaces in question text",
-      "detail": null
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 243,
+      "questionIndex": 240,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Broccoli is particularly supportive for the prevention of which condition due to"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 245,
+      "questionIndex": 242,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Beta-carotene, which is present in high levels in carrots, provides protection a"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 254,
+      "questionIndex": 251,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A boiled potato has a higher glycemic index than a baked potato."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 267,
+      "questionIndex": 264,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Imbalances in the gut microbiome can impact which of the following:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 269,
+      "questionIndex": 266,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "The process by which the body neutralizes and eliminates toxins and harmful subs"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 273,
+      "questionIndex": 270,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Biotransformation refers to the biochemical reactions that occur in the body to "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 274,
+      "questionIndex": 271,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which phase of Detoxification involves the activation and conversion of compound"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 276,
+      "questionIndex": 273,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which phase of detoxification involves the conjugation of activated compounds wi"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 277,
+      "questionIndex": 274,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Methylation is an essential process involved in numerous biochemical reactions, "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 279,
+      "questionIndex": 276,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which of the following occurs when there is an imbalance between the production "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 280,
+      "questionIndex": 277,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Highly reactive molecules that are generated as natural byproducts of cellular m"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 281,
+      "questionIndex": 278,
       "message": "Inconsistent option capitalization",
       "detail": "superoxide dismutase, catalase, and glutathione peroxidase | vitamins C and E, and glutathione | Calcium, B12, aspartame"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 282,
+      "questionIndex": 279,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "The powerhouse of cells that generate energy through oxidative phosphorylation."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 286,
+      "questionIndex": 283,
       "message": "Inconsistent option capitalization",
       "detail": "cortisol | melatonin | Insulin"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 293,
+      "questionIndex": 290,
       "message": "Inconsistent option capitalization",
       "detail": "GABA | Glutamate | neither answer is correct"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 297,
+      "questionIndex": 294,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "On the pH scale, values below 7 are considered basic."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 298,
+      "questionIndex": 295,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "On the pH scale, values below 7 are considered acidic."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 305,
+      "questionIndex": 301,
       "message": "Inconsistent option capitalization",
       "detail": "exercising regularly | Avoiding tobacco use and exposure to cigarette smoke | Avoiding alcohol or drinking only moderate amounts. | All answers are correct"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 306,
-      "message": "Double spaces in question text",
-      "detail": null
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 307,
+      "questionIndex": 303,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which phase of detoxification includes a process known as conjugation where a pr"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 318,
+      "questionIndex": 313,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which of the following is a type of white blood cell."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 318,
+      "questionIndex": 313,
       "message": "Inconsistent option capitalization",
       "detail": "Neutrophils | Eosinophils and Basophils | lymphocytes and monocytes | All answers are correct"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 319,
+      "questionIndex": 314,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "What is the name for the type of basophil that takes up residence along blood ve"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 328,
+      "questionIndex": 323,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "White blood cells are also called:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 332,
+      "questionIndex": 327,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "All of the following stimulate appetite cravings and food intake, except:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 333,
+      "questionIndex": 328,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "All of the following are components of pancreatic juice, EXCEPT:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 334,
+      "questionIndex": 329,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "An enzyme in the stomach that can hydrolyze protein is:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 336,
+      "questionIndex": 331,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which of the following supports the digestion of protein in the stomach"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 337,
+      "questionIndex": 332,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Peroxisomes are the cell organelles in which fatty acids longer than 20 carbons "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 339,
+      "questionIndex": 334,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Blood that has perfused the pancreas, spleen, and GI tract will next perfuse the"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 342,
+      "questionIndex": 337,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A significant purpose of the pentose phosphate pathway is the reduction of"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 342,
+      "questionIndex": 337,
       "message": "Inconsistent option capitalization",
       "detail": "trans and cis fatty acids. | the reduction of NADP+ to NADPH | Omega 6 to omega 3"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 343,
+      "questionIndex": 338,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A build-up of cholesterol in a cell may:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 350,
+      "questionIndex": 345,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Soluble fibers are able to dissolve in water and include substances such as cell"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 354,
+      "questionIndex": 349,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Pyridoxal phosphate is needed in transamination reactions."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 356,
+      "questionIndex": 351,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "All enzymes are proteins."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 357,
+      "questionIndex": 352,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "What is the overall role of enzymes"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 359,
+      "questionIndex": 354,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which of the following amino acids is non-essential meaning that the body is abl"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 388,
+      "questionIndex": 383,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Production of protein does not require much ATP."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 396,
+      "questionIndex": 391,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Sweating losses can exceed 2 liters per hour for some athletes."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 419,
+      "questionIndex": 414,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Nutraceuticals can be of plant, animal, or microbial origin."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 420,
+      "questionIndex": 415,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Holistic Nutrition Professionals cannot practice medical nutrition therapy, whic"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 421,
+      "questionIndex": 416,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which of the following is not true"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 422,
+      "questionIndex": 417,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "When a state law limits the ability to individualize recommendations by those ot"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 423,
+      "questionIndex": 418,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A meal plan is not considered “individualized” nutrition service."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 424,
+      "questionIndex": 419,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "If a particular state restricts individualized recommendations by anyone other t"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 425,
+      "questionIndex": 420,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Holistic Nutrition Professionals can make recommendations for dietary supplement"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 426,
+      "questionIndex": 421,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "It is important for Holistic Nutrition Professionals to state that they are not "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 427,
+      "questionIndex": 422,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Holistic Nutrition Professionals are the same as a Registered Dietitian and Cert"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 428,
+      "questionIndex": 423,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Holistic Nutrition Professionals teach a whole, organic, chemical free food appr"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 431,
+      "questionIndex": 426,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A Holistic Nutrition Professional’s job is to bring unbiased health and nutritio"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 432,
+      "questionIndex": 427,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Holistic nutrition professionals can promote which of the following"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 434,
+      "questionIndex": 429,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Holistic Nutrition Professionals can make health claims."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 435,
+      "questionIndex": 430,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Holistic nutrition professionals can do which of the following:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 438,
+      "questionIndex": 433,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "An NANP member will choose whom he or she will serve. Having undertaken a client"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 440,
+      "questionIndex": 435,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which of following are determinants of food behavior for preschool children, mid"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 442,
+      "questionIndex": 437,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "What is the term used to describe a supportive process guiding a client toward n"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 443,
+      "questionIndex": 438,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "What is the term used to describe the learned patterns of thinking, feeling, and"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 445,
+      "questionIndex": 440,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Indicating to a client that everything will be fine unlikely to be productive be"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 445,
-      "message": "Double spaces in question text",
-      "detail": null
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 456,
+      "questionIndex": 451,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which is a technique that helps clients actively participate in clarifying issue"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 457,
+      "questionIndex": 452,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which technique focuses on identifying strengths and expanding on past successes"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 463,
+      "questionIndex": 458,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "What is an example of effective counseling nonverbal behavior."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 464,
+      "questionIndex": 459,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Empathy is the true understanding of another’s perspective and experience withou"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 466,
+      "questionIndex": 461,
       "message": "Inconsistent option capitalization",
       "detail": "provide positive feedback | Set clear, achievable goals | Utilize a collaborative counseling style | All of the above"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 473,
+      "questionIndex": 468,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which of the following describes challenging destructive thoughts, beliefs, and "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 480,
+      "questionIndex": 475,
       "message": "Inconsistent option capitalization",
       "detail": "Third trimester of pregnancy | higher risk pregnancy | Clients experiencing acute symptoms during an illness or infectious disease | All answers are correct"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 483,
+      "questionIndex": 478,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Population-specific differences in the presence of disease, health outcomes, or "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 487,
+      "questionIndex": 482,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "What are the two components of readiness to make a behavior change."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 520,
+      "questionIndex": 515,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "What is something that many people suffering from alcoholism tend to do."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 522,
+      "questionIndex": 517,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "The name of the degenerative brain disorder that is characterized by the progres"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 524,
+      "questionIndex": 519,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "An allergic disorder that often includes spasms of the bronchi."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 525,
+      "questionIndex": 520,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Food allergies may play a role in asthma."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 529,
+      "questionIndex": 524,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "The process of hardening of an artery due to build up of cholesterol containing "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 536,
+      "questionIndex": 531,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A dietary protocol for candida overgrowth should include which of the following "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 537,
+      "questionIndex": 532,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Regular canker sores are associated with food allergies."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 552,
+      "questionIndex": 547,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "The name of the condition where the blood is deficient in red blood cells."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 562,
+      "questionIndex": 557,
       "message": "Inconsistent option capitalization",
       "detail": "Ketogenic diet | carnivore diet | Increase the consumption of fiber as it has been shown to bind to bile acids and remove them from the body."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 564,
+      "questionIndex": 559,
       "message": "Inconsistent option capitalization",
       "detail": "Nuts and seeds | Legumes | Garlic and onions | sweet tea"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 576,
+      "questionIndex": 571,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Consuming concentrated sources of sugar reduces the ability of white blood cells"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 577,
+      "questionIndex": 572,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A low fiber diet is typically recommended to treat constipation."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 590,
+      "questionIndex": 585,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Food allergy or sensitivity does not play a primary role in many cases of migrai"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 608,
+      "questionIndex": 603,
       "message": "Inconsistent option capitalization",
       "detail": "Stress, insufficient intake of dietary fiber, food allergies, and consuming excess sugar | Food sensitivities, excessive fiber, dehydration, genetics | genetics, excess consumption of sugar, lack of dietary fiber, genetics"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 611,
+      "questionIndex": 606,
       "message": "Inconsistent option capitalization",
       "detail": "A diet low in oxalates | Adequate hydration | Increased intake of dietary fiber | grass fed beef, seafood, and organ meats"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 613,
+      "questionIndex": 608,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "The neurodegenerative condition characterized by the gradual loss of the myelin "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 639,
+      "questionIndex": 634,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Black tea provides significantly more health benefits than green tea due to its "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 648,
+      "questionIndex": 643,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Anemia can be caused by all of the following except:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 660,
+      "questionIndex": 655,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Which fruit may be a good recommendation for someone with bronchitis due to its "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 664,
+      "questionIndex": 659,
       "message": "Inconsistent option capitalization",
       "detail": "Pineapple | raw honey | Garlic"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 666,
+      "questionIndex": 661,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Getting your data from the internet is a copyright infringement."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 667,
+      "questionIndex": 662,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "It is important to cite all your sources, except the ones you pull off Wikipedia"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 669,
+      "questionIndex": 664,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A quality research paper should include all of the following except:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 670,
+      "questionIndex": 665,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Plagiarism is defined as:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 673,
+      "questionIndex": 668,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A warrant in writing is defined as which of the following:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 675,
+      "questionIndex": 670,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Holistic nutrition professionals should prioritize evidence-based practice, whic"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 683,
+      "questionIndex": 678,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "In the hierarchy of evidence pyramid, meta-analysis research studies fall above "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 684,
+      "questionIndex": 679,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "In the hierarchy of evidence pyramid, randomized controlled trials are below sys"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 685,
+      "questionIndex": 680,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "In the hierarchy of evidence pyramid, cohort studies are the most reliable sourc"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 691,
+      "questionIndex": 686,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A method for determining if an article is relevant to your research is to skim t"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 692,
+      "questionIndex": 687,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "When reading a source, practitioners should not accept a claim just because an a"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 696,
+      "questionIndex": 691,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "The term used to describe general principles that connect reasons to claims."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 697,
+      "questionIndex": 692,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "The section that explains to readers what they will find in the article, paper, "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 699,
+      "questionIndex": 694,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Keywords represent the main concepts of a research topic and help readers search"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 700,
+      "questionIndex": 695,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Paraphrasing the works of another author too closely can increase the risk of an"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 701,
+      "questionIndex": 696,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "If using information or ideas from an outside sources, only intext citations OR "
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 721,
+      "questionIndex": 716,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "If a website is supported by an individual vs an organization then it is typical"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 723,
+      "questionIndex": 718,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Research more than 15 years old is automatically invalid based upon modern conve"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 725,
+      "questionIndex": 720,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "There is no need to cite a resource unless you are using a direct quote."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 730,
-      "message": "No question mark and no fill-in-the-blank marker",
-      "detail": "The term used to describe general principles that connect reasons to claims."
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 731,
-      "message": "No question mark and no fill-in-the-blank marker",
-      "detail": "The section that explains to readers what they will find in the article, paper, "
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 732,
+      "questionIndex": 723,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "If using information or ideas from an outside source, only intext citations or a"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 735,
-      "message": "No question mark and no fill-in-the-blank marker",
-      "detail": "Which of the following is false:"
-    },
-    {
-      "category": "format",
-      "severity": "info",
       "questionIndex": 737,
-      "message": "No question mark and no fill-in-the-blank marker",
-      "detail": "A method for determining if an article is relevant to your research is to skim t"
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 745,
-      "message": "No question mark and no fill-in-the-blank marker",
-      "detail": "What is the term used to describe a supportive process guiding a client toward n"
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 761,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "A quality research paper should include all the following except:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 770,
+      "questionIndex": 746,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "If your client storms out of the office when you make recommendations like cutti"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 772,
+      "questionIndex": 748,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "If a client who is not progressing as expected and is very frustrated and unhapp"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 780,
+      "questionIndex": 756,
       "message": "Inconsistent option capitalization",
       "detail": "hypothalamus | anterior pituitary gland | Thyroid"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 784,
+      "questionIndex": 760,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Raw foods contains fewer live enzymes because they are activated only when cooki"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 789,
+      "questionIndex": 765,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Beets, kale, collards, spinach, and green beans are low oxalate foods."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 808,
+      "questionIndex": 784,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Nutritional therapies for chronic fatigue syndrome include high doses of vitamin"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 839,
-      "message": "No question mark and no fill-in-the-blank marker",
-      "detail": "White blood cells are also called:"
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 841,
+      "questionIndex": 813,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "All the following stimulate food intake, except:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 842,
-      "message": "No question mark and no fill-in-the-blank marker",
-      "detail": "An enzyme in the stomach that can hydrolyze protein is:"
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 847,
-      "message": "No question mark and no fill-in-the-blank marker",
-      "detail": "How many sodium ions are pumped out of the cells for every two potassium ions th"
-    },
-    {
-      "category": "format",
-      "severity": "info",
-      "questionIndex": 853,
+      "questionIndex": 818,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "What is the term for deficient gastric acid secretion (low stomach acid)."
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 855,
+      "questionIndex": 819,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Increased calcium resorption in kidney tubules is stimulated by:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 866,
+      "questionIndex": 825,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Energy deficiency produces which of the following:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 867,
+      "questionIndex": 826,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "The recommended dietary component of osteoporosis treatment involves:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 868,
+      "questionIndex": 827,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "The most common cause of chronic kidney disease (CKD) is:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 869,
+      "questionIndex": 828,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Aloe vera (aloe barbadensis) is traditionally use for the following condition:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 870,
+      "questionIndex": 829,
       "message": "No question mark and no fill-in-the-blank marker",
-      "detail": "114.\tThe following herb has been shown to relieve symptoms of premenstrual syndr"
+      "detail": "The following herb has been shown to relieve symptoms of premenstrual syndrome a"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 871,
+      "questionIndex": 830,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Intestinal absorption of dietary iron may be enhanced by concurrent ingestion of"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 872,
+      "questionIndex": 831,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "High intakes of zinc will interfere with the absorption and utilization of which"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 873,
+      "questionIndex": 832,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "The most difficult challenge facing a nutritionist or nutrition counselor is to:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 874,
+      "questionIndex": 833,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "Symptoms of vitamin A overdose include all the following EXCEPT:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 875,
+      "questionIndex": 834,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "All the following are functions of fat in human health except:"
     },
     {
       "category": "format",
       "severity": "info",
-      "questionIndex": 876,
+      "questionIndex": 835,
       "message": "No question mark and no fill-in-the-blank marker",
       "detail": "This type of lipoprotein transports cholesterol from the liver to places in the "
     }

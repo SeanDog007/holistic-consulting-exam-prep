@@ -1,0 +1,2776 @@
+{
+  "generated": "2026-04-08T13:38:34.051Z",
+  "description": "High-risk questions requiring subject matter expert review. Prioritized by risk level.",
+  "totalQuestions": 836,
+  "queuedForReview": 196,
+  "categories": {
+    "answer-key-risk": {
+      "description": "Negative/exception questions where answer key may be inverted",
+      "questions": [
+        {
+          "index": 0,
+          "question": "Which of the following is not an antioxidant?",
+          "correctAnswer": 2,
+          "correctOptionText": "Alcohol dehydrogenase I",
+          "options": [
+            "Vitamin C and E",
+            "superoxide dismutase and catalase",
+            "Alcohol dehydrogenase I",
+            "glutathione peroxidase"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 10,
+          "question": "Which of the following foods is not high in pectin?",
+          "correctAnswer": 3,
+          "correctOptionText": "Grassfed beef",
+          "options": [
+            "Citrus fruits",
+            "Beans",
+            "Apples",
+            "Grassfed beef"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 12,
+          "question": "Which of the following is false?",
+          "correctAnswer": 2,
+          "correctOptionText": "A holistic nutrition protocol should always start with targeted dietary supplementation",
+          "options": [
+            "When dietary supplements are used in the appropriate form, dose, and frequency, they can help promote good health but not act as a substitute for a good diet.",
+            "Colorful fruits and vegetables are some of the best sources of phytochemicals",
+            "A holistic nutrition protocol should always start with targeted dietary supplementation"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 13,
+          "question": "Which of the following is not one of the components of holistic nutrition and holistic nutrition modalities?",
+          "correctAnswer": 1,
+          "correctOptionText": "The Food Pyramid",
+          "options": [
+            "Seasonal, whole, organic foods",
+            "The Food Pyramid",
+            "Biochemical individuality"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 26,
+          "question": "Which of the following is not a source of all the essential amino acids?",
+          "correctAnswer": 0,
+          "correctOptionText": "Broccoli",
+          "options": [
+            "Broccoli",
+            "Meat",
+            "Eggs"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 39,
+          "question": "Which of the following is not one of the 9 main food allergens?",
+          "correctAnswer": 2,
+          "correctOptionText": "Meat, vegetables, and seeds",
+          "options": [
+            "Dairy, soy, eggs",
+            "Wheat, peanuts, and tree nuts",
+            "Meat, vegetables, and seeds"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 61,
+          "question": "Which of the following is not true about micronutrients that are crucial for supporting bone health?",
+          "correctAnswer": 3,
+          "correctOptionText": "Vitamin B12 stimulates to production of collagen",
+          "options": [
+            "Calcium is needed for bone structure and strength",
+            "Magnesium helps to activate vitamin D into its active form",
+            "Vitamin D promotes calcium absorption",
+            "Vitamin B12 stimulates to production of collagen"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 66,
+          "question": "Which of the following is not a strategy to promote healthy portion control?",
+          "correctAnswer": 2,
+          "correctOptionText": "Intermittent fasting",
+          "options": [
+            "Use measuring cups or a food scale to accurately measure portions.",
+            "Use smaller plates and bowls to make portions appear larger",
+            "Intermittent fasting",
+            "Eating slowly and mindfully can help individuals feel full with smaller portions."
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 89,
+          "question": "Which of the following is not a category of unsaturated fats?",
+          "correctAnswer": 1,
+          "correctOptionText": "Diunsaturated",
+          "options": [
+            "Monounsaturated",
+            "Diunsaturated",
+            "Polyunsaturated"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 105,
+          "question": "Which of the following foods is not considered a high oxalate food?",
+          "correctAnswer": 3,
+          "correctOptionText": "Onions",
+          "options": [
+            "Green peppers",
+            "Beets",
+            "Eggplant",
+            "Onions"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 106,
+          "question": "Which of the following foods is not considered a low oxalate vegetable?",
+          "correctAnswer": 3,
+          "correctOptionText": "Potatoes",
+          "options": [
+            "Onions",
+            "Arugula",
+            "Acorn squash",
+            "Potatoes"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 144,
+          "question": "Which of the following is not a common artificial sweetener?",
+          "correctAnswer": 3,
+          "correctOptionText": "Monk fruit extrack",
+          "options": [
+            "Saccharin",
+            "Aspartame",
+            "Sucralose",
+            "Monk fruit extrack"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 4",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 155,
+          "question": "Which of the following is not a simple sugar?",
+          "correctAnswer": 2,
+          "correctOptionText": "Polysaccharide",
+          "options": [
+            "Monosaccharide",
+            "Disaccharides",
+            "Polysaccharide"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 4",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 158,
+          "question": "The fermentation of dietary fiber produces all of the following except __________.",
+          "correctAnswer": 2,
+          "correctOptionText": "Ammonia",
+          "options": [
+            "Short chain fatty acids",
+            "Energy and various gases",
+            "Ammonia"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 4",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 166,
+          "question": "Which of the following is not true regarding fat soluble vitamins?",
+          "correctAnswer": 2,
+          "correctOptionText": "Stored in the body in only small amounts while most is excreted through the urine",
+          "options": [
+            "The body is able to keep a supply of these vitamins available for use on demand",
+            "Toxic levels can be built up in the body, leading to severe side effects",
+            "Stored in the body in only small amounts while most is excreted through the urine"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 4",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 167,
+          "question": "Which of the following is not true regarding the \"Recommended Dietary Allowance (RDA)\"",
+          "correctAnswer": 2,
+          "correctOptionText": "There is scientific basis that RDAs meet the needs of individuals",
+          "options": [
+            "Developed to reduce the rate of severe nutrition deficiency diseases such as scury",
+            "Individuals with special nutritional needs are not covered by the RDAs",
+            "There is scientific basis that RDAs meet the needs of individuals"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 4",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 236,
+          "question": "Artichokes are particularly great for which population due to their rich contents of inulin , which is not utilized by the body for energy.",
+          "correctAnswer": 2,
+          "correctOptionText": "Type 2 Diabetes",
+          "options": [
+            "Hashimoto's",
+            "Osteoporosis",
+            "Type 2 Diabetes"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 6",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 278,
+          "question": "Which of the following is not an examples of an antioxidant?",
+          "correctAnswer": 2,
+          "correctOptionText": "Calcium, B12, aspartame",
+          "options": [
+            "superoxide dismutase, catalase, and glutathione peroxidase",
+            "vitamins C and E, and glutathione",
+            "Calcium, B12, aspartame"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 327,
+          "question": "All of the following stimulate appetite cravings and food intake, except:",
+          "correctAnswer": 3,
+          "correctOptionText": "leptin",
+          "options": [
+            "ghrelin",
+            "galanin",
+            "peptide YY.",
+            "leptin"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 328,
+          "question": "All of the following are components of pancreatic juice, EXCEPT:",
+          "correctAnswer": 2,
+          "correctOptionText": "intrinsic factor",
+          "options": [
+            "trypsin",
+            "trypsin inhibitor",
+            "intrinsic factor",
+            "pepsinogen"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 346,
+          "question": "which of the following is not an essential fatty acid?",
+          "correctAnswer": 2,
+          "correctOptionText": "Arachidonic acids",
+          "options": [
+            "Linoleic acids",
+            "Linolenic acids",
+            "Arachidonic acids"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 348,
+          "question": "Which of the following is not a sulfur containing amino acid?",
+          "correctAnswer": 0,
+          "correctOptionText": "Threonine",
+          "options": [
+            "Threonine",
+            "Cysteine",
+            "Methionine"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 365,
+          "question": "Which of the following is not a function/role of protein in the body?",
+          "correctAnswer": 3,
+          "correctOptionText": "All of the answers are functions of protein",
+          "options": [
+            "Acting as enzymes",
+            "Blood transporters",
+            "Immune function",
+            "All of the answers are functions of protein"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 4",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 369,
+          "question": "Which of the follow amino acids is not involved in neurotransmission and brain function (choose the best answer)?",
+          "correctAnswer": 0,
+          "correctOptionText": "Leucine",
+          "options": [
+            "Leucine",
+            "GABA",
+            "Tyrosine",
+            "Glutamate"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 4",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 416,
+          "question": "Which of the following is not true",
+          "correctAnswer": 2,
+          "correctOptionText": "Holistic Nutrition Professionals can be licensed in some states.",
+          "options": [
+            "The definition of “Medical Nutrition Therapy” may differ from state to state.",
+            "Each state has exemptions regarding “general nutrition information.”",
+            "Holistic Nutrition Professionals can be licensed in some states."
+          ],
+          "domain": 3,
+          "examSource": "Domain 3 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 434,
+          "question": "Which of the following is not true about the NANP Code of Ethics?",
+          "correctAnswer": 0,
+          "correctOptionText": "NANP members can use the term Board Certified in Holistic Nutrition® or BCHN® without the express written permission and approval of NANP.",
+          "options": [
+            "NANP members can use the term Board Certified in Holistic Nutrition® or BCHN® without the express written permission and approval of NANP.",
+            "An NANP member will seek consultation in doubtful or difficult cases, and whenever it appears that the services of other professionals are warranted to provide more complete or better quality advice.",
+            "NANP members will oppose without hesitation the illegal or unethical conduct of fellow members."
+          ],
+          "domain": 3,
+          "examSource": "Domain 3 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 528,
+          "question": "Chemotherapy can cause fatigue, loss of appetite, and nausea. Which dietary recommendation is not appropriate for this type of client?",
+          "correctAnswer": 3,
+          "correctOptionText": "Intermittent fasting",
+          "options": [
+            "Small frequent meals",
+            "High protein smoothies",
+            "Ginger tea",
+            "Intermittent fasting"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 554,
+          "question": "Which of the following foods is not known for possibly triggering anxiety by raising blood lactic acid levels?",
+          "correctAnswer": 2,
+          "correctOptionText": "Eggs",
+          "options": [
+            "Caffeine",
+            "Sugar",
+            "Eggs"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 559,
+          "question": "Which of the following food recommendations is not appropriate for a client with elevated cholesterol?",
+          "correctAnswer": 3,
+          "correctOptionText": "sweet tea",
+          "options": [
+            "Nuts and seeds",
+            "Legumes",
+            "Garlic and onions",
+            "sweet tea"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 564,
+          "question": "Which of the following is not true regarding magnesium's effect on blood pressure?",
+          "correctAnswer": 3,
+          "correctOptionText": "Reduces sodium retention by the kidneys",
+          "options": [
+            "Increases nitric oxide production",
+            "Induces vasodilation",
+            "Regulates cell communication, allowing the correct amount of calcium into the cell",
+            "Reduces sodium retention by the kidneys"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 573,
+          "question": "Which of the following recommendations is not well supported to treat constipation?",
+          "correctAnswer": 3,
+          "correctOptionText": "2.0 g/kg of animal protein per day",
+          "options": [
+            "Regular physical activity",
+            "High fiber diet",
+            "Adequate hydration",
+            "2.0 g/kg of animal protein per day"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 582,
+          "question": "Which of the following is not a well supported recommendation for gallstone prevention?",
+          "correctAnswer": 3,
+          "correctOptionText": "Drinking large amounts of whole milk daily",
+          "options": [
+            "Vegetables and fruit",
+            "Flaxseeds and oat bran",
+            "Reduce the consumption of saturated fats, sugar, and animal proteins",
+            "Drinking large amounts of whole milk daily"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 596,
+          "question": "Which of the following is not true regarding blood pressure?",
+          "correctAnswer": 0,
+          "correctOptionText": "Sodium should be avoided for people at risk of hypertension",
+          "options": [
+            "Sodium should be avoided for people at risk of hypertension",
+            "A diet high in sodium and low in potassium is associated with high blood pressure",
+            "Sodium restriction alone does not lower blood pressure in most people"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 599,
+          "question": "Hives are primarily caused by the release of histamine in the skin. Which of the following foods is not commonly associated with triggering hives?",
+          "correctAnswer": 3,
+          "correctOptionText": "Nightshade and cruciferous vegetables",
+          "options": [
+            "Milk and shellfish",
+            "Eggs and cured meat",
+            "Alcohol and citrus fruits",
+            "Nightshade and cruciferous vegetables"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 601,
+          "question": "Which of the follow recommendations is not well supported for a client who catches colds easily more that 2 times per year?",
+          "correctAnswer": 2,
+          "correctOptionText": "Calorie restricted diet",
+          "options": [
+            "A whole foods diet that includes fruits, vegetables, whole grains, beans, seeds, and nuts",
+            "Adequate hydration and regular exercise",
+            "Calorie restricted diet"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 605,
+          "question": "Which of the following recommendations is not appropriate for a client suffering from IBS?",
+          "correctAnswer": 1,
+          "correctOptionText": "Low fiber diet",
+          "options": [
+            "Relaxation therapy",
+            "Low fiber diet",
+            "Enteric coated peppermint oil",
+            "High fiber diet"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 606,
+          "question": "Which of the following recommendations is not well supported for kidney stones?",
+          "correctAnswer": 3,
+          "correctOptionText": "grass fed beef, seafood, and organ meats",
+          "options": [
+            "A diet low in oxalates",
+            "Adequate hydration",
+            "Increased intake of dietary fiber",
+            "grass fed beef, seafood, and organ meats"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 609,
+          "question": "Which of the following is not a well supported recommendation for multiple sclerosis?",
+          "correctAnswer": 1,
+          "correctOptionText": "A diet high in saturated fats",
+          "options": [
+            "A diet low in saturated fats",
+            "A diet high in saturated fats",
+            "Daily intake of cod liver oil",
+            "Regular consumption of cold water omega 3 rich fish like wild caught Alaskan salmon"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 610,
+          "question": "Which of the following recommendations is not well supported for osteoarthritis?",
+          "correctAnswer": 0,
+          "correctOptionText": "Nightshade vegetables",
+          "options": [
+            "Nightshade vegetables",
+            "Ginger and curcumin",
+            "Garlic, onion, and brussels sprouts"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 615,
+          "question": "Which of the following dietary recommendations is not well supported for psoriasis?",
+          "correctAnswer": 2,
+          "correctOptionText": "Grassfed milk",
+          "options": [
+            "Avoidance of gluten and other likely food allergies",
+            "Increased consumption of fiber rich vegetables, legumes, and fruits",
+            "Grassfed milk",
+            "Limit the consumption of meat while increasing the consumption of cold water omega 3 rich fish"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 619,
+          "question": "Which of the following is not well supported for rheumatoid arthritis?",
+          "correctAnswer": 1,
+          "correctOptionText": "Whole grains and dairy rich foods",
+          "options": [
+            "Eliminate all food allergens",
+            "Whole grains and dairy rich foods",
+            "Vegetarian diet rich in fiber and antioxidants",
+            "Eliminate added sugar and refined carbohydrates"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 629,
+          "question": "Which of the following is not well supported for IBS?",
+          "correctAnswer": 0,
+          "correctOptionText": "Lavender essential oil",
+          "options": [
+            "Lavender essential oil",
+            "Peppermint oil",
+            "Ginger",
+            "Fennel essential oil"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 643,
+          "question": "Anemia can be caused by all of the following except:",
+          "correctAnswer": 2,
+          "correctOptionText": "Excessive hydration",
+          "options": [
+            "Excessive blood loss",
+            "Nutritional deficiencies",
+            "Excessive hydration",
+            "Red blood cell destruction due to abnormal red blood cell shape"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 650,
+          "question": "Which of the following is not a well supported recommendation for asthma?",
+          "correctAnswer": 0,
+          "correctOptionText": "Organic coffee and tea",
+          "options": [
+            "Organic coffee and tea",
+            "Elimination of food allergies",
+            "High intake of dietary antioxidants",
+            "Using olive oil instead of foods high in animal  fats such as butter"
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 652,
+          "question": "Which of the following is not a well supported recommendation for atherosclerosis?",
+          "correctAnswer": 1,
+          "correctOptionText": "Decrease your intake of monounsaturated fats by limiting the consumption of nuts and seeds",
+          "options": [
+            "Reduce the amount of saturated fat, trans-fatty acids, cholesterol, and total fat",
+            "Decrease your intake of monounsaturated fats by limiting the consumption of nuts and seeds",
+            "Increase your intake of omega 3 oils by eating flaxseed oil, walnuts, and small amounts of cold water fish like wild caught Alaskan salmon."
+          ],
+          "domain": 4,
+          "examSource": "Domain 4 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 662,
+          "question": "It is important to cite all your sources, except the ones you pull off Wikipedia since this is free information.",
+          "correctAnswer": 1,
+          "correctOptionText": "False",
+          "options": [
+            "True",
+            "False"
+          ],
+          "domain": 5,
+          "examSource": "Domain 5 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 664,
+          "question": "A quality research paper should include all of the following except:",
+          "correctAnswer": 3,
+          "correctOptionText": "Researchers opinions",
+          "options": [
+            "Abstract and method",
+            "Resources and acknowledgements",
+            "Summary of findings",
+            "Researchers opinions"
+          ],
+          "domain": 5,
+          "examSource": "Domain 5 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 667,
+          "question": "When writing an article that draws on the work of multiple researchers, which of the following is NOT an example of manipulating the research author’s intention?",
+          "correctAnswer": 3,
+          "correctOptionText": "Taking a direct, full sentence quote and citing it properly",
+          "options": [
+            "Listing a resource that has nothing to do with your article just to make the resources section appear more complete",
+            "Slightly changing a direct quote from the author",
+            "Selecting a partial quote and omitting the part that provides context",
+            "Taking a direct, full sentence quote and citing it properly"
+          ],
+          "domain": 5,
+          "examSource": "Domain 5 Exam 1",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 698,
+          "question": "Which of the following statements about plagiarism is false?",
+          "correctAnswer": 1,
+          "correctOptionText": "If you paraphrase closely but do not quote exactly you do not need to cite the source.",
+          "options": [
+            "Using someone’s ideas, but not exact words, without giving them credit is plagiarism.",
+            "If you paraphrase closely but do not quote exactly you do not need to cite the source.",
+            "Most writers who plagiarize do so inadvertently because they fail to take careful notes."
+          ],
+          "domain": 5,
+          "examSource": "Domain 5 Exam 2",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 710,
+          "question": "Which of the following is NOT a characteristic of reliable sources?",
+          "correctAnswer": 2,
+          "correctOptionText": "Popular press articles",
+          "options": [
+            "Peer-reviewed status",
+            "Current information",
+            "Popular press articles"
+          ],
+          "domain": 5,
+          "examSource": "Domain 5 Exam 3",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 722,
+          "question": "Which of the following are methods for determining if an online source is not reliable?",
+          "correctAnswer": 2,
+          "correctOptionText": "Determine if the author has a PhD",
+          "options": [
+            "Determine if the source is published or posted online by a reputable press",
+            "Determine if it was peer reviewed",
+            "Determine if the author has a PhD",
+            "Determine if the source is current"
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 726,
+          "question": "Which of the following statements is false?",
+          "correctAnswer": 1,
+          "correctOptionText": "b.\tHolistic Nutrition Professionals develop generalized programs to address their client needs.",
+          "options": [
+            "a.\tThe main tenet of holistic nutrition is biochemical individuality.",
+            "b.\tHolistic Nutrition Professionals develop generalized programs to address their client needs.",
+            "Holistic Nutrition Professionals can promote active lifestyles and teach healthy eating.",
+            "Holistic Nutrition Professionals educate the public on the cost/benefit of eating unprocessed local, fresh, plant-forward foods."
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 736,
+          "question": "Which of the following is not a key components of mindful eating?",
+          "correctAnswer": 1,
+          "correctOptionText": "Leveraging meal time to plan out the rest of your day",
+          "options": [
+            "Eating slowly and being present in the moment",
+            "Leveraging meal time to plan out the rest of your day",
+            "Recognizing inner cues and being aware of senses",
+            "Eating nonjudgmentally and recognizing interconnectedness"
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 737,
+          "question": "A quality research paper should include all the following except:",
+          "correctAnswer": 3,
+          "correctOptionText": "Researchers’ opinions",
+          "options": [
+            "Abstract and method",
+            "Resources and acknowledgements",
+            "Summary of findings",
+            "Researchers’ opinions"
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 813,
+          "question": "All the following stimulate food intake, except:",
+          "correctAnswer": 3,
+          "correctOptionText": "Leptin",
+          "options": [
+            "Ghrelin",
+            "Galanin",
+            "Peptide YY",
+            "Leptin"
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 833,
+          "question": "Symptoms of vitamin A overdose include all the following EXCEPT:",
+          "correctAnswer": 1,
+          "correctOptionText": "Garlic breath",
+          "options": [
+            "Blurred vision",
+            "Garlic breath",
+            "Loss of appetite",
+            "Dry skin"
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        },
+        {
+          "index": 834,
+          "question": "All the following are functions of fat in human health except:",
+          "correctAnswer": 0,
+          "correctOptionText": "Serving as the body’s primary and preferred fuel source",
+          "options": [
+            "Serving as the body’s primary and preferred fuel source",
+            "Protect organs",
+            "Regulation of body temperature",
+            "Building blocks of cell membranes, hormones, vitamins, and transport molecules"
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "high",
+          "reason": "Negative/exception phrasing — verify answer key is correct (not inverted)"
+        }
+      ]
+    },
+    "duplicate-options": {
+      "description": "Questions that had or still have duplicate answer options",
+      "questions": []
+    },
+    "near-duplicates": {
+      "description": "Questions very similar to others — may need dedup or differentiation",
+      "questions": [
+        {
+          "indexA": 33,
+          "indexB": 251,
+          "similarity": 90,
+          "questionA": "A baked potato has a higher glycemic index than a boiled sweet potato.",
+          "questionB": "A boiled potato has a higher glycemic index than a baked potato.",
+          "domain": 1,
+          "risk": "medium",
+          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+        },
+        {
+          "indexA": 294,
+          "indexB": 295,
+          "similarity": 82,
+          "questionA": "On the pH scale, values below 7 are considered basic.",
+          "questionB": "On the pH scale, values below 7 are considered acidic.",
+          "domain": 2,
+          "risk": "medium",
+          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+        },
+        {
+          "indexA": 306,
+          "indexB": 307,
+          "similarity": 82,
+          "questionA": "Amylase is an enzyme responsible for breaking down which macronutrient?",
+          "questionB": "Lipase is an enzyme responsible for breaking down which macronutrient?",
+          "domain": 2,
+          "risk": "medium",
+          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+        },
+        {
+          "indexA": 306,
+          "indexB": 308,
+          "similarity": 82,
+          "questionA": "Amylase is an enzyme responsible for breaking down which macronutrient?",
+          "questionB": "Protease is an enzyme responsible for breaking down which macronutrient?",
+          "domain": 2,
+          "risk": "medium",
+          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+        },
+        {
+          "indexA": 307,
+          "indexB": 308,
+          "similarity": 82,
+          "questionA": "Lipase is an enzyme responsible for breaking down which macronutrient?",
+          "questionB": "Protease is an enzyme responsible for breaking down which macronutrient?",
+          "domain": 2,
+          "risk": "medium",
+          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+        },
+        {
+          "indexA": 602,
+          "indexB": 607,
+          "similarity": 83,
+          "questionA": "Which of the following is a well supported recommendation for insomnia?",
+          "questionB": "Which of the following is a well supported recommendation for menopause?",
+          "domain": 4,
+          "risk": "medium",
+          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+        },
+        {
+          "indexA": 650,
+          "indexB": 652,
+          "similarity": 85,
+          "questionA": "Which of the following is not a well supported recommendation for asthma?",
+          "questionB": "Which of the following is not a well supported recommendation for atherosclerosis?",
+          "domain": 4,
+          "risk": "medium",
+          "reason": "Near-duplicate — verify if intentionally different or should be merged"
+        }
+      ]
+    },
+    "anatomy-clinical": {
+      "description": "Anatomy/clinical questions flagged for factual accuracy review",
+      "questions": [
+        {
+          "index": 15,
+          "question": "Which class of herbs primarily help to support the adrenal glands and stress?",
+          "correctAnswer": 0,
+          "correctOptionText": "Adaptogens",
+          "options": [
+            "Adaptogens",
+            "Nervines",
+            "Mucilages"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 1",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 165,
+          "question": "Which is referred to as the cardiac risk factor ratios because they reflect whether cholesterol is being deposited into tissues or broken down and excreted?",
+          "correctAnswer": 2,
+          "correctOptionText": "Both are correct",
+          "options": [
+            "Total cholesterol to HDL ratio",
+            "LDL to HDL ratio",
+            "Both are correct"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 4",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 247,
+          "question": "____________ is referred to as an intestinal antispasmodic, or compound that relieves intestinal spasms or cramps.",
+          "correctAnswer": 2,
+          "correctOptionText": "Fennel",
+          "options": [
+            "Egg plant",
+            "Chives",
+            "Fennel"
+          ],
+          "domain": 1,
+          "examSource": "Domain 1 Exam 6",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 265,
+          "question": "Which of the following terms describes an imbalance or disruption in the diversity and composition of the gut microbiota and is often associated with gastrointestinal symptoms and increased risk of va",
+          "correctAnswer": 1,
+          "correctOptionText": "Dysbiosis",
+          "options": [
+            "GERD",
+            "Dysbiosis",
+            "IBD"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 1",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 328,
+          "question": "All of the following are components of pancreatic juice, EXCEPT:",
+          "correctAnswer": 2,
+          "correctOptionText": "intrinsic factor",
+          "options": [
+            "trypsin",
+            "trypsin inhibitor",
+            "intrinsic factor",
+            "pepsinogen"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 2",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 334,
+          "question": "Blood that has perfused the pancreas, spleen, and GI tract will next perfuse the heart through the hepatic portal vein.",
+          "correctAnswer": 1,
+          "correctOptionText": "False",
+          "options": [
+            "True",
+            "False"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 2",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 344,
+          "question": "Which of the following increases gastric emptying?",
+          "correctAnswer": 3,
+          "correctOptionText": "All of the answers are correct",
+          "options": [
+            "Pectin",
+            "Gums",
+            "Mucilage",
+            "All of the answers are correct"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 3",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 360,
+          "question": "What condition is caused by redistribution of water among body compartments and can be caused by inflammation, renal disease, cardiac failure, blockage of lymph nodes, and some medication?",
+          "correctAnswer": 1,
+          "correctOptionText": "Edema",
+          "options": [
+            "Bloating",
+            "Edema",
+            "Leaky capillaries"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 4",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 408,
+          "question": "___________ is a cofactor for more than 200 enzymes and it is absorbed by small intestinal enterocytes via ZIP4.",
+          "correctAnswer": 2,
+          "correctOptionText": "Zinc",
+          "options": [
+            "Iodine",
+            "Iron",
+            "Zinc"
+          ],
+          "domain": 2,
+          "examSource": "Domain 2 Exam 5",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 741,
+          "question": "Which food should be avoided during acute intestinal illness?",
+          "correctAnswer": 0,
+          "correctOptionText": "Dairy",
+          "options": [
+            "Dairy",
+            "Nightshade vegetables",
+            "Cruciferous vegetables",
+            "Legumes"
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 764,
+          "question": "Which enzymes is used to break down protein and is produced in the stomach by the gastric chief cells?",
+          "correctAnswer": 0,
+          "correctOptionText": "Pepsin",
+          "options": [
+            "Pepsin",
+            "Lipase",
+            "Amlyase"
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 770,
+          "question": "What is the role of calcium in muscle contraction in cardiac muscle?",
+          "correctAnswer": 1,
+          "correctOptionText": "Calcium binds to troponin, which is an important regulatory protein for muscle contraction.",
+          "options": [
+            "Calcium binds to myosin, initiating the contraction process.",
+            "Calcium binds to troponin, which is an important regulatory protein for muscle contraction.",
+            "Calcium inhibits the interaction between actin and myosin during muscle contraction."
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 805,
+          "question": "The hepatic vein is located in the __________________.",
+          "correctAnswer": 2,
+          "correctOptionText": "Liver",
+          "options": [
+            "Kidney",
+            "Heart",
+            "Liver"
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 818,
+          "question": "What is the term for deficient gastric acid secretion (low stomach acid).",
+          "correctAnswer": 2,
+          "correctOptionText": "Hyprochlorhydria",
+          "options": [
+            "Hyperkalemia",
+            "Hyperchlorhydria",
+            "Hyprochlorhydria"
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        },
+        {
+          "index": 830,
+          "question": "Intestinal absorption of dietary iron may be enhanced by concurrent ingestion of:",
+          "correctAnswer": 2,
+          "correctOptionText": "Ascorbic acid",
+          "options": [
+            "Oxalates",
+            "Phytates",
+            "Ascorbic acid"
+          ],
+          "domain": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "medium",
+          "reason": "Contains anatomy/clinical terms — verify factual accuracy"
+        }
+      ]
+    },
+    "answer-key-skew": {
+      "description": "Long runs of same answer or suspicious distribution patterns",
+      "questions": [
+        {
+          "index": 656,
+          "examSource": "Domain 4 Exam 3",
+          "runLength": 5,
+          "answer": 1,
+          "risk": "low",
+          "reason": "5 consecutive questions with answer=1 in Domain 4 Exam 3"
+        },
+        {
+          "index": 774,
+          "examSource": "Full Length Comprehensive Exam",
+          "runLength": 5,
+          "answer": 1,
+          "risk": "low",
+          "reason": "5 consecutive questions with answer=1 in Full Length Comprehensive Exam"
+        }
+      ]
+    },
+    "domain-unassigned": {
+      "description": "Questions with domain=0 that need classification",
+      "questions": [
+        {
+          "index": 721,
+          "question": "What are some ways that the internet can be a valuable component of a research plan?",
+          "options": [
+            "To get bearings with respect to a new topic",
+            "To explore potential keywords to use in a more systematic search",
+            "To remind ourselves of dates and facts",
+            "All options are correct"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 722,
+          "question": "Which of the following are methods for determining if an online source is not reliable?",
+          "options": [
+            "Determine if the source is published or posted online by a reputable press",
+            "Determine if it was peer reviewed",
+            "Determine if the author has a PhD",
+            "Determine if the source is current"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 723,
+          "question": "If using information or ideas from an outside source, only intext citations or a reference list is required",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 724,
+          "question": "If a particular state restricts individualized recommendations by anyone other than a Licensed Dietitian or Nutritionist, a Holistic Nutrition Professional may still provide what type of information t",
+          "options": [
+            "Educational information about food selection",
+            "Food preparation information",
+            "Normal nutritional requirements and sources of nutrients in food",
+            "All answers are correct"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 725,
+          "question": "Which of the following may Holistic Nutrition Professionals not provide to their clients?",
+          "options": [
+            "Favorite recipes",
+            "Nearby farmers markets",
+            "Medical diagnoses",
+            "Information about meal delivery services"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 726,
+          "question": "Which of the following statements is false?",
+          "options": [
+            "a.\tThe main tenet of holistic nutrition is biochemical individuality.",
+            "b.\tHolistic Nutrition Professionals develop generalized programs to address their client needs.",
+            "Holistic Nutrition Professionals can promote active lifestyles and teach healthy eating.",
+            "Holistic Nutrition Professionals educate the public on the cost/benefit of eating unprocessed local, fresh, plant-forward foods."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 727,
+          "question": "Which of the following is true?",
+          "options": [
+            "Holistic Nutrition Professionals should refer their clients to doctors for medical conditions.",
+            "Holistic Nutrition Professionals can make health claims.",
+            "Holistic Nutrition Professionals can diagnose, treat, cure, prescribe, manage, or heal diseases.",
+            "Holistic Nutrition Professionals can use unproven devices, assessments, or therapies."
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 728,
+          "question": "Which of the following is true regarding NANP members?",
+          "options": [
+            "The NANP member will participate in activities that improve the nutritional well-being of the client and the community",
+            "NANP members need to continually improve their skill and knowledge and should make their professional attainments available to their clients and colleagues.",
+            "An NANP member will not intentionally misrepresent their education or professional credentials.",
+            "All answers are correct"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 729,
+          "question": "Which of the following is a disadvantage of group counseling?",
+          "options": [
+            "Individual responsiveness",
+            "Modeling effect",
+            "Emotional support",
+            "Problem solving"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 730,
+          "question": "Which of the following factors has been shown to influence food choice?",
+          "options": [
+            "Convenience",
+            "Cost",
+            "Taste",
+            "All answers are correct"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 731,
+          "question": "Which stage of change recognizes a need to change but the person continues to find reasons not the change?",
+          "options": [
+            "Action",
+            "Contemplation",
+            "Maintenance",
+            "Precontemplation"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 732,
+          "question": "Which stage of change is seen in clients who have no intention of changing within the next 6 months? They may even resist change.",
+          "options": [
+            "Contemplation",
+            "Action",
+            "Precontemplation",
+            "Maintenance"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 733,
+          "question": "Which stage of change is seen in clients who believe that changing their behavior will provide more benefits than harm and they are committed to making change soon?",
+          "options": [
+            "Preparation",
+            "Action",
+            "Contemplation",
+            "Precontemplation"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 734,
+          "question": "What is the term used to describe a person’s confidence in their ability to perform a behavior?",
+          "options": [
+            "Self-efficacy",
+            "Confidence",
+            "Self-compassion",
+            "Readiness to Change"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 735,
+          "question": "_________ is the true understanding of another’s perspective and experience without judging, criticizing, or blaming.",
+          "options": [
+            "Self-efficacy",
+            "Compassion",
+            "Empathy",
+            "Openness"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 736,
+          "question": "Which of the following is not a key components of mindful eating?",
+          "options": [
+            "Eating slowly and being present in the moment",
+            "Leveraging meal time to plan out the rest of your day",
+            "Recognizing inner cues and being aware of senses",
+            "Eating nonjudgmentally and recognizing interconnectedness"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 737,
+          "question": "A quality research paper should include all the following except:",
+          "options": [
+            "Abstract and method",
+            "Resources and acknowledgements",
+            "Summary of findings",
+            "Researchers’ opinions"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 738,
+          "question": "Which of the following is linked to chronic ear infections?",
+          "options": [
+            "Salmonella",
+            "Food allergies",
+            "PKU"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 739,
+          "question": "Which test is commonly used to detect antibodies in the blood?",
+          "options": [
+            "ELISA",
+            "Metabolomics",
+            "Genomics",
+            "Micronutrient white blood cell testing"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 740,
+          "question": "Which herb has laxative effects?",
+          "options": [
+            "Lemon balm",
+            "Berberine",
+            "Senna",
+            "Ginseng"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 741,
+          "question": "Which food should be avoided during acute intestinal illness?",
+          "options": [
+            "Dairy",
+            "Nightshade vegetables",
+            "Cruciferous vegetables",
+            "Legumes"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 742,
+          "question": "When writing a paper, use a block quote if the quote is longer than _______ lines or ________ words.",
+          "options": [
+            "2 ; 50",
+            "3 ; 40",
+            "4 ; 60"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 743,
+          "question": "Which mineral is particularly known for binding oxalates in the gut?",
+          "options": [
+            "Calcium",
+            "Zinc",
+            "Manganese"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 744,
+          "question": "Individuals with celiac disease may also have to avoid which foods?",
+          "options": [
+            "Nightshade vegetables",
+            "Dairy and gluten free grains",
+            "Berries"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 745,
+          "question": "Which group of B vitamins are important for regulating homocysteine levels in the body?",
+          "options": [
+            "B3, B6, B12",
+            "B6, Folate, B12",
+            "B6, Biotin, B12"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 746,
+          "question": "If your client storms out of the office when you make recommendations like cutting out processed food the best course of action is to do nothing, the client will only make changes when they are ready",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 747,
+          "question": "Steroid hormones are synthesized from ___________",
+          "options": [
+            "Albumin",
+            "Triglycerides",
+            "Protein",
+            "Cholesterol"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 748,
+          "question": "If a client who is not progressing as expected and is very frustrated and unhappy with your program, it may be appropriate to have a discussion with the client on potentially parting ways.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 749,
+          "question": "________ is a vital compound found in every cell of the body. It plays a role in cellular energy production and serves as a cofactor in the electron transport chain of the mitochondria. Its primary fu",
+          "options": [
+            "Co Enzyme Q10",
+            "Resveraterol",
+            "Lycopene"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 750,
+          "question": "Which of the following is a common source of aluminum?",
+          "options": [
+            "Pots and pans",
+            "Antiperspirants and foil",
+            "Antacids and non-dairy creamers",
+            "All answers are correct"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 751,
+          "question": "Which form of estrogen is the primary form that the body makes after menopause?",
+          "options": [
+            "E1 - Estrone",
+            "E2 - Estradiol",
+            "E3 - Estriol"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 752,
+          "question": "Which form of estrogen is the primary form made during pregnancy?",
+          "options": [
+            "E1 - Estrone",
+            "E2 - Estradiol",
+            "E3 - Estriol"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 753,
+          "question": "Which of the following forms of estrogen is the primary form made by the body during reproductive years?",
+          "options": [
+            "E1 - Estrone",
+            "E2 - Estradiol",
+            "E3 - Estriol"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 754,
+          "question": "_____________ is a skin rash triggered by food, environmental exposures, or medications. A low histamine diet may be appropriate.",
+          "options": [
+            "Urticaria",
+            "Psoriasis",
+            "Eczema"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 755,
+          "question": "___________ is an infection or irritation of the bronchi. Causes are thought to be bacteria and viruses. Supportive foods include antioxidant rich foods especially pineapple and garlic.",
+          "options": [
+            "Pneumonia",
+            "Asthma",
+            "Bronchitis"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 756,
+          "question": "Which of the following produces thyroid releasing hormone (TRH)?",
+          "options": [
+            "hypothalamus",
+            "anterior pituitary gland",
+            "Thyroid"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 757,
+          "question": "Which of the following produces thyroid stimulating hormone (TSH)?",
+          "options": [
+            "hypothalamus",
+            "anterior pituitary gland",
+            "thyroid"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 758,
+          "question": "Which of the following produces T4 and T3?",
+          "options": [
+            "hypothalamus",
+            "anterior pituitary gland",
+            "thyroid"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 759,
+          "question": "________________ is commonly used as a supplement to help manage osteoarthritis. It is believed to support cartilage repair and reduce inflammation, potentially improving joint function and relieving ",
+          "options": [
+            "Vitamin D",
+            "Glucosamine sulfate",
+            "Polyphenols"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 760,
+          "question": "Raw foods contains fewer live enzymes because they are activated only when cooking on high heat.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 761,
+          "question": "How can you narrow down a research topic effectively?",
+          "options": [
+            "By choosing a broad topic with as many subtopics as possible.",
+            "By relying solely on general information without any specific questions.",
+            "By adding \"action\" words and formulating questions that direct you to the specific information needed."
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 762,
+          "question": "In patients with Multiple Sclerosis (MS), what is often found in their cerebrospinal fluid (CSF)?",
+          "options": [
+            "A decrease in white blood cells and no presence of antibodies.",
+            "Increased levels of antibodies such as oligoclonal bands, which are indicative of an abnormal immune response.",
+            "High levels of glucose and low levels of protein."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 763,
+          "question": "Which of the following is thought to be a contributing factor or trigger of multiple sclerosis?",
+          "options": [
+            "Viruses",
+            "Infection",
+            "Environmental toxic exposures",
+            "All answers are correct"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 764,
+          "question": "Which enzymes is used to break down protein and is produced in the stomach by the gastric chief cells?",
+          "options": [
+            "Pepsin",
+            "Lipase",
+            "Amlyase"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 765,
+          "question": "Beets, kale, collards, spinach, and green beans are low oxalate foods.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 766,
+          "question": "Which foods can support hemorrhoids?",
+          "options": [
+            "Flavonoid rich foods",
+            "Fiber rich foods",
+            "High protein diet",
+            "Flavonoid and fiber rich foods"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 767,
+          "question": "Which of the following releases gonadal releasing hormone?",
+          "options": [
+            "Hypothalamus",
+            "Anterior pituitary gland",
+            "Ovaries"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 768,
+          "question": "Which of the following releases follicle stimulating hormone?",
+          "options": [
+            "Hypothalamus",
+            "Anterior pituitary gland",
+            "Ovaries"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 769,
+          "question": "Which of the following releases estrogen and progesterone?",
+          "options": [
+            "Hypothalamus",
+            "Anterior pituitary gland",
+            "Ovaries"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 770,
+          "question": "What is the role of calcium in muscle contraction in cardiac muscle?",
+          "options": [
+            "Calcium binds to myosin, initiating the contraction process.",
+            "Calcium binds to troponin, which is an important regulatory protein for muscle contraction.",
+            "Calcium inhibits the interaction between actin and myosin during muscle contraction."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 771,
+          "question": "Which part of the small intestine is primarily responsible for lipid absorption?",
+          "options": [
+            "Duodenum",
+            "Jejunum",
+            "Ileum"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 772,
+          "question": "What is annatto, and what is one of its uses?",
+          "options": [
+            "A synthetic food additive used to enhance flavor and increase shelf life.",
+            "A natural food additive derived from the seeds of the achiote tree, used as a food color and potentially for reducing inflammation",
+            "A preservative derived from fruits, primarily used for its sweetening properties."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 773,
+          "question": "Which of the following can help support and/or prevent urinary tract infections (UTIs)?",
+          "options": [
+            "Only taking antibiotics prescribed by a doctor.",
+            "Adequate hydration through water, herbal teas, and juices like cranberry or blueberry juice, with cranberry juice in particular helping to combat UTIs.",
+            "Drinking large amounts of sugary beverages to flush out bacteria."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 774,
+          "question": "What is erythropoietin (EPO) and what is its primary function?",
+          "options": [
+            "A hormone produced by the liver that stimulates white blood cell production.",
+            "A glycoprotein hormone produced by the kidneys that stimulates red blood cell production and is used to treat anemia.",
+            "A protein produced by the brain that regulates blood sugar levels."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 775,
+          "question": "What effect does cooking vegetables have on glutathione levels?",
+          "options": [
+            "Cooking vegetables increases glutathione levels due to heat activation.",
+            "Glutathione is not affected by cooking and remains stable in all cooking methods.",
+            "High temperatures from cooking vegetables can decrease glutathione levels."
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 776,
+          "question": "What is one of the key roles of the lymphatic system?",
+          "options": [
+            "To produce red blood cells and regulate blood pressure.",
+            "To filter toxins from the blood and store them in the liver.",
+            "To absorb fats and fat-soluble vitamins from the digestive system and transport them to the venous circulation."
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 777,
+          "question": "What are the main functions of the hormone secretin?",
+          "options": [
+            "Regulation of gastric acid, regulation of pancreatic bicarbonate, and osmoregulation.",
+            "Regulation of blood sugar, stimulation of appetite, and inhibition of gastric acid.",
+            "Regulation of heart rate, blood pressure, and body temperature."
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 778,
+          "question": "Long term use of oral contraceptives can contribute to the depletion of which nutrients?",
+          "options": [
+            "B6, folate, and B12",
+            "Magnesium, riboflavin, and vitamin C",
+            "Zinc, copper, and CoQ10",
+            "All answers are correct"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 779,
+          "question": "Which of the following statements about diverticulitis is true?",
+          "options": [
+            "A diet high in fiber and low in red meat may reduce the risk of diverticulitis, while seeds and nuts should be avoided.",
+            "Diverticulitis is caused by a lack of vitamin D and can be managed by taking supplements.",
+            "A diet low in fiber and high in red meat increases the risk of diverticulitis, and recent research suggests seeds are not as harmful as once thought."
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 780,
+          "question": "___________ is characterized by greasy scaling of the skin that appears similar to psoriasis. It is associated with dandruff and oiliness. Candida overgrowth may be an underlying root cause. Food alle",
+          "options": [
+            "Eczema",
+            "Seborrheic dermatitis",
+            "Cystic acne"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 781,
+          "question": "What is the best way to avoid food additives such as preservatives, artificial colorings, and sweeteners?",
+          "options": [
+            "Drink only bottled beverages and pre-packaged juices.",
+            "Focus on eating canned fruits and frozen vegetables for convenience.",
+            "Consume an organic whole foods diet, focusing on fresh, unprocessed foods.",
+            "Choose processed meats and packaged snacks that are labeled \"low-fat.\""
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 782,
+          "question": "Which of the following is the most reliable way to identify gluten in food ingredients?",
+          "options": [
+            "Look for wheat, oats, barley, rye, kamut, triticale, brewer's yeast, and soy sauce on the label, as well as the scientific name Triticum for wheat, barley, or rye.",
+            "Check for any mention of \"gluten-free\" or \"wheat-free\" labels on the packaging.",
+            "Identify gluten by the presence of sugar, high fructose corn syrup, and artificial sweeteners in the ingredients list."
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 783,
+          "question": "Which of the following best describes the Jarisch-Herxheimer reaction?",
+          "options": [
+            "A reaction that occurs after antibiotic treatment for viral infections, manifesting with symptoms like rash and sore throat.",
+            "A sudden reaction that may occur after antibiotic treatment for spirochetal infections, causing symptoms such as headache, fever, chills, hypotension, and muscle aches.",
+            "A severe allergic reaction to antibiotics, characterized by difficulty breathing and swelling."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 784,
+          "question": "Nutritional therapies for chronic fatigue syndrome include high doses of vitamin C, Magnesium, essential fatty acids, NADH, CoQ10, L carnitine, ginseng, and stress management techniques.",
+          "options": [
+            "Vitamin C and magnesium",
+            "Essential fatty acids and NADH",
+            "CoQ10 and L carnitine",
+            "All answers are correct"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 785,
+          "question": "Which of the following is true about lymph nodes?",
+          "options": [
+            "Lymph nodes are large, oval-shaped organs that produce red blood cells and store platelets.",
+            "Lymph nodes are located in the bloodstream and help transport oxygen throughout the body.",
+            "Lymph nodes filter lymph, trap harmful substances like bacteria and viruses, and produce and store white blood cells to fight infection."
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 786,
+          "question": "Which of the following is true about phagocytes?",
+          "options": [
+            "Phagocytes destroy foreign substances by releasing antibodies into the bloodstream.",
+            "Phagocytes destroy foreign substances by engulfing them and using hydrolytic enzymes. Macrophages and neutrophils are examples of phagocytic cells.",
+            "Phagocytes primarily produce red blood cells and help with blood clotting."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 787,
+          "question": "Which of the following best describes herbal choleretics?",
+          "options": [
+            "Herbal choleretics are herbs that promote the release of bile from the gallbladder.",
+            "Herbal choleretics are herbs that stimulate the production of digestive enzymes in the pancreas.",
+            "Herbal choleretics are herbs that inhibit bile production and reduce bile flow from the gallbladder."
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 788,
+          "question": "Which of the following conditions has Uva Ursi traditionally been used to treat?",
+          "options": [
+            "Skin rashes, eczema, and acne",
+            "High blood pressure, asthma, and diabetes",
+            "Cystitis, kidney stones, bladder stones, and urinary tract infections"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 789,
+          "question": "Which of the following conditions can result from biotin deficiency in children?",
+          "options": [
+            "Eczema and psoriasis",
+            "Seborrheic dermatitis",
+            "Acne vulgaris",
+            "Fungal infections"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 790,
+          "question": "What nutrient is important to limit with a client who is suffering from gout?",
+          "options": [
+            "Purine, as it raises uric acid levels.",
+            "Carbohydrates, as they increase blood sugar levels.",
+            "Vitamin D, as it affects calcium absorption."
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 791,
+          "question": "Which of the following is true about the role of digestive enzymes?",
+          "options": [
+            "Pepsin breaks down carbohydrates into simple sugars, while trypsin and chymotrypsin break down fats into fatty acids.",
+            "Pepsin breaks down proteins into peptides, while trypsin and chymotrypsin break down peptides into free amino acids.",
+            "Pepsin and trypsin both break down lipids into glycerol and fatty acids.",
+            "Chymotrypsin and trypsin both convert starches into glucose."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 792,
+          "question": "Which of the following types of foods can help strengthen vein structure and support hemorrhoid relief or prevention?",
+          "options": [
+            "High fat foods",
+            "Flavonoid rich foods",
+            "'Sugar free' processed snacks",
+            "Dairy products"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 793,
+          "question": "Which of the following is a role of the amino acid arginine?",
+          "options": [
+            "Detoxification and hormone secretion",
+            "Muscle relaxation only",
+            "Only plays a role in protein synthesis",
+            "Stimulating blood sugar production"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 794,
+          "question": "Which of the following is a function of glutamine in the human body?",
+          "options": [
+            "It is the primary fuel source for cells lining the intestines and white blood cells.",
+            "It is involved in the production of insulin.",
+            "It is needed solely for muscle repair."
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 795,
+          "question": "Which of the following is a role of the amino acid lysine in the body?",
+          "options": [
+            "It is used exclusively for energy production.",
+            "It is responsible for producing red blood cells.",
+            "It helps with calcium absorption and tissue repair."
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 796,
+          "question": "Which of the following factors can contribute to mild dehydration?",
+          "options": [
+            "Consuming adequate water daily",
+            "Living in a cool, humid climate",
+            "Drinking large amounts of water only after exercise",
+            "Diuretics, regular exercise, and drinking beverages like coffee, soda, and beer"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 797,
+          "question": "Which of the following terms on a food label indicates that sugar has been added to the food?",
+          "options": [
+            "Whole wheat flour",
+            "Sucrose, glucose, high fructose corn syrup",
+            "Natural fruit flavors"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 798,
+          "question": "Which of the following is a function of the trigeminal nerve?",
+          "options": [
+            "It helps regulate heart rate.",
+            "It extends into the brain from the face and forehead and plays a role in inhibiting seizures.",
+            "It controls muscle movement in the arms and legs.",
+            "It regulates digestion in the stomach."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 799,
+          "question": "Which condition is characterized by swelling caused by too much fluid trapped in the body's tissues?",
+          "options": [
+            "Hypertension",
+            "Edema",
+            "Anemia"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 800,
+          "question": "Which of the following factors can increase the risk of developing cataracts?",
+          "options": [
+            "High intake of vitamin A",
+            "Deficiency in antioxidants like vitamin E, vitamin C, and glutathione",
+            "Low levels of protein in the diet"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 801,
+          "question": "What is the function of alveoli in the lungs?",
+          "options": [
+            "They help produce red blood cells.",
+            "They filter out toxins from the air.",
+            "They take up oxygen we breathe in and supply it to the body.",
+            "They regulate the body’s temperature."
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 802,
+          "question": "What is a common result of a deviated septum?",
+          "options": [
+            "It causes chronic headaches.",
+            "It can obstruct one or both nostrils, making it difficult to breathe.",
+            "It leads to frequent nosebleeds."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 803,
+          "question": "_________________ are inorganic salts that are used as preservatives in many foods such as dried fruits, deli meats, and canned vegetables.",
+          "options": [
+            "Sulfites",
+            "Nitrates",
+            "Phosphates"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 804,
+          "question": "Cellulose, pectin, and hemicellulose are considered fibers while fibrinogen is considered a ______________.",
+          "options": [
+            "Carbohydrate",
+            "Anti-nutrient",
+            "Protein"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 805,
+          "question": "The hepatic vein is located in the __________________.",
+          "options": [
+            "Kidney",
+            "Heart",
+            "Liver"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 806,
+          "question": "Which of the following is true about Peyer’s patches?",
+          "options": [
+            "They are small masses of lymphatic tissue found in the lining of the stomach.",
+            "They play a role in the immune system by monitoring and responding to harmful substances in the digestive tract.",
+            "They are responsible for producing digestive enzymes in the small intestine."
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 807,
+          "question": "Alpha linolenic acid is what type of fatty acid?",
+          "options": [
+            "Omega 3",
+            "Omega 6",
+            "Omega 9"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 808,
+          "question": "Erythropoietin hormone is secreted by the ____________",
+          "options": [
+            "Liver",
+            "Spleen",
+            "Kidneys"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 809,
+          "question": "The tonsils, adenoids, and spleen are all part of the ____________ system.",
+          "options": [
+            "Cardiovascular system",
+            "Lymphatic system",
+            "Musculoskeletal system"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 810,
+          "question": "Which of the following does pH measure?",
+          "options": [
+            "The concentration of hydroxide ions (OH⁻)",
+            "The concentration of hydrogen ions (H⁺)",
+            "The temperature of a solution"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 811,
+          "question": "Trigeminal pain is located in the ____________ area.",
+          "options": [
+            "Stomach",
+            "Back",
+            "Face"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 812,
+          "question": "What is the site of most ATP production within the cells?",
+          "options": [
+            "Lysosomes",
+            "Mitochondria",
+            "Ribosomes",
+            "Golgi apparatus"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 813,
+          "question": "All the following stimulate food intake, except:",
+          "options": [
+            "Ghrelin",
+            "Galanin",
+            "Peptide YY",
+            "Leptin"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 814,
+          "question": "What is the normal fasting blood glucose concentration?",
+          "options": [
+            "50–60 mg/100 mL",
+            "70–110 mg/100 mL",
+            "120–130 mg/100 mL"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 815,
+          "question": "Which of the following is least likely to break down carbohydrates?",
+          "options": [
+            "Salivary amylase",
+            "Stomach acid",
+            "Lipase",
+            "Large intestine bacteria"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 816,
+          "question": "Professional health organizations such, as the American Heart Association, and the Dietary Guidelines for Americans 2015–2025 recommend that people consume _________ of calories per day from added sug",
+          "options": [
+            "less than 10%",
+            "25%",
+            "30-40%"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 817,
+          "question": "Which bodily organ plays a key role in detoxification?",
+          "options": [
+            "Brain",
+            "Large intestine",
+            "Gallbladder",
+            "Liver"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 818,
+          "question": "What is the term for deficient gastric acid secretion (low stomach acid).",
+          "options": [
+            "Hyperkalemia",
+            "Hyperchlorhydria",
+            "Hyprochlorhydria"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 819,
+          "question": "Increased calcium resorption in kidney tubules is stimulated by:",
+          "options": [
+            "Increased levels of parathyroid hormone.",
+            "1αHydroxylase",
+            "Calbindin",
+            "Increased calcitonin level"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 820,
+          "question": "Which of the following gluten free grains may need to be removed with celiac disease?",
+          "options": [
+            "Oats",
+            "Millet",
+            "Buckwheat",
+            "All answers are correct"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 821,
+          "question": "Which of the following nutrients helps to regulate cholesterol levels by binding to bile acids, which results in the body using up its cholesterol to make more bile?",
+          "options": [
+            "Vitamin D",
+            "Fiber",
+            "Protein",
+            "Vitamin E"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 822,
+          "question": "Which of the following would not be a well-supported recommendation for a client suffering from anemia?",
+          "options": [
+            "Brewer's yeast",
+            "Calf's liver",
+            "Several glasses of whole milk or a calcium supplement",
+            "Green leafy vegetables"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 823,
+          "question": "Which B vitamin has been shown to lower LDL cholesterol?",
+          "options": [
+            "Niacin",
+            "B12",
+            "Folate",
+            "Riboflavin"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 824,
+          "question": "Which of the following is a high purine food that should be avoided with gout?",
+          "options": [
+            "Eggs and fruit",
+            "Nuts and olives",
+            "Organ meats, anchovies, and mackerel"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 825,
+          "question": "Energy deficiency produces which of the following:",
+          "options": [
+            "Weight loss",
+            "Decreased immune function",
+            "Adaptive endocrine changes",
+            "All answers are correct"
+          ],
+          "correctAnswer": 3,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 826,
+          "question": "The recommended dietary component of osteoporosis treatment involves:",
+          "options": [
+            "Consumption of full fat dairy",
+            "Calcium intake of 1200 mg per day in divided doses",
+            "Daily strength training"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 827,
+          "question": "The most common cause of chronic kidney disease (CKD) is:",
+          "options": [
+            "Glomerulonephritis",
+            "Hypertension",
+            "Diabetic neuropathy",
+            "Kidney stones"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 828,
+          "question": "Aloe vera (aloe barbadensis) is traditionally use for the following condition:",
+          "options": [
+            "Constipation",
+            "Hypertension",
+            "Acne"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 829,
+          "question": "The following herb has been shown to relieve symptoms of premenstrual syndrome and menopause",
+          "options": [
+            "Chaste Tree (Vitex agnus-castus)",
+            "Evening Primrose (Oenthera biennis)",
+            "Motherwort (Leonurus cardiac)",
+            "Red Clover (Trifolium pratense)"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 830,
+          "question": "Intestinal absorption of dietary iron may be enhanced by concurrent ingestion of:",
+          "options": [
+            "Oxalates",
+            "Phytates",
+            "Ascorbic acid"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 831,
+          "question": "High intakes of zinc will interfere with the absorption and utilization of which mineral(s):",
+          "options": [
+            "Copper",
+            "Iron",
+            "Both answers are correct"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 832,
+          "question": "The most difficult challenge facing a nutritionist or nutrition counselor is to:",
+          "options": [
+            "Classify individuals",
+            "Assess nutritional status",
+            "Motivate behavior medication",
+            "Recommend solutions"
+          ],
+          "correctAnswer": 2,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 833,
+          "question": "Symptoms of vitamin A overdose include all the following EXCEPT:",
+          "options": [
+            "Blurred vision",
+            "Garlic breath",
+            "Loss of appetite",
+            "Dry skin"
+          ],
+          "correctAnswer": 1,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 834,
+          "question": "All the following are functions of fat in human health except:",
+          "options": [
+            "Serving as the body’s primary and preferred fuel source",
+            "Protect organs",
+            "Regulation of body temperature",
+            "Building blocks of cell membranes, hormones, vitamins, and transport molecules"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        },
+        {
+          "index": 835,
+          "question": "This type of lipoprotein transports cholesterol from the liver to places in the body where it is needed:",
+          "options": [
+            "LDL",
+            "HDL",
+            "VLDL"
+          ],
+          "correctAnswer": 0,
+          "examSource": "Full Length Comprehensive Exam",
+          "risk": "low",
+          "reason": "Needs domain classification"
+        }
+      ]
+    }
+  }
+}

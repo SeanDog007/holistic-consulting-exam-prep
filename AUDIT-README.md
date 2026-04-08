@@ -49,19 +49,45 @@ node audit-questions.mjs --category dupes
 | 🔍 Review | 78 | 51 negative/exception questions, 16 anatomy questions, 3 "all of the above", plus overlaps |
 | ℹ️ Info | 249 | 57 T/F as MC, 156 missing question marks, 19 inconsistent caps, format noise |
 
-### Critical Issues
-1. **40 exact duplicate questions** — these should be deduplicated
-2. **151 questions in Domain 0** (unassigned) — need domain classification
-3. **2 questions with duplicate options** (Q172, Q811) — broken questions
-4. **78 high-risk "negative" questions** — the hepatic portal bug was exactly this type. Each needs manual review.
+## Cleanup Pass (April 8, 2026)
+
+**Before:** 877 questions, 540 issues (42 errors)
+**After:** 836 questions, 438 issues (0 errors)
+
+| Action | Count | Detail |
+|--------|-------|--------|
+| Exact duplicates removed | 41 | Kept first occurrence in all cases |
+| Duplicate options fixed | 2 | Q172 (Vitamin E×2), Q811 (bile inhibit×2) — removed redundant option |
+| Double spaces fixed | 6 | Normalized to single spaces |
+| Leading number artifacts removed | 2 | e.g., "48.\\t" prefix stripped |
+
+### New Files
+- `cleanup-questions.mjs` — Cleanup script (run with `--apply`)
+- `review-queue.json` — 196 high-risk questions prioritized for SME review
+- `review-status.json` — Per-question review tracking (pending/reviewed/approved/rejected)
+- `cleanup-log.json` — Detailed log of every change made
+- `circle-questions-export.backup.json` — Pre-cleanup backup
+
+### Remaining Issues (not auto-fixable)
+1. **115 questions in Domain 0** (unassigned) — need domain classification
+2. **57 negative/exception questions** — need manual answer key verification
+3. **15 anatomy/clinical questions** — need factual accuracy review
+4. **7 near-duplicate pairs** — need human judgment on merge vs. keep
+
+### Critical Issues (historical)
+1. ~~**40 exact duplicate questions**~~ ✅ FIXED — deduplicated
+2. **151→115 questions in Domain 0** (unassigned) — need domain classification
+3. ~~**2 questions with duplicate options** (Q172, Q811)~~ ✅ FIXED — removed duplicate options
+4. **78→57 high-risk "negative" questions** — the hepatic portal bug was exactly this type. Each needs manual review.
 
 ## Recommended Workflow for Full Accuracy Audit
 
-### Phase 1: Fix Automated Findings (Dwight, ~2 hours)
-- [ ] Remove 40 exact duplicates from export + DB
-- [ ] Fix 2 questions with duplicate options (Q172, Q811)
-- [ ] Assign domain to 151 domain-0 questions
-- [ ] Clean format issues (double spaces, whitespace)
+### Phase 1: Fix Automated Findings (Dwight, ~2 hours) — ✅ COMPLETE
+- [x] Remove 41 exact duplicates from export
+- [x] Fix 2 questions with duplicate options (Q172, Q811)
+- [x] Clean format issues (double spaces, whitespace, number artifacts)
+- [ ] Assign domain to 115 domain-0 questions (needs SME input)
+- [ ] Sync cleaned export back to Supabase DB
 
 ### Phase 2: Manual Review of High-Risk Questions (Subject Matter Expert, ~4-6 hours)
 - [ ] Review all 78 flagged negative/exception questions — verify answer keys are correct

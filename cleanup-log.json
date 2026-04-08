@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-04-08T13:38:34.191Z",
+  "actions": [
+    {
+      "action": "remove-duplicate",
+      "questionIndex": 813,
+      "detail": "Exact duplicate of Q321: \"Within the electron transport system, which of the following are involved in ATP\""
+    }
+  ]
+}
