@@ -1604,7 +1604,7 @@
     "question_type": "multiple_choice",
     "options": [
       "Onions",
-      "Arugula",
+      "Cabbage",
       "Acorn squash",
       "Potatoes"
     ],
@@ -3956,7 +3956,7 @@
     "options": [
       "Bile acid",
       "Stomach acid",
-      "Amlyase"
+      "Amylase"
     ],
     "correct_answer": 0,
     "difficulty": "medium",
@@ -4921,7 +4921,7 @@
     "options": [
       "ghrelin",
       "galanin",
-      "peptide YY.",
+      "Neuropeptide Y",
       "leptin"
     ],
     "correct_answer": 3,
@@ -4938,7 +4938,7 @@
       "trypsin",
       "trypsin inhibitor",
       "intrinsic factor",
-      "pepsinogen"
+      "chymotrypsin"
     ],
     "correct_answer": 2,
     "difficulty": "medium",
@@ -5173,7 +5173,7 @@
     "domain": 2,
     "topic": "Anatomy, Physiology, and Biochemistry",
     "exam_source": "Domain 2 Exam 3",
-    "question_text": "Which of the following increases gastric emptying?",
+    "question_text": "Which of the following delays gastric emptying?",
     "question_type": "multiple_choice",
     "options": [
       "Pectin",
@@ -10964,8 +10964,8 @@
     "question_text": "Which of the following statements is false?",
     "question_type": "multiple_choice",
     "options": [
-      "a.\tThe main tenet of holistic nutrition is biochemical individuality.",
-      "b.\tHolistic Nutrition Professionals develop generalized programs to address their client needs.",
+      "The main tenet of holistic nutrition is biochemical individuality.",
+      "Holistic Nutrition Professionals develop generalized programs to address their client needs.",
       "Holistic Nutrition Professionals can promote active lifestyles and teach healthy eating.",
       "Holistic Nutrition Professionals educate the public on the cost/benefit of eating unprocessed local, fresh, plant-forward foods."
     ],
@@ -11551,7 +11551,7 @@
     "options": [
       "Pepsin",
       "Lipase",
-      "Amlyase"
+      "Amylase"
     ],
     "correct_answer": 0,
     "difficulty": "medium",
@@ -11897,9 +11897,10 @@
     "question_text": "Which of the following best describes herbal choleretics?",
     "question_type": "multiple_choice",
     "options": [
-      "Herbal choleretics are herbs that promote the release of bile from the gallbladder.",
+      "Herbal choleretics are herbs that stimulate the production of bile by the liver.",
       "Herbal choleretics are herbs that stimulate the production of digestive enzymes in the pancreas.",
-      "Herbal choleretics are herbs that inhibit bile production and reduce bile flow from the gallbladder."
+      "Herbal choleretics are herbs that inhibit bile production and reduce bile flow from the gallbladder.",
+      "Herbal choleretics are herbs that reduce stomach acid production and promote alkalinity."
     ],
     "correct_answer": 0,
     "difficulty": "medium",
@@ -12297,7 +12298,7 @@
     "options": [
       "Ghrelin",
       "Galanin",
-      "Peptide YY",
+      "Neuropeptide Y",
       "Leptin"
     ],
     "correct_answer": 3,
@@ -12375,7 +12376,7 @@
     "options": [
       "Hyperkalemia",
       "Hyperchlorhydria",
-      "Hyprochlorhydria"
+      "Hypochlorhydria"
     ],
     "correct_answer": 2,
     "difficulty": "medium",
