@@ -18,9 +18,9 @@ exports.handler = async (event) => {
       .select("*")
       .eq("user_id", user.id)
       .order("taken_at", { ascending: false })
-      .limit(1);
+      .maybeSingle();
 
-    return { statusCode: 200, headers: cors, body: JSON.stringify(data?.[0] || null) };
+    return { statusCode: 200, headers: cors, body: JSON.stringify(data || null) };
   }
 
   // POST — generate diagnostic exam (5 questions per domain = 25 total)

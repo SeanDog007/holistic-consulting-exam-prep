@@ -20,9 +20,9 @@ async function updateFocusArea(userClient, userId, questionId) {
       .select("id, status, wrong_count")
       .eq("user_id", userId)
       .eq("lesson_id", q.lesson_id)
-      .limit(1);
+      .maybeSingle();
 
-    const row = existing?.[0];
+    const row = existing;
 
     if (!row) {
       // 3a. No existing row — insert new focus area
@@ -83,9 +83,9 @@ async function batchUpdateFocusAreas(userClient, userId, wrongQuestionIds) {
         .select("id, status, wrong_count")
         .eq("user_id", userId)
         .eq("lesson_id", group.lesson_id)
-        .limit(1);
+        .maybeSingle();
 
-      const row = existing?.[0];
+      const row = existing;
 
       if (!row) {
         await userClient.from("user_focus_areas").insert({

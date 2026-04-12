@@ -82,8 +82,7 @@ exports.handler = async (event) => {
           .eq("user_id", student.id)
           .eq("is_active", true)
           .order("created_at", { ascending: false })
-          .limit(1)
-          .single();
+          .maybeSingle();
 
         if (plan?.plan_data?.weeks) {
           const planStart = new Date(plan.plan_data.weeks[0]?.start_date || today);

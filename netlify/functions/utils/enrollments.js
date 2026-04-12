@@ -16,7 +16,7 @@ async function hasEnrollment(email) {
     .select("id, status")
     .eq("email", email.toLowerCase())
     .eq("status", "active")
-    .limit(1);
+    .maybeSingle();
 
   if (error) {
     console.error("[enrollments] Check failed:", error.message);
@@ -27,7 +27,7 @@ async function hasEnrollment(email) {
     return false;
   }
 
-  return data && data.length > 0;
+  return !!data;
 }
 
 /**
@@ -76,8 +76,7 @@ async function getEnrollment(email) {
     .eq("email", email.toLowerCase())
     .eq("status", "active")
     .order("enrolled_at", { ascending: false })
-    .limit(1)
-    .single();
+    .maybeSingle();
 
   if (error) return null;
   return data;

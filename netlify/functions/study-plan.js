@@ -27,9 +27,9 @@ exports.handler = async (event) => {
       .eq("user_id", user.id)
       .eq("is_active", true)
       .order("created_at", { ascending: false })
-      .limit(1);
+      .maybeSingle();
 
-    return { statusCode: 200, headers: cors, body: JSON.stringify(data?.[0] || null) };
+    return { statusCode: 200, headers: cors, body: JSON.stringify(data || null) };
   }
 
   if (event.httpMethod === "POST") {

@@ -142,14 +142,12 @@ exports.handler = async (event) => {
     const quality = isCorrect ? 4 : 1;
 
     // 3. Get existing review or defaults
-    const { data: existingRows } = await userClient
+    const { data: existing } = await userClient
       .from("question_reviews")
       .select("*")
       .eq("user_id", user.id)
       .eq("question_id", question_id)
-      .limit(1);
-
-    const existing = existingRows && existingRows.length > 0 ? existingRows[0] : null;
+      .maybeSingle();
     const prevEase = existing?.ease_factor || 2.5;
     const prevInterval = existing?.interval_days || 0;
     const prevReps = existing?.repetition_count || 0;

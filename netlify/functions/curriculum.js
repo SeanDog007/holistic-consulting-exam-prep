@@ -121,13 +121,12 @@ async function handleGetLesson(userClient, user, lessonId, cors) {
   const module = lesson.study_modules;
 
   // Get user progress for this lesson
-  const { data: progressRows } = await userClient
+  const { data: progress } = await userClient
     .from("lesson_progress")
     .select("*")
     .eq("user_id", user.id)
     .eq("lesson_id", lessonId)
-    .limit(1);
-  const progress = progressRows && progressRows.length > 0 ? progressRows[0] : null;
+    .maybeSingle();
 
   // Get practice questions matching the lesson's domain and topic keyword
   let practiceQuestions = [];
@@ -136,7 +135,7 @@ async function handleGetLesson(userClient, user, lessonId, cors) {
     const keyword = lesson.title.split(/[\s&,]+/).find(w => w.length > 3) || lesson.title;
     const { data: questions } = await userClient
       .from("questions")
-      .select("id, question_text, options, domain, topic")
+      .select("id, question_text, options, correct_answer, explanation, textbook_reference, domain, topic")
       .eq("domain", module.domain)
       .ilike("topic", `%${keyword}%`)
       .limit(3);
@@ -145,6 +144,9 @@ async function handleGetLesson(userClient, user, lessonId, cors) {
       id: q.id,
       question_text: q.question_text,
       options: q.options,
+      correct_answer: q.correct_answer,
+      explanation: q.explanation,
+      textbook_reference: q.textbook_reference,
       domain: q.domain,
       topic: q.topic,
     }));

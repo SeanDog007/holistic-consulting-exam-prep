@@ -136,9 +136,9 @@ exports.handler = async (event) => {
           .select("id")
           .eq("user_id", user.id)
           .eq("lesson_id", fa.lesson_id)
-          .limit(1);
+          .maybeSingle();
 
-        const progressRow = existingProgress?.[0];
+        const progressRow = existingProgress;
         if (progressRow) {
           await userClient.from("lesson_progress").update({
             is_completed: true,
