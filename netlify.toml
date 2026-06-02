@@ -8,11 +8,8 @@
 [functions."*"]
   max_duration = 26
 
-[functions."send-study-reminders"]
-  schedule = "0 12 * * *"
-
-[functions."send-trigger-emails"]
-  schedule = "0 17 * * *"
+# send-study-reminders + send-trigger-emails schedules removed —
+# study reminders and behavioral nurture now handled by Kit, not Resend.
 
 [[headers]]
   for = "/.netlify/functions/*"
