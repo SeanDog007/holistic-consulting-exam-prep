@@ -13,21 +13,19 @@ async function hasEnrollment(email) {
   const sb = getServiceClient();
   const { data, error } = await sb
     .from("direct_enrollments")
-    .select("id, status")
+    .select("id")
     .eq("email", email.toLowerCase())
     .eq("status", "active")
-    .maybeSingle();
+    .limit(1);
 
   if (error) {
     console.error("[enrollments] Check failed:", error.message);
-    // If table doesn't exist yet, return false gracefully
-    if (error.code === "42P01" || error.message.includes("does not exist")) {
-      return false;
-    }
     return false;
   }
 
-  return !!data;
+  // Tolerant of duplicate active rows (avoid the .maybeSingle() error that
+  // previously locked out anyone who had more than one active enrollment).
+  return Array.isArray(data) && data.length > 0;
 }
 
 /**
@@ -42,10 +40,27 @@ async function createEnrollment({
   amountPaid,
 }) {
   const sb = getServiceClient();
+  const normalizedEmail = email.toLowerCase();
+
+  // Idempotent per email: if an active enrollment already exists, reuse it
+  // instead of inserting a duplicate. Prevents duplicate rows piling up from
+  // repeat checkouts or retried Stripe webhook events.
+  const { data: existing } = await sb
+    .from("direct_enrollments")
+    .select("*")
+    .eq("email", normalizedEmail)
+    .eq("status", "active")
+    .order("enrolled_at", { ascending: false })
+    .limit(1);
+
+  if (Array.isArray(existing) && existing.length > 0) {
+    return { success: true, enrollment: existing[0], alreadyEnrolled: true };
+  }
+
   const { data, error } = await sb
     .from("direct_enrollments")
     .insert({
-      email: email.toLowerCase(),
+      email: normalizedEmail,
       name: name || "",
       stripe_session_id: stripeSessionId,
       stripe_customer_id: stripeCustomerId,
@@ -76,6 +91,7 @@ async function getEnrollment(email) {
     .eq("email", email.toLowerCase())
     .eq("status", "active")
     .order("enrolled_at", { ascending: false })
+    .limit(1)
     .maybeSingle();
 
   if (error) return null;
