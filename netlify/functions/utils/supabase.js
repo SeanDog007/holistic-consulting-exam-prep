@@ -1,5 +1,12 @@
 const { createClient } = require("@supabase/supabase-js");
 
+// Internal sentinel: getUserClient trusts a "__MAGIC_LINK__:<email>" token as an
+// authenticated magic-link session. It must ONLY ever be minted server-side from
+// the HMAC-signed httpOnly cookie (see extractToken) — never accepted from a
+// client-supplied header, or anyone could impersonate any email by sending it
+// as a Bearer token.
+const MAGIC_LINK_PREFIX = "__MAGIC_LINK__:";
+
 function getServiceClient() {
   return createClient(
     process.env.SUPABASE_URL,
@@ -9,8 +16,8 @@ function getServiceClient() {
 
 function getUserClient(token) {
   // Magic-link cookie auth: look up the real Supabase auth user by email
-  if (token && token.startsWith('__MAGIC_LINK__:')) {
-    const email = token.slice('__MAGIC_LINK__:'.length);
+  if (token && token.startsWith(MAGIC_LINK_PREFIX)) {
+    const email = token.slice(MAGIC_LINK_PREFIX.length);
     const sc = getServiceClient();
     
     // Look up real auth.users record so FK constraints work
@@ -88,13 +95,17 @@ function getCorsHeaders(origin) {
 
 function extractToken(headers) {
   const auth = headers.authorization || headers.Authorization || "";
-  if (auth.startsWith("Bearer ")) return auth.slice(7);
-  
-  // Fallback: check magic-link cookie
+  if (auth.startsWith("Bearer ")) {
+    const bearer = auth.slice(7);
+    // Only real Supabase JWTs are valid here; reject a forged magic-link sentinel.
+    if (bearer && !bearer.startsWith(MAGIC_LINK_PREFIX)) return bearer;
+  }
+
+  // Magic-link identity comes only from the signature-verified session cookie.
   const { getSessionUser } = require("./auth");
   const result = getSessionUser(headers);
-  if (result && result.email) return '__MAGIC_LINK__:' + result.email;
-  
+  if (result && result.email) return MAGIC_LINK_PREFIX + result.email;
+
   return null;
 }
 
