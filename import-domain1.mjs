@@ -64,13 +64,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Building blocks of structure, enzymes, and immune function',
       estimated_minutes: 18,
       exam_alert: true,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Proteins are composed of 20 amino acids, 9 of which are essential and must come from the diet.',
         'Complete proteins contain all essential amino acids; complementary combining can achieve completeness from plant sources.',
         'Protein quality is measured by PDCAAS and DIAAS scores — important for clinical recommendations.',
         'Deficiency signs include muscle wasting, edema, poor wound healing, and weakened immunity.',
         'Excess protein intake can stress the kidneys and liver, particularly in those with pre-existing conditions.'
-      ]),
+      ],
       content_html: `
 <h2>Proteins &amp; Amino Acids</h2>
 
@@ -127,13 +127,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Energy metabolism, blood sugar regulation, and clinical significance',
       estimated_minutes: 17,
       exam_alert: true,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Carbohydrates are classified as simple (mono/disaccharides) or complex (oligosaccharides/polysaccharides) based on molecular structure.',
         'The glycemic index (GI) ranks foods by their effect on blood glucose; glycemic load (GL) accounts for portion size and is more clinically relevant.',
         'Insulin resistance develops from chronic blood sugar dysregulation and is a precursor to type 2 diabetes and metabolic syndrome.',
         'Complex carbohydrates from whole food sources provide sustained energy, fiber, and micronutrients.',
         'Low-GI diets are associated with improved blood sugar control, reduced cardiovascular risk, and better weight management.'
-      ]),
+      ],
       content_html: `
 <h2>Carbohydrates &amp; Glycemic Index</h2>
 
@@ -193,13 +193,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Lipid classification, omega balance, and anti-inflammatory nutrition',
       estimated_minutes: 18,
       exam_alert: true,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Dietary fats are classified as saturated, monounsaturated, and polyunsaturated; trans fats are the most harmful and should be eliminated.',
         'Omega-3 (ALA, EPA, DHA) and omega-6 (LA, AA) are essential fatty acids — the modern diet tends to be excessively high in omega-6.',
         'An optimal omega-6 to omega-3 ratio of approximately 2:1 to 4:1 supports anti-inflammatory balance.',
         'Fat-soluble vitamins (A, D, E, K) require dietary fat for proper absorption.',
         'Medium-chain triglycerides (MCTs) are absorbed directly into portal circulation and are a rapid energy source.'
-      ]),
+      ],
       content_html: `
 <h2>Fats &amp; Essential Fatty Acids</h2>
 
@@ -252,13 +252,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Soluble and insoluble fiber, resistant starch, and gut health',
       estimated_minutes: 15,
       exam_alert: false,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Soluble fiber dissolves in water, forms a gel, and helps lower cholesterol and regulate blood sugar; insoluble fiber adds bulk and promotes regularity.',
         'Resistant starch functions similarly to soluble fiber and is fermented by gut bacteria to produce short-chain fatty acids (SCFAs), especially butyrate.',
         'Butyrate is the primary fuel for colonocytes and supports gut barrier integrity and anti-inflammatory signaling.',
         'The recommended fiber intake is 25-35 g per day for adults, but most Americans consume only 15 g.',
         'Fiber intake should be increased gradually to prevent gas, bloating, and cramping; adequate hydration is essential.'
-      ]),
+      ],
       content_html: `
 <h2>Fiber &amp; Digestive Support</h2>
 
@@ -317,13 +317,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Absorption, function, and clinical relevance of the water-soluble vitamins',
       estimated_minutes: 20,
       exam_alert: true,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Water-soluble vitamins are not stored in significant quantities and must be consumed regularly; excess is generally excreted in urine.',
         'The B-complex vitamins function as coenzymes in energy metabolism, methylation, neurotransmitter synthesis, and red blood cell formation.',
         'B12 deficiency is common in vegans, older adults, and those with low stomach acid or pernicious anemia — it causes megaloblastic anemia and neurological damage.',
         'Folate (B9) is critical for neural tube development and is a key player in the methylation cycle alongside B12 and B6.',
         'Vitamin C is a potent antioxidant, essential for collagen synthesis, immune function, and enhances non-heme iron absorption.'
-      ]),
+      ],
       content_html: `
 <h2>Water-Soluble Vitamins (B-complex, C)</h2>
 
@@ -373,13 +373,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Storage, toxicity risk, and critical roles in immunity, bone health, and coagulation',
       estimated_minutes: 18,
       exam_alert: true,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Fat-soluble vitamins (A, D, E, K) require dietary fat for absorption and are stored in the liver and adipose tissue — toxicity is possible with excessive supplementation.',
         'Vitamin A exists as retinol (preformed, animal sources) and beta-carotene (provitamin A, plant sources); it is essential for vision, immunity, and cell differentiation.',
         'Vitamin D functions as a hormone, regulating calcium absorption, bone health, immune modulation, and mood — deficiency is widespread.',
         'Vitamin E (tocopherols/tocotrienols) is the primary fat-soluble antioxidant protecting cell membranes from lipid peroxidation.',
         'Vitamin K1 (phylloquinone) supports blood clotting while K2 (menaquinone) directs calcium into bones and away from arteries.'
-      ]),
+      ],
       content_html: `
 <h2>Fat-Soluble Vitamins (A, D, E, K)</h2>
 
@@ -435,13 +435,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Electrolyte balance, bone health, and cardiovascular function',
       estimated_minutes: 18,
       exam_alert: true,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Calcium and phosphorus are the primary structural minerals of bone; calcium also regulates muscle contraction, nerve signaling, and blood clotting.',
         'Magnesium is a cofactor in over 300 enzymatic reactions and is commonly deficient — involved in energy production, muscle relaxation, and nervous system regulation.',
         'Potassium and sodium work as opposing electrolytes to regulate blood pressure, fluid balance, and nerve transmission.',
         'The modern diet tends to be excessively high in sodium and deficient in potassium, contributing to hypertension.',
         'Mineral absorption is influenced by cofactors (vitamin D for calcium), inhibitors (phytates, oxalates), and the form of the mineral consumed.'
-      ]),
+      ],
       content_html: `
 <h2>Major Minerals (Ca, Mg, K, Na, P)</h2>
 
@@ -490,13 +490,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Essential micromineral functions, deficiency patterns, and clinical applications',
       estimated_minutes: 20,
       exam_alert: true,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Iron exists as heme (animal sources, well-absorbed) and non-heme (plant sources, absorption enhanced by vitamin C and inhibited by calcium, tannins, and phytates).',
         'Zinc supports over 300 enzymes, is critical for immune function, wound healing, and taste/smell — deficiency impairs immunity and causes delayed wound healing.',
         'Selenium is essential for thyroid hormone conversion (T4 to T3) and glutathione peroxidase activity — Brazil nuts are the richest food source.',
         'Iodine is required for thyroid hormone synthesis; deficiency causes goiter and, during pregnancy, cretinism — the most common preventable cause of intellectual disability.',
         'Mineral interactions are clinically significant: zinc and copper compete for absorption, iron and calcium inhibit each other, and selenium and iodine work synergistically for thyroid health.'
-      ]),
+      ],
       content_html: `
 <h2>Trace Minerals &amp; Electrolytes</h2>
 
@@ -554,13 +554,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Oxidative stress, antioxidant defense systems, and clinical strategies',
       estimated_minutes: 16,
       exam_alert: true,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Free radicals are unstable molecules with unpaired electrons that damage cells through oxidative stress; they are produced by normal metabolism and increased by toxins, stress, and inflammation.',
         'The body has endogenous antioxidant systems — superoxide dismutase (SOD), catalase, and glutathione peroxidase — that require mineral cofactors (Zn, Cu, Mn, Se).',
         'Dietary antioxidants include vitamins C and E, carotenoids, polyphenols, and flavonoids — they work synergistically in a network.',
         'The ORAC scale measures antioxidant capacity but has limitations; a varied diet of colorful whole foods is the best strategy.',
         'Excessive supplementation with isolated antioxidants can paradoxically become pro-oxidant — food-based antioxidants are preferred.'
-      ]),
+      ],
       content_html: `
 <h2>Antioxidants &amp; Free Radicals</h2>
 
@@ -608,13 +608,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Polyphenols, carotenoids, glucosinolates, and their therapeutic applications',
       estimated_minutes: 16,
       exam_alert: false,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Phytonutrients are bioactive plant compounds that provide health benefits beyond basic nutrition — over 25,000 have been identified.',
         'Major categories include polyphenols (flavonoids, phenolic acids, stilbenes), carotenoids, glucosinolates, and organosulfur compounds.',
         'The "eat the rainbow" principle ensures a broad spectrum of phytonutrients — each color group provides different bioactive compounds.',
         'Cruciferous vegetables contain glucosinolates that are converted to sulforaphane and indole-3-carbinol, which support detoxification and estrogen metabolism.',
         'Bioavailability of phytonutrients is affected by cooking method, food matrix, fat co-ingestion, and gut microbiome composition.'
-      ]),
+      ],
       content_html: `
 <h2>Phytonutrients &amp; Plant Compounds</h2>
 
@@ -665,13 +665,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'The gut microbiome, beneficial bacteria, and fermentation science',
       estimated_minutes: 17,
       exam_alert: true,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'The gut microbiome contains trillions of organisms that influence digestion, immunity, mood, metabolism, and disease risk.',
         'Probiotics are live beneficial microorganisms; key strains include Lactobacillus, Bifidobacterium, and Saccharomyces boulardii — strain specificity matters for clinical outcomes.',
         'Prebiotics are non-digestible fibers that selectively feed beneficial bacteria — FOS, GOS, inulin, and resistant starch are the most studied.',
         'Fermented foods (yogurt, kefir, sauerkraut, kimchi, miso, kombucha) provide both probiotics and bioavailable nutrients.',
         'Dysbiosis (microbial imbalance) is linked to IBS, IBD, autoimmune disease, obesity, mental health disorders, and skin conditions.'
-      ]),
+      ],
       content_html: `
 <h2>Probiotics, Prebiotics &amp; Fermented Foods</h2>
 
@@ -722,13 +722,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Traditional uses, active compounds, and evidence-based herbal therapeutics',
       estimated_minutes: 15,
       exam_alert: false,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Culinary herbs and spices contain concentrated bioactive compounds with therapeutic properties — turmeric (curcumin), ginger (gingerols), cinnamon (cinnamaldehyde), and garlic (allicin) are the most studied.',
         'Adaptogenic herbs (ashwagandha, rhodiola, holy basil) help modulate the stress response by supporting HPA axis balance.',
         'Herb-drug interactions are a critical safety concern — St. John\'s Wort, ginkgo, and garlic are among the most interactive herbs.',
         'Quality, preparation method, and standardization significantly affect herbal potency and clinical outcomes.',
         'Holistic nutrition consultants should understand herbal basics but recognize when to refer to a qualified herbalist for complex protocols.'
-      ]),
+      ],
       content_html: `
 <h2>Culinary &amp; Medicinal Herbs</h2>
 
@@ -774,13 +774,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Food processing continuum, nutrient density, and the impact of ultra-processing',
       estimated_minutes: 14,
       exam_alert: false,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'The NOVA classification system categorizes foods into 4 groups: unprocessed/minimally processed, processed culinary ingredients, processed foods, and ultra-processed foods.',
         'Ultra-processed foods (UPFs) are associated with obesity, metabolic syndrome, cardiovascular disease, cancer, depression, and all-cause mortality.',
         'Nutrient density — the ratio of micronutrients to calories — is a key concept for evaluating food quality and guiding client recommendations.',
         'Processing removes fiber, vitamins, minerals, and phytonutrients while adding sugar, refined oils, sodium, and artificial additives.',
         'A whole-foods-based diet centered on vegetables, fruits, whole grains, legumes, nuts, seeds, and quality animal products is foundational to holistic nutrition practice.'
-      ]),
+      ],
       content_html: `
 <h2>Whole vs. Processed Foods</h2>
 
@@ -826,13 +826,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Pesticide exposure, the Dirty Dozen, heavy metals, and reducing toxic burden',
       estimated_minutes: 15,
       exam_alert: false,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Organic certification prohibits synthetic pesticides, herbicides, GMOs, and irradiation — organic produce has significantly lower pesticide residues.',
         'The Environmental Working Group publishes the annual Dirty Dozen (highest pesticide residues) and Clean Fifteen (lowest residues) lists to guide purchasing decisions.',
         'Glyphosate (Roundup) is the most widely used herbicide globally and has been classified as a "probable human carcinogen" by the IARC.',
         'Heavy metals (lead, mercury, cadmium, arsenic) accumulate in the body and can impair neurological function, kidney function, and development.',
         'Reducing toxic burden involves choosing organic when possible, filtering water, avoiding plastic food containers, and supporting detoxification pathways nutritionally.'
-      ]),
+      ],
       content_html: `
 <h2>Organic Foods &amp; Environmental Toxins</h2>
 
@@ -875,13 +875,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'IgE allergies, IgG sensitivities, intolerances, and elimination diet protocols',
       estimated_minutes: 16,
       exam_alert: true,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'True food allergies (IgE-mediated) cause immediate immune reactions that can be life-threatening (anaphylaxis); the top 9 allergens account for 90% of allergic reactions.',
         'Food sensitivities (often IgG-mediated) cause delayed, less severe reactions (hours to days) — symptoms include bloating, fatigue, headaches, joint pain, and skin issues.',
         'Food intolerances involve enzymatic or chemical mechanisms rather than immune responses — lactose intolerance and histamine intolerance are the most common.',
         'The elimination diet is the gold standard for identifying food sensitivities — remove suspected foods for 3-4 weeks, then reintroduce one at a time.',
         'Intestinal hyperpermeability ("leaky gut") is a key underlying factor in the development of food sensitivities.'
-      ]),
+      ],
       content_html: `
 <h2>Food Sensitivities &amp; Allergies</h2>
 
@@ -924,13 +924,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Comparing major dietary approaches and their evidence base',
       estimated_minutes: 16,
       exam_alert: false,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'No single dietary philosophy is optimal for all individuals — biochemical individuality, cultural background, health status, and personal values all influence the best approach.',
         'The Mediterranean diet has the strongest overall evidence base for cardiovascular health, longevity, and chronic disease prevention.',
         'Plant-based diets (vegetarian, vegan) require careful attention to B12, iron, zinc, omega-3s, calcium, and complete protein intake.',
         'Ancestral/paleo approaches emphasize whole foods and eliminate processed foods, grains, and dairy; benefits may come more from what is removed (UPFs) than from specific food exclusions.',
         'Holistic nutrition consultants should be knowledgeable about multiple dietary approaches while avoiding dogmatic adherence to any single system.'
-      ]),
+      ],
       content_html: `
 <h2>Dietary Philosophies</h2>
 
@@ -978,13 +978,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Prenatal, pediatric, adolescent, adult, and geriatric nutritional needs',
       estimated_minutes: 17,
       exam_alert: true,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Nutritional needs vary significantly across life stages — prenatal nutrition (especially folate, iron, DHA, and choline) has lifelong impacts on child development.',
         'Breastmilk is the optimal infant nutrition source, providing immunoglobulins, prebiotics, and a composition that adapts to the infant\'s changing needs.',
         'Adolescents have increased needs for calcium, iron, and zinc during rapid growth; eating disorders are most common in this population.',
         'Adults face metabolic slowing, stress-related nutrient depletion, and chronic disease prevention as primary nutritional concerns.',
         'Older adults require increased protein, vitamin D, B12, and calcium, with attention to sarcopenia, bone density, cognitive decline, and medication-nutrient interactions.'
-      ]),
+      ],
       content_html: `
 <h2>Nutrition Across the Lifespan</h2>
 
@@ -1038,13 +1038,13 @@ function domain1Lessons(moduleIdMap) {
       subtitle: 'Performance fueling, body composition, and evidence-based approaches to healthy weight',
       estimated_minutes: 16,
       exam_alert: false,
-      key_takeaways: JSON.stringify([
+      key_takeaways: [
         'Energy balance (calories in vs. calories out) is the fundamental driver of weight change, but hormonal, metabolic, and psychological factors profoundly influence both sides of the equation.',
         'Athletes require increased energy, protein (1.2-2.0 g/kg), carbohydrates for glycogen replenishment, and attention to hydration and electrolyte balance.',
         'Chronic caloric restriction can lower basal metabolic rate through adaptive thermogenesis, making sustained weight loss progressively more difficult.',
         'Set point theory suggests the body defends a genetically and hormonally influenced weight range; addressing insulin resistance, sleep, stress, and gut health can shift this set point.',
         'Holistic weight management focuses on nutrient density, blood sugar stability, hormonal balance, stress management, sleep quality, and sustainable behavior change rather than restrictive dieting.'
-      ]),
+      ],
       content_html: `
 <h2>Sports Nutrition &amp; Weight Management</h2>
 
