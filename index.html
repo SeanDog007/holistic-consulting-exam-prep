@@ -3596,10 +3596,14 @@
         // Content
         document.getElementById('lesson-body').innerHTML = lesson.content_html ? cleanStudyContent(lesson.content_html, lesson.title) : '<p class="text-sm text-parchment-400 italic">No content available for this lesson yet.</p>';
 
-        // Key takeaways
-        if (lesson.key_takeaways && lesson.key_takeaways.length > 0) {
+        // Key takeaways — tolerate a double-encoded JSON string (legacy import defect)
+        let takeaways = lesson.key_takeaways;
+        if (typeof takeaways === 'string') {
+          try { takeaways = JSON.parse(takeaways); } catch (e) { takeaways = []; }
+        }
+        if (Array.isArray(takeaways) && takeaways.length > 0) {
           document.getElementById('lesson-takeaways').classList.remove('hidden');
-          document.getElementById('lesson-takeaways-content').innerHTML = lesson.key_takeaways.map(t => `
+          document.getElementById('lesson-takeaways-content').innerHTML = takeaways.map(t => `
             <div class="flex items-start gap-2">
               <svg class="w-4 h-4 text-sage-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
               <span>${escapeHtml(t)}</span>

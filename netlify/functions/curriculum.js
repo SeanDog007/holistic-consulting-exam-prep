@@ -167,13 +167,26 @@ async function handleGetLesson(userClient, user, lessonId, cors) {
     if (idx >= 0 && idx < siblings.length - 1) nextLesson = siblings[idx + 1];
   }
 
+  // Normalize key_takeaways — some legacy rows stored the array as a
+  // double-encoded JSON string, which crashes clients that expect an array.
+  let keyTakeaways = lesson.key_takeaways;
+  if (typeof keyTakeaways === "string") {
+    try {
+      const parsed = JSON.parse(keyTakeaways);
+      keyTakeaways = Array.isArray(parsed) ? parsed : [];
+    } catch (e) {
+      keyTakeaways = [];
+    }
+  }
+  if (!Array.isArray(keyTakeaways)) keyTakeaways = [];
+
   const result = {
     lesson: {
       id: lesson.id,
       title: lesson.title,
       subtitle: lesson.subtitle,
       content_html: lesson.content_html,
-      key_takeaways: lesson.key_takeaways,
+      key_takeaways: keyTakeaways,
       exam_alert: lesson.exam_alert,
       estimated_minutes: lesson.estimated_minutes,
     },
