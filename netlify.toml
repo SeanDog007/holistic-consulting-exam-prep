@@ -11,6 +11,11 @@
 # send-study-reminders + send-trigger-emails schedules removed —
 # study reminders and behavioral nurture now handled by Kit, not Resend.
 
+# Grant prep-tool access to Circle exam-prep course members (paywall +
+# Mentorship bundle). See netlify/functions/sync-circle-enrollments.js.
+[functions."sync-circle-enrollments"]
+  schedule = "*/10 * * * *"
+
 [[headers]]
   for = "/.netlify/functions/*"
   [headers.values]
