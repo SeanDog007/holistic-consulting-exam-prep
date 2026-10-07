@@ -2,24 +2,31 @@
  * sync-circle-enrollments — Grants prep-tool access to everyone entitled to it
  * through Circle.
  *
- * Runs on a schedule (see netlify.toml). Access to this tool is gated by the
- * `direct_enrollments` table, which until now was only ever written by
- * stripe-webhook.js — i.e. by purchases made on /buy.html. Anyone who bought
- * through Circle's paywall (or gets exam prep bundled with the Mentorship)
- * landed in the Circle course, followed its "Start Here" link here, and was
- * told they had no account. On 2026-09-23 that was 65 of 90 course members.
+ * Runs hourly (see netlify.toml). Access to this tool is gated by the
+ * `direct_enrollments` table. Anyone in the NANP Exam Prep space (Circle
+ * paywall or Mentorship bundle) who doesn't already have an active row gets
+ * one tagged `circle-sync:<email>` (`stripe_session_id` is UNIQUE). Rows this
+ * sync or a manual Circle grant created (prefixes `circle-sync:` /
+ * `circle-paywall-`) are cancelled when the member leaves the space.
+ * Stripe-created rows are never touched.
  *
- * Each run:
- *   1. Reads the roster of the NANP Exam Prep course space in Circle.
- *   2. Resolves each member's email.
- *   3. Creates an active enrollment for any member who doesn't have one,
- *      tagged `circle-sync:<email>` so these rows are distinguishable from
- *      Stripe purchases. (`stripe_session_id` is UNIQUE, hence per-email.)
- *   4. Cancels rows this sync created for members who have since left the
- *      space (refund / removal). Stripe-created rows are never touched.
+ * Circle Admin API: GET /space_members already includes each member's email
+ * on `community_member.email` (Admin API v2, confirmed against the live
+ * roster). A run therefore does not list the whole community. The roster is
+ * one request per 100 members. `status=all` is explicit so inactive space
+ * members stay in the roster — the default is "all", and dropping them would
+ * cancel access they already have.
  *
- * Manual run for verification: GET with header `x-sync-secret: $SYNC_SECRET`,
- * add `?dry=1` to report without writing.
+ * A per-id GET /community_members/:id runs only when a roster record has no
+ * email, and only while this run stays within MAX_CALLS_PER_RUN. Past that
+ * cap those members are left unresolved and revocation is skipped: a schema
+ * surprise must not fan out into one call per member, and must not cancel
+ * anyone we couldn't identify.
+ *
+ * A roster under MIN_PLAUSIBLE_ROSTER aborts with no writes.
+ *
+ * Manual run: GET with header `x-sync-secret: $SYNC_SECRET`. Add `?dry=1`
+ * to report without writing.
  */
 const { getServiceClient } = require("./utils/supabase");
 const { createEnrollment } = require("./utils/enrollments");
@@ -32,6 +39,9 @@ const OWNED_PREFIXES = ["circle-sync:", "circle-paywall-"];
 // If Circle ever returns an implausibly small roster (outage, auth failure,
 // pagination bug) we must not react to it by cancelling real people.
 const MIN_PLAUSIBLE_ROSTER = 10;
+// Hourly schedule × this cap stays under ~100 Circle calls/day
+// (24 × 4 = 96), including a second roster page and a couple of fallbacks.
+const MAX_CALLS_PER_RUN = 4;
 
 async function circle(path) {
   const res = await fetch(`${CIRCLE_API}${path}`, {
@@ -46,78 +56,147 @@ async function circle(path) {
   return res.json();
 }
 
-async function paginate(path) {
+async function paginate(request, path) {
   const records = [];
   for (let page = 1; page < 50; page++) {
-    const data = await circle(`${path}${path.includes("?") ? "&" : "?"}per_page=100&page=${page}`);
+    const data = await request(`${path}${path.includes("?") ? "&" : "?"}per_page=100&page=${page}`);
     records.push(...(data.records || []));
     if (!data.has_next_page) break;
   }
   return records;
 }
 
-async function run({ dry }) {
-  if (!TOKEN) throw new Error("CIRCLE_API_TOKEN is not set");
+function emailFromRosterRecord(record) {
+  const nested = record && record.community_member && typeof record.community_member === "object"
+    ? record.community_member
+    : {};
+  const raw = (typeof nested.email === "string" && nested.email)
+    || (record && typeof record.email === "string" && record.email)
+    || "";
+  const email = raw.toLowerCase().trim();
+  const name = (typeof nested.name === "string" && nested.name)
+    || (record && typeof record.name === "string" && record.name)
+    || "";
+  const id = record && record.community_member_id != null && record.community_member_id !== ""
+    ? String(record.community_member_id)
+    : "";
+  return { id, email, name };
+}
 
-  // 1 + 2. Roster of the course space, resolved to emails via the community
-  // member list (a few pages) rather than one lookup per member.
-  const roster = await paginate(`/space_members?space_id=${SPACE_ID}`);
-  if (roster.length < MIN_PLAUSIBLE_ROSTER) {
-    throw new Error(`Roster of ${roster.length} is below the plausibility floor; aborting without changes`);
-  }
-  const memberIds = new Set(roster.map((r) => String(r.community_member_id)));
-  const members = await paginate("/community_members");
-  const entitled = new Map(); // email -> name
-  const seen = new Set();
-  for (const m of members) {
-    if (m.email && memberIds.has(String(m.id))) {
-      entitled.set(m.email.toLowerCase().trim(), m.name || "");
-      seen.add(String(m.id));
+/**
+ * @param {Array} roster space-member records
+ * @param {(id: string) => Promise<object>} lookup per-id member fetch
+ * @param {{ callsAlready: number }} budget
+ */
+async function resolveEntitled(roster, lookup, { callsAlready }) {
+  const entitled = new Map();
+  const missing = [];
+  for (const record of roster) {
+    const parsed = emailFromRosterRecord(record);
+    if (parsed.email) {
+      entitled.set(parsed.email, parsed.name);
+      continue;
     }
+    missing.push(parsed.id);
   }
-  // The list endpoint omits some accounts (deactivated / not yet confirmed)
-  // that are still in the space and still resolve individually. Look those
-  // up one by one. First observed 2026-09-23: 5 of 90 were missing this way.
+
+  const budget = Math.max(0, MAX_CALLS_PER_RUN - callsAlready);
+  if (missing.length > budget) {
+    console.error(
+      `[sync-circle] ${missing.length} roster records have no email; not looking them up ` +
+      `(${budget} calls left after ${callsAlready} roster requests). Revocation skipped.`
+    );
+    return { entitled, unresolved: missing.map((id) => id || "missing-id"), directLookups: 0 };
+  }
+
   const unresolved = [];
-  for (const id of memberIds) {
-    if (seen.has(id)) continue;
+  let directLookups = 0;
+  for (const id of missing) {
+    if (!id) {
+      unresolved.push("missing-id");
+      continue;
+    }
+    directLookups += 1;
     try {
-      const m = await circle(`/community_members/${id}`);
-      if (m && m.email) entitled.set(m.email.toLowerCase().trim(), m.name || "");
+      const m = await lookup(id);
+      const email = m && typeof m.email === "string" ? m.email.toLowerCase().trim() : "";
+      if (email) entitled.set(email, (m && m.name) || "");
       else unresolved.push(id);
-    } catch (e) {
+    } catch {
       unresolved.push(id);
     }
   }
+  return { entitled, unresolved, directLookups };
+}
+
+function isOwned(row) {
+  return OWNED_PREFIXES.some((p) => (row.stripe_session_id || "").startsWith(p));
+}
+
+async function run({ dry = false, circle: circleOverride, supabase, createEnrollment: enrollOverride } = {}) {
+  if (!circleOverride && !TOKEN) throw new Error("CIRCLE_API_TOKEN is not set");
+  const requestOne = circleOverride || circle;
+  let circleCalls = 0;
+  const request = async (path) => {
+    circleCalls += 1;
+    return requestOne(path);
+  };
+
+  // status=all matches the endpoint default (every current space member,
+  // including inactive). Do not switch this to status=active.
+  const roster = await paginate(request, `/space_members?space_id=${SPACE_ID}&status=all`);
+  if (roster.length < MIN_PLAUSIBLE_ROSTER) {
+    throw new Error(`Roster of ${roster.length} is below the plausibility floor; aborting without changes`);
+  }
+
+  const rosterCalls = circleCalls;
+  const { entitled, unresolved } = await resolveEntitled(
+    roster,
+    (id) => request(`/community_members/${id}`),
+    { callsAlready: rosterCalls }
+  );
   // An unresolvable member is unknown, not un-entitled. If anyone is
   // unresolved, skip revocation entirely this run rather than guess.
   const safeToRevoke = unresolved.length === 0;
 
-  // 3. Grant what's missing.
-  const sb = getServiceClient();
+  const sb = supabase || getServiceClient();
+  const enroll = enrollOverride || createEnrollment;
   const { data: rows, error } = await sb
     .from("direct_enrollments")
     .select("id, email, status, stripe_session_id")
     .limit(5000);
   if (error) throw new Error(`enrollments read failed: ${error.message}`);
-  const active = new Set(rows.filter((r) => r.status === "active").map((r) => r.email.toLowerCase()));
 
+  const active = new Set(rows.filter((r) => r.status === "active").map((r) => r.email.toLowerCase()));
   const toGrant = [...entitled].filter(([email]) => !active.has(email));
   const granted = [];
   for (const [email, name] of toGrant) {
     if (dry) { granted.push(email); continue; }
-    const r = await createEnrollment({
+    // A previous leave cancels the owned row but leaves its unique
+    // stripe_session_id in place, so a rejoin cannot insert circle-sync:<email>
+    // again. Reactivate that row instead of inserting a second one.
+    const reusable = rows.find((r) =>
+      (r.email || "").toLowerCase() === email && r.status !== "active" && isOwned(r)
+    );
+    if (reusable) {
+      const { error: reactivateError } = await sb
+        .from("direct_enrollments")
+        .update({ status: "active" })
+        .eq("id", reusable.id);
+      if (!reactivateError) granted.push(email);
+      else console.error("[sync-circle] reactivate failed", email, reactivateError.message);
+      continue;
+    }
+    const r = await enroll({
       email, name, stripeSessionId: `circle-sync:${email}`, stripeCustomerId: null, priceId: "", amountPaid: 0,
     });
     if (r.success) granted.push(email);
     else console.error("[sync-circle] grant failed", email, r.error);
   }
 
-  // 4. Revoke only rows this sync (or a manual Circle grant) created, for
-  // people no longer in the space.
   const toCancel = !safeToRevoke ? [] : rows.filter(
     (r) => r.status === "active"
-      && OWNED_PREFIXES.some((p) => (r.stripe_session_id || "").startsWith(p))
+      && isOwned(r)
       && !entitled.has(r.email.toLowerCase())
   );
   const cancelled = [];
@@ -128,7 +207,17 @@ async function run({ dry }) {
     else console.error("[sync-circle] cancel failed", r.email, e2.message);
   }
 
-  const summary = { dry: !!dry, circleRoster: roster.length, entitled: entitled.size, unresolved, revocationSkipped: !safeToRevoke, activeBefore: active.size, granted, cancelled };
+  const summary = {
+    dry: !!dry,
+    circleRoster: roster.length,
+    entitled: entitled.size,
+    unresolved,
+    revocationSkipped: !safeToRevoke,
+    activeBefore: active.size,
+    granted,
+    cancelled,
+    circleCalls,
+  };
   console.log("[sync-circle]", JSON.stringify(summary));
   return summary;
 }
@@ -143,7 +232,7 @@ exports.handler = async (event) => {
 
   const dry = !!(event.queryStringParameters && event.queryStringParameters.dry);
   try {
-    const summary = await run({ dry });
+    const summary = await exports.run({ dry });
     return { statusCode: 200, body: JSON.stringify(summary) };
   } catch (err) {
     console.error("[sync-circle] run failed:", err.message);
@@ -151,4 +240,8 @@ exports.handler = async (event) => {
   }
 };
 
-exports.run = run; // for local verification
+exports.run = run;
+exports.emailFromRosterRecord = emailFromRosterRecord;
+exports.resolveEntitled = resolveEntitled;
+exports.MAX_CALLS_PER_RUN = MAX_CALLS_PER_RUN;
+exports.MIN_PLAUSIBLE_ROSTER = MIN_PLAUSIBLE_ROSTER;
