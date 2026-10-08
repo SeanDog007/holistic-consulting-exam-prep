@@ -13,7 +13,7 @@ const {
   resolveEntitled,
   MAX_CALLS_PER_RUN,
   MIN_PLAUSIBLE_ROSTER,
-} = require("./sync-circle-enrollments");
+} = require("../netlify/functions/sync-circle-enrollments");
 
 function member(id, email, name) {
   const community_member = { name: name || "Member" };
@@ -281,7 +281,7 @@ describe("run", () => {
 
 describe("schedule", () => {
   test("runs once a day at 07:17 UTC, about 3:17am Eastern", () => {
-    const toml = fs.readFileSync(path.join(__dirname, "../../netlify.toml"), "utf8");
+    const toml = fs.readFileSync(path.join(__dirname, "../netlify.toml"), "utf8");
     const block = toml.split('[functions."sync-circle-enrollments"]')[1];
     assert.ok(block, "sync-circle-enrollments schedule block missing");
     assert.match(block.split("\n")[1], /schedule = "17 7 \* \* \*"/);
@@ -303,7 +303,7 @@ describe("handler", () => {
   });
 
   test("accepts a Netlify scheduled POST and a secret manual dry run", async () => {
-    const mod = require("./sync-circle-enrollments");
+    const mod = require("../netlify/functions/sync-circle-enrollments");
     const original = mod.run;
     const seen = [];
     mod.run = async ({ dry }) => {
