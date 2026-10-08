@@ -2,13 +2,16 @@
  * sync-circle-enrollments — Grants prep-tool access to everyone entitled to it
  * through Circle.
  *
- * Runs hourly (see netlify.toml). Access to this tool is gated by the
+ * Runs once a day (see netlify.toml). Access to this tool is gated by the
  * `direct_enrollments` table. Anyone in the NANP Exam Prep space (Circle
  * paywall or Mentorship bundle) who doesn't already have an active row gets
  * one tagged `circle-sync:<email>` (`stripe_session_id` is UNIQUE). Rows this
  * sync or a manual Circle grant created (prefixes `circle-sync:` /
  * `circle-paywall-`) are cancelled when the member leaves the space.
  * Stripe-created rows are never touched.
+ *
+ * Purchases on /buy.html do not wait for this job. stripe-webhook.js writes
+ * their enrollment when Stripe sends checkout.session.completed.
  *
  * Circle Admin API: GET /space_members already includes each member's email
  * on `community_member.email` (Admin API v2, confirmed against the live
@@ -39,8 +42,9 @@ const OWNED_PREFIXES = ["circle-sync:", "circle-paywall-"];
 // If Circle ever returns an implausibly small roster (outage, auth failure,
 // pagination bug) we must not react to it by cancelling real people.
 const MIN_PLAUSIBLE_ROSTER = 10;
-// Hourly schedule × this cap stays under ~100 Circle calls/day
-// (24 × 4 = 96), including a second roster page and a couple of fallbacks.
+// Fuse for a single run. Steady state is one roster request per day.
+// Past this cap, members with no email stay unresolved and revocation is
+// skipped, so a schema surprise cannot fan out into one call per member.
 const MAX_CALLS_PER_RUN = 4;
 
 async function circle(path) {

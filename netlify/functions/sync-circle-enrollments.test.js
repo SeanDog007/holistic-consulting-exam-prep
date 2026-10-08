@@ -1,5 +1,7 @@
 const { describe, test } = require("node:test");
 const assert = require("node:assert/strict");
+const fs = require("fs");
+const path = require("path");
 
 process.env.SYNC_SECRET = "test-secret";
 process.env.CIRCLE_API_TOKEN = "test-token";
@@ -274,6 +276,15 @@ describe("run", () => {
     assert.equal(summary.granted.includes("new@example.com"), true);
     assert.deepEqual(summary.cancelled, ["left@example.com"]);
     assert.deepEqual(db.updates, []);
+  });
+});
+
+describe("schedule", () => {
+  test("runs once a day at 07:17 UTC, about 3:17am Eastern", () => {
+    const toml = fs.readFileSync(path.join(__dirname, "../../netlify.toml"), "utf8");
+    const block = toml.split('[functions."sync-circle-enrollments"]')[1];
+    assert.ok(block, "sync-circle-enrollments schedule block missing");
+    assert.match(block.split("\n")[1], /schedule = "17 7 \* \* \*"/);
   });
 });
 

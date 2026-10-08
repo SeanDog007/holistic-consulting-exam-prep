@@ -12,12 +12,13 @@
 # study reminders and behavioral nurture now handled by Kit, not Resend.
 
 # Grant prep-tool access to Circle exam-prep course members (paywall +
-# Mentorship bundle). Hourly, not every 10 minutes: the space roster is one
-# Admin API page and already includes emails, so this stays around 24
-# calls/day. New members still get access within about an hour.
+# Mentorship bundle). Once a day. Netlify cron is UTC and does not follow
+# daylight saving: 07:17 UTC is 3:17am Eastern Daylight Time and 2:17am
+# Eastern Standard Time. Minute 17 stays off :00. One roster page is one
+# Admin API call, about 30/month at the current roster size.
 # See netlify/functions/sync-circle-enrollments.js.
 [functions."sync-circle-enrollments"]
-  schedule = "0 * * * *"
+  schedule = "17 7 * * *"
 
 [[headers]]
   for = "/.netlify/functions/*"
