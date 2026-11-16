@@ -4,7 +4,12 @@
   "private": true,
   "description": "BCHN Board Exam Prep Platform for Holistic Consulting GROW members",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "parse:2027": "node scripts/parse-david-2027.mjs",
+    "presort:2026": "node scripts/presort-2026-for-david.mjs",
+    "import:2027": "node scripts/import-2027-questions.mjs",
+    "apply:david-review": "node scripts/apply-david-review.mjs",
+    "verify:tracks": "node scripts/verify-exam-tracks.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.0",

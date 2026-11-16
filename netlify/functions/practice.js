@@ -1,5 +1,12 @@
 const { getUserClient, getServiceClient, getCorsHeaders, extractToken } = require("./utils/supabase");
 const { updateFocusArea } = require("./utils/focus-areas");
+const {
+  loadStudentTrack,
+  runTrackedQuery,
+  questionVisibleOnTrack,
+  isMissingExamTrackColumn,
+  publicTrackPayload,
+} = require("./utils/exam-track");
 
 // SM-2 algorithm implementation
 function sm2(quality, prevEase, prevInterval, prevReps) {
@@ -49,22 +56,34 @@ exports.handler = async (event) => {
     const params = event.queryStringParameters || {};
     const limit = params.limit ? parseInt(params.limit, 10) : 20;
     const domainFilter = params.domain ? parseInt(params.domain, 10) : null;
+    const trackInfo = await loadStudentTrack(userClient, user.id);
 
     // 1. Get due reviews (next_review_at <= now)
-    let dueQuery = userClient
+    let dueResult = await userClient
       .from("question_reviews")
-      .select("*, questions(id, domain, topic, question_text, options, difficulty)")
+      .select("*, questions(id, domain, topic, question_text, options, difficulty, exam_track)")
       .eq("user_id", user.id)
       .lte("next_review_at", new Date().toISOString())
       .order("next_review_at", { ascending: true });
 
-    const { data: dueReviews, error: dueErr } = await dueQuery;
-    if (dueErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: dueErr.message }) };
+    if (dueResult.error && isMissingExamTrackColumn(dueResult.error)) {
+      trackInfo.schemaPending = true;
+      dueResult = await userClient
+        .from("question_reviews")
+        .select("*, questions(id, domain, topic, question_text, options, difficulty)")
+        .eq("user_id", user.id)
+        .lte("next_review_at", new Date().toISOString())
+        .order("next_review_at", { ascending: true });
+    }
+    if (dueResult.error) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: dueResult.error.message }) };
+    const dueReviews = dueResult.data;
 
-    // Filter by domain (question_reviews doesn't have domain column)
-    const filteredDue = domainFilter
-      ? (dueReviews || []).filter(r => r.questions && r.questions.domain === domainFilter)
-      : (dueReviews || []);
+    const filteredDue = (dueReviews || []).filter((review) => {
+      if (!review.questions) return false;
+      if (domainFilter && review.questions.domain !== domainFilter) return false;
+      if (trackInfo.schemaPending) return true;
+      return questionVisibleOnTrack(review.questions.exam_track || "2026", trackInfo.track);
+    });
 
     const dueSlice = filteredDue.slice(0, limit);
     const dueCount = dueSlice.length;
@@ -83,13 +102,14 @@ exports.handler = async (event) => {
       const reviewedIds = new Set((userReviews || []).map(r => r.question_id));
 
       // Get candidate new questions
-      let newQuery = userClient
-        .from("questions")
-        .select("id, domain, topic, question_text, options, difficulty")
-        .eq("is_active", true);
-      if (domainFilter) newQuery = newQuery.eq("domain", domainFilter);
-
-      const { data: candidates, error: newErr } = await newQuery;
+      const { data: candidates, error: newErr } = await runTrackedQuery(() => {
+        let newQuery = userClient
+          .from("questions")
+          .select("id, domain, topic, question_text, options, difficulty")
+          .eq("is_active", true);
+        if (domainFilter) newQuery = newQuery.eq("domain", domainFilter);
+        return newQuery;
+      }, trackInfo);
       if (newErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: newErr.message }) };
 
       const unreviewed = (candidates || []).filter(q => !reviewedIds.has(q.id));
@@ -109,6 +129,7 @@ exports.handler = async (event) => {
         questions,
         dueCount,
         newCount: newQuestions.length,
+        ...publicTrackPayload(trackInfo),
       }),
     };
   }

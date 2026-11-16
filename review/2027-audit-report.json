@@ -1,0 +1,507 @@
+{
+  "timestamp": "2026-11-16T16:42:45.189Z",
+  "totalQuestions": 461,
+  "totalIssues": 70,
+  "bySeverity": {
+    "error": 0,
+    "warning": 4,
+    "review": 30,
+    "info": 36
+  },
+  "byCategory": {
+    "content": 34,
+    "format": 36
+  },
+  "issues": [
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 27,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "What structural feature distinguishes cardiac muscle tissue from skeletal and smooth muscle tissues "
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 44,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "What structural network in cardiac muscle cells allows rapid influx of extracellular calcium ions to"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 71,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "The hormones secreted by the adrenal medulla produce physiological responses that closely mimic acti"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 72,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Secretion of epinephrine from the adrenal medulla leads to which autonomic metabolic response?"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 73,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Cortisol is synthesized and secreted by which specific region of the adrenal gland?"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 75,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Which liver process is directly stimulated by the pancreatic hormone glucagon to raise blood sugar l"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 109,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Which antibody class makes up roughly 13% of circulating immunoglobulins and provides mucosal defens"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 119,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Which gastric enzyme is considered by far the most important digestive enzyme present in gastric jui"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 120,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Which gastric cell type secretes pepsinogen into the gastric lumen?"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 124,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "What essential digestive component is secreted by hepatic cells in the liver?"
+    },
+    {
+      "category": "content",
+      "severity": "warning",
+      "questionIndex": 139,
+      "message": "Very short option (< 2 chars)",
+      "detail": "Options: 12 | 8 | 64 | 20"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 147,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Which organ modifies Vitamin D into an active hormone that acts on the intestinal tract to promote c"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 167,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "What happens to the glomerular filtration rate (GFR) if the net filtration pressure within the renal"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 173,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "How does the renal tubule normally process filtered uric acid present in the glomerular filtrate?"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 175,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "What occurs to nitrogenous wastes in the renal tubules when GFR drops too low?"
+    },
+    {
+      "category": "content",
+      "severity": "warning",
+      "questionIndex": 221,
+      "message": "Very short option (< 2 chars)",
+      "detail": "Options: 6 | 1 | 12 | 2"
+    },
+    {
+      "category": "content",
+      "severity": "warning",
+      "questionIndex": 251,
+      "message": "Very short option (< 2 chars)",
+      "detail": "Options: 13 | 5 | None | All 50"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 266,
+      "message": "Negative/exception question — high-risk for answer key errors",
+      "detail": "Which abbreviation is NOT among those NANP lists as protected in Exclusive Scope of Practice States?"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 281,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "In clinical nutrition assessment, the gastrointestinal tract is evaluated both as a digestive organ "
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 283,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "During a clinical evaluation of stomach digestion, a practitioner considers how gastric secretions a"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 284,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Why is pepsin secreted into the gastric lumen as pepsinogen rather than in its fully active form?"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 285,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "A client asks how micronutrients and trace elements enter intestinal cells when intracellular concen"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 289,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "If a client experiences carbohydrate malabsorption due to blunting of the small intestinal villi, wh"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 291,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Which statement accurately defines dysbiosis within the human gastrointestinal ecosystem?"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 292,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "How do prebiotics specifically support gastrointestinal health and host microbial ecology?"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 294,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Where are disaccharides final breakdown enzymes—such as sucrase, lactase, and maltase—located and ac"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 313,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "In functional health assessment, how do dietary Vitamin D and Phosphorus interact to affect intestin"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 327,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "A patient with end-stage renal disease (ESRD) exhibits a serum calcium level of 7.2 mg/dL and a seru"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 330,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "In metabolic assessment, urinary serum creatinine measurements are evaluated to gauge skeletal muscl"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 340,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Which routes represent the primary excretion pathways for transformed endogenous and exogenous toxin"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 361,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Why are disease-specific enteral formulas intended for patients with renal or hepatic failure intent"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 430,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "Excessive consumption of which sweetener class can worsen diarrhea by increasing hyperosmotic load i"
+    },
+    {
+      "category": "content",
+      "severity": "review",
+      "questionIndex": 440,
+      "message": "Anatomy-related question — manual accuracy review recommended",
+      "detail": "In managing fluid overload and electrolyte imbalances in End-Stage Renal Disease (ESRD), medical nut"
+    },
+    {
+      "category": "content",
+      "severity": "warning",
+      "questionIndex": 458,
+      "message": "Correct answer text appears verbatim in question",
+      "detail": "Answer: \"Omega-3 fatty acids\""
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 14,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "Biological catalysts that accelerate metabolic chemical reactions inside living "
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 57,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "Olfactory and gustatory receptors, which monitor specific chemical levels in sur"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 61,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "Sensory receptors situated in the skin that detect incoming heat or cold are des"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 93,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "The endothelial lining and underlying connective tissue layer that directly line"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 96,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "When sympathetic vasomotor fibers stimulate the smooth muscle within vessel wall"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 97,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "An increase in the lumen diameter of an arteriole resulting from the relaxation "
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 98,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "Microscopic blood vessels that link small arterioles with small venules and serv"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 99,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "The peak arterial force measured during the phase of active ventricular contract"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 100,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "The minimum pressure remaining in the systemic arteries when the ventricles are "
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 102,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "If lymphatic drainage is blocked or impaired, the accumulation of excess interst"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 103,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "Organized clusters of lymphocytes and macrophages situated along lymphatic pathw"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 106,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "Proteins synthesized and secreted by virally infected host cells or fibroblasts "
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 107,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "The process by which immune cells such as macrophages ingest, break down, and cl"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 111,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "When the adaptive immune system loses immunologic self-tolerance and produces au"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 118,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "Failure of the stomach's mucous cells to produce adequate protective mucus would"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 137,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "Before protein molecules can be used by cells to produce ATP, they must first be"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 141,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "An incomplete dietary protein is defined as a protein that:"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 181,
+      "message": "Inconsistent option capitalization",
+      "detail": "pH level | Temperature | Osmolarity | Viscosity"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 183,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "An increased permeability of capillary walls contributes to edema because it all"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 210,
+      "message": "Inconsistent option capitalization",
+      "detail": "LH | Progesterone | Relaxin | hCG"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 228,
+      "message": "Inconsistent option capitalization",
+      "detail": "Phenotype is transcribed into genotype, which is translated into alleles | mRNA is transcribed into DNA, which is then translated into traits | Protein is translated into mRNA, which is then transcribed into DNA | DNA is transcribed into mRNA, which is then translated into protein"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 232,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "A graduate of a holistic nutrition program adds \"BCHN\" after her name on her web"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 233,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "A member wants to stop working with a client who repeatedly misses sessions. Acc"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 234,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "A practitioner declines a prospective client whose goals fall outside the practi"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 235,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "A client presents with several overlapping symptoms the practitioner does not fu"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 238,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "A colleague invites an NANP member to join a practice that operates in violation"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 240,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "An NANP member learns that a fellow member is advising clients in a clearly ille"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 246,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "According to the NANP AI Policy, using copyrighted material that appears in AI o"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 248,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "The Code of Ethics also pledges members to protect the public's \"health freedom\""
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 253,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "NANP defines Medical Nutrition Therapy (MNT), which HNPs do not practice, as:"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 257,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "Exemption language in Exclusive Scope of Practice States typically allows HNPs t"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 269,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "NANP says the overlap in scope of practice between health coaches and holistic n"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 272,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "When working with a licensed healthcare provider, a holistic nutrition professio"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 333,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "Alterations or variations in the primary DNA sequence are clinically and scienti"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 334,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "Broadly defined, genetics is the scientific discipline dedicated to the study of"
+    },
+    {
+      "category": "format",
+      "severity": "info",
+      "questionIndex": 335,
+      "message": "No question mark and no fill-in-the-blank marker",
+      "detail": "When managing clinical genetic data in personalized nutrition practice, health p"
+    }
+  ]
+}

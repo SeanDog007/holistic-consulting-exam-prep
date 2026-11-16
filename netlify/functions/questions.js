@@ -1,4 +1,5 @@
 const { getUserClient, getServiceClient, getCorsHeaders, extractToken } = require("./utils/supabase");
+const { loadStudentTrack, runTrackedQuery } = require("./utils/exam-track");
 
 exports.handler = async (event) => {
   const cors = getCorsHeaders(event.headers.origin || event.headers.Origin);
@@ -15,19 +16,26 @@ exports.handler = async (event) => {
 
   // GET — fetch questions
   if (event.httpMethod === "GET") {
-    let query = userClient.from("questions").select("*");
+    const trackInfo = await loadStudentTrack(userClient, user.id);
+    let skipTrack = false;
+    if (params.all_tracks === "1") {
+      const { data: adminProfile } = await userClient.from("student_profiles").select("is_admin").eq("id", user.id).maybeSingle();
+      skipTrack = !!adminProfile?.is_admin;
+    }
 
-    if (params.domain) query = query.eq("domain", parseInt(params.domain, 10));
-    if (params.topic) query = query.eq("topic", params.topic);
-    if (params.difficulty) query = query.eq("difficulty", parseInt(params.difficulty, 10));
-    if (params.type) query = query.eq("question_type", params.type);
-    if (params.active !== "false") query = query.eq("is_active", true);
-    if (params.id) query = query.eq("id", params.id);
+    const { data, error } = await runTrackedQuery(() => {
+      let query = userClient.from("questions").select("*");
+      if (params.domain) query = query.eq("domain", parseInt(params.domain, 10));
+      if (params.topic) query = query.eq("topic", params.topic);
+      if (params.difficulty) query = query.eq("difficulty", parseInt(params.difficulty, 10));
+      if (params.type) query = query.eq("question_type", params.type);
+      if (params.active !== "false") query = query.eq("is_active", true);
+      if (params.id) query = query.eq("id", params.id);
+      query = query.order("created_at", { ascending: false });
+      if (params.limit) query = query.limit(parseInt(params.limit, 10));
+      return query;
+    }, skipTrack ? null : trackInfo);
 
-    query = query.order("created_at", { ascending: false });
-    if (params.limit) query = query.limit(parseInt(params.limit, 10));
-
-    const { data, error } = await query;
     if (error) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: error.message }) };
     return { statusCode: 200, headers: cors, body: JSON.stringify(data) };
   }
@@ -52,6 +60,7 @@ exports.handler = async (event) => {
       correct_answer: body.correct_answer,
       explanation: body.explanation || null,
       textbook_reference: body.textbook_reference || null,
+      exam_track: body.exam_track || "2026",
     }).select().single();
 
     if (error) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: error.message }) };
@@ -63,7 +72,7 @@ exports.handler = async (event) => {
     if (!body.id) return { statusCode: 400, headers: cors, body: JSON.stringify({ error: "id required" }) };
 
     const updates = {};
-    for (const key of ["domain", "topic", "subtopic", "difficulty", "cognitive_level", "question_type", "question_text", "options", "correct_answer", "explanation", "textbook_reference", "is_active"]) {
+    for (const key of ["domain", "topic", "subtopic", "difficulty", "cognitive_level", "question_type", "question_text", "options", "correct_answer", "explanation", "textbook_reference", "is_active", "exam_track"]) {
       if (body[key] !== undefined) updates[key] = body[key];
     }
 

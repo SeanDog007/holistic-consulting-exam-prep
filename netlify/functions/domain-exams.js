@@ -1,12 +1,11 @@
 const { getUserClient, getCorsHeaders, extractToken } = require("./utils/supabase");
-
-const DOMAIN_NAMES = {
-  1: "Food and Nutrition",
-  2: "Clinical and Community Nutrition",
-  3: "Food Service Management",
-  4: "Nutrition Science",
-  5: "Professional Practice",
-};
+const {
+  NANP_DOMAIN_NAMES,
+  FIXED_EXAM_RE,
+  loadStudentTrack,
+  fetchAllTracked,
+  publicTrackPayload,
+} = require("./utils/exam-track");
 
 exports.handler = async (event) => {
   const cors = getCorsHeaders(event.headers.origin || event.headers.Origin);
@@ -22,22 +21,25 @@ exports.handler = async (event) => {
 
   const params = event.queryStringParameters || {};
   const examName = params.exam;
+  const trackInfo = await loadStudentTrack(userClient, user.id);
 
   // ── Start a specific fixed exam ──────────────────────────────────────
   if (examName) {
-    const match = examName.match(/^Domain (\d+) Exam (\d+)$/);
+    const match = examName.match(FIXED_EXAM_RE);
     if (!match) {
       return { statusCode: 400, headers: cors, body: JSON.stringify({ error: "Invalid exam name. Expected format: Domain N Exam N" }) };
     }
-    const domainNumber = parseInt(match[1]);
+    const domainNumber = parseInt(match[2], 10);
 
-    // Fetch questions ordered by id for consistent order every time
-    const { data: questions, error } = await userClient
-      .from("questions")
-      .select("id, domain, topic, difficulty, cognitive_level, question_type, question_text, options, correct_answer, explanation, textbook_reference")
-      .eq("is_active", true)
-      .eq("subtopic", examName)
-      .order("id", { ascending: true });
+    const { data: questions, error } = await fetchAllTracked(
+      () => userClient
+        .from("questions")
+        .select("id, domain, topic, difficulty, cognitive_level, question_type, question_text, options, correct_answer, explanation, textbook_reference")
+        .eq("is_active", true)
+        .eq("subtopic", examName)
+        .order("id", { ascending: true }),
+      trackInfo
+    );
 
     if (error) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: error.message }) };
     if (!questions || questions.length === 0) {
@@ -72,6 +74,8 @@ exports.handler = async (event) => {
         exam_id: exam.id,
         exam_name: examName,
         domain: domainNumber,
+        domain_name: NANP_DOMAIN_NAMES[domainNumber] || `Domain ${domainNumber}`,
+        ...publicTrackPayload(trackInfo),
         total_questions: questions.length,
         time_limit_minutes: null,
         questions,
@@ -82,12 +86,15 @@ exports.handler = async (event) => {
   // ── List all available fixed exams ───────────────────────────────────
 
   // Get all active questions whose subtopic matches "Domain N Exam N"
-  const { data: questionRows, error: qErr } = await userClient
-    .from("questions")
-    .select("domain, subtopic")
-    .eq("is_active", true)
-    .not("subtopic", "is", null)
-    .like("subtopic", "Domain % Exam %");
+  const { data: questionRows, error: qErr } = await fetchAllTracked(
+    () => userClient
+      .from("questions")
+      .select("domain, subtopic")
+      .eq("is_active", true)
+      .not("subtopic", "is", null)
+      .like("subtopic", "%Domain % Exam %"),
+    trackInfo
+  );
 
   if (qErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: qErr.message }) };
 
@@ -95,7 +102,7 @@ exports.handler = async (event) => {
   const examMap = {};
   for (const q of questionRows || []) {
     const key = q.subtopic;
-    if (!key || !key.match(/^Domain \d+ Exam \d+$/)) continue;
+    if (!key || !FIXED_EXAM_RE.test(key)) continue;
     if (!examMap[key]) examMap[key] = { name: key, domain: q.domain, questionCount: 0 };
     examMap[key].questionCount++;
   }
@@ -139,7 +146,7 @@ exports.handler = async (event) => {
 
     for (const attempt of attempts || []) {
       const name = attemptToExam[attempt.id];
-      if (!name || !name.match(/^Domain \d+ Exam \d+$/)) continue;
+      if (!name || !FIXED_EXAM_RE.test(name)) continue;
       if (!examStats[name]) examStats[name] = { bestScore: null, attempts: 0 };
       examStats[name].attempts += 1;
       if (attempt.score_pct != null) {
@@ -177,13 +184,13 @@ exports.handler = async (event) => {
     .sort((a, b) => a - b)
     .map(domainNum => ({
       domain: domainNum,
-      name: DOMAIN_NAMES[domainNum] || `Domain ${domainNum}`,
+      name: NANP_DOMAIN_NAMES[domainNum] || `Domain ${domainNum}`,
       exams: domainGroups[domainNum],
     }));
 
   return {
     statusCode: 200,
     headers: cors,
-    body: JSON.stringify({ domains }),
+    body: JSON.stringify({ domains, ...publicTrackPayload(trackInfo) }),
   };
 };

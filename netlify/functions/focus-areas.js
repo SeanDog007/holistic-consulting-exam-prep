@@ -1,12 +1,9 @@
 const { getUserClient, getCorsHeaders, extractToken } = require("./utils/supabase");
-
-const DOMAIN_NAMES = {
-  1: "Food & Nutrition",
-  2: "A&P / Biochemistry",
-  3: "Counseling / Ethics / Scope",
-  4: "Nutrition in Practice",
-  5: "Research",
-};
+const {
+  NANP_DOMAIN_NAMES: DOMAIN_NAMES,
+  loadStudentTrack,
+  loadActiveFocusAreas,
+} = require("./utils/exam-track");
 const DOMAIN_WEIGHTS = { 1: 0.35, 2: 0.15, 3: 0.10, 4: 0.30, 5: 0.10 };
 
 function computePriority(wrongCount, lastWrongAt, domain) {
@@ -43,11 +40,8 @@ exports.handler = async (event) => {
   // ── GET /focus-areas ──────────────────────────────────────────────
   if (event.httpMethod === "GET") {
     try {
-      const { data: focusAreas, error: faErr } = await userClient
-        .from("user_focus_areas")
-        .select("id, lesson_id, domain, wrong_count, last_wrong_at, study_lessons(id, title, study_modules(title))")
-        .eq("user_id", user.id)
-        .eq("status", "active");
+      const trackInfo = await loadStudentTrack(userClient, user.id);
+      const { data: focusAreas, error: faErr } = await loadActiveFocusAreas(userClient, user.id, trackInfo);
 
       if (faErr) throw faErr;
 

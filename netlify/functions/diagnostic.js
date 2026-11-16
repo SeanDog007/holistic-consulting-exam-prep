@@ -1,4 +1,5 @@
 const { getUserClient, getCorsHeaders, extractToken } = require("./utils/supabase");
+const { NANP_DOMAIN_NAMES, loadStudentTrack, fetchAllTracked, publicTrackPayload } = require("./utils/exam-track");
 
 exports.handler = async (event) => {
   const cors = getCorsHeaders(event.headers.origin || event.headers.Origin);
@@ -61,13 +62,18 @@ exports.handler = async (event) => {
     const questions = [];
     const domainCoverage = {};
     const missingDomains = [];
+    const trackInfo = await loadStudentTrack(userClient, user.id);
 
     for (let domain = 1; domain <= 5; domain++) {
-      const { data: domainQs } = await userClient
-        .from("questions")
-        .select("id, domain, topic, difficulty, question_type, question_text, options, correct_answer, explanation, textbook_reference")
-        .eq("is_active", true)
-        .eq("domain", domain);
+      const { data: domainQs, error: domainErr } = await fetchAllTracked(
+        () => userClient
+          .from("questions")
+          .select("id, domain, topic, difficulty, question_type, question_text, options, correct_answer, explanation, textbook_reference")
+          .eq("is_active", true)
+          .eq("domain", domain),
+        trackInfo
+      );
+      if (domainErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: domainErr.message }) };
 
       const count = domainQs ? domainQs.length : 0;
       domainCoverage[domain] = count;
@@ -82,8 +88,7 @@ exports.handler = async (event) => {
 
     // If any domain has zero questions, return an informative error
     if (missingDomains.length > 0) {
-      const domainNames = { 1: "Food & Nutrition", 2: "A&P / Biochem", 3: "Counseling / Ethics", 4: "Nutrition in Practice", 5: "Research" };
-      const missing = missingDomains.map(d => `Domain ${d} (${domainNames[d]})`).join(", ");
+      const missing = missingDomains.map(d => `Domain ${d} (${NANP_DOMAIN_NAMES[d]})`).join(", ");
       return {
         statusCode: 200,
         headers: cors,
@@ -93,6 +98,7 @@ exports.handler = async (event) => {
           insufficient: true,
           message: `The diagnostic assessment requires questions in all 5 domains. Missing: ${missing}. Ask your instructor to add more questions.`,
           domain_coverage: domainCoverage,
+          ...publicTrackPayload(trackInfo),
         }),
       };
     }
@@ -100,7 +106,7 @@ exports.handler = async (event) => {
     // Shuffle all together
     questions.sort(() => Math.random() - 0.5);
 
-    return { statusCode: 200, headers: cors, body: JSON.stringify({ questions, total: questions.length }) };
+    return { statusCode: 200, headers: cors, body: JSON.stringify({ questions, total: questions.length, ...publicTrackPayload(trackInfo) }) };
   }
 
   return { statusCode: 405, headers: cors, body: JSON.stringify({ error: "Method not allowed" }) };

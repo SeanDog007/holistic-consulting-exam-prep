@@ -1,4 +1,5 @@
 const { getUserClient, getServiceClient, getCorsHeaders, extractToken } = require("./utils/supabase");
+const { isMissingExamTrackColumn } = require("./utils/exam-track");
 
 exports.handler = async (event) => {
   const cors = getCorsHeaders(event.headers.origin || event.headers.Origin);
@@ -21,11 +22,19 @@ exports.handler = async (event) => {
   const { count: totalQuestions } = await serviceClient
     .from("questions").select("*", { count: "exact", head: true }).eq("is_active", true);
 
-  const { data: questionsByDomain } = await serviceClient
-    .from("questions").select("domain").eq("is_active", true);
+  let questionsByDomainResult = await serviceClient
+    .from("questions").select("domain, exam_track").eq("is_active", true);
+  if (questionsByDomainResult.error && isMissingExamTrackColumn(questionsByDomainResult.error)) {
+    questionsByDomainResult = await serviceClient.from("questions").select("domain").eq("is_active", true);
+  }
+  const questionsByDomain = questionsByDomainResult.data;
   const domainCounts = {};
+  const trackCounts = {};
   for (const q of (questionsByDomain || [])) {
     domainCounts[q.domain] = (domainCounts[q.domain] || 0) + 1;
+    const track = q.exam_track || "2026";
+    if (!trackCounts[track]) trackCounts[track] = {};
+    trackCounts[track][q.domain] = (trackCounts[track][q.domain] || 0) + 1;
   }
 
   // Hardest questions (lowest pass rate with at least 10 attempts)
@@ -79,6 +88,7 @@ exports.handler = async (event) => {
     body: JSON.stringify({
       totalQuestions: totalQuestions || 0,
       questionsByDomain: domainCounts,
+      questionsByTrack: trackCounts,
       hardestQuestions: hardest,
       flaggedCount: flaggedCount || 0,
       activeStudents: activeStudents || 0,

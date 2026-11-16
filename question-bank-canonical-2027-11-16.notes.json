@@ -1,0 +1,354 @@
+{
+  "status": "Parsed from David's three source files. David has not reviewed this parse. Krause domain tags are a proposal.",
+  "source": "david_2027_drive",
+  "shuffle_seed": "david_2027_drive-v1",
+  "shuffle_applied_to": [
+    "domain-ii-holes.md",
+    "krause-ncp.md"
+  ],
+  "shuffle_not_applied_to": [
+    "domain-iii-ethics.md"
+  ],
+  "correct_answer_stored_as": "0-based index, matching question-bank-canonical-2026-04-08.json. The import script writes the letter to Supabase, which is what import-circle-questions.mjs did for the 2026 bank. practice.js accepts either.",
+  "counts": {
+    "total": 461,
+    "parsed_by_file": {
+      "domain-ii-holes.md": 231,
+      "domain-iii-ethics.md": 50,
+      "krause-ncp.md": 180
+    },
+    "by_domain": {
+      "1": 100,
+      "2": 241,
+      "3": 55,
+      "4": 65
+    },
+    "parse_failures": 0
+  },
+  "answer_letters_after_shuffle": {
+    "holes": {
+      "D": 54,
+      "B": 55,
+      "A": 58,
+      "C": 64
+    },
+    "krause": {
+      "C": 51,
+      "D": 44,
+      "B": 43,
+      "A": 42
+    },
+    "domain_iii_unshuffled": {
+      "C": 12,
+      "B": 13,
+      "D": 12,
+      "A": 13
+    }
+  },
+  "answer_letters_before_shuffle": {
+    "holes": {
+      "B": 145,
+      "C": 57,
+      "D": 3,
+      "A": 26
+    },
+    "krause": {
+      "B": 111,
+      "C": 40,
+      "D": 2,
+      "A": 27
+    }
+  },
+  "krause_by_chapter": {
+    "1": 15,
+    "2": 15,
+    "3": 10,
+    "4": 5,
+    "5": 5,
+    "6": 5,
+    "7": 5,
+    "8": 5,
+    "9": 5,
+    "10": 5,
+    "11": 5,
+    "12": 5,
+    "13": 5,
+    "14": 5,
+    "15": 5,
+    "16": 5,
+    "17": 5,
+    "18": 5,
+    "19": 5,
+    "20": 5,
+    "21": 5,
+    "22": 5,
+    "23": 5,
+    "24": 3,
+    "25": 2,
+    "26": 3,
+    "27": 1,
+    "28": 3,
+    "29": 2,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "34": 1,
+    "35": 1,
+    "36": 2,
+    "37": 3,
+    "38": 2,
+    "39": 1,
+    "40": 2,
+    "41": 5,
+    "42": 5
+  },
+  "krause_chapter_domain_proposal": {
+    "1": {
+      "domain": 1,
+      "title": "Intake: Gastrointestinal Digestion, Absorption, and Excretion of Nutrients",
+      "note": "Proposed Domain I (digestive support and the human microbiome). Overlaps Domain II digestive system."
+    },
+    "2": {
+      "domain": 1,
+      "title": "Energy",
+      "note": "Proposed Domain I (energy as part of macronutrients)."
+    },
+    "3": {
+      "domain": 1,
+      "title": "Water, Electrolytes, and Acid-Base Balance",
+      "note": "Proposed Domain I (water and fluid balance). Acid-base balance is also a Domain II key concept."
+    },
+    "4": {
+      "domain": 1,
+      "title": "Nutrition Assessment: Dietary Intake Methods",
+      "note": "Proposed Domain I (food intake). Assessment tools are also listed under Domain IV."
+    },
+    "5": {
+      "domain": 4,
+      "title": "Clinical Assessment: Laboratory and Physical Data",
+      "note": "Proposed Domain IV (lab assessments)."
+    },
+    "6": {
+      "domain": 1,
+      "title": "Nutritional Genomics",
+      "note": "Proposed Domain I (biochemical individuality). David may prefer another domain."
+    },
+    "7": {
+      "domain": 4,
+      "title": "Inflammation and the Pathophysiology of Chronic Disease",
+      "note": "Proposed Domain IV. The chapter also contains nutrient items that could sit in Domain I."
+    },
+    "8": {
+      "domain": 1,
+      "title": null,
+      "content_note": "Social determinants of health and community food environment.",
+      "note": "Proposed Domain I (environmental influences). The source file does not name this chapter."
+    },
+    "9": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Nutrition Care Process interventions, including which cause an intervention should target.",
+      "note": "Proposed Domain IV. The source file does not name this chapter."
+    },
+    "10": {
+      "domain": 1,
+      "title": null,
+      "content_note": "Food deserts and community access to nutrient-dense food.",
+      "note": "Proposed Domain I. The source file does not name this chapter."
+    },
+    "11": {
+      "domain": 1,
+      "title": null,
+      "content_note": "Dietary supplements, including why people take them and DSHEA.",
+      "note": "Proposed Domain I (supplements). The source file does not name this chapter."
+    },
+    "12": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Enteral and parenteral nutrition support.",
+      "note": "Proposed Domain IV. The source file does not name this chapter."
+    },
+    "13": {
+      "domain": 3,
+      "title": null,
+      "content_note": "Health Belief Model, Social Cognitive Theory, and the Theory of Planned Behavior.",
+      "note": "Proposed Domain III (counseling and behavior change). This is the only Krause chapter proposed for the counseling-skills gap. David has not confirmed it. The source file does not name this chapter."
+    },
+    "14": {
+      "domain": 1,
+      "title": null,
+      "content_note": "Pregnancy nutrition, including iron and folate.",
+      "note": "Proposed Domain I (life-stage nutrition). The source file does not name this chapter."
+    },
+    "15": {
+      "domain": 1,
+      "title": null,
+      "content_note": "Lactation and the composition of human milk.",
+      "note": "Proposed Domain I (life-stage nutrition). The source file does not name this chapter."
+    },
+    "16": {
+      "domain": 1,
+      "title": null,
+      "content_note": "Childhood nutrient needs, including the calcium RDA.",
+      "note": "Proposed Domain I (life-stage nutrition). The source file does not name this chapter."
+    },
+    "17": {
+      "domain": 1,
+      "title": null,
+      "content_note": "Adolescent micronutrient deficiency and eating patterns.",
+      "note": "Proposed Domain I (life-stage nutrition). The source file does not name this chapter."
+    },
+    "18": {
+      "domain": 1,
+      "title": null,
+      "content_note": "Which reference values to use for a transgender client.",
+      "note": "Proposed Domain I (life-stage nutrition and biochemical individuality). The source file does not name this chapter."
+    },
+    "19": {
+      "domain": 1,
+      "title": null,
+      "content_note": "Phytochemicals and food composition.",
+      "note": "Proposed Domain I (food composition). The source file does not name this chapter."
+    },
+    "20": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Opens with cataracts in older adults; later items include age-related absorption.",
+      "note": "Proposed Domain IV (vision). Mixed with life-stage material. The source file does not name this chapter."
+    },
+    "21": {
+      "domain": 2,
+      "title": null,
+      "content_note": "Opens with ghrelin and glucagon. Later items cover malabsorption after bariatric surgery.",
+      "note": "Proposed Domain II (endocrine). Later items look like Domain IV. Kept as one chapter pending David. The source file does not name this chapter."
+    },
+    "22": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Bulimia nervosa and the dietitian's role on the care team.",
+      "note": "Proposed Domain IV. Eating disorders are not a named line in the 2027 Domain IV key concepts. The source file does not name this chapter."
+    },
+    "23": {
+      "domain": 1,
+      "title": null,
+      "content_note": "ADH, the renin-angiotensin response, thirst, and dehydration.",
+      "note": "Proposed Domain I (water and fluid balance). Overlaps Domain II. The source file does not name this chapter."
+    },
+    "24": {
+      "domain": 4,
+      "title": "Bone Health and Nutrition",
+      "note": "Proposed Domain IV (osteopenia/osteoporosis). Some items are anatomy and could be Domain II."
+    },
+    "25": {
+      "domain": 4,
+      "title": "Oral Health and Nutrition",
+      "note": "Proposed Domain IV. Oral health is not a named 2027 Domain IV key concept."
+    },
+    "26": {
+      "domain": 4,
+      "title": "Food Allergies and Intolerances",
+      "note": "Proposed Domain IV (allergies). Food sensitivity/allergy is also a Domain I key concept."
+    },
+    "27": {
+      "domain": 4,
+      "title": "Upper Gastrointestinal Tract Disorders",
+      "note": "Proposed Domain IV (gastrointestinal system)."
+    },
+    "28": {
+      "domain": 4,
+      "title": "Lower Gastrointestinal Tract Disorders",
+      "note": "Proposed Domain IV (gastrointestinal system)."
+    },
+    "29": {
+      "domain": 4,
+      "title": "Hepatobiliary and Pancreatic Disorders",
+      "note": "Proposed Domain IV (gastrointestinal system, including NAFLD)."
+    },
+    "30": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Diabetes management, including physical activity and insulin sensitivity.",
+      "note": "Proposed Domain IV (diabetes). The source file does not name this chapter."
+    },
+    "31": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Thyroid hormone conversion and selenium.",
+      "note": "Proposed Domain IV (hypo/hyperthyroidism). The source file does not name this chapter."
+    },
+    "32": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Megaloblastic anemia from vitamin B12 or folate deficiency.",
+      "note": "Proposed Domain IV (anemia). The source file does not name this chapter."
+    },
+    "33": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Cardiovascular nutrition, including omega-3 fatty acids and nitric oxide.",
+      "note": "Proposed Domain IV (circulatory/cardiovascular system). The source file does not name this chapter."
+    },
+    "34": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Asthma and a Mediterranean-style eating pattern.",
+      "note": "Proposed Domain IV (respiratory system). The source file does not name this chapter."
+    },
+    "35": {
+      "domain": 4,
+      "title": null,
+      "content_note": "End-stage renal disease: sodium, potassium, and fluid.",
+      "note": "Proposed Domain IV (urinary system). The source file does not name this chapter."
+    },
+    "36": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Foods discussed for cancer prevention, including beta-carotene.",
+      "note": "Proposed Domain IV (cancer). The source file groups chapters 36–40 under one heading and does not name this chapter."
+    },
+    "37": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Vitamin A and infection risk.",
+      "note": "Proposed Domain IV (infections). The source file does not name this chapter."
+    },
+    "38": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Protein needs in HIV-related wasting.",
+      "note": "Proposed Domain IV (infections). HIV is not a named 2027 key concept. The source file does not name this chapter."
+    },
+    "39": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Gluconeogenesis and protein needs in burn injury.",
+      "note": "Proposed Domain IV. Burns are not a named 2027 key concept. The source file does not name this chapter."
+    },
+    "40": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Rheumatoid cachexia and muscle loss.",
+      "note": "Proposed Domain IV (rheumatoid arthritis). The source file does not name this chapter."
+    },
+    "41": {
+      "domain": 4,
+      "title": null,
+      "content_note": "Dehydration risk when swallowing is difficult.",
+      "note": "Proposed Domain IV. Dysphagia is not a named 2027 key concept. The source file does not name this chapter."
+    },
+    "42": {
+      "domain": 2,
+      "title": null,
+      "content_note": "Amino acids as precursors of dopamine and serotonin.",
+      "note": "Proposed Domain II (nervous system). Could also be read as Domain IV mood disorders. The source file does not name this chapter."
+    }
+  },
+  "gaps": [
+    "No questions for Integrative Medicine, 5th ed. (Rakel). That is the likely main source for Domain IV.",
+    "No questions for The Craft of Research, 5th ed. (Domain V).",
+    "No questions for The Pantry Principle.",
+    "Domain III counseling skills are not in David's Domain III file. Krause chapter 13 is proposed as Domain III and is the only counseling-theory set in this import. David has not confirmed that tag."
+  ],
+  "failures": []
+}
