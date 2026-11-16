@@ -7,14 +7,14 @@
  * 1. Creates enrollment record in Supabase
  * 2. Syncs buyer to Kit with purchase tag
  * 3. Sends magic link email for immediate access
+ *
+ * The Kit tags and welcome email are shared with samcart-webhook.js
+ * via utils/exam-prep-access.js.
  */
 const { getStripe } = require("./utils/stripe");
 const { createEnrollment } = require("./utils/enrollments");
-const { addSubscriber } = require("./utils/kit");
-const { generateMagicToken } = require("./utils/auth");
-const { sendEmail } = require("./utils/resend");
+const { syncBuyerToKit, sendWelcomeMagicLink } = require("./utils/exam-prep-access");
 
-const SITE_URL = process.env.SITE_URL || "https://exam.holisticconsultinghq.com";
 const WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 exports.handler = async (event) => {
@@ -66,19 +66,11 @@ exports.handler = async (event) => {
       // Don't return 500 — Stripe will retry. Log and move on.
     }
 
-    // 2. Sync to Kit (ConvertKit) with HC: tags
+    // 2. Sync to Kit (ConvertKit) with the same HC: tags SamCart uses.
+    const firstName = (session.customer_details?.name || "").split(" ")[0];
     if (process.env.KIT_API_SECRET || process.env.KIT_API_KEY) {
       try {
-        await addSubscriber({
-          email,
-          firstName: (session.customer_details?.name || "").split(" ")[0],
-          tags: [
-            "HC:src:exam-prep",
-            "HC:int:bchn-exam",
-            "HC:stage:buyer",
-            "HC:bought:exam-prep",
-          ],
-        });
+        await syncBuyerToKit({ email, firstName });
         console.log(`[stripe-webhook] Kit subscriber synced with HC: tags: ${email}`);
       } catch (kitErr) {
         console.error("[stripe-webhook] Kit sync failed:", kitErr.message);
@@ -88,40 +80,7 @@ exports.handler = async (event) => {
     // 3. Send magic link email for immediate access
     if (process.env.RESEND_API_KEY && process.env.MAGIC_LINK_SECRET) {
       try {
-        const token = generateMagicToken(email);
-        const magicUrl = `${SITE_URL}/.netlify/functions/verify-magic-link?token=${encodeURIComponent(token)}`;
-        const name = (session.customer_details?.name || "").split(" ")[0] || "there";
-
-        await sendEmail({
-          to: email,
-          subject: "🎉 Welcome to BCHN® Exam Prep — Access Your Account",
-          html: `
-            <div style="font-family: 'DM Sans', -apple-system, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px 24px;">
-              <h1 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; color: #2A3024; margin-bottom: 8px;">
-                Welcome to BCHN® Exam Prep
-              </h1>
-              <p style="color: #6B7F5E; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px;">
-                Holistic Consulting
-              </p>
-              <p style="color: #3a4a3a; font-size: 15px; line-height: 1.7;">
-                Hey ${name}! Your purchase is confirmed. Click below to access your Exam Prep portal:
-              </p>
-              <div style="margin: 28px 0;">
-                <a href="${magicUrl}" style="display: inline-block; background: #6B7F5E; color: white; padding: 14px 32px; border-radius: 6px; font-size: 15px; font-weight: 600; text-decoration: none;">
-                  Access Exam Prep →
-                </a>
-              </div>
-              <p style="color: #999; font-size: 13px; line-height: 1.6;">
-                This link expires in 15 minutes. You can always request a new one from the login page.
-              </p>
-              <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;">
-              <p style="color: #bbb; font-size: 12px;">
-                Holistic Consulting HQ · holisticconsultinghq.com
-              </p>
-            </div>
-          `,
-          tags: [{ name: "category", value: "exam-prep-welcome" }],
-        });
+        await sendWelcomeMagicLink({ email, firstName });
         console.log(`[stripe-webhook] Welcome magic link sent to ${email}`);
       } catch (emailErr) {
         console.error("[stripe-webhook] Welcome email failed:", emailErr.message);

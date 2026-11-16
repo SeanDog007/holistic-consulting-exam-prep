@@ -1,0 +1,27 @@
+{
+  "type": "Refund",
+  "api_key": null,
+  "product": {
+    "id": 350399,
+    "name": "NANP Board Exam PREP course",
+    "price": "300.00",
+    "transaction_id": "ch_test_exam_prep"
+  },
+  "customer": {
+    "first_name": "Test",
+    "last_name": "Buyer",
+    "email": "samcart-test-buyer@example.com",
+    "phone_number": "5555550100",
+    "customer_id": 1001
+  },
+  "order": {
+    "id": 8560842,
+    "total": "0.00",
+    "ip_address": "203.0.113.10",
+    "stripe_id": "cus_test",
+    "custom_fields": [],
+    "transaction_id": ["ch_test_exam_prep"]
+  },
+  "processor": "Stripe",
+  "refund_transaction_id": "re_test_exam_prep"
+}
