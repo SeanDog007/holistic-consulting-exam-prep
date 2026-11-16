@@ -8,10 +8,12 @@
  * one tagged `circle-sync:<email>` (`stripe_session_id` is UNIQUE). Rows this
  * sync or a manual Circle grant created (prefixes `circle-sync:` /
  * `circle-paywall-`) are cancelled when the member leaves the space.
- * Stripe-created rows are never touched.
+ * Stripe-created rows and SamCart rows (`samcart:<order id>`) are never touched.
  *
  * Purchases on /buy.html do not wait for this job. stripe-webhook.js writes
  * their enrollment when Stripe sends checkout.session.completed.
+ * samcart-webhook.js does the same for SamCart orders and stores
+ * stripe_session_id as `samcart:<order id>`. This job does not own that prefix.
  *
  * Circle Admin API: GET /space_members already includes each member's email
  * on `community_member.email` (Admin API v2, confirmed against the live

@@ -187,6 +187,7 @@ describe("run", () => {
       { id: "stripe-leave", email: "bought@example.com", status: "active", stripe_session_id: "cs_bought" },
       { id: "owned-return", email: "returns@example.com", status: "cancelled", stripe_session_id: "circle-sync:returns@example.com" },
       { id: "stripe-refund", email: "new.person@example.com", status: "refunded", stripe_session_id: "cs_refund" },
+      { id: "samcart-stay", email: "samcart-buyer@example.com", status: "active", stripe_session_id: "samcart:8560842" },
       { id: "already-cancelled", email: "gone@example.com", status: "cancelled", stripe_session_id: "circle-sync:gone@example.com" },
       ...fillers.map((row, i) => ({
         id: `fill-${i}`,
@@ -218,6 +219,8 @@ describe("run", () => {
     assert.equal(byId["paywall-leave"], "cancelled");
     assert.equal(summary.cancelled.includes("bought@example.com"), false);
     assert.equal(summary.cancelled.includes("stays@example.com"), false);
+    assert.equal(summary.cancelled.includes("samcart-buyer@example.com"), false);
+    assert.equal(db.updates.some((u) => u.id === "samcart-stay"), false);
   });
 
   test("does not revoke anyone when a roster email is missing and the lookup fails", async () => {
