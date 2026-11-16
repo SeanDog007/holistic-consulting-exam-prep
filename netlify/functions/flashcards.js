@@ -1,4 +1,5 @@
 const { getUserClient, getServiceClient, getCorsHeaders, extractToken } = require("./utils/supabase");
+const { loadStudentTrack, runTrackedQuery, publicTrackPayload } = require("./utils/exam-track");
 
 exports.handler = async (event) => {
   const cors = getCorsHeaders(event.headers.origin || event.headers.Origin);
@@ -15,11 +16,13 @@ exports.handler = async (event) => {
   if (event.httpMethod === "GET") {
     try {
       const domain = event.queryStringParameters?.domain;
+      const trackInfo = await loadStudentTrack(userClient, user.id);
 
-      // Get flashcards
-      let query = userClient.from("flashcards").select("*").eq("is_active", true).order("domain").order("topic");
-      if (domain) query = query.eq("domain", parseInt(domain));
-      const { data: cards, error: cardsErr } = await query;
+      const { data: cards, error: cardsErr } = await runTrackedQuery(() => {
+        let query = userClient.from("flashcards").select("*").eq("is_active", true).order("domain").order("topic");
+        if (domain) query = query.eq("domain", parseInt(domain));
+        return query;
+      }, trackInfo);
       if (cardsErr) throw cardsErr;
 
       // Get user's review state for all cards
@@ -35,7 +38,7 @@ exports.handler = async (event) => {
       return {
         statusCode: 200,
         headers: cors,
-        body: JSON.stringify({ cards: cards || [], reviews: reviewMap }),
+        body: JSON.stringify({ cards: cards || [], reviews: reviewMap, ...publicTrackPayload(trackInfo) }),
       };
     } catch (err) {
       return { statusCode: 500, headers: cors, body: JSON.stringify({ error: err.message }) };
@@ -57,6 +60,7 @@ exports.handler = async (event) => {
         front_text: body.front_text,
         back_text: body.back_text,
         card_type: body.card_type || "term",
+        exam_track: body.exam_track || "2026",
         is_active: true,
       }).select().single();
 

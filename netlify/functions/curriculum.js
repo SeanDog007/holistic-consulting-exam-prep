@@ -1,4 +1,11 @@
 const { getUserClient, getCorsHeaders, extractToken } = require("./utils/supabase");
+const {
+  loadStudentTrack,
+  runTrackedQuery,
+  questionVisibleOnTrack,
+  publicTrackPayload,
+  COVERAGE_NOTE_2027,
+} = require("./utils/exam-track");
 
 exports.handler = async (event) => {
   const cors = getCorsHeaders(event.headers.origin || event.headers.Origin);
@@ -12,15 +19,16 @@ exports.handler = async (event) => {
   if (authErr || !user) return { statusCode: 401, headers: cors, body: JSON.stringify({ error: "Invalid token" }) };
 
   const params = event.queryStringParameters || {};
+  const trackInfo = await loadStudentTrack(userClient, user.id);
 
   if (event.httpMethod === "GET") {
     // --- Single lesson with full content ---
     if (params.lesson) {
-      return handleGetLesson(userClient, user, params.lesson, cors);
+      return handleGetLesson(userClient, user, params.lesson, cors, trackInfo);
     }
     // --- All modules/lessons for a domain ---
     if (params.domain) {
-      return handleGetDomain(userClient, user, parseInt(params.domain), cors);
+      return handleGetDomain(userClient, user, parseInt(params.domain), cors, trackInfo);
     }
     return { statusCode: 400, headers: cors, body: JSON.stringify({ error: "domain or lesson parameter required" }) };
   }
@@ -33,25 +41,33 @@ exports.handler = async (event) => {
 };
 
 // GET /curriculum?domain=N
-async function handleGetDomain(userClient, user, domain, cors) {
-  const { data: modules, error: modErr } = await userClient
-    .from("study_modules")
-    .select("*")
-    .eq("domain", domain)
-    .order("module_order");
+function curriculumNote(trackInfo) {
+  if (trackInfo.schemaPending) return "Study-material filtering is waiting on the database update. Showing the current lessons.";
+  if (trackInfo.track === "2027") return `No 2027 lessons are loaded yet. ${COVERAGE_NOTE_2027}`;
+  return null;
+}
+
+async function handleGetDomain(userClient, user, domain, cors, trackInfo) {
+  const { data: modules, error: modErr } = await runTrackedQuery(
+    () => userClient.from("study_modules").select("*").eq("domain", domain).order("module_order"),
+    trackInfo
+  );
 
   if (modErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: modErr.message }) };
   if (!modules || modules.length === 0) {
-    return { statusCode: 200, headers: cors, body: JSON.stringify({ domain, modules: [] }) };
+    return {
+      statusCode: 200,
+      headers: cors,
+      body: JSON.stringify({ domain, modules: [], curriculum_note: curriculumNote(trackInfo), ...publicTrackPayload(trackInfo) }),
+    };
   }
 
   const moduleIds = modules.map(m => m.id);
 
-  const { data: lessons, error: lesErr } = await userClient
-    .from("study_lessons")
-    .select("*")
-    .in("module_id", moduleIds)
-    .order("lesson_order");
+  const { data: lessons, error: lesErr } = await runTrackedQuery(
+    () => userClient.from("study_lessons").select("*").in("module_id", moduleIds).order("lesson_order"),
+    trackInfo
+  );
 
   if (lesErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: lesErr.message }) };
 
@@ -102,11 +118,15 @@ async function handleGetDomain(userClient, user, domain, cors) {
     };
   });
 
-  return { statusCode: 200, headers: cors, body: JSON.stringify({ domain, modules: result }) };
+  return {
+    statusCode: 200,
+    headers: cors,
+    body: JSON.stringify({ domain, modules: result, curriculum_note: curriculumNote(trackInfo), ...publicTrackPayload(trackInfo) }),
+  };
 }
 
 // GET /curriculum?lesson=LESSON_ID
-async function handleGetLesson(userClient, user, lessonId, cors) {
+async function handleGetLesson(userClient, user, lessonId, cors, trackInfo) {
   // Get lesson with module context
   const { data: lesson, error: lesErr } = await userClient
     .from("study_lessons")
@@ -119,6 +139,12 @@ async function handleGetLesson(userClient, user, lessonId, cors) {
   }
 
   const module = lesson.study_modules;
+  if (!trackInfo.schemaPending) {
+    const lessonTrack = lesson.exam_track || module?.exam_track || "2026";
+    if (!questionVisibleOnTrack(lessonTrack, trackInfo.track)) {
+      return { statusCode: 404, headers: cors, body: JSON.stringify({ error: "Lesson not found on this study track" }) };
+    }
+  }
 
   // Get user progress for this lesson
   const { data: progress } = await userClient
@@ -133,12 +159,15 @@ async function handleGetLesson(userClient, user, lessonId, cors) {
   if (lesson.title) {
     // Use first significant keyword from lesson title for topic matching
     const keyword = lesson.title.split(/[\s&,]+/).find(w => w.length > 3) || lesson.title;
-    const { data: questions } = await userClient
-      .from("questions")
-      .select("id, question_text, options, correct_answer, explanation, textbook_reference, domain, topic")
-      .eq("domain", module.domain)
-      .ilike("topic", `%${keyword}%`)
-      .limit(3);
+    const { data: questions } = await runTrackedQuery(
+      () => userClient
+        .from("questions")
+        .select("id, question_text, options, correct_answer, explanation, textbook_reference, domain, topic")
+        .eq("domain", module.domain)
+        .ilike("topic", `%${keyword}%`)
+        .limit(3),
+      trackInfo
+    );
 
     practiceQuestions = (questions || []).map(q => ({
       id: q.id,

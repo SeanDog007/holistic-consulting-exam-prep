@@ -12,6 +12,8 @@ CREATE TABLE student_profiles (
   display_name text NOT NULL,
   email text NOT NULL,
   target_exam_date date,
+  exam_track_override text
+    CHECK (exam_track_override IS NULL OR exam_track_override IN ('2026', '2027')),
   is_admin boolean NOT NULL DEFAULT false,
   is_active boolean NOT NULL DEFAULT true,
   enrolled_at timestamptz NOT NULL DEFAULT now(),
@@ -38,6 +40,8 @@ CREATE TABLE questions (
   correct_answer text NOT NULL, -- for mc: "A"/"B"/"C"/"D"; for tf: "true"/"false"; for fill: expected text
   explanation text,             -- why the correct answer is correct
   textbook_reference text,      -- e.g. "Encyclopedia of Healing Foods, Ch. 7"
+  exam_track text NOT NULL DEFAULT '2026'
+    CHECK (exam_track IN ('2026', '2027', 'both')),
   times_shown integer NOT NULL DEFAULT 0,
   times_correct integer NOT NULL DEFAULT 0,
   is_active boolean NOT NULL DEFAULT true,
@@ -106,6 +110,8 @@ CREATE TABLE flashcards (
   front_image_url text,
   card_type text NOT NULL DEFAULT 'text'
     CHECK (card_type IN ('text', 'image', 'scenario', 'term')),
+  exam_track text NOT NULL DEFAULT '2026'
+    CHECK (exam_track IN ('2026', '2027', 'both')),
   is_active boolean NOT NULL DEFAULT true,
   created_at timestamptz NOT NULL DEFAULT now(),
   updated_at timestamptz NOT NULL DEFAULT now()
@@ -140,6 +146,8 @@ CREATE TABLE study_guide_sections (
   title text NOT NULL,
   content_html text NOT NULL,
   exam_alert boolean NOT NULL DEFAULT false,  -- "This topic appears frequently on the exam"
+  exam_track text NOT NULL DEFAULT '2026'
+    CHECK (exam_track IN ('2026', '2027', 'both')),
   created_at timestamptz NOT NULL DEFAULT now(),
   updated_at timestamptz NOT NULL DEFAULT now()
 );
@@ -205,6 +213,7 @@ CREATE TABLE question_flags (
 CREATE INDEX idx_questions_domain ON questions(domain);
 CREATE INDEX idx_questions_topic ON questions(domain, topic);
 CREATE INDEX idx_questions_active ON questions(is_active) WHERE is_active = true;
+CREATE INDEX idx_questions_domain_track ON questions(domain, exam_track) WHERE is_active = true;
 CREATE INDEX idx_question_attempts_user ON question_attempts(user_id);
 CREATE INDEX idx_question_attempts_question ON question_attempts(question_id);
 CREATE INDEX idx_exam_attempts_user ON exam_attempts(user_id);

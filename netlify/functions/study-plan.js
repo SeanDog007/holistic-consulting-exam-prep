@@ -1,12 +1,5 @@
 const { getUserClient, getCorsHeaders, extractToken } = require("./utils/supabase");
-
-const DOMAIN_NAMES = {
-  1: "Food & Nutrition",
-  2: "A&P / Biochemistry",
-  3: "Counseling / Ethics / Scope",
-  4: "Nutrition in Practice",
-  5: "Research",
-};
+const { NANP_DOMAIN_NAMES: DOMAIN_NAMES, loadStudentTrack, publicTrackPayload, validateTrackUpdate } = require("./utils/exam-track");
 const DOMAIN_WEIGHTS = { 1: 35, 2: 15, 3: 10, 4: 30, 5: 10 };
 
 exports.handler = async (event) => {
@@ -29,12 +22,20 @@ exports.handler = async (event) => {
       .order("created_at", { ascending: false })
       .maybeSingle();
 
-    return { statusCode: 200, headers: cors, body: JSON.stringify(data || null) };
+    if (!data) return { statusCode: 200, headers: cors, body: JSON.stringify(null) };
+    const trackInfo = await loadStudentTrack(userClient, user.id);
+    return { statusCode: 200, headers: cors, body: JSON.stringify({ ...data, ...publicTrackPayload(trackInfo) }) };
   }
 
   if (event.httpMethod === "POST") {
     const { target_exam_date } = JSON.parse(event.body);
     if (!target_exam_date) return { statusCode: 400, headers: cors, body: JSON.stringify({ error: "target_exam_date required" }) };
+    const trackInfo = await loadStudentTrack(userClient, user.id);
+    const check = validateTrackUpdate(
+      { target_exam_date: trackInfo.date, exam_track_override: trackInfo.override },
+      { exam_date: target_exam_date }
+    );
+    if (!check.ok) return { statusCode: 400, headers: cors, body: JSON.stringify({ error: check.error }) };
 
     // Get domain mastery to personalize the plan
     const { data: attempts } = await userClient

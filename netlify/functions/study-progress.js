@@ -1,4 +1,5 @@
 const { getUserClient, getCorsHeaders, extractToken } = require("./utils/supabase");
+const { loadStudentTrack, runTrackedQuery, publicTrackPayload } = require("./utils/exam-track");
 
 exports.handler = async (event) => {
   const cors = getCorsHeaders(event.headers.origin || event.headers.Origin);
@@ -15,10 +16,12 @@ exports.handler = async (event) => {
 
   if (event.httpMethod === "GET") {
     // Get study guide sections with user's progress
-    let sectionsQuery = userClient.from("study_guide_sections").select("*").order("domain").order("section_order");
-    if (params.domain) sectionsQuery = sectionsQuery.eq("domain", parseInt(params.domain));
-
-    const { data: sections, error: sectErr } = await sectionsQuery;
+    const trackInfo = await loadStudentTrack(userClient, user.id);
+    const { data: sections, error: sectErr } = await runTrackedQuery(() => {
+      let sectionsQuery = userClient.from("study_guide_sections").select("*").order("domain").order("section_order");
+      if (params.domain) sectionsQuery = sectionsQuery.eq("domain", parseInt(params.domain));
+      return sectionsQuery;
+    }, trackInfo);
     if (sectErr) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: sectErr.message }) };
 
     const { data: progress } = await userClient

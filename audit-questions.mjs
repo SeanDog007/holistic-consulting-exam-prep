@@ -20,7 +20,15 @@ const args = process.argv.slice(2);
 const jsonOutput = args.includes('--json');
 const categoryFilter = args.includes('--category') ? args[args.indexOf('--category') + 1] : null;
 
-const questions = JSON.parse(await readFile('circle-questions-export.json', 'utf8'));
+function argValue(flag) {
+  const index = args.indexOf(flag);
+  return index >= 0 ? args[index + 1] : null;
+}
+
+const inputFile = argValue('--file') || 'circle-questions-export.json';
+const outputFile = argValue('--out') || 'audit-report.json';
+
+const questions = JSON.parse(await readFile(inputFile, 'utf8'));
 
 const issues = [];
 
@@ -350,8 +358,8 @@ if (jsonOutput) {
     byCategory: Object.fromEntries(Object.entries(byCategory).map(([k, v]) => [k, v.length])),
     issues,
   };
-  await writeFile('audit-report.json', JSON.stringify(report, null, 2));
-  console.log(`Report written to audit-report.json (${issues.length} issues)`);
+  await writeFile(outputFile, JSON.stringify(report, null, 2));
+  console.log(`Report written to ${outputFile} (${issues.length} issues)`);
 } else {
   console.log('═══════════════════════════════════════════════');
   console.log('  HCQ EXAM PREP — QUESTION BANK AUDIT REPORT');

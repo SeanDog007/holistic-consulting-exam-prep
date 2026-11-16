@@ -1,0 +1,44 @@
+{
+  "status": "Automated suggestion for David. He has not reviewed these rows. suggested_action is not a decision.",
+  "source_bank": "question-bank-canonical-2026-04-08.json",
+  "how_classified": "Each question is matched to the 2027 key concepts in nanp/sg2027.txt. A match in the question stem outweighs a match that appears only in an answer option. RETIRE_LIKELY is used when the question itself is about a concept the 2027 guide dropped (alkaline-forming foods, hemorrhoids, basal body temperature). REVIEW is used when the question treats cholesterol as a clinical target (the 2027 list says dyslipidemia), when it says adrenal fatigue (the 2027 list says adrenal dysfunction), or when no 2027 key concept matched. KEEP_LIKELY is a core point that matched a 2027 key concept. The canonical file has no per-question textbook, so the book named in current_textbook_reference is the domain default from generate-explanations.mjs.",
+  "blank_explanation": "The canonical JSON has no explanation field. Live Supabase may hold template explanations. This script did not read the database.",
+  "by_domain": {
+    "1": {
+      "KEEP_LIKELY": 241,
+      "REVIEW": 48,
+      "RETIRE_LIKELY": 2,
+      "total": 291
+    },
+    "2": {
+      "KEEP_LIKELY": 174,
+      "REVIEW": 18,
+      "RETIRE_LIKELY": 0,
+      "total": 192
+    },
+    "3": {
+      "KEEP_LIKELY": 79,
+      "REVIEW": 33,
+      "RETIRE_LIKELY": 0,
+      "total": 112
+    },
+    "4": {
+      "KEEP_LIKELY": 160,
+      "REVIEW": 13,
+      "RETIRE_LIKELY": 2,
+      "total": 175
+    },
+    "5": {
+      "KEEP_LIKELY": 50,
+      "REVIEW": 16,
+      "RETIRE_LIKELY": 0,
+      "total": 66
+    }
+  },
+  "totals": {
+    "KEEP_LIKELY": 704,
+    "REVIEW": 128,
+    "RETIRE_LIKELY": 4,
+    "total": 836
+  }
+}

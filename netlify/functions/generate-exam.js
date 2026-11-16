@@ -1,6 +1,12 @@
 const { getUserClient, getCorsHeaders, extractToken } = require("./utils/supabase");
-
-const DOMAIN_DISTRIBUTION = { 1: 53, 2: 23, 3: 15, 4: 45, 5: 15 }; // total = 151
+const {
+  DOMAIN_DISTRIBUTION,
+  loadStudentTrack,
+  fetchAllTracked,
+  fullExamPlan,
+  fullExamShortfallMessage,
+  publicTrackPayload,
+} = require("./utils/exam-track");
 
 exports.handler = async (event) => {
   const cors = getCorsHeaders(event.headers.origin || event.headers.Origin);
@@ -15,33 +21,58 @@ exports.handler = async (event) => {
   if (authErr || !user) return { statusCode: 401, headers: cors, body: JSON.stringify({ error: "Invalid token" }) };
 
   const { timed, domain_filter } = JSON.parse(event.body || "{}");
+  const trackInfo = await loadStudentTrack(userClient, user.id);
 
-  // If domain filter, make a domain-specific exam
+  async function questionsInDomain(domain) {
+    const res = await fetchAllTracked(
+      () => userClient.from("questions").select("id, domain").eq("is_active", true).eq("domain", domain),
+      trackInfo
+    );
+    if (res.error) {
+      const wrapped = new Error(res.error.message);
+      wrapped.statusCode = 500;
+      throw wrapped;
+    }
+    return res.data || [];
+  }
+
   let examQuestions = [];
   let totalQuestions = 0;
 
-  if (domain_filter) {
-    const { data: questions, error } = await userClient
-      .from("questions").select("id, domain").eq("is_active", true).eq("domain", domain_filter);
-    if (error) return { statusCode: 500, headers: cors, body: JSON.stringify({ error: error.message }) };
-
-    const shuffled = questions.sort(() => Math.random() - 0.5);
-    examQuestions = shuffled.slice(0, Math.min(50, shuffled.length));
-    totalQuestions = examQuestions.length;
-  } else {
-    // Full exam weighted by domain — use available questions up to target
-    const targetTotal = Object.values(DOMAIN_DISTRIBUTION).reduce((a, b) => a + b, 0);
-    for (const [domain, count] of Object.entries(DOMAIN_DISTRIBUTION)) {
-      const { data: questions, error } = await userClient
-        .from("questions").select("id, domain").eq("is_active", true).eq("domain", parseInt(domain));
-      if (error) continue;
-
+  try {
+    if (domain_filter) {
+      const questions = await questionsInDomain(domain_filter);
       const shuffled = questions.sort(() => Math.random() - 0.5);
-      const selected = shuffled.slice(0, Math.min(count, shuffled.length));
-      examQuestions.push(...selected);
+      examQuestions = shuffled.slice(0, Math.min(50, shuffled.length));
+      totalQuestions = examQuestions.length;
+    } else {
+      const counts = {};
+      const pools = {};
+      for (const domain of Object.keys(DOMAIN_DISTRIBUTION)) {
+        pools[domain] = await questionsInDomain(parseInt(domain, 10));
+        counts[domain] = pools[domain].length;
+      }
+      const plan = fullExamPlan(counts);
+      if (!plan.ok) {
+        return {
+          statusCode: 400,
+          headers: cors,
+          body: JSON.stringify({
+            error: fullExamShortfallMessage(plan),
+            shortfall: plan.shortfall,
+            ...publicTrackPayload(trackInfo),
+          }),
+        };
+      }
+      for (const [domain, count] of Object.entries(DOMAIN_DISTRIBUTION)) {
+        const shuffled = pools[domain].sort(() => Math.random() - 0.5);
+        examQuestions.push(...shuffled.slice(0, count));
+      }
+      examQuestions.sort(() => Math.random() - 0.5);
+      totalQuestions = examQuestions.length;
     }
-    examQuestions.sort(() => Math.random() - 0.5);
-    totalQuestions = examQuestions.length;
+  } catch (err) {
+    return { statusCode: err.statusCode || 500, headers: cors, body: JSON.stringify({ error: err.message }) };
   }
 
   if (totalQuestions === 0) {

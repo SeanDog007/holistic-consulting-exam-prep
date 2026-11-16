@@ -1,4 +1,5 @@
 const { getUserClient, getServiceClient, getCorsHeaders, extractToken } = require("./utils/supabase");
+const { loadStudentTrack, validateTrackUpdate } = require("./utils/exam-track");
 
 exports.handler = async (event) => {
   const cors = getCorsHeaders(event.headers.origin || event.headers.Origin);
@@ -33,6 +34,14 @@ exports.handler = async (event) => {
     const updates = {};
     for (const key of ["display_name", "target_exam_date"]) {
       if (body[key] !== undefined) updates[key] = body[key];
+    }
+    if (body.target_exam_date !== undefined) {
+      const trackInfo = await loadStudentTrack(serviceClient, user.id);
+      const check = validateTrackUpdate(
+        { target_exam_date: trackInfo.date, exam_track_override: trackInfo.override },
+        { exam_date: body.target_exam_date }
+      );
+      if (!check.ok) return { statusCode: 400, headers: cors, body: JSON.stringify({ error: check.error }) };
     }
 
     const { data, error } = await serviceClient

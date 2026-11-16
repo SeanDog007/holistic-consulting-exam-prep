@@ -1,12 +1,12 @@
 const { getUserClient, getCorsHeaders, extractToken } = require("./utils/supabase");
+const {
+  NANP_DOMAIN_NAMES: DOMAIN_NAMES,
+  loadStudentTrack,
+  loadActiveFocusAreas,
+  runTrackedQuery,
+  publicTrackPayload,
+} = require("./utils/exam-track");
 
-const DOMAIN_NAMES = {
-  1: "Food & Nutrition",
-  2: "A&P / Biochemistry",
-  3: "Counseling / Ethics / Scope",
-  4: "Nutrition in Practice",
-  5: "Research",
-};
 const DOMAIN_WEIGHTS = { 1: 35, 2: 15, 3: 10, 4: 30, 5: 10 };
 
 exports.handler = async (event) => {
@@ -20,6 +20,8 @@ exports.handler = async (event) => {
   const userClient = getUserClient(token);
   const { data: { user }, error: authErr } = await userClient.auth.getUser();
   if (authErr || !user) return { statusCode: 401, headers: cors, body: JSON.stringify({ error: "Invalid token" }) };
+
+  const trackInfo = await loadStudentTrack(userClient, user.id);
 
   // ── Fetch all data in parallel ──────────────────────────────────
   const [
@@ -57,11 +59,7 @@ exports.handler = async (event) => {
       .eq("user_id", user.id)
       .gte("interval_days", 21),
     // Active focus areas with lesson info
-    userClient
-      .from("user_focus_areas")
-      .select("id, lesson_id, domain, wrong_count, last_wrong_at, study_lessons(id, title, study_modules(title))")
-      .eq("user_id", user.id)
-      .eq("status", "active"),
+    loadActiveFocusAreas(userClient, user.id, trackInfo),
     // Today's question attempts (to know what they've done today)
     userClient
       .from("question_attempts")
@@ -302,6 +300,17 @@ exports.handler = async (event) => {
       rank: i === 0 ? "primary" : "secondary",
     }));
 
+  const questionBank = { total: 0, by_domain: {} };
+  for (let domain = 1; domain <= 5; domain++) {
+    const counted = await runTrackedQuery(
+      () => userClient.from("questions").select("*", { count: "exact", head: true }).eq("is_active", true).eq("domain", domain),
+      trackInfo
+    );
+    const count = counted.error ? 0 : (counted.count || 0);
+    questionBank.by_domain[domain] = count;
+    questionBank.total += count;
+  }
+
   return {
     statusCode: 200,
     headers: cors,
@@ -317,6 +326,8 @@ exports.handler = async (event) => {
       smartActions,
       // Keep legacy field for backwards compat (empty)
       recommendations: [],
+      questionBank,
+      ...publicTrackPayload(trackInfo),
     }),
   };
 };

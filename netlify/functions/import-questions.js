@@ -45,6 +45,7 @@ exports.handler = async (event) => {
       correct_answer: q.correct_answer,
       explanation: q.explanation || null,
       textbook_reference: q.textbook_reference || null,
+      exam_track: q.exam_track || "2026",
     });
 
     if (error) {
